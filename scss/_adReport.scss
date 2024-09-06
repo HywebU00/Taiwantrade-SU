@@ -1,0 +1,115 @@
+// 2023 廣告管理:檢查啟用
+
+.adReport{
+  @extend %paddingSet1;@extend %marginSet1;
+  background: #fff;border-radius: 6px; position: relative;
+}
+
+.report{
+  padding: 24px 12px 10px; margin: 0 0 25px;
+  line-height: 1.4;
+  border-radius: 6px;
+  border: 1px solid $border-color-pale;
+  box-shadow: $border-color-pale 0 4px 12px -4px;
+  .heading{
+    padding: 0 5px;
+    font-size: 1.25em; color: $head-font-color; display: inline-block;
+    &+p{ display: inline-block; margin-left: 2em;}
+  }
+
+
+  ul{
+    list-style: none; margin:5px 0;padding: 0;
+    border-top: 2px solid $border-color-light;
+    li{
+      position: relative;
+      padding:4px 5px 3px 22px; margin: 0;
+      border-bottom: 1px solid $border-color-pale;
+      display: flex; justify-content: space-between;
+      align-items: center;
+
+      &::before{
+        position: absolute; content: ''; left: 8px; top: 25px;
+        width: 7px;height: 7px; background-color: $hintColor1;
+      }
+
+      p{ 
+        flex: 1 1 80%;margin: 0;
+        &+*{ margin-left: 18px;}
+      }
+      button, .funcBtn{ margin-right: 0;}
+    }
+  }
+
+  table{
+    width: 100%; margin:5px 0; 
+    border-top: 2px solid $border-color-light;
+    tr{
+      border-bottom: 1px solid $border-color-pale;
+      // &:last-child{border-bottom: none;}
+    }
+    th, td{ padding:16px 5px 14px;vertical-align: top;}
+    th{ 
+      position: relative;
+      text-align: left; width: 10em; padding-right: 10px;
+      &::after{
+        content: ''; position: absolute; right: 5px; top: 21px;
+        width: 0; height: 0; border-style: solid; 
+        border-width: 6px 0 6px 7px;
+        border-color: transparent transparent transparent $border-color-light;
+      }
+    }
+    td{
+      &>.ficon, &>.funcBtn{margin-top: -12px; margin-bottom: -9px;}
+      input[type="text"] { margin: -12px 0 -9px;}
+
+      &:last-child:nth-child(3){
+        text-align: right;
+      }
+    }
+  }
+}
+
+// 等待中（轉圈圖示）
+.waitingResult{
+  text-align: center;
+  
+  --front: #{$indicate}; //圓弧前景顏色
+  --bg: #eee; //圓弧背景顏色
+  --diameter: 60px; //直徑
+
+  .waiting{
+    position: relative; display: inline-block; margin: 5px auto;
+    padding: 0 0 0 64px; line-height: var(--diameter);
+    &::before{
+      content: ''; position: absolute; left: 0; top: 0;
+      width: var(--diameter); height: var(--diameter); border-radius: 50%;
+      background-image: conic-gradient( var(--front) var(--angle), var(--bg) var(--angle));
+      animation: ring 1.5s infinite linear, spin 1.5s infinite linear;
+    }
+    &::after{
+      content: ''; position: absolute; left: 5px; top: 5px;
+      width: calc( var(--diameter) - 10px ); height: calc( var(--diameter) - 10px ); border-radius: 50%;
+      background-color: #fff;
+    }
+  }
+  p{ font-size: 1.5em;}
+}
+
+@keyframes ring {
+  0% {--angle: 0deg;}
+	50% {--angle: 360deg;}
+	100% {--angle: 0deg;}
+}
+
+@property --angle {
+	syntax: "<angle>";
+	initial-value: 0deg;
+	inherits: false;
+}
+
+@keyframes spin {
+  0%{transform: rotate(0deg);}
+  50%{transform: rotate(270deg);}
+  100%{transform: rotate(720deg);}
+}

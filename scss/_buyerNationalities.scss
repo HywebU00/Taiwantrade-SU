@@ -1,0 +1,49 @@
+// 買主國別參考（＊另開新頁）
+.buyerNationalities{
+  margin: 0 auto; padding:50px 40px 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+
+  // @extend %shadowWide;
+
+  .noteDv{
+    margin: 1em 0 2em;
+  }
+
+  h1{
+    margin: 0; padding: 0 0 .3em; font-size:2em;
+    border-bottom: 3px solid $border-color-pale;
+  }
+}
+
+.threeRanks{
+  display: flex; ;padding: 0 0 30px;
+  *{ box-sizing: border-box;}
+  .rankTable{
+    flex: 0 0 32.4%;
+    margin: 0; padding:30px 15px;
+    border-radius: 4px;
+    @extend %shadowBorder;
+    &:nth-child(2){ margin-left: 1.4%; margin-right: 1.4%;}
+
+    table{
+      width: 100%; border-collapse: collapse;
+      line-height: 1.5; font-size: 1.15em;
+    }
+    th, td{ 
+      padding:.6em .5em .5em; 
+      border-bottom: $border-color-light 1px solid;
+      text-align: center;
+    }
+    th{
+      border-bottom-color: $border-color-dark;
+      &:first-child{width: 3.5em;}
+    }
+    caption{
+      padding-bottom: 6px; margin-bottom: 16px;
+      font-weight: bold; font-size: 1.1em;
+      border-bottom: $border-color-pale 3px solid;
+    }
+  }
+
+}

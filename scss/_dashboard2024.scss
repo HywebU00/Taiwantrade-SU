@@ -1,0 +1,1113 @@
+// *************** 2024/07 SU儀表板改版案 ****************//
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
+
+// 連結等寬字型，用於數字資料
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100..700&display=swap'); 
+
+// 以 flex 做多欄排版 
+@import "_flexDivs"; 
+
+
+
+////////////////////////////////////////////////////////////
+////////// *** SU首頁：home_su2024.html *** ////////////////
+////////////////////////////////////////////////////////////
+
+// 「營運摘要」新增三個資料卡：
+// 訪客數型錄＋瀏覽量＋潛在買主詢問數
+////////////////////////////////////////////////////////////
+.board1.type2{
+  li{
+    display: flex; justify-content: space-between;
+    flex-flow: row wrap;cursor: default;
+    &:hover{
+      box-shadow: rgba(0,0,0,.35) 0 1px 5px;
+    }
+    .term{ 
+      flex: 0 1 48%;margin-top: 5px; margin-bottom: 8px;
+      font-size: 1.25em;
+    }
+    .sumUp{
+      flex: 0 1 auto; margin: 0 0 4px;
+      em{font-size: 2.5em; margin: 0 0 16px; }
+      .trend{margin-right: .3em; font-size: 1.25em;}
+      p{font-size: 1.1em;}
+    }
+    
+
+    // 20240817 removed
+    //   .data{
+    //     flex: 0 1 auto; margin: 0 0 4px;
+    //     em{font-size: 2.5em; display: block; margin: 0 0 16px; white-space: nowrap;}
+    //     .timeRange, .difference{ display: inline-block;  white-space: nowrap;}
+    //     .difference{
+    //       margin-right: .3em;font-size: 1.25em;
+    //       &::before{margin-right: 3px; vertical-align: baseline;}
+    //       &.positive{ color: $posColor;
+    //         &::before{content: '⬆︎'; }
+    //       }
+    //       &.negative{ color: $negColor;
+    //         &::before{content: '⬇︎'; }
+    //       }
+    //     }
+    //     .timeRange{color: $font-color-lighter;font-size: 1.1em;}
+    //   }
+  }
+}
+////////////////////////////////////////////////////////////
+
+
+
+
+
+////////////////////////////////////////////////////////////
+////////////// *** 共用的模組或元件 *** ////////////////////
+////////////////////////////////////////////////////////////
+
+// 產業三階分類下拉選單
+////////////////////////////////////////////////////////////
+.industryCategory{
+  display: flex; gap: 0;
+  // align-items: center;
+  .label{
+    font-size: 1.1em; padding-left: 5px;
+    // display: inline-block;
+    line-height: 2.6;
+    flex: 0 0 auto; white-space: nowrap;
+  }
+  .selectImitating{flex: 1 0 26%;}
+  .icon_search{ flex: 0 0 auto;}
+
+
+  .multiCategory{
+    flex: 1 1 auto;
+
+    .inputAndBtns{
+      input[type="text"]{ height: 2.5em; background-color: #fff;}
+    }
+    .cateSearch{
+      .label{margin-right: 6px;}
+    }
+  }
+}
+
+// 查詢 buttton 圖示
+button.icon_search, input.icon_search {
+  display: inline-block;
+  height: 2.4em; width: 2.4em;
+  margin:3px; padding: 0;
+  background: $btn-bg1 url(../images/icon_searchClose.png) no-repeat -22px 8px;
+  background-size: 50px;
+  box-shadow: $btn-bg1 0 0 0 1px;
+  text-indent: -20em; overflow: hidden;
+  &:hover{background-color: $btn-bg2;box-shadow: $btn-bg2 0 0 0 3px;}
+}
+////////////////////////////////////////////////////////////
+
+
+// 多選下拉選單旁邊帶文字
+////////////////////////////////////////////////////////////
+.selectSet {
+  margin: 0 0 12px;
+  box-sizing: border-box;
+  *{box-sizing: border-box;}
+  .multiSelection,  &>p { display: inline-block;}
+  &>p{margin: 0 0 0 6px;}
+
+  .icon_search{margin:3px; vertical-align: top;}
+}
+
+
+// 多選下拉選單（選擇國家）
+////////////////////////////////////////////////////////////
+.multiSelection{
+  position: relative;z-index: 99;
+  border: 1px solid $border-color-light;
+  border-radius: 4px;
+  height: 2.8em; padding: 0; margin: 0 0 5px;
+  width: 22em;
+  background-color: #fff;
+
+  button.placeholder{
+    position: relative;
+    background-color: transparent; color: $font-color;
+    height: 100%; width: 100%; text-align: left;
+    padding: 0 28px 0 12px; margin: 0;
+    background: none; box-shadow: none;
+    &:focus{box-shadow: $border-color-dark 0 0 0 2px;}
+    &::after{
+      content: ''; position: absolute; right: 8px;top: calc(50% - 3px);
+      width: 0; height: 0;
+      border-style: solid;
+      border-width: 6px 5px 0 5px;
+      border-color: $btn-bg1 transparent transparent transparent;
+      transition: .3s;
+    }
+
+    &.up{
+      &::after { rotate: 180deg;}
+    }
+  }
+
+  // 多選下拉內的查詢
+  .searchHere{ 
+    display: flex; align-items: center;
+    flex-flow: row wrap;
+    margin: 0 0 8px; padding: 4px 8px 10px; 
+    border-bottom: 1px solid $border-color-pale; 
+    input[type="text"]{flex:1 1 45%; min-width:5em;}
+    input[type="submit"], input[type="button"]{
+      flex: 0 0 2.4em; white-space: nowrap;
+      text-indent: -20em; overflow: hidden;height: 2.4em;width:2.4em;padding:0;
+      background:$btn-bg1 url(../images/icon_searchClose.png) no-repeat -22px 8px; 
+      background-size: 50px;
+      &:hover{background-color: $btn-bg2;}
+    }
+  }
+
+  // 帶 checkbox 的選項
+  .options{
+    display: none;
+    position: absolute; left: 0; top: calc(100% + 4px); 
+    padding: 6px 0;width: 100%;
+    overflow-y: auto;
+    
+    border-radius: 4px;background-color: #fff;
+    @extend %shadowWide;
+
+    label{
+      display: block; overflow: hidden;
+      line-height: 1.3;
+      padding: .5em 8px .2em; margin:2px 4px;
+      border-radius: 4px;
+      &:hover{ background-color: $bg-color-pale;}
+      input[type="checkbox"]{
+        height: 15px; width: 15px;
+        margin: 0 8px 0 0; vertical-align: top;
+      }
+      span:last-child{ float:right; margin-top: .25em;}
+      &.checkAll{ font-weight: bold; font-size: 1.05em;}
+    }
+  }
+}
+.main>.selectSet{
+  @extend %marginSet1;
+  margin-bottom: 12px;
+}
+////////////////////////////////////////////////////////////
+
+
+// 日期區間 2024（模擬套件效果）
+////////////////////////////////////////////////////////////
+.dateRangePicker{
+  position: relative; z-index: 299;
+  padding: 0 0 0 40px; height:2.65em;
+  border-radius:4px;border:1px solid $border-color-light;
+  background:#fff url(../images/icon_calendar.png) no-repeat 8px 7px;
+  background-size: 24px;
+  &:hover::before,  &:focus::before{ 
+    opacity: 1; translate: calc(-100% - 6px) 0;
+    transition:opacity .2s, translate 0s;
+  }
+  &::before{
+    content: attr(data-label);
+    position: absolute; left: 0; top: .65em;
+    opacity: 0; translate: 0 0;
+    transition:opacity .3s, translate 0s .3s;
+  }
+  &::after{
+    content: ""; position: absolute; right: 8px; top: calc(50% - 3px);
+    width: 0;height: 0;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: $btn-bg1 transparent transparent transparent;
+    z-index: 0;
+  }
+
+  &:has(input[type="text"]:focus) {
+    border-color: $border-color-dark;
+    box-shadow: $border-color-dark 0 0 0 1px;
+  }
+
+  input[type="text"]{
+    position: relative; z-index: 3;
+    width: calc(100% - 40px); min-width: 16em;
+    height: 100%; padding:0 27px 0 .8em; margin:0; 
+    background-color: transparent;
+    border: none; box-shadow: none;
+    cursor: pointer;
+  }
+
+  .pickRange{
+    position: absolute; top: auto; right: 0; margin-top: 3px;
+    width: 640px; border-radius: 6px; overflow: hidden;
+    background: #fff; @extend %shadowWide;
+
+    display: flex; justify-content: space-between;
+    display: none;
+
+    .rangeList{
+      flex: 1 1 auto;
+      border-right: 1px solid $border-color-light;
+      ul {
+        list-style: none; margin: 0; padding:10px 0;
+        li{
+          margin: 0; padding: 0;
+          button{
+            box-sizing: border-box;
+            width: 100%; margin: 0;border-radius: 0;
+            text-align: left;
+            background-color: transparent; color: $font-color;
+            &:hover{background-color: $bg-color-pale; box-shadow: none;}
+          }
+          &.active{
+            button{ background-color: $btn-bg2; color: #fff;}
+          }
+        }
+      }
+  
+    }
+
+    .daterangepicker{
+      flex: 1 1 75%;
+      // outline: 1px dashed #f008;
+      // outline-offset: -1px;
+    }
+  }
+  
+  .calendars {
+    // flex: 1 1 78%;
+    flex: 0 0  470px;
+    padding: 10px;
+    img.fake{ display: block; width: 470px;}
+  }
+
+}
+.pageHeading + .dateRangePicker{
+  z-index: 299;
+  position: absolute; right: 2vw; top: auto; margin-top: -2px;
+  @media screen and (min-width:$wwMaximum){
+    right: 45px;
+  }
+}
+
+
+// 選日期區間的套件（不是假圖）
+////////////////////////////////////////////////////////////
+.daterangepicker{
+  display: flex; flex-flow: row wrap; justify-content: space-between;
+  box-sizing: border-box;
+  *, *::before, *::after{box-sizing: border-box;}
+
+  .ranges { flex: 0 0 100%;}
+  .drp-calendar{
+    flex: 0 0 50%;
+    .calendar-table{
+      padding:8px 12px;
+      table{
+        width: 100%; border-collapse: collapse;
+        font-size: .92em; line-height: 1.3; text-align: center;
+        color: $font-color;
+      }
+      th, td { padding: 6px 4px; }
+      thead{
+        border-bottom: 1px solid $border-color-pale;
+        th{
+          &[colspan]{ font-size: 1rem; height: 2em; line-height: 2;}
+          &.prev, &.next{
+            &>span{
+              position: relative;display: block; 
+              width: 1.9em; height: 1.9em; border-radius: 50%;
+              transition: all .2s, scale 0s;
+              cursor: pointer;
+              &::before{
+                content: ''; width: 8px; height: 8px;
+                position: absolute; top: calc(50% - 4px); left: calc(50% - 5px);
+                border-style: solid; border-width: 2px 2px 0 0; border-color: $font-color;
+                rotate: 45deg;
+              }
+              &:hover{ background-color: $bg-color; box-shadow: $bg-color 0 0 0 3px; }
+            }
+          }
+          &.prev>span{ scale: -100% 1;}
+        }
+      }
+      tbody{
+        td{
+          width: calc(100% / 7); border-radius: 4px; 
+          &:hover{ background-color: $bg-color-pale; cursor: pointer;}
+          &.in-range { 
+            background-color: $bg-color; border-radius: 0;
+            &.off{ color: $font-color-lighter; background-color: transparent;}
+          }
+          &.start-date, &.end-date{ 
+            background: $btn-bg2; color: #fff;
+            &.today:not(.off)::after{background-color: $hiLight1;}
+          }
+          &.start-date{ border-radius: 4px 0 0 4px;}
+          &.end-date{ border-radius: 0 4px 4px 0;}
+          &.off{ color: $font-color-lighter; background-color: transparent;}
+          &.today:not(.off){
+            position: relative;
+            &::after{
+              content: ''; width: 8px; height: 4px; border-radius: 2px;
+              position: absolute; bottom: 4px; left: calc(50% - 4px);
+              background-color: $indicate;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .drp-buttons{
+    flex: 0 0 100%; text-align: right;
+    padding: 8px;
+    border-top: 1px solid $border-color-light;
+    .drp-selected{
+      display: inline-block; margin-right: 12px;
+    }
+    button{
+      height: 2.2em; line-height: 2.2;
+      &.btn-primary{ background-color: $indicate;
+        &:hover{ box-shadow: $indicate 0 0 0 2px}
+      }
+    }
+  }
+}
+
+
+// 左邊選國家、右邊選日期區間
+////////////////////////////////////////////////////////////
+.areaAndTime{
+  @extend %marginSet1;margin-bottom: 8px; margin-top: 12px;
+  display: flex; justify-content: space-between;
+  .selectSet{
+    flex: 0 1 auto; margin: 0;
+    .multiSelection{max-width: calc(100% - 17em);}
+  }
+  .dateRangePicker{ flex: 0 1 min-content;}
+}
+////////////////////////////////////////////////////////////
+
+
+// 放統計圖表的容器
+////////////////////////////////////////////////////////////
+.chartHere{
+  width: 100%;
+
+  // 統計假圖
+  img.fake-chart{ display: block; width: 100%; padding: 12px;}
+}
+////////////////////////////////////////////////////////////
+
+
+// 統計項目總和與變化量
+////////////////////////////////////////////////////////////
+.sumUp{
+  display: block; line-height: 1;white-space: nowrap;
+  text-align: right;
+  em{ 
+    display: block; margin-bottom: 12px;white-space: nowrap;
+    font-size: 2em; color: $font-color-darker;
+  }
+  p{ display: inline-block; margin: 0;}
+  .trend{
+    display: inline-block; padding: 5px 6px 3px; margin-right: 3px;
+    border-radius: 4px;color: #fff; background-color: $bg-color-dark;
+    &::before {margin-right: 3px; font-size: .8em; }
+    &.up{
+      background-color: #d71c57;
+      &::before{ content: '⬆︎';}
+    }
+    &.down{
+      background-color: #029a8b;
+      &::before{ content: '⬇︎';}
+    }
+  }
+}
+////////////////////////////////////////////////////////////
+
+
+// 可垂直捲動的表格
+////////////////////////////////////////////////////////////
+.listTable .scrollY{
+  position: relative; clear: both;
+  max-height: 27.2em;overflow-y: auto;
+  border-bottom: 2px solid $border-color-dark;
+
+  &:has( tfoot ) { 
+    max-height: 30.2em;
+    border-bottom: 1px solid $border-color-dark;
+  }
+
+  table{
+    border-top:none; border-bottom: none;
+
+    // 固定的表頭
+    thead{
+      position: sticky; top: 0; z-index: 19;
+      &::before, &::after{content: ''; z-index: 9;position: absolute;left: 0;right: 0;}
+      &::before{
+        top: 0;
+        height: 2px; background-color: $border-color-dark;
+      }
+      &::after{
+        bottom: 0;
+        height: 1px; background-color: $border-color-dark;
+      }
+      th{border-bottom:none;}
+    }
+    td:last-child{ padding-right: 12px;}
+    tbody{
+      tr:first-child{
+        th, td { border-top: none;}
+      }
+      tr:last-child{
+        th, td{ border-bottom: none;}
+      }
+    }
+
+    // 固定的表底
+    tfoot{
+      position: sticky; bottom: 0;
+      background-color: rgb(255 255 255 / .92);
+      &::before{
+        content: ''; position: absolute;left: 0;right: 0;top: 0;
+        height: 1px; background-color: $border-color-dark;
+      }
+      &::after{
+        content: ''; position: absolute;left: 0;right: 0;bottom: 0;
+        height: 1px; background-color: $border-color-dark;
+      }
+
+      tr:hover{ background-color: #fff;}
+      td, th{ border-top: none;}
+    }
+  }
+
+}
+////////////////////////////////////////////////////////////
+
+
+
+
+
+////////////////////////////////////////////////////////////
+//////////// ***多種統計資料共用樣式*** ////////////////////
+////////////////////////////////////////////////////////////
+
+// .operationalAnalysis：營運分析（頁籤項） ////////////////
+// .marketAnalysis：市場分析（頁籤項） /////////////////////
+// .salesAnalysis：銷售分析（頁籤項） //////////////////////
+// .sources：來源管道報表（＊營運分析） ////////////////////
+// .webPageBrowsing：網頁瀏覽報表（＊營運分析） ////////////
+// .userBehavior：重要行為報表（＊營運分析） ///////////////
+// .whereUsers：使用者資訊（＊營運分析） ///////////////////
+.operationalAnalysis, .marketAnalysis, .salesAnalysis,
+.sources, .webPageBrowsing, .userBehavior, .whereUsers {
+  box-sizing: border-box;
+  *, *::before, *::after {box-sizing: border-box;}
+
+  .block{
+    padding:20px 12px;
+    box-shadow: $border-color-light 0 0 4px;
+    border-radius: 6px; background: #fff;
+  }
+  h3{ font-size: 1.3em; line-height: 1.3; margin: 0 0 12px;}
+  h4{ font-size: 1.05em; color: $font-color-darker; line-height: 1.3; margin: 0 0 8px;}
+
+  .heading{
+    display: flex; flex-wrap: nowrap; justify-content: flex-start;
+    margin: 0 0 8px;
+    h3{
+      flex: 0 1 auto; margin:0;
+      &>.icon_i{margin-left: 5px;}
+      &:has( + *){margin-right: 20px;}
+      &:has( + .funcBtn ) { margin-top: 12px;}
+    }
+    .sumUp{
+      flex: 0 0 auto;
+      &:last-child{ margin-left: auto;}
+      &+.funcBtn {margin-left: 12px;
+        &:last-child{margin-left: auto;}
+      }
+    }
+    .funcBtn{ 
+      // align-self: flex-end; 
+      margin-left: auto;
+      &>a{white-space: nowrap;}
+    }
+  }
+
+
+  // 條列表格
+  ////////////////////////////////////////////////////////////
+  .listTable{
+    clear: both; padding: 0; margin:0;
+
+    &>.funcBtn:first-child { float: right; margin-bottom: 6px;}
+
+    table{
+      clear: both; margin: 0; width: 100%;
+      white-space: normal; word-break: break-word;
+      border-left: none; border-right: none;
+      th, td{ 
+        position: relative;padding: .45em .5em;
+        &:first-child {border-left: none;}
+        &:last-child {border-right: none;}
+      }
+      td:has( .indiArrow ) { padding-right: 1.25em !important;}
+      thead {
+        th{ 
+          &:has(.ellipsis) {height: 2.4em; min-width: 3em;}
+          .ellipsis{
+            position: absolute;left: 0; top: 0; width: 100%; height: 100%;
+            padding-top: .4em; padding-left: .2em;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+            transition: .2s;
+            &:hover{
+              white-space: normal; z-index: 99;
+              height: auto;min-height: 100%;
+              background-color: $bg-color-pale;
+            }
+          }
+        }
+      }
+      
+      tbody{
+        td{
+          word-break: break-word;
+          &.rowOrder{width: 2em; white-space: nowrap; vertical-align: top;}
+          .nowrapTitle{
+            position: absolute; 
+            left: 0; top: 0; width: 100%;
+            padding: .45em .5em;
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+            transition:box-shadow .2s;
+            &:hover{
+              white-space:normal; z-index: 9;
+              border-radius: 3px; background-color: #fff;
+              @extend %shadowNormal;      
+            }
+          }
+          &.digit{
+            white-space: nowrap;
+            text-align: right;
+            font-family: "Roboto Mono", monospace;
+            font-weight: 400; font-size: .88em;
+            .ellipsis{
+              position: absolute; right: 0; top: 0;
+              min-width: 100%; width: 100%;
+              padding: .6em .65em;
+              white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+              transition: .2s;
+              &:hover{
+                z-index: 9; width: auto;
+                border-radius: 3px; background-color: #fff;
+                @extend %shadowNormal;      
+              }
+              &:has( + .indiArrow) {
+                right: 1.1em;
+                width: calc(100% - 1.1em);
+                min-width: calc(100% - 1.1em);
+                &:hover{width:auto;}
+              }
+            }
+            &:has(.indiArrow){
+              &::before{ min-width: calc(100% - 1em); left: auto; right: 1em; padding-right: 1px; }
+            }
+          }
+        }
+      }
+      tfoot{
+        td.digit{ font-weight: 600;
+          .ellipsis{
+            position: absolute; right: 0; bottom: 0;
+            min-width: 100%; width: 100%; height: calc(100% - 1px);
+            padding: .45em .7em 0;
+            white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+            transition: .2s;
+            &:hover{
+              z-index: 9; width: auto;
+              border-radius: 3px; background-color: #fff;
+              @extend %shadowNormal;      
+            }
+          }
+        }
+      }
+      time{font-size: 1em;}
+    }
+
+    // 固定高度，可垂直捲動
+    .scrollY table{
+      thead {
+        th{
+          .ellipsis{ 
+            top: 1px !important;
+            &:hover{ min-height: calc(100% - 2px);}
+          }
+        }
+      }
+      tbody{
+        tr:last-child td .nowrapTitle:hover{top: auto; bottom: 0; }
+      }
+    }
+  }
+  
+}
+
+
+
+// 營運分析（頁籤項）
+////////////////////////////////////////////////////////////
+.operationalAnalysis{
+  .block{
+    position: relative; 
+
+    .heading{ min-height: 4.4em;}
+
+    .sumUp{
+      display: block; text-align: right;line-height: 1;
+      em{ 
+        display: block; margin-bottom: 12px;
+        font-size: 2em; color: $font-color-darker;
+      }
+      .trend{
+        display: inline-block; padding: 5px 6px 3px; margin-right: 3px;
+        border-radius: 4px; color: #fff;
+        &::before {margin-right: 3px; font-size: .8em; }
+        &.up{
+          background-color: #d71c57;
+          &::before{ content: '⬆︎';}
+        }
+        &.down{
+          background-color: #029a8b;
+          &::before{ content: '⬇︎';}
+        }
+      }
+    }
+
+    &:has( .more ) {padding-bottom: calc(24px + 2.2em);}
+    .more{
+      position: absolute; right: 12px; bottom: 16px;
+      a{
+        height: 2.2em; line-height: 2.3;
+        padding: 0 24px 0 14px;
+        border-radius: 2em;
+        box-shadow: $border-color-pale 0 0 0 1px;
+        transition: .2s;
+        &::after{
+          box-sizing: content-box;
+          right: 11px; top: calc( 50% - 4px); margin-top: 0;
+        }
+        &:hover{
+          box-shadow: $border-color-dark 0 0 0 2px;
+          color: $font-a-color;
+        }
+      }
+    }
+
+    // &:has( .btnLook) {padding-bottom: calc(32px + 2.4em);}
+    // .btnLook{position: absolute; right: 12px; bottom: 16px; top: auto;
+    //   box-sizing: content-box;
+    //   a::before{box-sizing: content-box;}
+    // }
+
+
+    .chartHere{
+      width: 100%; height: 400px;
+    }
+
+  }
+
+  &.disabled{
+    position: relative;
+    &::after{
+      content: ''; position: absolute;left: 0;top: 0;right: 0;bottom: 0;
+      background-color: rgb(255 255 255 / .5);
+      cursor: not-allowed;
+    }
+  }
+}
+////////////////////////////////////////////////////////////
+
+
+
+// 市場分析 （頁籤項）
+////////////////////////////////////////////////////////////
+.marketAnalysis{
+
+  // 比較產業三階分類下拉選單
+  .industryCategory{ margin-bottom: 12px; }
+  .colx-11{flex-wrap: wrap;}
+
+  // 三個堆疊的折線圖
+  .lineChartStacks{
+    .stack{
+      display: flex; flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin: 0 0 12px; padding: 0 0 12px;
+      border-bottom: 1px solid $border-color-light;
+      &:last-child{border-bottom: none; margin-bottom: 0; padding-bottom: 0;}
+      
+      &>table{
+        flex: 0 0 38%; 
+        line-height: 1.1; margin: 0;
+        th, td{ 
+          padding:5px 0; 
+          text-align: left; vertical-align: top;
+        }
+        th{
+          padding-right: 8px;
+          font-weight: normal; width: 60%; line-height: 1.3; 
+        }
+        tr{
+          &:first-child { 
+            border-bottom: 1px dotted $border-color-light;
+            th{ font-size: 1.3em; padding-top: 8px; color: $font-color-darker; 
+              .icon_i{margin-left: 5px;}
+            }
+            td{font-size: 1.7em;white-space: nowrap;}
+          }
+          &:last-child{
+            th, td{ padding-top: 9px;}
+          }
+        }
+      }
+      .chartHere{
+        flex: 0 0 60%; min-height: 7em;
+        img.fake-chart{ padding: 0;}
+      }
+    }
+  
+  }
+
+  .block{
+    .heading:has(h3:only-child) {
+      padding-top: 8px;
+    }
+  }
+
+  //買主熱搜關鍵詞 + 產業熱搜關鍵詞
+
+  // 產業搜尋趨勢預測
+  .predict{
+    .heading{
+      align-items: center;
+      .sumUp{
+        em{ margin: 0;}
+      }
+    }
+  }
+
+  .chartHere{
+    h4{margin-top: 12px; }
+  
+  }
+}
+////////////////////////////////////////////////////////////
+
+
+
+// 銷售分析 （頁籤項）
+////////////////////////////////////////////////////////////
+.salesAnalysis {
+  // 排版
+  .col-12{
+    display: flex;gap: 12px;margin: 0 0 12px;
+    &>section, &>div {
+      &:first-child {flex:0 0 calc(34% - 6px);}
+      &:last-child{flex: 0 0 calc(66% - 6px);}
+    }
+  }
+
+  .heading{
+    min-height: 4.4em; 
+    .sumUp{
+      flex: 1 1 auto; margin-right: 12px;
+    }
+    .funcBtn{ align-self: flex-end; margin-bottom: 0;}
+  }
+
+  .block:nth-child(2){
+    .heading{
+      &>h3{ margin-top: 0;}
+    }
+  }
+  .comparisons{
+    background-color: $bg-color-pale;
+    border-radius: 6px;
+    margin: 22px 0 0; padding: 12px;
+
+    // 比較產業，產業三階分類下拉選單
+    .industryCategory {margin: 0 0 16px;}
+
+    .heading{min-height: 2.8em;}
+  }
+
+  .stChart{
+    display: flex; flex-wrap: wrap;
+    h3{ flex: 0 1 100%;}
+    .chartHere{
+      flex: 0 0 50%;
+      h4{ width: 90%; margin: 0 auto 12px; font-size: 1.1em;}
+    }
+  }
+
+  // 同產業熱銷產品前三名
+  .top3Products{
+    ul{
+      list-style: none; margin: 0;padding: 0;
+     display: flex;
+     gap: 0 2%;
+      
+      li{
+        margin: 0;padding: 0;
+        flex: 0 0 32%; width: 32%;
+
+        &>a{
+          display: block; height: 100%;
+          color: $font-color;
+          border-radius: 6px; overflow: hidden;
+          border-bottom: none;
+          transition: .2s;
+
+          display: flex; flex-direction: column;
+          img{
+            display: block; margin: 0 0 8px;
+            width: 100%; aspect-ratio:1/1; object-fit: cover;
+            border-radius: 6px;
+          }
+
+          &:hover, &:focus{
+            box-shadow: #fff 0 0 0 3px, $border-color-dark 0 0 0 4px;
+            
+          }
+        }
+
+        p{ margin: 0 0 6px;}
+      }
+    }
+  }
+}
+////////////////////////////////////////////////////////////
+
+
+
+
+
+////////////////////////////////////////////////////////////
+////////////// *** 營運分析之詳細報表 *** //////////////////
+////////////////////////////////////////////////////////////
+
+// 網頁瀏覽報表
+////////////////////////////////////////////////////////////
+.webPageBrowsing{
+  @extend .primeSection;
+  border-radius: 0; padding: 0 0 20px;background-color: transparent;
+
+  .chartAndTable{
+    display: flex; flex-flow: row nowrap; justify-content: space-between;
+
+    padding:16px 12px;
+    background-color: #fff; border-radius: 6px;
+
+    &+.chartAndTable { margin-top: 12px;}
+
+    .heading{
+      margin: 10px 0 20px;
+      display: flex; flex-wrap: wrap; justify-content: space-between;
+      align-content: flex-start;
+      h3{ /* font-size: 1.2em; */ margin:6px 12px 0 0;}
+    }
+
+    &>.left{flex: 0 0 calc(34% - 12px);}
+
+    &>.listTable{ 
+      flex: 0 0 66%; 
+      margin: 0; padding: 0; width: auto;
+      background-color: transparent;
+      border-radius: 0;
+
+      table{
+        td{
+          &:nth-child(2) {width: 55%;}
+          time{min-width: 0; width:auto; margin: 0 auto;}
+        }
+      }
+  
+    }
+  }
+}
+////////////////////////////////////////////////////////////
+
+
+// 重要行為報表
+////////////////////////////////////////////////////////////
+.userBehavior{
+
+  @extend .primeSection;
+  border-radius: 0; padding: 0 0 20px;background-color: transparent;
+
+  .chartAndTable{
+    .heading{
+      display: flex;justify-content: space-between;
+      margin: 0 0 12px;
+      h3{ margin-right: 0; display: block;}
+    }
+    .chartHere{flex: 0 0 66%;}
+    .listTable{
+      margin:16px 0 0; padding: 0;
+      .funcBtn{ float: right; margin-bottom: 6px;}
+      table{ 
+        td>time{ min-width: 0;}
+        td:nth-child(2):nth-last-child(4){ width: 55%;}
+      }
+    }
+  }
+
+  .chartHere{
+    img{width: 96%; height: 196px; margin: 0 auto;}
+  }
+  .listTable .scrollY{height: 20em;}
+}
+////////////////////////////////////////////////////////////
+
+
+// 使用者資訊
+////////////////////////////////////////////////////////////
+.whereUsers{
+  @extend .primeSection;
+
+  .heading{min-height: 50px;}
+  .mapBlock, .block{ padding-top: 10px;}
+  .mapBlock h3{ margin-top: 10px;}
+  .barchart{  position: relative; }
+
+  .listTable{
+    padding: 0; margin:20px auto 0;
+    table{width: 100%; margin: 0;}
+    tfoot{
+      td[colspan="2"] { text-align: center; letter-spacing: 1em;}
+    }
+  }
+}
+////////////////////////////////////////////////////////////
+
+
+// 來源管道報表
+////////////////////////////////////////////////////////////
+.sources{
+  @extend .primeSection;
+  padding-top: 20px;
+
+  .listTable{
+    margin:30px 0 0; padding: 0 0 16px;
+    .funcBtn {float: right; margin-bottom: 8px;}
+  }
+}
+////////////////////////////////////////////////////////////
+
+
+
+// // 模擬圓餅圖 
+// :root{
+//   --pie-c11: #f67520;
+//   --pie-c12: #f99620;
+//   --pie-c13: #ffc020;
+//   --pie-c21: #2a7ca3;
+//   --pie-c22: #3693b9;
+//   --pie-c23: #66b6d9;
+//   --pie-cEnd: #6a6b6c;
+// }
+
+// .pieChartSimulate{
+//   width: 200px;height: 200px;
+//   border-radius: 50%;
+//   background-color: #eee;
+//   background-image: conic-gradient(
+//     var(--pie-c11) 130deg,
+//     var(--pie-c12) 130deg 210deg,
+//     var(--pie-c13) 210deg 260deg,
+//     var(--pie-c21) 260deg 300deg,
+//     var(--pie-c22) 300deg 333deg,
+//     var(--pie-c23) 333deg 350deg,
+//     var(--pie-cEnd) 350deg 360deg
+//   );
+// }
+
+
+.hiddenInfo{
+  display: none;
+  position: fixed; z-index: 999;
+  padding:20px 30px; line-height: 1.6; width: 32em;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: rgba(0,0,0,.4) 0 3px 20px;
+  &::before {
+    content: ''; position: absolute;
+    left: 86px; top: -9px;
+    border-style: solid; border-width: 0 8px 9px 8px;
+    border-color: transparent transparent #fff transparent;
+  }
+  article{ display: block;}
+  p{ margin: 0;
+    &+p{ margin-top: 1.2em;}
+  }
+}
+
+
+// 以下模擬各種圖表
+
+
+// 折線圖，流量來源管道
+.lineChart{
+  --h: 320px;
+  --xP: 7%;
+  --yP: 20%;
+
+  position: relative;
+  margin: 50px 0;
+  padding: 30px 20px 20px 50px;
+  // background-color: #f3f3f3;
+  // box-shadow: rgb(0 0 0 / .3) 0 2px 12px;
+
+  .x, .y{
+    list-style: none; margin:0;padding: 0;
+    text-align: right;
+    font-size: .85em; line-height: 1;
+    li{margin: 0;padding:0;}
+  }
+  .x{
+    display: flex;
+    margin-top: 4px;
+    &>li{
+      flex: 0 0 var(--xP);
+    }
+  }
+  .y{
+    position: absolute; top: calc(30px - .45em); left: 5px;
+    height: var(--h); width: 40px;
+    display: flex; flex-direction: column-reverse;
+    &>li{
+      flex: 0 0 var(--yP);
+    }
+  }
+
+  .body{
+    height: var(--h);
+
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-image: repeating-linear-gradient( 90deg, 
+      transparent 0 calc(var(--xP) - 1px),
+      #aaa calc(var(--xP) - 1px) var(--xP)),
+
+      repeating-linear-gradient( 0deg,
+      transparent 0 calc(var(--yP) - 1px),
+      #aaa calc(var(--yP) - 1px) var(--yP)
+    );
+  }
+}

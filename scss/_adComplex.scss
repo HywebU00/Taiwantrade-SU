@@ -1,0 +1,821 @@
+//////////////////////////////////////////////////
+//////////// ２０２３新編的元件和模組 ////////////
+//////////////////////////////////////////////////
+// 網址容器 //////////////////////////////////////
+.url, .urlInUse>li{
+  padding: .5em 6px;
+  background-color: $bg-color-pale;
+  border-radius: 4px;
+  word-break: break-all; white-space: normal;
+}
+
+// 最近使用的網址
+div.urlInUse{
+  line-height: 1.2;
+  .label{ display: inline-block;}
+  .url{ position: relative; padding-right: 44px;
+    .removeThis{
+      top: 50%; transform: translateY(-50%);
+    }
+  }
+}
+
+//////////////////////////////////////////////////
+ul.urlInUse{
+  list-style: none; margin:0;padding: 0;
+  li{
+    position: relative; 
+    margin:5px 0; padding:12px 7em 12px 8px;
+    &:first-child{background-color:$bg-color; color: #000;}
+
+    .btnLook, .removeThis{ 
+      position: absolute; top: 50%;
+      transform: translateY(-50%);
+      margin: 0;
+    }
+    .btnLook{
+      right: calc(2.2em + 15px);
+      &>a{ height: 2.2em; line-height: 2.2;}
+    }
+    .removeThis{width: 2.2em;height: 2.2em; padding: 0; right: 5px;
+      // &:hover{ background-color: rgba(0,0,0,.3)}
+    }
+  }
+}
+.formLayout td{
+  .urlInUse{
+    @extend %widthFM;
+  }
+}
+
+//////////////////////////////////////////////////
+/// 文字＋編輯圖示＋刪除圖示（單筆或多筆）
+/// 下拉選單：select 元件或帶 checkbox 的選項
+.selectAndEdit{
+  clear: both; padding-top: 1px;
+  .selected{
+    display: flex;align-items: center;
+    border-top: 1px dashed $border-color-light;
+    padding: 6px 0; margin: 6px 0 0;
+    .title{flex:1 1 50%; margin-right: 8px;}
+    .ficon{
+      &+.ficon{ margin-left: 5px;}
+    }
+  }
+  &>select{ width: 100%; box-sizing: border-box; margin:0;}
+
+  .selectedList{
+    line-height: 1.3; margin: 12px 0;
+    ul{
+      list-style: none; margin: 0;padding: 0;
+      line-height: inherit;
+    }
+    li{
+      margin: 0; padding: 5px 0;
+      border-bottom: 1px dashed $border-color-light;
+
+      display: flex; align-items: center;
+    }
+    .title{flex:1 1 50%; margin-right: 8px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+
+    .ficon{
+      &+.ficon{ margin-left: 5px;}
+    }
+  }
+
+}
+
+
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////////////////////////////////
+// 廣告設定＞步驟二：「廣告內容設定」＞頁籤：「關鍵字和廣告」＞「廣告」可開合區 //
+//////////////////////////////////////////////////////////////////////////////////
+
+// 【【【廣告】】】：關鍵字和廣告
+.adComplex{
+
+  // 排版 ////////////////////////////////////////////////
+  // 上三欄
+  .flex3col{
+    display: flex;
+    margin: 0 0 10px; border-radius: 8px;
+    background-color: $bg-color-pale;
+    border:$border-color-light 1px solid;
+    &>*{ 
+      &:nth-child(2) {margin: 0 2%;}
+    }
+  }
+  
+  // 下兩欄
+  .flex2col{
+    display: flex;
+    .leftCol{flex: 0 1 33%; margin: 0 15px 0 0; }
+    .rightCol{flex: 1 0 67%;}
+  }
+
+
+
+  
+  //////////////////////////////////////////////////
+  //////////////////////////////////////////////////
+  // 上方三欄區塊：「操作提示」＋「廣告優異度百分比環」＋「檢測提案」
+  .hintsList, .adStrength, .completions{
+    // 標題字
+    .heading{
+      margin: 0 0 10px;
+      font-size: 1.125em; font-weight: bold; 
+      color: $font-color-darker;
+    }
+  }
+
+  // ***************************************************************
+  // ***************************************************************
+  // ***************************************************************
+  // ***************************************************************
+  // ***************************************************************
+  // 操作提示 //////////////////////////////
+  .hintsList{
+    flex: 1 1 35%; margin-right: 5%; padding:20px 10px;
+    .textSlide{
+      position: relative;padding:5px 0; margin-top: 28px;
+      // outline: 1px solid pink;
+      display: flex; flex-flow: row nowrap;
+      justify-content: center; align-items: center;
+
+      .slideBox{
+        flex: 0 0 calc(100% - 80px); 
+        position: relative; overflow: hidden;
+        height: 1.9em; margin: 0 5px; 
+        &:hover{ overflow: visible;}
+      }
+      .slideItem{
+        position: absolute; top: .2em;left: 0; right: 0;
+        line-height: 1.5;white-space: nowrap;
+        text-overflow: ellipsis; overflow: hidden;
+        transform: translateX(100%);
+        transition: transform .5s;
+        &.otherside {transform: translateX(-100%);}
+        &.in { transform: translateX(0);}
+        &.fadeOut{ opacity: 0; transition: opacity .2s;}
+
+        &:hover{white-space:normal; cursor: pointer;}
+      }
+
+
+      .prev, .next{
+        position: relative; flex: 0 0 auto; z-index: 99;
+        width: 30px; height: 30px; padding: 0; border-radius: 50%;
+        background-color: $bg-color;
+        &::before{ 
+          content: ''; position: absolute; left: calc(50% - 3px); top: calc(50% - 5px);
+          width: 8px; height: 8px;
+          border: 2px solid $border-color-dark; border-top: none; border-right: none;
+          transform: rotate(45deg);
+        }
+        &:hover{
+          background-color: $btn-bg2;
+          &::before{ border-color: #fff;}
+        }
+      }
+      .next{transform: rotate(180deg);}
+
+    }
+  }
+
+  // 廣告優異度 //////////////////////////////
+  .adStrength{
+    flex: 1 1 26%;
+    position: relative; padding: 20px 10px 20px;
+
+    // 百分比環
+    .percentageDonut{
+      --color : #{$indicate};
+      --bgColor : #{$border-color-pale};
+      --innerWidth : 50px;
+
+      position: relative; float: left; margin-right: 10px;
+      width: 76px; height: 76px; border-radius: 50%;
+      background-color: var(--bgColor);
+
+      &::before{
+        content: ''; position: absolute; 
+        left: calc(50% - var(--innerWidth)*.5); top: calc(50% - var(--innerWidth)*.5);
+        width: var(--innerWidth); height: var(--innerWidth); border-radius: 50%;
+        background-color: $bg-color-pale;
+      }
+
+      &::after{
+        content: attr(data-percentage)'%';
+        width: var(--innerWidth); line-height: 1; text-align: center;
+        position: absolute; left: calc(50% - var(--innerWidth)*.5); top:calc( 50% - .5em);
+        font-size: .92em;
+      }
+
+
+    }
+
+    p{line-height: 60px; margin: 0;}
+  }
+
+  // 檢測提案 //////////////////////////////
+  .completions {
+    --theme : #{$indicate};
+    flex: 1 1 30%; padding: 20px 10px;
+    ul{
+      list-style: none; margin: 0; padding: 0; line-height: 1.3;
+    }
+    li{
+      position: relative;
+      padding: 1px 0 1px 20px; margin: 5px 0;
+      &::before, &::after{
+        content: ''; position: absolute; 
+      }
+      &::before {
+        left: 0; top:1px;
+        width: 13px; height: 13px; border-radius: 50%;
+        border: 2px solid var(--theme);
+      }
+
+      &.partial{
+        &::before{
+          background-image: linear-gradient(180deg, transparent 50%, var(--theme) 51%);
+        }
+      }
+      &.done{
+        &::before{background-color: var(--theme);}
+        &::after{
+          left: 4px;top: 5px; transform: rotate(-45deg);
+          width: 7px;height: 4px; 
+          border: 2px solid #fff; border-top: none; border-right: none;
+          border-radius: 1px;
+        }
+      }
+    }
+    
+  }
+
+
+  // 左側欄可開合的設定區塊 //////////////////////////////////////////
+  .adSideBlock{
+    margin: 0 0 10px; padding-bottom: 8px;
+    border: $border-color-light solid 1px; border-radius: 8px;
+    background-color: #fff;
+    .heading{
+      line-height: 2;
+      font-size: 1.125em; font-weight: bold; color: $font-color-darker;
+
+      .icon_i{margin-top: -2px; margin-left: 4px;}
+    }
+    .expCtrl{
+      &::after{ top: 18px;}
+      &.reveal:after{ top: 22px;}
+    }
+    .expContent{ 
+      margin:0;padding: 12px 8px 0;
+      border-top: 1px solid $border-color-light;
+
+      // 新增 button //////////////////////////////////////////
+      .funcBtn:first-child { 
+        float: right; margin-left: 8px;
+        & + .note{
+          &::after{ content: ''; display: block; clear: both;}
+        }
+      }
+
+      // 修正 .funcBtn float: right 造成的影響
+      &::after{
+        content: ''; display: block; clear: both;
+      }
+
+      // 限制高度 20240116 
+      // 
+      &.fixHeight_a1 {height: 20.6em;overflow-y: auto;} // 廣告標題
+      &.fixHeight_a2 {height: 21.4em;overflow-y: auto;} // 廣告說明
+
+      &.fixHeight_b1 {height: 17em;overflow-y: auto;} // 廣告標題（最高成效）
+      &.fixHeight_b2 {height: 8em;overflow-y: auto;} // 長廣告標題（最高成效）
+      &.fixHeight_b3 {height: 21.4em;overflow-y: auto;} // 廣告說明（最高成效）
+
+      &.fixHeight_c1 {height: 8em;overflow-y: auto;} // 廣告標題（探索）
+      &.fixHeight_c2 {height: 12.2em;overflow-y: auto;} // 廣告標題（探索）
+    }
+
+    .label {
+      display: block; margin: 0 0 5px;
+    }
+    
+    p{ margin: .3em 0 .5em;}
+
+
+    .getUrlButtons{
+      margin: 15px 0 0; flex-flow: wrap;
+      input[type="text"] {
+        flex: 0 1 100%; margin:3px 0 6px;
+      }
+    }
+
+    // 顯示路徑
+    .twoInputSet{
+      position: relative; margin: 5px 0 0;
+      display: flex; flex-flow: column wrap; height: 4.2em;
+      
+      *{box-sizing: border-box;} 
+      
+      input{ 
+        width: calc(50% - 7px); margin: 0; flex: 0 0 2.4em;
+        &:first-child {margin-right: 14px;}
+      }
+      .textCount{ width: calc(50% - 10px); margin:.1em 0 0; flex: 0 0 1.2em;}
+
+      &::before{
+        content: '/'; position: absolute; left:calc(50% - .2em); top: .4em;
+      }
+    }
+
+    .oneRow{
+      margin: 12px 0; clear: both;
+      input[type="text"], textarea {
+        box-sizing: border-box;
+        width: 100%; margin: 0;
+      }
+      textarea{height: 6.8em;}
+      .textCount{ margin:.1em 4px 0;}
+    }
+
+
+
+    // 廣告標題使用特殊語法
+    .adKeywordInput{
+      display: none;
+      position: relative; top: 3px;
+      padding:12px 8px; border-radius: 6px;
+      box-shadow: $border-color-light 0 1px 12px;
+      background-color: #fff;
+      p{ margin: 0 0 .5em;}
+      label.defaultText{
+        display: block; margin: 12px 0 0;
+        input[type="text"]{ width: 100%; margin: 5px 0;}
+      }
+      .optionPool{font-size: 1em;margin: 0 -2px;}
+      .btnDv{margin: 12px 0 6px;}
+    }
+
+  }
+
+}
+
+
+
+
+//////////////////////////////////////////////////
+///////////////// 下方右欄 ///////////////////////
+//////////////////////////////////////////////////
+
+// 共用 //////////////////////////////////////////////////
+.adKeywordsPicking, .aiSuggestions, .getKetwords{
+  padding:10px; margin: 10px 0; overflow: hidden;
+  box-shadow: $border-color-light 0 0 0 1px inset;
+  border-radius: 8px;
+
+  &:first-child{margin-top: 0;}
+
+}
+
+.adKeywordsPicking, .aiSuggestions{
+  background-color: #fff;
+  .eachSource, .sugTitles, .sugDescriptions{
+    margin: 0 0 10px;
+    border: $bg-color solid 2px; border-radius: 6px;
+    .heading{ 
+      padding: 5px 10px;line-height: 2; min-height: 2em;
+      text-align: center; font-size: 1.125em;
+      font-weight: bold; color: $font-color-darker;
+      background-color: $bg-color;
+    }
+  }
+}
+
+
+//////////////////////////////////////////////////
+// 挑選10組關鍵字 ////////////////////////////////
+.adKeywordsPicking{
+  // padding:10px; overflow: hidden;
+  // box-shadow: $border-color-light 0 0 0 1px inset;
+  // border-radius: 8px;
+
+  p.note{ 
+    margin: 1em 0 0; display: inline-block;
+  }
+  .funcBtn{ 
+    float: right; margin-right: 0;
+  }
+
+  // 10組已選的關鍵字
+  .tenSets{
+    padding:10px 6px; margin: 0 0 15px;
+    border-radius: 6px;
+    background-color: $bg-color;
+    ul{
+      list-style: none; margin: 0;padding: 0; line-height: 1;
+      overflow: hidden;
+    }
+    li{
+      position: relative; float: left; margin: 4px;
+      height: 32px; line-height: 32px; padding: 0 34px 0 .8em;
+      // box-shadow: $border-color-light 0 0 0 1px; 
+      border-radius: 2em;
+      background-color: #fff;
+
+      .removeThis{
+        top: 2px; right: 2px; background: none;
+        &::before, &::after{ background-color: $border-color-dark;}
+        &:hover{ background-color: $hiLight2; box-shadow: none;
+          &::before, &::after{ background-color: #fff;}
+        }
+      }
+    }
+  }
+  
+  // 關鍵字來源
+  .keywordSources{
+    clear: both;
+    display: flex; margin:0;
+    .eachSource{
+      flex: 1 1 calc(33.33% - 4px);margin: 5px 0 0 6px;
+      &:first-child{margin-left: 0;}
+    }
+  
+    .checkList{
+      padding: 8px 0;
+      max-height: 23em; overflow-y: scroll;
+    
+      label{
+        display: block; position: relative;
+        margin: 1px 4px; padding: 6px 3px 6px 2em;
+        cursor: pointer; border-radius: 1.2em;
+        transition: .2s;
+        input{position: absolute; left: 7px;top: 6px;}
+        &:hover{background: saturate($bg-color-light, 30%); color: $font-color-darker;}
+      }
+    }
+  
+  }
+
+  // 人工輸入關鍵字 20240116
+  .keywordInput{
+    display: flex; align-items: center;
+    width: calc(100% - 13em);
+    input{flex: 1 1 16em; margin-left: 3px;}
+    .label{ white-space: nowrap;}
+  }
+}
+
+//////////////////////////////////////////////////////////////
+// AI 建議的標題＆說明 ///////////////////////////////////////
+.aiSuggestions{
+  // padding:10px; margin: 10px 0;
+  // border-radius: 8px;
+  // box-shadow: $border-color-light 0 0 0 1px inset;
+
+  .flexBox{
+    display: flex; flex-flow: row wrap;
+    clear: both;
+    .sugTitles{flex: 0 1 40%; margin-right: 10px;}
+    .sugDescriptions{flex: 1 0 50%;}
+  }
+
+  &>.funcBtn { float: right; margin-bottom: 8px;}
+
+  .sugTitles, .sugDescriptions{
+    .heading{
+      line-height: 1.6; text-align: left; 
+      display: flex; flex-flow: row wrap; justify-content:flex-end; align-items: center;
+      em{ flex: 1 1 30%; margin: 5px 0;}
+      .funcBtn{flex: 0 1 auto; margin: 0 0 0 5px; font-size: .95rem; font-weight: normal;
+      }
+    }
+    ul{ 
+      list-style: none; margin: 0; padding:8px 0; line-height: 1.3;
+      max-height: 24em; overflow-y: scroll;
+    }
+    li{
+      position: relative; cursor: pointer;
+      padding: .5em 3px .4em 25px; margin: 1px 8px;
+      border-radius: 1.2em;
+      transition:transform .4s, background .2s, color .2s;
+
+      &::first-letter{font-weight: bold;}
+
+      &::before, &::after{content: ''; position: absolute;}
+      &::before{
+        width: 6px; height: 6px; left: 9px; top: 12px;
+        border: 2px solid $border-color-light; border-right: none; border-top: none;
+        transform: rotate(45deg);
+      }
+      &::after{
+        width: 9px; height: 2px; top: 15px; left: 9px;
+        background-color: $border-color-light;
+      }
+
+      &:hover{
+        transform: translateX(-5px);
+        background: saturate($bg-color-light, 30%); color: $font-color-darker;
+        &::before{border-color: $font-color-darker;}
+        &::after{background-color: $font-color-darker;}
+      }
+    }
+  }
+
+
+  // 提案版本紀錄
+  .sugRecords{
+    flex: 0 0 100%;margin: 50px 0 0;
+    .heading{ 
+      display: flex; align-items: center; 
+      justify-content: space-between;
+      h5{
+        line-height: 1.3;font-weight: bold; color: $font-color-darker; 
+        font-size: 1.125em;
+      }
+    }
+    .listTable{
+      margin: 0; padding: 0;
+      td{ text-align: center;}
+    }
+    .note{margin: 0 0 .3em;}
+  }
+}
+
+
+
+
+
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+// 燈箱：查看提案紀錄詳細內容
+.aiSugLog{
+
+  .flexBox{
+    display: flex; padding: 10px 0 30px;
+  }
+
+  .sugTitles, .sugDescriptions{
+    border: $bg-color solid 2px; border-radius: 6px;
+    .heading{ 
+      padding: 12px 5px 10px;line-height: 1;
+      text-align: center; font-size: 1.125em;
+      font-weight: bold; color: $font-color-darker;
+      background-color: $bg-color;
+    }
+    ul{ 
+      list-style: none; margin: 0; padding:5px 0 10px; line-height: 1.3;
+    }
+    li{
+      border-bottom: 1px solid $border-color-pale;
+      padding: .5em 3px .4em; margin: 1px 8px;
+      &::first-letter{font-weight: bold;}
+    }
+  }
+  .sugTitles{
+    flex: 0 1 calc(40% - 10px);
+    margin-right: 10px;
+  }
+  .sugDescriptions{
+    flex: 1 0 60%;
+  }
+}
+
+
+
+
+//////////////////////////////////////////////////
+// 右邊滑入的編輯區
+.slideinBox{
+  .head{ padding: 1.6em 0 .3em; margin-bottom: 24px;}
+  .slideinForm{ 
+    margin: 0 16px; 
+    .formLayout td{
+      .inputButtonSet, .urlInUse{
+        @extend %widthFM;
+      }
+  
+      // 建立待開發客戶表單：隱私權政策網址
+      .funcBtn.add:first-child{ float: right; margin-right: calc(10% - 17px);
+        &+.note{margin-top: .8em;}
+      }
+    }
+
+
+    .oneRow{
+      margin: 12px 0; 
+      .textCount{ margin: 0 5px;}
+    }
+
+    .btnDv{border-top: 1px solid $border-color-pale;}
+    fieldset + .btnDv { border-top: none;}
+    fieldset + .funcBtn { margin-top: 1em;}
+    .funcBtn + .btnDv{ margin-top: 1em;}
+    
+    // 較窄的
+    &.medium {
+      width: 60%; margin-left:auto; margin-right: auto;
+      min-width: 35em; max-width: 760px;
+    }
+
+    // 待開發客戶表單類型
+    .optionList {
+      width: calc(95% - 32px); margin: 0 auto 2em 16px;
+    }
+  }
+}
+
+.formLayout td{
+  .label{ margin: .5em 5px 5px;}
+  .uri{
+    margin: 5px; width: 90%;
+  }
+}
+
+
+
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+/// 20230731
+// 預算，依所選「出價」變換
+.adBudgets{ margin:0 auto 50px;}
+.changeSetting .adBudgets{ font-size: 1rem;}
+.budgetOption{
+  box-sizing: border-box;
+  *{box-sizing: border-box;}
+  
+  position: relative;width: 100%;
+  padding:20px 12px 24px 15px; margin: 12px 0;
+  border-radius: 12px; background-color: $bg-color-pale;
+
+  input[type="radio"]{ 
+    display: inline-block;  height: 1.2em; width: 1.2em; margin: 7px 4px 0 0;
+    cursor: pointer; vertical-align: top;
+  }
+
+  .perDay{
+    display: inline-block;
+    .data{
+      font-size: 1.2em; font-weight: bold; margin-left: .2em;
+      line-height: 1.8;
+    }
+    .term{  
+      margin-left: .2em; padding: 0 .8em; border-radius: 1em;
+      display: inline-block; line-height: 2;
+      &::before{
+        content: '';width: 2px; height: 16px;
+        display: inline-block; margin-right: 8px; vertical-align: baseline;
+        background-color: $border-color-dark;
+        transform: skewX(-30deg);
+      }
+    }
+  }
+  .mark{
+     position: absolute; right: 15px;top: -5px;
+     height: 2.2em; line-height: 2.2;padding: 0 1em 0;
+     border-radius: 0 6px 12px 12px;
+    //  box-shadow: $hintColor1 0 0 0 1px; color: $hintColor1;
+     background-color: $hintColor1; color: #fff;
+     box-shadow: rgba(0,0,0,.3) -1px 1px 3px;
+
+    &::before{
+      content: ''; position: absolute; left: -6px; top:0;
+      width: 6px;height: 5px; border-radius:6px 0 0 0;
+      background-color: darken( $hintColor1, 10%);
+    }
+  }
+
+  dl{
+    display: flex;
+    padding: 0; margin: 8px 0 0 20px;line-height: 1.1;
+    &>div{
+      flex: 1 1 calc(33.33% - 6px); overflow: hidden;
+      margin: 0 0 0 9px;
+      box-shadow: $border-color-light 0 0 0 1px;
+      background: #fff; border-radius: 8px;
+    }
+
+    dt, dd{ margin:0; }
+    dt{
+      float: left;padding: 17px 12px;
+      background-color: lighten($border-color-light, 18%);
+    }
+    dd{
+      float: right;padding: 16px 12px 8px;
+      text-align: right; white-space: nowrap;
+      font-weight: bold; font-size: 1.125em; 
+    }
+
+    &~.note{margin-left: 28px; margin-bottom: 0;}
+  }
+
+  .formRow{
+    display: inline-block; width: 60%; max-width: 36em;
+    margin: 2px 0 10px 5px;
+    input[type="text"]{ 
+      display: block;
+      width: calc(100% - 4em - 20px);min-width: 12em; height: 2.8em;
+    }
+    .note{ margin:5px 0 0 5px;}
+  }
+
+}
+
+
+
+
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+// 開啟圖庫燈箱選圖
+// 在燈箱中，以 iframe 嵌入
+.mediaLib{
+  padding: 20px 0; 
+  background-color: $bg-color-light;
+  .tabContainer, .tabs {margin-right: 20px;}
+  .mediaList{margin-left: 0; margin-right: 0;}
+  .classify{
+    margin: 10px 0; border-radius: 6px;
+    background-color: $bg-color-light;
+  }
+
+  .btnDv{
+    border-top: 1px solid $border-color-light;
+    margin: 2em 0 0; padding: 2em 0;
+  }
+}
+
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+// 新增後的圖片預覽小圖，右上角有刪除圖示
+.imagesList{
+  clear: both;margin: 0;
+  ul{ 
+    list-style: none; margin: 0; padding:10px 0 0;
+    display: flex; flex-flow: row wrap;
+  }
+  li{
+    flex: 0 0 auto; max-width: 100%;
+    position: relative;;margin: 0 8px 8px 0; padding: 0;
+    box-shadow: $border-color-light 0 0 0 1px;
+    img{ display: block; margin: 0; width: 100%; height:80px; object-fit: contain;}
+
+    .removeThis{
+      right: 0; top: 0;
+      border-radius: 0;box-shadow: none;
+      &:hover{ background-color: $red; }
+    }
+  }
+
+  // 在廣告活動中加入待開發客戶表單之『背景圖片』
+  // 圖的長寬比為1.91:1
+  &.r191{
+    li{
+      flex: 0 0 191px;
+      img{ height:100px;}
+    }
+  }
+}
+
+.formLayout td .imagesList{
+  width: 92%; margin: 0 0 0 3px;
+}
+
+
+.videoList{
+
+  ul{ 
+    list-style: none; margin: 0 -8px 0 0; padding:10px 0 0;
+    display: flex; flex-flow: row wrap;
+  }
+  li{
+    position: relative; flex: 0 0 auto; width: 160px;
+    margin: 0 8px 8px 0; padding: 0;
+    box-shadow: $border-color-light 0 0 0 1px;
+    iframe{ display: block; margin: 0; width: 100%; height:90px;}
+
+    .removeThis{
+      right: 0; top: 0;
+      border-radius: 0;box-shadow: none;
+      &:hover{ background-color: $red; }
+    }
+  }
+
+}
+
+

@@ -1,0 +1,9 @@
+.formA{
+  @extend %paddingSet1;
+  @extend %marginSet1;
+
+  position: relative;
+	border-radius:6px;background:#fff;
+
+
+}

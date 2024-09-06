@@ -1,0 +1,145 @@
+// 廣告活動、群組 標題＋功能模組
+.adTitleGroup{
+  display: flex; align-items: flex-start;
+  text-align: left;
+
+  button.adStatus{
+    position: relative; 
+    flex: 0 0 18px;
+    width: 18px;height: 18px; border-radius: 50%;
+    padding:0; margin:4px 4px 4px 0;
+    &::before{
+      content: ''; position: absolute;
+    }
+    &.on {
+      background-color: var(--bg-on);
+      &:hover{box-shadow: var(--bg-on) 0 0 0 2px;}
+      &::before{
+        top: calc(50% - 3px); left: calc(50% - 4px);
+        width: 7px; height: 3px;
+        border: 2px solid #fff;
+        border-top: none; border-right: none;
+        transform: rotate(-45deg);
+      }
+    }
+    &.off {
+      background-color: var(--bg-off);
+      &:hover{box-shadow: var(--bg-off) 0 0 0 2px;}
+      &::before {
+        top: calc(50% - 3px); left: calc(50% - 3px);
+        width: 2px; height: 6px;
+        border: 2px solid #fff;
+        border-top: none; border-bottom: none;
+      }
+    }
+    &.removed {
+      background-color: var(--bg-rem);
+      cursor:not-allowed;
+      &:hover{box-shadow: var(--bg-rem) 0 0 0 2px;}
+
+      &::before, &::after {
+        content: ''; position: absolute;
+        top: calc(50% - 1px); left: calc(50% - 5px);
+        width: 10px; height: 2px; 
+        background-color: #fff;
+      }
+      &::before{ transform: rotate(45deg);}
+      &::after{ transform: rotate(-45deg);}
+
+      &+.adTitle{ color:$font-color-lighter}
+    }
+  }
+
+  .adTitle{
+    flex: 1 1 70%;
+    line-height: 1.3; margin-top: 2px;
+    a:hover{ color: $font-color-darker; border-color: $font-color-darker;}
+  }
+
+  // 編輯、設定、查看圖示
+  .ficon{
+    flex: 0 0 32px;
+    margin: 0 0 0 5px;
+    a{
+      width: 34px; height: 34px;
+      &::before{ width: 30px;}
+    }
+    &.edit a{
+      background-position: center -36px;
+    }
+    &.setting a{
+      background-position: center -515px;
+    }
+    &.file a{
+      background-position: center -115px;
+    }
+  }
+
+}
+
+
+// 改變廣告狀態
+.adStatusSelect{
+  --bg-on:#067d1f;
+  --bg-off:#6b6b6b;
+  --bg-rem:#d00;
+
+  display: none;
+  position: absolute;  z-index: 999;
+  padding: 4px;
+  background: #fff; border-radius: 6px;
+  box-shadow: $border-color-light 0 0 16px;
+  ul{ list-style: none; margin: 6px auto; padding: 0; line-height: 1;}
+  li{
+    position: relative;width:2em;border-radius: 1em;
+    padding: 7px 12px 6px 30px; margin: 7px;
+    box-shadow: $border-color-light 0 0 0 1px;
+    cursor: pointer; transition: .2s;
+    &:hover{
+      box-shadow: $border-color-dark 0 0 0 2px;
+    }
+    span.adStatus { 
+      position: absolute; left: 4px; top: 8px;width: 20px; height: 20px; border-radius: 50%;
+      vertical-align: middle; margin:-4px 5px 0 0;
+      &::before{
+        content: ''; position: absolute;
+      }
+    
+      &.on {
+        background-color: var(--bg-on);
+        &::before{
+          top: calc(50% - 3px); left: calc(50% - 4px);
+          width: 7px; height: 3px;
+          border: 2px solid #fff;
+          border-top: none; border-right: none;
+          transform: rotate(-45deg);
+        }
+      }
+      &.off {
+        background-color: var(--bg-off);
+        &::before {
+          top: calc(50% - 3px); left: calc(50% - 3px);
+          width: 2px; height: 6px;
+          border: 2px solid #fff;
+          border-top: none; border-bottom: none;
+        }
+      }
+      &.removed {
+        background-color: var(--bg-rem); 
+        &::before, &::after {
+          content: ''; position: absolute;
+          top: calc(50% - 1px); left: calc(50% - 5px);
+          width: 10px; height: 2px; 
+          background-color: #fff;
+        }
+        &::before{ transform: rotate(45deg);}
+        &::after{ transform: rotate(-45deg);}
+      }
+    }
+  }
+
+  button{
+    display: block;
+    margin: 12px 0 0; padding: 0; width: 100%;
+  }
+}

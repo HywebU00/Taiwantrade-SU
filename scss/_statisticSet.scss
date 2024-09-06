@@ -1,0 +1,65 @@
+
+// 20210505 製作 「My Taiwantrade／VR分析」時增加
+// ***20230718 製作「廣告設定」時修改、擴充
+.statisticSet{ 
+  @extend %shadowBorder;
+  overflow: hidden;border-radius: 6px;
+  padding: 20px 15px;margin: 10px 0 10px;
+
+  h3:first-child {
+    margin-top: .5em;
+  }
+  h4 {
+    margin: 0 0 12px; padding: 0 0 5px;font-size: 1.35em; line-height: 1.1;
+    border-bottom: 3px solid $border-color-light;
+  }
+
+  .interval{
+    float: right; position: relative;
+    padding-bottom: 15px;
+    &+*{clear: both;}
+
+    .labelText, .optionPool, .during{ display: inline-block; vertical-align: middle;}
+    .labelText{ line-height: 2; font-weight: bold; margin-right: .5em;}
+
+    .during{width: 36em;}
+
+    //20240123 「請選擇開始與結束日期」
+    p:last-child{
+      display: block; margin-left: 5em;
+      text-align: left;
+    }
+  }
+
+ .listTbNew, .listTable{margin:10px 0; padding: 0;
+   &>table, &>.expArea{margin:8px 0;}
+ }
+ 
+  // 20230718
+  .chartArea{ display: block; margin: 0; }
+
+  //20240123 增加訊息元件：「此區間無資料」
+  .messageBox{
+    clear: both; margin: 30px auto;padding:1.5em 20px;
+    border: 1px dashed $border-color-light;
+    border-radius: 1em;
+    text-align: center;
+    p {
+      display: inline !important;
+      &.msg{
+        font-size: 1.4em; color: $btn-bg2;
+        &::before{
+          content: '! '; font-size: 1.3em; font-weight: 900;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          display: inline-block; width: 1.1em; height: 1.1em; line-height: 1.2;
+          margin-right: 10px;padding: 2px; border-radius: 1em;
+          // background-color: $btn-bg1;
+          box-shadow: $btn-bg1 0 0 0 2px;
+          color: $btn-bg1;
+        }
+      }
+    }
+  }
+}
+
+img.fakeChart{ display: block; width: 100%;}

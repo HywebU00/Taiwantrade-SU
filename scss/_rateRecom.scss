@@ -1,0 +1,26 @@
+// 「商機秘書服務通知」詳細內容燈箱裡面增加評分功能
+.rateRecom{
+  padding: 25px 15px; margin-top: 30px; margin-bottom: 30px; 
+  // margin: 30px auto;
+  border: 1px solid $border-color-light; border-radius: 6px;
+  box-shadow: $border-color-light 0 0 6px;
+  header{
+    margin: 0 0 .5em;
+    h4,p { display: inline-block; margin: 0;padding: 0; line-height: 1.5;}
+    h4{ margin-right: .5em;}
+  }
+ 
+  .rateThis{margin: 0;}
+  .feedback{
+    margin: 2em 0 1em;
+    p{margin: 3px;}
+    textarea{
+      height: 5.5em; width: calc(100% - 20px);
+    }
+  }
+
+  @media screen and (min-width: $wwWide){
+    // margin-left: 3%;margin-right: 3%;
+  }
+
+}

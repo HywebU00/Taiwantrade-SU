@@ -1,0 +1,50 @@
+// 2023
+// 「廣告目標設定」：選擇廣告目標 ＋ 選擇廣告類型
+.optionBox{
+  * {box-sizing: border-box;}
+  list-style: none; margin:0 0 -9px; padding:0;
+
+  display: flex; flex-flow: row wrap;
+  line-height: 1.5;
+  &>li{
+    flex: 1 1 calc(33.33% - 8px); margin: 0 12px 12px 0;  padding:20px 20px 15px;
+    box-shadow: $border-color-light 0 1px 4px; border-radius: 8px;
+    transition: .2s;
+    &:last-child{ margin-right: 0;}
+
+    input[type="radio"]{
+      margin: 0 8px 0 0;
+    }
+    label{
+      display: block;padding:0; margin: 0;
+      font-size: 1.05em; font-weight: bold;
+      cursor: pointer;
+    }
+  }
+
+}
+
+
+
+// 待開發客戶表單類型
+// -------------------------------------------------
+.optionList {
+  margin:1em 0 0;
+  .note{ margin-left: .8em;}
+
+  label{
+    display: block; margin: 0; padding: .5em .4em .6em;
+    border-radius: 4px;
+    cursor: pointer;
+    .labelText {display: inline-block;font-size: 1.2em; color: #000;}
+    input{ margin-right: .4em;}
+    p{display: inline-block;margin:.4em 0 0 1.8em;}
+    &+label{ margin-top: .3em;}
+    
+    &:hover{
+      box-shadow: $border-color-light 0 0 0 1px;
+    }
+    
+  }
+
+}

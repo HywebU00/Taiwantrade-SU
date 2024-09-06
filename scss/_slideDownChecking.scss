@@ -1,0 +1,115 @@
+// 模組：有 checkbox 的多選下拉選單
+.slideDownChecking{
+  position: relative;
+
+  .checkedItems{
+    position: relative;height: auto; min-height: 2em;
+    padding: 4px 36px 4px 6px;
+    border-radius:4px;border:1px solid $border-color-light;
+    color: $font-color; 
+
+    button.slideCtrl{
+      position: absolute;top: 3px; right: 4px;
+      text-indent: -15em; overflow: hidden;
+      width: 32px; height: 32px;border-radius: 50%;
+      padding: 0; margin: 0; box-shadow: none;
+      background: transparent url(../images/selectBg.png) no-repeat right 2px top 13px;
+      background-size: 20px auto;
+      transition: .4s;
+      &:hover, &:focus{background-color: $bg-color-pale;}
+
+      &.turn{ transform: rotate(180deg);}
+    }
+  
+    // 已選項目
+    .item{
+      position: relative;
+      display: inline-block; margin:1px; 
+      height: 1.8em; line-height: 1.8; padding: 0 2em 0 .5em;
+      border: $border-color-light solid 1px; border-radius: 1em;
+      .removeThis{
+        width: 1.6em; height: 1.6em;padding: 0; 
+        top: calc(50% - .8em); right: 0;
+        background-color: transparent; box-shadow: none;
+        &::before, &::after{background-color: $border-color-dark;}
+
+        &:hover{
+          background-color: $hiLight2;
+          &::before, &::after{background-color: #fff;}
+        }
+      }
+    }
+
+    // 佔位文字
+    .placeholder{
+      display: none; height: 2em; line-height: 2; color: $font-color-lighter;
+      &:nth-last-child(2){ display: inline-block;}
+    }
+  }
+
+  .slideArea{
+    display: none;
+    position: absolute; top: auto; left: 0; right: 0;overflow-y: auto;
+    padding:5px;margin:2px 0; z-index: 220;
+    box-shadow: rgba(0,0,0,.3) 0 1px 6px; border-radius: 4px;
+    background: #fff; color: $font-color; 
+  }
+  // 查詢
+  .quickSearch{
+    position: relative;margin: 8px auto;
+    // outline: 1px solid pink;
+    input[type="text"]{ 
+      padding-right: 40px; padding-left: 20px;width: calc(100% - 66px);
+      height: 2.6em;
+    }
+    button{
+      position: absolute; right: 4px; top: calc(50% - 18px);padding: 0; margin: 0;
+      text-indent: -10em; overflow: hidden;
+      width: 36px; height: 36px;
+      background:transparent url(../images/icon_searchClose.png) no-repeat 8px 8px;
+      background-size: 50px;
+      box-shadow: none;
+      &:hover{
+        background-color: $border-color-pale;
+      }
+    }
+  }
+
+
+
+  // 多選選項
+  .optionGroup{
+    
+    // 有 checkbox 可複選
+    &>label{
+      display: block !important; position: relative; overflow: hidden; clear: both;
+      margin:2px 0;padding: .5em 6px .4em 1.8em;
+      text-indent: calc(-1em - 7px);
+      border-radius: 1em;line-height: 1.2;
+      
+      &.cascade{margin-left: 1.1em;}
+      &:hover{background: $bg-color-pale;}
+
+      .count {
+        float: right;
+        margin-left: .3em;padding: 0 5px;height: 1.4em;
+        font-size: .92em; line-height: 1.35em; text-align: right;
+        font-weight: bold;text-indent: 0;
+        border-radius: 1em;
+        background-color: $border-color-pale;
+      }
+
+      input[type="checkbox"]{
+        width: 1em; height: 1em; vertical-align: top; margin-top: 1px;
+      }
+    }
+  }
+
+
+}
+
+.formLayout td{
+  .slideDownChecking{
+    width: 90%;
+  }
+}

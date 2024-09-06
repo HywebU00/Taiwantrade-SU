@@ -1,0 +1,19 @@
+// 「廣告報表」最下方「帳單」區塊
+.adBill{
+  list-style: none; margin: 0; padding: 0; line-height: 1.8;
+  display: flex;
+  li{
+    flex: 1 1 30%; margin: 0 2% 0 0; padding:5px 15px 5px 0;
+    border-right: 1px solid $border-color-light;
+    span{
+      display: inline-block;
+      &.label{display: block; margin-bottom: .8em; color: $font-color;}
+      &.data{font-size: 1.25em;}
+      &.strong{ font-weight: bold; font-size: 1.6em;}
+
+    }
+    button{float: right;}
+
+    &:nth-child(3n){margin-right: 0;border: none;}
+  }
+}

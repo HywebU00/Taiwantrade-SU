@@ -1,0 +1,55 @@
+// 橫向多欄排版
+.colx-11{
+  display: flex;
+  gap: 12px;
+  &>section, &>div{
+    flex: 0 0 calc(50% - 6px);
+  }
+}
+
+.colx-211{
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  // outline: 1px dashed #f008;
+  // outline-offset: -1px;
+  &+.colx-211{margin-top: 12px;}
+
+  &>section, &>div{
+    flex: 0 0 calc(25% - 8px);
+    &:first-child{
+      flex-basis: calc(50% - 8px);
+    }
+  }
+}
+
+// 2x2 排版
+.colx-11r {
+  display: flex; flex-flow: row wrap; justify-content: space-between;
+  gap: 12px;
+  &>section, &>div{
+    flex:0 0 calc(50% - 6px);
+  }
+}
+
+// 3:2:2
+.colx-322{
+  display: flex; justify-content: space-between;
+  gap: 12px;
+  &>div, &>section{
+    flex: 0 0 calc(28% - 8px);
+    &:first-child{
+      flex-basis: calc(44% - 8px);
+    }
+  }
+}
+
+
+// 來源管道報表
+// .sources{
+//   .listTable{
+//     margin:30px 0 0; padding: 0 0 16px;
+//     .funcBtn {float: right; margin-bottom: 8px;}
+//   }
+// }
+
