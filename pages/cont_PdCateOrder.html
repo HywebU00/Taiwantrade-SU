@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU- 產品分類設定:自訂商品排序（內容管理）</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>產品分類設定</h2>
+        <ul class="path">
+          <li><a href="#">內容管理</a></li>
+          <li>產品分類設定</li>
+        </ul>
+      </header>
+
+
+      
+      <section class="templateSetting">
+        <div class="settingNav fixArea">
+          <h3 class="compoundHeading">自訂分類下商品排序：<em>Application software</em><span class="count" title="此分類下商品筆數">15</span></h3>
+          <div class="tempBtns">
+            <span class="btnLook back"><a href="cont_PdCateSetting.html">回分類管理</a></span>
+          </div>
+        </div>
+
+
+        <div class="formInline boundary">
+          <table class="formLayout">
+            <tr>
+              <td>產品排序方式</td>
+              <td>
+                <div class="optionPool singleSelection">
+                  <label><input type="radio" checked="checked">依更新日期</label>
+                  <select class="relatePrev">
+                    <option>由新到舊</option>
+                    <option>由舊到新</option>
+                  </select>
+                  <label><input type="radio">依點閱次數</label>
+                  <select class="relatePrev">
+                    <option>由多到少</option>
+                    <option>由少到多</option>
+                  </select>               
+                  <label><input type="radio">自訂排序</label>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <div class="btnDv">
+            <input type="submit" value="儲存">
+          </div>
+        </div>
+
+        <section class="listTable">
+          <p class="hint">Tips: 分類下產品排序為語系共用，但當產品無該語系時，在該分類語系下會自動不顯示</p>
+          <table>
+            <thead>
+              <tr>
+                <th>移動順序</th>
+                <th>產品資訊</th>
+                <th>目前型錄啟用語系</th>
+                <th>最後編修</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td>
+                  <div class="pdImgInfo">
+                    <span class="pdImage"><img src="../publicData/pd41.jpg"></span>
+                    <span class="pdNumber">1800815</span>
+                    <span class="pdName">LED Ceiling light Mini Laptop Computer</span>
+                  </div>
+                </td>
+                <td>
+                  <ul class="langList">
+                    <li>英</li>
+                    <li>繁中</li>
+                    <li>日</li>
+                    <li>簡中</li>
+                    <li>共 <em>13</em> 語系</li>
+                  </ul>
+                </td>
+                <td><time>2020-10-10 10:26:15</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td>
+                  <div class="pdImgInfo">
+                    <span class="pdImage"><img src="../publicData/ph17.jpg"></span>
+                    <span class="pdNumber">1800815</span>
+                    <span class="pdName">Lorem ipsum dolor sit amet</span>
+                  </div>
+                </td>
+                <td>
+                  <ul class="langList">
+                    <li>英</li>
+                    <li>繁中</li>
+                    <li>日</li>
+                  </ul>
+                </td>
+                <td><time>2020-10-10 10:26:15</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td>
+                  <div class="pdImgInfo">
+                    <span class="pdImage"><img src="../publicData/ph15.jpg"></span>
+                    <span class="pdNumber">1800815</span>
+                    <span class="pdName">Integer eget aliquet nibh praesent tristique magna sit</span>
+                  </div>
+                </td>
+                <td>
+                  <ul class="langList">
+                    <li>英</li>
+                    <li>繁中</li>
+                    <li>日</li>
+                    <li>簡中</li>
+                  </ul>
+                </td>
+                <td><time>2020-10-10 10:26:15</time></td>
+              </tr>
+
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td>
+                  <div class="pdImgInfo">
+                    <span class="pdImage"><img src="../publicData/ph14.jpg"></span>
+                    <span class="pdNumber">1800815</span>
+                    <span class="pdName">Velit Turpis aliquet sagittis consectetur</span>
+                  </div>
+                </td>
+                <td>
+                  <ul class="langList">
+                    <li>英</li>
+                    <li>日</li>
+                  </ul>
+                </td>
+                <td><time>2020-10-10 10:26:15</time></td>
+              </tr>
+
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td>
+                  <div class="pdImgInfo">
+                    <span class="pdImage"><img src="../publicData/ph16.jpg"></span>
+                    <span class="pdNumber">1800815</span>
+                    <span class="pdName">Massa id neque aliquam vestibulum morbi blandit cursus</span>
+                  </div>
+                </td>
+                <td>
+                  <ul class="langList">
+                    <li>英</li>
+                    <li>繁中</li>
+                    <li>日</li>
+                  </ul>
+                </td>
+                <td><time>2020-10-10 10:26:15</time></td>
+              </tr>
+        
+            </tbody>
+          </table>
+
+        </section>
+
+        <div class="btnsBelow">
+          <div class="tempBtns">
+            <span class="btnLook back"><a href="cont_PdCateSetting.html">回分類管理</a></span>
+          </div>
+        </div>
+
+      </section>
+
+
+
+
+
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+
+
+
+
+  <!-- 以下為燈箱 ＊＊＊＊＊＊＊＊＊＊＊-->
+  <section class="popMsg" id="msg1">
+    <div class="popBody">
+      <p>充同加結爾她子。問腦如司開進球林起學，部之法雙定同心老有愛、由近集備禮古是！是日冷天著感一與空，味重展時爸得腳能前屋面國，且在試花正！</p>
+    </div>
+    <div class="btnDv"><span class="btnLook closePop"><a onclick="">Ok</a></span></div>
+  </section>
+
+  <section class="popMsg" id="delConfirm">
+    <div class="popBody">
+      <h3>確定刪除？</h3>
+      <p>刪除後將無法復原，確定刪除？</p>
+      <p>點選「確定」儲存，點選「取消」保留</p>
+    </div>
+    <div class="btnDv">
+      <button type="button" class="confirm trigPop" id="pop-delDone">確定</button>
+      <button type="reset" class="closePop">取消</button>
+    </div>
+  </section>
+
+  <section class="popMsg" id="delDone">
+    <div class="popBody">
+      <h3>刪除成功</h3>
+      <p>資料已成功刪除。</p>
+    </div>
+    <div class="btnDv">
+      <button type="button" class="confirm closePop">確定</button>
+    </div>
+  </section>
+
+  <script>
+    $(function(){
+      $('#pop-delDone').click(function(){
+        $('#delConfirm').hide();
+      });
+    })
+  </script>
+
+</body>
+
+</html>

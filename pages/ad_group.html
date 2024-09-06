@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-廣告管理</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li class="activated"><a href="javascript:;"><span class="menuIcon myaccount"></span>廣告管理</a></li>
+
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>廣告設定</h2>
+      </header>
+
+      <!-- 廣告群組 List -->
+      <section class="listTbNew adGroups">
+        <div class="funcBtnGp">
+          <ul>
+            <li class="add"><a>設定一個新的廣告群組</a></li>
+            <li class="download"><a download="" href="xxx">下載 Excel</a></li>
+            <li class="back"><a href="x">返回列表頁</a></li>
+          </ul>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>廣告群組</th>
+              <th>複製</th>
+              <th>編輯</th>
+              <th>設定</th>
+              <th>狀態</th>
+              <th><span class="sortingTh descending">曝光</span></th>
+              <th><span class="sortingTh">點擊</span></th>
+              <th><span class="sortingTh">點閱率</span></th>
+              <th><span class="sortingTh">轉換</span></th>
+              <th><span class="sortingTh">費用</span></th>
+              <th><span class="sortingTh">平均單次點擊出價</span></th>
+              <th><span class="sortingTh">曝光率<br>(絕對頂端)</span></th>
+              <th><span class="sortingTh">曝光率<br>(頂端)</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div class="adTitleGroup">
+                  <button type="button" class="adStatus on"></button>
+                  <span class="adTitle"><a>廣告群組名稱家從異兒備收樂登</a></span>
+                </div>
+              </td>
+              <td class="onlyIcon"><span class="ficon duplicate"><a class="showLightbox" id="adGroupDuplicate" title="複製"></a></span></td>
+              <td class="onlyIcon"><span class="ficon edit"><a class="trigPop" id="pop-adTitle" title="編輯"></a></span></td>
+              <td class="onlyIcon"><span class="ficon setting"><a class="showLightbox" id="thisAdSetting" title="設定"></a></span></td>
+              <td class="aCenter">
+                <span class="adStatusNow">已啟用</span>
+                <span class="adStatusInfo">說明文字市家國強界經度環機緊有他是兒功濟兒此下改</span>
+              </td>
+              <td>3,011</td>
+              <td>98</td>
+              <td>3.25%</td>
+              <td>4</td>
+              <td>$780.86</td>
+              <td>$7.97</td>
+              <td>1.92%</td>
+              <td>30.77%</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="adTitleGroup">
+                  <button type="button" class="adStatus off"></button>
+                  <span class="adTitle"><a>以整委然而第管賽行商</a></span>
+                </div>
+              </td>
+              <td class="onlyIcon"><span class="ficon duplicate"><a class="showLightbox" id="adGroupDuplicate" title="複製"></a></span></td>
+              <td class="onlyIcon"><span class="ficon edit"><a class="trigPop" id="pop-adTitle" title="編輯"></a></span></td>
+              <td class="onlyIcon"><span class="ficon setting"><a class="showLightbox" id="thisAdSetting" title="設定"></a></span></td>
+              <td class="aCenter">
+                <span class="adStatusNow">已暫停</span>
+                <span class="adStatusInfo">已暫停所有廣告群組</span>
+                <!-- 其他狀態說明文字
+                <span class="adStatusInfo">所有廣告都已暫停</span>
+                <span class="adStatusInfo">大部分的廣告正在審核中</span>
+                <span class="adStatusInfo">缺少開發客戶表單額外資訊</span>
+                -->
+              </td>
+              <td>63</td>
+              <td>2</td>
+              <td>3.17%</td>
+              <td>0</td>
+              <td>$17.3</td>
+              <td>$8.65</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="adTitleGroup">
+                  <button type="button" class="adStatus off"></button>
+                  <span class="adTitle"><a>家風有黃都到界</a></span>
+                </div>
+              </td>
+              <td class="onlyIcon"><span class="ficon duplicate"><a class="showLightbox" id="adGroupDuplicate" title="複製"></a></span></td>
+              <td class="onlyIcon"><span class="ficon edit"><a class="trigPop" id="pop-adTitle" title="編輯"></a></span></td>
+              <td class="onlyIcon"><span class="ficon setting"><a class="showLightbox" id="thisAdSetting" title="設定"></a></span></td>
+              <td class="aCenter">
+                <span class="adStatusNow">已暫停</span>
+                <span class="adStatusInfo">缺少開發客戶表單額外資訊</span>
+              </td>
+              <td>2,830</td>
+              <td>43</td>
+              <td>1.52%</td>
+              <td>5</td>
+              <td>$689.71</td>
+              <td>$16.04</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+
+        </table>
+      </section>
+
+      <!------------------------------------------------------------>
+      <!-- 廣告群組：popup／燈箱  ---------------------------------->
+      <!------------------------------------------------------------>
+
+      <!--  Popup：改變廣告群組狀態 -->
+      <section class="adStatusSelect">
+        <ul>
+          <li class="trigPop" id="pop-adStatusChanged"><span class="adStatus on"></span>啟用</li>
+          <li class="trigPop" id="pop-adStatusChanged"><span class="adStatus off"></span>暫停</li>
+          <li class="trigPop" id="pop-adRemoveConfirm"><span class="adStatus removed"></span>移除</li>
+        </ul>
+        <button type="button">離開</button>
+      </section>
+
+      <!-- 訊息燈箱：廣告群組狀態變更已儲存 -->
+      <section class="popMsg" id="adStatusChanged">
+        <div class="popBody">
+          <p>變更已儲存</p>
+        </div>
+        <div class="btnDv">
+          <button type="button" class="ok closePop">Ok</button>
+        </div>
+      </section>
+
+      <!-- 訊息燈箱：廣告群組狀態變更：確定要永久移除嗎？-->
+      <section class="popMsg" id="adRemoveConfirm">
+        <h3>確定要永久移除這個廣告群組嗎？ </h3>
+        <div class="popBody">
+          <p>廣告群組移除後就無法重新啟用。您可以暫停廣告群組來停止累積新費用，而不需將其移除，暫停的廣告群組隨時可重新啟用。</p>
+        </div>
+        <div class="btnDv">
+          <input type="button" value="確定移除" class="confirm closePop">
+          <input type="button" value="取消" class="closePop">
+        </div>
+      </section>
+
+      <!-- 簡易編輯燈箱：編輯廣告群組名稱 -->
+      <section class="popMsg" id="adTitle">
+        <div class="popBody">
+          <h3>編輯廣告群組名稱</h3>
+          <input class="fullWidth" type="text" value="廣告群組名稱家從異兒備收樂登">
+        </div>
+        <div class="btnDv">
+          <input type="button" value="儲存" class="confirm closePop">
+          <input type="reset" value="取消" class="closePop">
+        </div>
+      </section>
+
+      <!-- 燈箱：廣告群組設定 -->
+      <section class="lightbox thisAdSetting">
+        <button type="button" title="關閉燈箱" class="closeThis hideLightbox"></button>
+        <div class="head">
+          <h3>設定</h3>
+        </div>
+        <section class="adSettingThis">
+          <ul class="adTypeScore">
+            <li>狀態：<em>符合資格</em></li>
+            <li>類型：<em>標準</em></li>
+          </ul>
+
+          <!-- 廣告群組名稱 -->
+          <div class="fieldSet">
+            <div class="legend">廣告群組名稱</div>
+            <div class="settingNow">貿協</div>
+            <div class="changeSetting">
+              <input type="text" class="fullWidth" value="貿協">
+              <p class="warning" style="display: block;">請填寫廣告群組名稱</p>
+              <div class="btnDv">
+                <input type="submit" value="儲存">
+                <input type="reset" value="取消">
+              </div>
+            </div>
+          </div>
+
+          <!-- 廣告群組狀態 -->
+          <div class="fieldSet">
+            <div class="legend">廣告群組狀態</div>
+            <div class="settingNow">已啟用</div>
+            <div class="changeSetting">
+              <select name="" id="" class="halfWidth">
+                <option selected>啟用</option>
+                <option>暫停</option>
+                <option>移除</option>
+              </select>
+              <p class="warning" style="display: block;">請設定廣告群組狀態</p>
+              <div class="btnDv">
+                <input type="submit" value="儲存">
+                <input type="reset" value="取消">
+              </div>
+            </div>
+          </div>
+
+          <!-- 出價 -->
+          <div class="fieldSet">
+            <div class="legend">出價</div>
+            <div class="settingNow">
+              最高單次點擊出價
+              <!-- 目標單次轉換出價 -->
+            </div>
+            <div class="changeSetting">
+              <div class="label">最高單次點擊出價</div>
+              <input type="text" class="halfWidth" value="35">
+              <span class="inputUnit">NT</span>
+              <p class="warning" style="display: block;">請填寫金額</p>
+
+              <!-- 2023/10/26
+              <div class="flexBox">
+                <label for="bidPrice">最高單次點擊出價</label>
+                <div>
+                  <input id="bidPrice" type="text" class="fullWidth" placeholder="NT 35.00">
+                  <p class="warning" style="display: block;">請填寫金額</p>
+                </div>
+              </div> -->
+              <div class="btnDv">
+                <input type="submit" value="儲存">
+                <input type="reset" value="取消">
+              </div>
+            </div>
+          </div>
+
+          <!-- 出價（唯讀） -->
+          <div class="fieldSet">
+            <div class="legend">出價</div>
+            <div class="settingNow">
+              盡量爭取點擊
+              <!-- 目標曝光比重 -->
+            </div>
+          </div>
+
+          <!-- 廣告群組類型 -->
+          <div class="fieldSet">
+            <div class="legend">廣告群組類型</div>
+            <div class="settingNow">標準</div>
+          </div>
+
+        </section>
+        <!-- /.adSettingAll -->
+
+      </section>
+
+      <!-- 燈箱：複製廣告群組 -->
+      <section class="lightbox adGroupDuplicate">
+        <button type="button" title="關閉燈箱" class="closeThis hideLightbox"></button>
+        <div class="head">
+          <h3>選取要貼入廣告群組的廣告活動</h3>
+        </div>
+
+        <section class="adPicking">
+          <div class="flexBox2">
+            <div class="col">
+              <div class="searchTC">
+                <input type="text" placeholder="依名稱或廣告ID搜尋">
+                <button type="button">搜尋</button>
+              </div>
+    
+              <p class="heading"><em>178</em>個廣告活動</p>
+            </div>
+
+            <div class="col">
+              <p class="heading">已選取<em>2</em>項</p>
+              <span role="button" class="funcBtn delete">全部清除</span>
+            </div>
+          </div>
+
+          <div class="checkPool">
+            <div class="flexBox2">
+              <ul class="pool">
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox" checked>廣告活動1</label></li>
+                <li><label><span class="adStatusSign off" aria-label="已暫停"></span>
+                  <input type="checkbox" checked>廣告活動2</label></li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">事可育例帶來成一</label></li>
+                <li><label><span class="adStatusSign off" aria-label="已暫停"></span>
+                  <input type="checkbox">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</label></li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing</label></li>
+                <li><label><span class="adStatusSign off" aria-label="已暫停"></span>
+                  <input type="checkbox">資科方基投山得總向山是門少的中院去，食種的再與不下冷點應不不明給重場的可</label></li>
+                <li><label><span class="adStatusSign off" aria-label="已暫停"></span>
+                  <input type="checkbox">藝陸西春史道聞的</label></li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">在一已那兩最藝沒功起不園想</label></li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">高學相中機</label></li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">因位是不國遠說時這東程放</label></li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">今天覺好好的看聽到這溫暖起於友悠遊卡美一衣</label>
+                </li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">今天覺好好的看聽到這溫暖起於友悠遊卡美一衣</label>
+                </li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">今天覺好好的看聽到這溫暖起於友悠遊卡美一衣</label>
+                </li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">今天覺好好的看聽到這溫暖起於友悠遊卡美一衣</label>
+                </li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">今天覺好好的看聽到這溫暖起於友悠遊卡美一衣</label>
+                </li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">今天覺好好的看聽到這溫暖起於友悠遊卡美一衣</label>
+                </li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">今天覺好好的看聽到這溫暖起於友悠遊卡美一衣</label>
+                </li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">今天覺好好的看聽到這溫暖起於友悠遊卡美一衣</label>
+                </li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">今天覺好好的看聽到這溫暖起於友悠遊卡美一衣</label>
+                </li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">今天覺好好的看聽到這溫暖起於友悠遊卡美一衣</label>
+                </li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">今天覺好好的看聽到這溫暖起於友悠遊卡美一衣</label>
+                </li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">今天覺好好的看聽到這溫暖起於友悠遊卡美一衣</label>
+                </li>
+                <li><label><span class="adStatusSign on" aria-label="已啟用"></span>
+                  <input type="checkbox">... ... ...</label>
+                </li>
+              </ul>
+
+              <ul class="picked editable">
+                <li>
+                  <div class="title"><span class="adStatusSign on" aria-label="已啟用"></span>廣告活動1</div>
+                  <span class="ficon delete"><a title="刪除"></a></span>
+                </li>
+                <li>
+                  <div class="title"><span class="adStatusSign off" aria-label="已暫停"></span>廣告活動2</div>
+                  <span class="ficon delete"><a title="刪除"></a></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="btnDv">
+            <input type="button" class="confirm trigPop" id="pop-adDuplicatefirm" value="完成">
+            <input type="button" class="hideLightbox" value="取消">
+          </div>
+        </section>         
+      </section>
+
+      <!-- 訊息燈箱：廣告活動複製確認-->
+      <section class="popMsg" id="adDuplicatefirm">
+        <!-- <h3>確定要將1個廣告群組貼入3個廣告活動嗎？ </h3> -->
+        <div class="popBody">
+          <p>確定要將1個廣告群組貼入3個廣告活動嗎？</p>
+        </div>
+        <div class="btnDv">
+          <input type="button" value="確定" class="confirm closePop">
+          <input type="button" value="取消" class="closePop">
+        </div>
+      </section>
+
+
+
+
+
+
+      <section class="primeSection">
+        
+        <!-- 設定一個廣告群組 -->
+        <section class="adSetting">
+          <h3>設定一個廣告群組</h3>
+
+          <!-- 廣告群組名稱 -->
+          <div class="fieldSet expFolder">
+            <div class="legend expCtrl reveal">
+              <h4>廣告群組名稱</h4>
+            </div>
+            
+            <!-- 廣告群組名稱 -->
+            <div class="expContent">
+              <table class="formLayout">
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 廣告群組名稱</td>
+                  <td><input class="fullWidth" type="text" value="廣告群組名稱一二三"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <!-- 取得關鍵字 -->
+          <div class="fieldSet expFolder">
+            <div class="legend expCtrl reveal">
+              <h4>取得關鍵字</h4>
+            </div>
+            <div class="expContent">
+              <table class="formLayout">
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 貼上或選擇要更新的網址</td>
+                  <td>
+                    <div class="getUrlButtons">
+                      <input type="text" placeholder="請貼上或選擇要更新的網址">
+                      <button type="button">首頁</button>
+                      <button type="button">Abous Us</button>
+                      <button type="button">All Products</button>
+                      <button type="button" class="showLightbox" id="majorPdFromLib">單一產品頁</button>
+                    </div>                
+                  </td>
+                </tr>                  
+                <tr>
+                  <td>最近使用的網址</td>
+                  <td>
+                    <ul class="urlInUse">
+                      <li>https://www.taiwantrade.com/products/detail.html?productid=1775051
+                        <span class="btnLook"><a href="https://www.taiwantrade.com/products/detail.html?productid=1775051">Link</a></span>
+                        <span class="removeThis"></span>
+                      </li>
+                      <li>https://www.taiwantrade.com/products/detail.html?productid=1775052
+                        <span class="btnLook"><a href="https://www.taiwantrade.com/products/detail.html?productid=1775052">Link</a></span>
+                        <span class="removeThis"></span>
+                      </li>
+                      <li>https://www.taiwantrade.com/products/detail.html?productid=1775053
+                        <span class="btnLook"><a href="https://www.taiwantrade.com/products/detail.html?productid=1775053">Link</a></span>
+                        <span class="removeThis"></span>
+                      </li>
+                    </ul>
+                    <p class="note">輸入要更新的網址，透過AI產生建議關鍵字</p>
+                    <p class="note">一家廠商一個月限制產生5次的關鍵字建議（包含廣告標題與說明）</p>
+                    <div class="funcBtnGp">
+                      <ul>
+                        <li><a>取得關鍵字建議</a></li>
+                      </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>AI 選用關鍵字</td>
+                  <td>
+                    <textarea name="" id="">Taiwan trade
+Export products
+Business opportunities
+Global sourcing,Taiwanese manufacturers
+International trade,Trade platform
+B2B marketplace
+Product sourcing
+Trade show
+Manufacturing industry
+Supplier directory
+Cross-border trade,Trade services
+Import-export business
+Trade promotion,  E-commerce platform
+Business matchmaking
+Product catalog
+Trade negotiations
+Trade facilitation
+Business networking
+Trade finance
+Trade policy
+Trade intelligence</textarea>
+                  </td>
+                </tr>
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 請輸入關鍵字</td>
+                  <td>
+                    <textarea name="" id="">Fur ball box
+Taiwan trade
+Decorative accessory
+Creative gift
+Handcrafted item
+Unique design
+Gift box collection
+Adorable shape
+Exquisite details
+Fun novelty item
+Practical collectible
+Distinctive design
+Soft touch
+Casual style
+Gift selection
+Home decor
+Aesthetically pleasing and functional
+Cute accessory
+Playful gift
+Gift packaging
+Practical innovation
+Ingenious design
+Fine craftsmanship
+Custom-made item
+  Innovative gift</textarea>
+                    <p class="note">您可以使用半形逗號分隔關鍵字的方式，也可以一行輸入一個字的方式，請選擇一種輸入方式。字數限定30個半形字元以下。</p>
+              
+                  </td>
+                </tr>
+              </table>
+            </div>
+          
+    
+          </div>
+
+          <!-- 廣告 -->
+          <div class="fieldSet expFolder">
+            <div class="legend expCtrl reveal">
+              <h4>製作廣告</h4>
+            </div>
+            
+            <div class="expContent adComplex">
+              <p class="note">建議您為每個廣告群組建立一個廣告優異度至少為「佳」的回應式搜尋廣告，並確認廣告內容與關鍵字主題密切相關。</p>
+
+              <div class="flex3col">
+
+                <section class="hintsList">
+                  <div class="heading">操作提示</div>
+                  <div class="textSlide">
+                    <button type="button" class="prev"></button>
+                    <div class="slideBox">
+                      <div class="slideItem">試試看在廣告標題中加入更多關鍵字</div>
+                      <div class="slideItem">二試試看在廣告標題中加入更多關鍵字</div>
+                      <div class="slideItem">三試試試試試試試試看在廣告標題中加入更多關鍵字試試看在廣告標題中加入更多關鍵字</div>
+                      <div class="slideItem">四試試看在廣告標題中加入更多關鍵字</div>
+                    </div>
+                    <button type="button" class="next"></button>
+                  </div>
+                </section>
+
+                <section class="adStrength">
+                  <div class="heading">廣告優異度</div>
+                  <div class="percentageDonut" data-percentage="3"></div>
+                  <!-- 將百分比值（不要百分比符號）帶入 data-percentage -->
+                  <p>未完成</p>
+                  <!-- 其他優異度文字描述
+                    <p>未完成</p>
+                    <p>普通</p>
+                    <p>佳</p>
+                    <p>極佳</p> 
+                  -->
+                </section>
+
+                <section class="completions">
+                  <div class="heading">檢測提案</div>
+                  <ul>
+                    <!-- <li class="none">新增廣告標題</li>
+                    <li class="none">加入熱門關鍵字</li>
+                    <li class="none">建立與眾不同的廣告標題</li>
+                    <li class="none">建立與眾不同的說明</li> -->
+
+<li class="done">加入更多廣告標題</li>
+<li class="partial">在廣告標題中加入熱門關鍵字</li>
+<li class="none">讓您的廣告標題更有特色</li>
+<li class="none">讓您的說明更有特色</li>
+                  </ul>
+                </section>
+              </div>
+
+              <div class="flex2col">
+                <div class="leftCol">
+
+                  <!-- 最終到達網址 -->
+                  <section class="adSideBlock expFolder">
+                    <div class="legend expCtrl reveal">
+                      <div class="heading"><abbr title="必填欄位" class="required">*</abbr> 最終到達網址</div>
+                    </div>
+                    <div class="expContent">
+                      <div class="urlInUse">
+                        <div class="label">最近使用的網址</div>
+                        <div class="url">https://www.taiwantrade.com/products/detail.html?productid=1775051</div>
+                      </div>
+                      <div class="getUrlButtons">
+                        <input type="text" placeholder="請貼上或選擇要更新的網址">
+                        <button type="button">首頁</button>
+                        <button type="button">Abous Us</button>
+                        <button type="button">All Products</button>
+                        <button type="button" class="showLightbox" id="majorPdFromLib">單一產品頁</button>
+                      </div>  
+                    </div>
+                  </section>
+
+                  <!-- 顯示路徑 -->
+                  <section class="adSideBlock expFolder">
+                    <div class="legend expCtrl reveal">
+                      <div class="heading">顯示路徑 <span class="icon_i"></span></div>
+                    </div>
+                    <div class="expContent">
+                      <div>www.example.com</div>
+                      <div class="twoInputSet">
+                        <input type="text">
+                        <div class="textCount"><em>0</em>/15</div>
+                        <input type="text">
+                        <div class="textCount"><em>0</em>/15</div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- 廣告標題 -->
+                  <section class="adSideBlock expFolder">
+                    <div class="legend expCtrl reveal">
+                      <div class="heading"><abbr title="必填欄位" class="required">*</abbr> 廣告標題</div>
+                    </div>
+                    <div class="expContent">
+                      <span role="button" class="funcBtn add">新增</span>
+                      <p class="note">最少3組、最多15組標題</p>
+                      <p>語法：{keyword:預設文字}</p>
+                      <p>自動將廣告改為使用曾帶出廣告的關鍵字</p>
+                      <div class="oneRow">
+                        <input type="text" placeholder="輸入'{' 試試" class="useKeywordSyntax">
+                        <div class="adKeywordInput">
+                          <p class="hint">關鍵字插入，插入可觸發您廣告的關鍵字</p>
+                          <label class="defaultText" >
+                            預設文字
+                            <input type="text" value="trade">
+                          </label>
+                          <div class="optionPool">
+                            <label><input type="radio" name="aaa">標題字母大寫</label>
+                            <label><input type="radio" name="aaa">句首字母大寫</label>
+                            <label><input type="radio" name="aaa">小寫</label>
+                          </div>
+                          <div class="btnDv">
+                            <input type="button" class="confirm" value="套用">
+                            <input type="reset" value="取消">
+                          </div>
+                        </div>
+                        <div class="textCount"><em>0</em>/30</div>
+                      </div>
+                      <!-- 模擬使用關鍵字特殊語法 -->
+                      <script>
+                        var _adKeywordInput = $('.adKeywordInput');
+                        $('.useKeywordSyntax').on('keyup', function(e){
+                          if ( e.key === "{") {
+                            _adKeywordInput.stop().slideDown(200);
+                          }
+                        })
+                        _adKeywordInput.find('input[type="reset"]').click( function(){
+                          _adKeywordInput.stop().slideUp(200);
+                        })
+                      </script>
+
+                      <div class="oneRow">
+                        <input type="text" placeholder="標題">
+                        <div class="textCount"><em>0</em>/30</div>
+                      </div>
+                      <div class="oneRow">
+                        <input type="text" placeholder="標題">
+                        <div class="textCount"><em>0</em>/30</div>
+                        <p class="warning" style="display: block;">有重複的廣告標題，請輸入不同的廣告標題</p>
+                      </div>
+                      <div class="oneRow">
+                        <input type="text" placeholder="標題">
+                        <div class="textCount"><em>0</em>/30</div>
+                        <p class="warning">有重複的廣告標題，請輸入不同的廣告標題</p>
+                      </div>
+                      <div class="oneRow">
+                        <input type="text" placeholder="標題">
+                        <div class="textCount"><em>0</em>/30</div>
+                      </div>
+                      <div class="oneRow">
+                        <input type="text" placeholder="標題">
+                        <div class="textCount"><em>0</em>/30</div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- 廣告說明 -->
+                  <section class="adSideBlock expFolder">
+                    <div class="legend expCtrl reveal">
+                      <div class="heading"><abbr title="必填欄位" class="required">*</abbr> 廣告說明</div>
+                    </div>
+                    <div class="expContent">
+                      <span role="button" class="funcBtn add">新增</span>
+                      <p class="note">最少2組、最多4組說明</p>
+                      <div class="oneRow">
+                        <textarea>Simplify trade with our e-commerce platform. Connect, sell,  succeed!</textarea>
+                        <div class="textCount"><em>63</em>/90</div>
+                      </div>
+                      <div class="oneRow">
+                        <textarea></textarea>
+                        <div class="textCount"><em>0</em>/90</div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <!-- 其他商家資訊說明 -->
+                  <section class="adSideBlock expFolder">
+                    <div class="legend expCtrl reveal">
+                      <div class="heading">
+                        其他商家資訊說明
+                        <span class="icon_i">
+                      </div>
+                    </div>
+                    <div class="expContent">
+                      <span role="button" class="funcBtn add showSlideinBox"  data-id="sb04">新增</span>
+
+                      <div class="selectAndEdit">
+                        <div class="selectedList">
+                          <ul>
+                            <li>
+                              <span class="title">摘要文字最多２５個字摘要文字摘要文字摘要文字摘要文</span>
+                              <span class="ficon edit trigPop" id="pop-adFirmDescrip"><a title="編輯" ></a></span>
+                              <span class="ficon delete"><a title="刪除"></a></span>
+                            </li>
+                            <li>
+                              <span class="title">好想有今年，再麻煩的情地其實很</span>
+                              <span class="ficon edit trigPop" id="pop-adFirmDescrip"><a title="編輯" ></a></span>
+                              <span class="ficon delete"><a title="刪除"></a></span>
+                            </li>
+                            
+                            <li>
+                              <span class="title">真的會時運人一暗角色</span>
+                              <span class="ficon edit trigPop" id="pop-adFirmDescrip"><a title="編輯" ></a></span>
+                              <span class="ficon delete"><a title="刪除"></a></span>
+                            </li>
+                            <li>
+                              <span class="title">ㄧ二三四五六七八九十ㄧ二三四五六七八九十ㄧ二三四五</span>
+                              <span class="ficon edit trigPop" id="pop-adFirmDescrip"><a title="編輯" ></a></span>
+                              <span class="ficon delete"><a title="刪除"></a></span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="slideDownChecking">
+                          <div class="checkedItems">
+                            <span class="placeholder">請選擇</span>
+                            <button type="button" class="slideCtrl">展開／收合</button></div>
+                            <div class="slideArea">
+                              <div class="optionGroup">
+                                <label><input type="checkbox" checked>摘要文字摘要文字摘要文字摘要文字摘要文字摘要文字。</label>
+                                <label><input type="checkbox" checked>好想有今年，再麻煩的情地其實很</label>
+                                <label><input type="checkbox" checked>真的會時運人一暗角色</label>
+                                <label><input type="checkbox" checked>ㄧ二三四五六七八九十ㄧ二三四五六七八九十ㄧ二三四五</label>
+                                <label><input type="checkbox">其他摘要文字摘要文字</label>
+                                <label><input type="checkbox">其他摘要文字摘要文字</label>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </section>
+
+                  <!-- （＊由右滑入的編輯視窗）新增「其他商家資訊說明」*** 2023/10 *** -->
+                  <section class="slideinBox" data-id="sb04">
+                    <button type="button" title="關閉" class="closeThis hideBox"></button>
+                    <div class="head"><h3>新增其他商家資訊說明</h3></div>
+                    <section class="slideinForm medium">
+                      <p class="note">請在這個廣告活動中加入說明。您在這裡新增的說明均可用於多個廣告活動。</p>
+                      <form action="">
+                        <div class="oneRow">
+                          <input class="fullWidth" type="text" placeholder="請輸入摘要文字">
+                          <div class="textCount"><em>0</em>/25</div>
+                        </div>
+                        <div class="oneRow">
+                          <input class="fullWidth" type="text" placeholder="請輸入摘要文字">
+                          <div class="textCount"><em>0</em>/25</div>
+                        </div>
+                        <div class="oneRow">
+                          <input class="fullWidth" type="text" placeholder="請輸入摘要文字">
+                          <div class="textCount"><em>0</em>/25</div>
+                        </div>
+                        <div class="oneRow">
+                          <input class="fullWidth" type="text" placeholder="請輸入摘要文字">
+                          <div class="textCount"><em>0</em>/25</div>
+                        </div>
+                        <span role="button" class="funcBtn add">新增摘要文字</span>
+
+                        <div class="btnDv">
+                          <input type="button" class="confirm" value="儲存">
+                          <input type="button" class="hideBox" value="取消">
+                          <!-- 加 class="hideBox" 用以關閉滑入燈箱 -->
+                        </div>
+                      </form>
+                    </section>
+                  </section>
+
+                  <!-- 簡易編輯燈箱：編輯「其他商家資訊摘要文字」*** 2023/10 *** -->
+                  <section class="popMsg" id="adFirmDescrip">
+                    <div class="popBody">
+                      <h3>編輯商家資訊摘要文字</h3>
+                      <input class="fullWidth" type="text" value="摘要文字最多２５個字摘要文字摘要文字摘要文字">
+                      <div class="textCount"><em>22</em>/25</div>
+                    </div>
+                    <div class="btnDv">
+                      <input type="button" value="儲存" class="confirm">
+                      <input type="reset" value="取消" class="closePop">
+                    </div>
+                  </section>
+
+                  <!-- 網站連結 -->
+                  <section class="adSideBlock expFolder">
+                    <div class="legend expCtrl reveal">
+                      <div class="heading">網站連結 <span class="icon_i"></div>
+                    </div>
+                    <div class="expContent">
+                      <span role="button" class="funcBtn add showSlideinBox" data-id="sb01">新增</span>
+                      <p class="note">請加入至少4組網站連結</p>
+
+                      <div class="selectAndEdit">
+                        <div class="selectedList">
+                          <ul>
+                            <li>
+                              <span class="title">網站連結標題</span>
+                              <span class="ficon edit"><a title="編輯"></a></span>
+                              <span class="ficon delete"><a title="刪除"></a></span>
+                            </li>
+                            <li>
+                              <span class="title">網站連結標題二</span>
+                              <span class="ficon edit"><a title="編輯"></a></span>
+                              <span class="ficon delete"><a title="刪除"></a></span>
+                            </li>
+                            <li>
+                              <span class="title">網站連結標題要以依保歡非不錢友色三</span>
+                              <span class="ficon edit"><a title="編輯"></a></span>
+                              <span class="ficon delete"><a title="刪除"></a></span>
+                            </li>
+                            <li>
+                              <span class="title">網站連結標題上看言四</span>
+                              <span class="ficon edit"><a title="編輯"></a></span>
+                              <span class="ficon delete"><a title="刪除"></a></span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="slideDownChecking">
+                          <div class="checkedItems">
+                            <span class="placeholder">請選擇</span>
+                            <button type="button" class="slideCtrl">展開／收合</button></div>
+                          <div class="slideArea">
+                            <div class="optionGroup">
+                              <label><input type="checkbox" checked>網站連結標題</label>
+                              <label><input type="checkbox" checked>網站連結標題二</label>
+                              <label><input type="checkbox" checked>網站連結標題要以依保歡非不錢友色三</label>
+                              <label><input type="checkbox" checked>網站連結標題上看言四</label>
+                              <label><input type="checkbox">主國指的組文外以度應度</label>
+                              <label><input type="checkbox">項慢術文庭知一深過相勢好的一</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </section>
+
+                  <!-- （＊由右滑入的編輯視窗）新增網站連結 -->
+                  <section class="slideinBox" data-id="sb01">
+                    <button type="button" title="關閉" class="closeThis hideBox"></button>
+                    <div class="head">
+                      <h3>新增網站連結</h3>
+                    </div>
+                    <section class="slideinForm">
+                      <form action="">
+                        <fieldset>
+                          <legend>網站連結 1</legend>
+                          <table class="formLayout">
+                            <tbody>
+                              <tr>
+                                <td><abbr title="必填欄位" class="required">*</abbr>網站連結文字</td>
+                                <td>
+                                  <input type="text" placeholder="網站連結文字（必填）">
+                                  <div class="textCount"><em>0</em>/25</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>說明行1</td>
+                                <td>
+                                  <input type="text" placeholder="說明行1（建議填寫）">
+                                  <div class="textCount"><em>0</em>/35</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>說明行2</td>
+                                <td>
+                                  <input type="text" placeholder="說明行2（建議填寫）">
+                                  <div class="textCount"><em>0</em>/35</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>最終到達網址</td>
+                                <td>
+                                  <div class="urlInUse">
+                                    <span class="label">最近使用的網址</span>
+                                    <div class="url">https://www.taiwantrade.com/products/detail.html?productid=1775051</div>
+                                  </div>
+                                  <div class="getUrlButtons">
+                                    <input type="text" placeholder="請貼上或選擇要更新的網址">
+                                    <button type="button">首頁</button>
+                                    <button type="button">Abous Us</button>
+                                    <button type="button">All Products</button>
+                                    <button type="button" class="showLightbox" id="majorPdFromLib">單一產品頁</button>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                        </fieldset>
+                        <fieldset>
+                          <legend>網站連結 2</legend>
+                          <table class="formLayout">
+                            <tbody>
+                              <tr>
+                                <td><abbr title="必填欄位" class="required">*</abbr>網站連結文字</td>
+                                <td>
+                                  <input type="text" placeholder="網站連結文字（必填）">
+                                  <div class="textCount"><em>0</em>/25</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>說明行1</td>
+                                <td>
+                                  <input type="text" placeholder="說明行1（建議填寫）">
+                                  <div class="textCount"><em>0</em>/35</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>說明行2</td>
+                                <td>
+                                  <input type="text" placeholder="說明行2（建議填寫）">
+                                  <div class="textCount"><em>0</em>/35</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>最終到達網址</td>
+                                <td>
+                                  <div class="urlInUse">
+                                    <span class="label">最近使用的網址</span>
+                                    <div class="url">https://www.taiwantrade.com/products/detail.html?productid=987654321</div>
+                                  </div>
+                                  <div class="getUrlButtons">
+                                    <input type="text" placeholder="請貼上或選擇要更新的網址">
+                                    <button type="button">首頁</button>
+                                    <button type="button">Abous Us</button>
+                                    <button type="button">All Products</button>
+                                    <button type="button" class="showLightbox" id="majorPdFromLib">單一產品頁</button>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          
+                        </fieldset>
+                        <fieldset>
+                          <legend>網站連結 3</legend>
+                          <table class="formLayout">
+                            <tbody>
+                              <tr>
+                                <td><abbr title="必填欄位" class="required">*</abbr>網站連結文字</td>
+                                <td>
+                                  <input type="text" placeholder="網站連結文字（必填）">
+                                  <div class="textCount"><em>0</em>/25</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>說明行1</td>
+                                <td>
+                                  <input type="text" placeholder="說明行1（建議填寫）">
+                                  <div class="textCount"><em>0</em>/35</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>說明行2</td>
+                                <td>
+                                  <input type="text" placeholder="說明行2（建議填寫）">
+                                  <div class="textCount"><em>0</em>/35</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>最終到達網址</td>
+                                <td>
+                                  <div class="urlInUse">
+                                    <span class="label">最近使用的網址</span>
+                                    <div class="url">https://www.taiwantrade.com/products/detail.html?productid=1775051</div>
+                                  </div>
+                                  <div class="getUrlButtons">
+                                    <input type="text" placeholder="請貼上或選擇要更新的網址">
+                                    <button type="button">首頁</button>
+                                    <button type="button">Abous Us</button>
+                                    <button type="button">All Products</button>
+                                    <button type="button" class="showLightbox" id="majorPdFromLib">單一產品頁</button>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          
+                        </fieldset>
+                        <fieldset>
+                          <legend>網站連結 4</legend>
+                          <table class="formLayout">
+                            <tbody>
+                              <tr>
+                                <td><abbr title="必填欄位" class="required">*</abbr>網站連結文字</td>
+                                <td>
+                                  <input type="text" placeholder="網站連結文字（必填）">
+                                  <div class="textCount"><em>0</em>/25</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>說明行1</td>
+                                <td>
+                                  <input type="text" placeholder="說明行1（建議填寫）">
+                                  <div class="textCount"><em>0</em>/35</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>說明行2</td>
+                                <td>
+                                  <input type="text" placeholder="說明行2（建議填寫）">
+                                  <div class="textCount"><em>0</em>/35</div>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>最終到達網址</td>
+                                <td>
+                                  <div class="urlInUse">
+                                    <span class="label">最近使用的網址</span>
+                                    <div class="url">https://www.taiwantrade.com/products/detail.html?productid=1775051</div>
+                                  </div>
+                                  <div class="getUrlButtons">
+                                    <input type="text" placeholder="請貼上或選擇要更新的網址">
+                                    <button type="button">首頁</button>
+                                    <button type="button">Abous Us</button>
+                                    <button type="button">All Products</button>
+                                    <button type="button" class="showLightbox" id="majorPdFromLib">單一產品頁</button>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          
+                        </fieldset>
+
+                        <span role="button" class="funcBtn add">加入網站連結</span>
+                        
+                        <div class="btnDv">
+                          <input type="button" class="confirm" value="儲存">
+                          <input type="button" class="hideBox" value="取消">
+                          <!-- 加 class="hideBox" 用以關閉滑入燈箱 -->
+                        </div>
+                      </form>
+
+                    </section>
+                    <!-- /.slideinForm -->
+
+                  </section>
+                  
+                </div>
+                <!-- /.leftCol -->
+
+                <div class="rightCol">
+
+                  <!-- 選10組關鍵字詞 -->
+                  <section class="adKeywordsPicking">
+
+                    <section class="tenSets">
+                      <ul>
+                        <li>Taiwan trade<span class="removeThis"></span></li>
+                        <li>zlobal sourcing <span class="removeThis"></span></li>
+                        <li>Supplier directory <span class="removeThis"></span></li>
+                        <li>Business opportunities <span class="removeThis"></span></li>
+                        <li>2023 <span class="removeThis"></span></li>
+                        <li>Product sourcing <span class="removeThis"></span></li>
+                        <li>Manufacturing industry <span class="removeThis"></span></li>
+                        <li>Trade platform <span class="removeThis"></span></li>
+                        <li>Export products <span class="removeThis"></span></li>
+                        <li>dreall <span class="removeThis"></span></li>
+                      </ul>
+                    </section>
+                    
+                    <p class="note">以下請挑選10組</p>
+                    <span class="funcBtn file showLightbox" id="keywordsList">關鍵字企劃參考</span>
+
+                    <div class="keywordSources">
+                      <section class="eachSource">
+                        <div class="heading">AI關鍵字</div>
+                        <div class="checkList">
+                          <label><input type="checkbox">Taiwan trade</label>
+                          <label><input type="checkbox">Export products</label>
+                          <label><input type="checkbox">Business opportunities</label>
+                          <label><input type="checkbox">zlobal sourcing</label>
+                          <label><input type="checkbox">ese manufacturers</label>
+                          <label><input type="checkbox">International trade</label>
+                          <label><input type="checkbox">Trade platform</label>
+                          <label><input type="checkbox">B2B marketplace</label>
+                          <label><input type="checkbox">Product sourcing</label>
+                          <label><input type="checkbox">Trade show</label>
+                          <label><input type="checkbox">Manufacturing industry</label>
+                          <label><input type="checkbox">Supplier directory</label>
+                          <label><input type="checkbox">Cross-border trade</label>
+                          <label><input type="checkbox">Trade services</label>
+                          <label><input type="checkbox">Import-export business</label>
+                          <label><input type="checkbox">Trade promotionz</label>
+                          <label><input type="checkbox">E-commerce platform</label>
+                          <label><input type="checkbox">Business matchmaking</label>
+                          <label><input type="checkbox">Product catalog</label>
+                          <label><input type="checkbox">Trade negotiations</label>
+                          <label><input type="checkbox">Trade facilitation</label>
+                          <label><input type="checkbox">Business networking</label>
+                          <label><input type="checkbox">Trade finance</label>
+                          <label><input type="checkbox">Trade policy</label>
+                          <label><input type="checkbox">Trade intelligence</label>
+                        </div>
+                      </section>
+                      <section class="eachSource">
+                        <div class="heading">輸入的關鍵字</div>
+                        <div class="checkList">
+                          <label><input type="checkbox">Taiwan trade</label>
+                          <label><input type="checkbox">Export products</label>
+                          <label><input type="checkbox">Business opportunities</label>
+                          <label><input type="checkbox">zlobal sourcing</label>
+                          <label><input type="checkbox">Taiwanese manufacturers</label>
+                          <label><input type="checkbox">International trade</label>
+                          <label><input type="checkbox">Trade platform</label>
+                          <label><input type="checkbox">B2B marketplace</label>
+                          <label><input type="checkbox">Product sourcing</label>
+                          <label><input type="checkbox">Trade show</label>
+                          <label><input type="checkbox">Manufacturing industry</label>
+                          <label><input type="checkbox">Supplier directory</label>
+                          <label><input type="checkbox">Cross-border trade</label>
+                          <label><input type="checkbox">Trade services</label>
+                          <label><input type="checkbox">Import-export business</label>
+                          <label><input type="checkbox">Trade promotionz</label>
+                          <label><input type="checkbox">E-commerce platform</label>
+                          <label><input type="checkbox">Business matchmaking</label>
+                          <label><input type="checkbox">Product catalog</label>
+                          <label><input type="checkbox">Trade negotiations</label>
+                          <label><input type="checkbox">Trade facilitation</label>
+                          <label><input type="checkbox">Business networking</label>
+                          <label><input type="checkbox">Trade finance</label>
+                          <label><input type="checkbox">Trade policy</label>
+                          <label><input type="checkbox">Trade intelligence</label>
+                        </div>
+                      </section>
+                      <section class="eachSource">
+                        <div class="heading">買主熱搜詞</div>
+                        <div class="checkList">
+                          <label><input type="checkbox">taiwan</label>
+                          <label><input type="checkbox">test</label>
+                          <label><input type="checkbox">memo</label>
+                          <label><input type="checkbox">dreall</label>
+                          <label><input type="checkbox">free</label>
+                          <label><input type="checkbox">2023</label>
+                          <label><input type="checkbox">Taiwantrade</label>
+                          <label><input type="checkbox">cable tie</label>
+                        </div>
+                      </section>
+
+                    </div>
+
+                  </section>
+
+                  <!-- AI 建議的標題 & 說明-->
+                  <section class="aiSuggestions">
+                    <p class="note">挑選的10組關鍵字將產生以下AI建議的標題與說明，請點選產生15組標題與5組說明</p>
+                    <p class="note">一家廠商一個月限制產生5次的關鍵字建議（包含廣告標題與說明）</p>
+                    <p class="note">請點選以下欄位，系統將AI建議的標題、說明，帶至左側廣告標題、廣告說明</p>
+
+                    <span class="funcBtn new">產生 15 組標題與 5 組說明</span>
+
+                    <div class="flexBox">
+                      <section class="sugTitles">
+                        <div class="heading">
+                          <em>AI 建議的標題</em>
+                        </div>
+                        <ul>
+                          <li>Global E-marketplace</li>
+                          <li>Perfect Matches Made Easy</li>
+                          <li>Diverse Catalog Selection</li>
+                          <li>Mastering Trade Talks</li>
+                          <li>Smooth Logistics Support</li>
+                          <li>Seamless Online Trading</li>
+                          <li>Tailored Business Connections</li>
+                          <li>Vast Product Range</li>
+                          <li>Negotiate with Confidence</li>
+                          <li>Effortless Trade Assistance</li>
+                          <li>Digital Commerce Hub</li>
+                          <li>Customized Matchmaking Solutions</li>
+                          <li>Extensive Product Listings</li>
+                          <li>Trade Agreement Experts</li>
+                          <li>Efficient Supply Chain Aid</li>
+                        </ul>
+                      </section>
+
+                      <section class="sugDescriptions">
+                        <div class="heading">
+                          <em>AI 建議的說明</em>
+                        </div>
+                        <ul>
+                          <li>Simplify trade with our e-commerce platform. Connect, sell, succeed!</li>
+                          <li>Find your perfect match. Our business matchmaking sparks success.</li>
+                          <li>Explore our catalog for a world of products. Shop smart, shop easy.</li>
+                          <li>Navigate negotiations with expertise. Secure deals, unlock growth.</li>
+                          <li>Streamline trade processes. Experience seamless facilitation today.</li>
+                        </ul>
+                      </section>
+                    </div>
+
+                    <!-- 提案版本 -->
+                    <section class="sugRecords">
+                      <div class="heading">
+                        <h5>提案版本</h5>
+                      </div>
+                      <div class="listTable">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th>版本名稱</th>
+                              <th>時間</th>
+                              <th>動作</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>標題、說明提案【版本3】</td>
+                              <td>2023/6/15 17:38</td>
+                              <td>
+                                <span role="button" class="funcBtn file showLightbox" id="aiSugLog">查看</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>標題、說明提案【版本2】</td>
+                              <td>2023/6/15 17:38</td>
+                              <td><span role="button" class="funcBtn file showLightbox" id="aiSugLog">查看</span></td>
+                            </tr>
+                            <tr>
+                              <td>標題、說明提案【版本1】</td>
+                              <td>2023/6/15 17:38</td>
+                              <td><span role="button" class="funcBtn file showLightbox" id="aiSugLog">查看</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <p class="note">只紀錄最近三筆</p>
+                    </section>
+                  </section>
+                  
+                  <!-- 燈箱：查看提案版本內容 -->
+                  <section class="lightbox aiSugLog">
+                    <button type="button" title="關閉燈箱" class="closeThis hideLightbox"></button>
+                    <div class="head">
+                      <h3>標題提案【版本3】</h3>
+                    </div>
+
+                    <div class="flexBox">
+                      <section class="sugTitles">
+                        <div class="heading">AI 建議的標題</div>
+                        <ul>
+                          <li>Global E-marketplace</li>
+                          <li>Perfect Matches Made Easy</li>
+                          <li>Diverse Catalog Selection</li>
+                          <li>Mastering Trade Talks</li>
+                          <li>Smooth Logistics Support</li>
+                          <li>Seamless Online Trading</li>
+                          <li>Tailored Business Connections</li>
+                          <li>Vast Product Range</li>
+                          <li>Negotiate with Confidence</li>
+                          <li>Effortless Trade Assistance</li>
+                          <li>Digital Commerce Hub</li>
+                          <li>Customized Matchmaking Solutions</li>
+                          <li>Extensive Product Listings</li>
+                          <li>Trade Agreement Experts</li>
+                          <li>Efficient Supply Chain Aid</li>
+                        </ul>
+                      </section>
+
+                      <section class="sugDescriptions">
+                        <div class="heading">AI 建議的說明</div>
+                        <ul>
+                          <li>Simplify trade with our e-commerce platform. Connect, sell, succeed!</li>
+                          <li>Find your perfect match. Our business matchmaking sparks success.</li>
+                          <li>Explore our catalog for a world of products. Shop smart, shop easy.</li>
+                          <li>Navigate negotiations with expertise. Secure deals, unlock growth.</li>
+                          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                          <li>Streamline trade processes. Experience seamless facilitation today.</li>
+                        </ul>
+                      </section>
+                    </div>
+                  </section>
+
+                </div>
+                <!-- /.rightCol -->
+
+              </div>
+              <!-- /.flex2col -->
+
+            </div>
+            <!-- /.adComplex -->
+
+          </div>
+          
+          <div class="btnDv">
+            <button type="button" class="trigPop confirm" id="pop-adGroupAdded">儲存並繼續</button>
+            <button type="button" class="trigPop" id="pop-ifExit">取消</button>
+          </div>
+        </section>
+
+      </section>
+
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+
+  <!----------------------------------------------------------------->
+  <!-- 燈箱 ***** 燈箱 ***** 燈箱 ***** 燈箱 ***** 燈箱 ***** 燈箱 -->
+  <!----------------------------------------------------------------->
+  
+  <!-- 燈箱：挑選產品型錄 -->
+  <section class="lightbox majorPdFromLib">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <div class="head">
+      <h3>挑選產品型錄</h3>
+    </div>
+    <section class="search toggleDrawer always hidden">
+      <h4 class="searchCaption">產品型錄查詢</h4>
+      <span class="toggleCtrl">查詢</span>
+      <div class="toggleArea">
+        <table class="formLayout">
+          <tr>
+            <td>產品名稱/產品型號</td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td>建立時間</td>
+            <td>
+              <div class="during">
+                <input type="date" placeholder="yyyy/mm/dd">
+                <span class="clearIcon"></span>
+                <input type="date" placeholder="yyyy/mm/dd">
+                <span class="clearIcon"></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>語系</td>
+            <td>
+              <div class="optionPool">
+                <label cid="42" class="isSelected disabled"><input type="checkbox">英文</label>
+                <label cid="41" class="isSelected disabled"><input type="checkbox">正中</label>
+                <label cid="43" class=""><input type="checkbox">日文</label>
+                <label cid="44" class=""><input type="checkbox">簡中</label>
+                <label cid="992" class=""><input type="checkbox">俄文</label>
+                <label cid="1699" class=""><input type="checkbox">西文</label>
+                <label cid="2124" class=""><input type="checkbox">葡文</label>
+                <label cid="2127" class=""><input type="checkbox">阿文</label>
+                <label cid="2129" class=""><input type="checkbox">印尼文</label>
+                <label cid="2382" class=""><input type="checkbox">德文</label>
+                <label cid="2383" class=""><input type="checkbox">法文</label>
+                <label cid="2384" class=""><input type="checkbox">越文</label>
+                <label cid="4085" class=""><input type="checkbox">泰文</label>
+                <label cid="6627" class=""><input type="checkbox">土文</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>自訂分類</td>
+            <td>
+              <div class="optionPool block scroll">
+                <label><input type="checkbox">自訂分類A</label>
+                <label class="cascade1"><input type="checkbox">自訂分類A-1</label>
+                <label class="cascade2"><input type="checkbox">自訂分類A-1-1</label>
+                <label><input type="checkbox">自訂分類B</label>
+                <label class="cascade1"><input type="checkbox">自訂分類B-1</label>
+                <label><input type="checkbox">自訂分類C</label>
+                <label><input type="checkbox">自訂分類D</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>狀態</td>
+            <td>
+              <div class="optionPool singleSelection">
+                <label><input type="radio" name="sss" checked>啟用且審核通過</label>
+                <label><input type="radio" name="sss">線上販售</label>
+                <label><input type="radio" name="sss">未線上販售</label>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="btnDv">
+          <input type="submit" value="查詢">
+          <input type="reset" value="清除">
+        </div>
+      </div>
+    </section>
+
+    <p class="hint">請選擇一則。</p>
+
+    <!-- <section class="page">
+      每頁顯示 <select name="perPage" id="perPage">
+        <option value="12">12</option>
+        <option value="40">40</option>
+        <option value="80">80</option>
+        <option value="999">全部</option>
+        </select> 筆
+    </section> -->
+
+    <section class="thumbnail checkingList">
+      <ul>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph_photo3.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="產品名稱">產品名稱產品名稱</li>
+            <li class="filename" title="產品型號">ABC123456</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph15.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="產品名稱">發現我也要麼突然真的是他不要他的年的距離本都最近有我笑著</li>
+            <li class="filename" title="產品型號">EDFG-99876564321-zyxtsrqpo</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph16.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="產品名稱">大概一些製題我自己的</li>
+            <li class="filename" title="產品型號">ABC123456</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph11.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="產品名稱">不是自己做得有</li>
+            <li class="filename" title="產品型號">ABC123456</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph12.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="產品名稱">那個時帶大家都車上認識的</li>
+            <li class="filename" title="產品型號">ABC123456</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph13.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="產品名稱">引商下也很棒為什麼</li>
+            <li class="filename" title="產品型號">ABC123456</li>
+          </ol>
+        </li>
+
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph01.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="產品名稱">現這家的了自己真的沒可愛愛</li>
+            <li class="filename" title="產品型號">ABC123456</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph03.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="產品名稱">公司的時候的話題沒什麼有這麼為了</li>
+            <li class="filename" title="產品型號">ABC123456</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph04.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="產品名稱">我門村民們著力我的</li>
+            <li class="filename" title="產品型號">ABC123456</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph05.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="產品名稱">人家面不過這這次也</li>
+            <li class="filename" title="產品型號">ABC123456</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph06.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="產品名稱">真的不就被這樣的</li>
+            <li class="filename" title="產品型號">ABC123456</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph08.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="產品名稱">他們的耳那小小的播突然覺之</li>
+            <li class="filename" title="產品型號">ABC123456</li>
+          </ol>
+        </li>
+      </ul>
+    </section>
+
+    <section class="page">
+      <div class="perPage">
+        每頁顯示 <select name="perPage" id="perPage">
+          <option value="12">12</option>
+          <option value="40">40</option>
+          <option value="80">80</option>
+          <option value="999">全部</option>
+        </select> 筆
+      </div>
+      <p>本頁顯示 <em>1</em> 到 <em>40</em> 筆，共有 <em>157</em> 筆</p>
+      <ul>
+        <li class="prev disabled"><a href="#">上一頁</a></li>
+        <li class="here"><a href="#">1</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">12</a></li>
+        <li class="next"><a href="#">下一頁</a></li>
+      </ul>
+    </section>
+
+    <div class="btnDv">
+      <input type="submit" class="hideLightbox" value="確定">
+      <input type="reset" class="hideLightbox" value="取消">
+    </div>
+
+  </section>
+
+  <!-- 燈箱：關鍵字企劃 -->
+  <section class="lightbox keywordsList">
+    <button type="button" title="關閉燈箱" class="closeThis hideLightbox"></button>
+    <button class="openNewWin" type="button" onclick="window.open('ad_keywordsTable_in_lightbox.html');">在新視窗開啟</button>
+    <iframe src="ad_keywordsTable_in_lightbox.html"></iframe>
+  </section>
+
+  <!-- 訊息燈箱：儲存並繼續-->
+  <section class="popMsg" id="adGroupAdded">
+    <h3>新的廣告群組已儲存</h3>
+    <div class="popBody">
+      <p>已經儲存「<strong>廣告群組名稱一二三</strong>」</p>
+    </div>
+    <div class="btnDv">
+      <button type="button" class="ok closePop">Ok</button>
+    </div>
+  </section>
+
+  <!-- 訊息燈箱：取消（離開）-->
+  <section class="popMsg" id="ifExit">
+    <h3>確定要離開此頁嗎？</h3>
+    <div class="popBody">
+      <p>如果現在離開，系統將不會儲存您的廣告群組。如要儲存變更，請完成廣告群組建立程序。</p>
+    </div>
+    <div class="btnDv">
+      <button type="button" class="ok closePop">留下</button>
+      <button type="button" class="ok closePop">離開</button>
+    </div>
+  </section>
+
+</body>
+
+</html>

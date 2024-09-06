@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-產品型錄設定（內容管理）</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/dropzone.css">
+
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="#not_a_link">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+          </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="javascript:void(0);">3 Items</a>
+          <div class="top-cart">
+            <button class="closeCart" type="button">close</button>
+            <span class="viewcart">view cart &amp; check out</span>
+            <div class="block-title">Items in My Cart</div>
+            <div class="block">
+              <div class="order-title"><span class="seller-name"><a href="https://tt.tw.ttstaging.com.tw" target="_blank">TAIWAN EXTERNAL TRADE DEVELOPMENT COUNCIL</a></span><span class="number">1</span></div>
+              <div class="product-info-detail">
+                <div class="product-pic"><a href="javascript:void(0);" class="product-remove"><i class="glyphicon glyphicon-trash"></i></a><img class="product-pic-image" alt="NaluTest_7662" src="https://im01.ttstaging.com.tw/090ae4d7-686f-4a03-84a9-090bba3fe300/ImgScrTest-100x100.jpg"></div>
+                <div class="product-info"><span class="product-price">USD 18.00</span><span class="old-price"><del>USD 20.00</del></span>
+                  <div class="product-name"><a href="https://www.ttstaging.com.tw/product/nalutest-7662-1593880.html" target="_blank">NaluTest_7662</a></div>
+                  <div class="quantity">Quantity：2</div>
+                  <div class="spec">size：S</div><span class="product-freeshipping">Free Shipping</span><span class="discount">10</span>
+                </div>
+              </div>
+            </div>
+            <div class="block">
+              <div class="order-title"><span class="seller-name"><a href="https://www.ttstaging.com.tw/company/li-chuan-biotechnology-development-co-ltd-327725.html" target="_blank">LI CHUAN BIOTECHNOLOGY DEVELOPMENT CO., LTD.</a></span><span class="number">2</span></div>
+              <div class="product-info-detail">
+                <div class="product-pic"><a href="javascript:void(0);" class="product-remove"><i class="glyphicon glyphicon-trash"></i></a><img class="product-pic-image" alt="Li Chuan Golden Clam Tablets(100 tablets)" src="//im01.ttstaging.com.tw/640eccdb-4078-48c6-b693-7e34958438ce/88825_500-100x100.jpg"></div>
+                <div class="product-info"><span class="product-price">USD 122.40</span><span class="old-price"><del>USD 136.00</del></span>
+                  <div class="product-name"><a href="https://www.ttstaging.com.tw/product/li-chuan-golden-clam-tablets-100-tablets-1476500.html" target="_blank">Li Chuan Golden Clam Tablets(100 tablets)</a></div>
+                  <div class="quantity">Quantity：2</div><span class="product-freeshipping">Free Shipping</span><span class="discount">10</span>
+                </div>
+              </div>
+              <div class="product-info-detail">
+                <div class="product-pic"><a href="javascript:void(0);" class="product-remove"><i class="glyphicon glyphicon-trash"></i></a><img class="product-pic-image" alt="Li Chuan Iron-containing collagen Clam Tablets(100 tablets)" src="//im01.ttstaging.com.tw/3ecfebb3-39de-4bda-9e05-975e4f94c082/88826_%E4%B8%BB%E5%9C%96500X500-100x100.jpg"></div>
+                <div class="product-info"><span class="product-price">USD 232.23</span><span class="old-price"><del>USD 258.00</del></span>
+                  <div class="product-name"><a href="https://www.ttstaging.com.tw/product/li-chuan-iron-containing-collagen-clam-tablets-100-tablets-1476501.html" target="_blank">Li Chuan Iron-containing collagen Clam Tablets(100 tablets)</a></div>
+                  <div class="quantity">Quantity：3</div><span class="product-freeshipping">Free Shipping</span><span class="discount">10</span>
+                </div>
+              </div>
+            </div>
+            <span class="viewcart">view cart &amp; check out</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a></li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="pageHeading">
+        <h2>產品型錄設定</h2>
+        <ul class="path">
+          <li><a href="#">內容管理</a></li>
+          <li>產品型錄設定</li>
+        </ul>
+      </header>
+
+      <div class="searchAndFilter">
+        <!-- <span class="toggleCtrl">查詢</span> -->
+        <section class="searchOrders">
+          <form action="">
+            <input type="text" placeholder="請輸入產品名稱、產品型號或是查詢關鍵字" />
+            <input type="reset" value="清除" title="清除" />
+            <select name="" id="">
+              <option value="0">所有欄位</option>
+              <option value="1">日期區間</option>
+            </select>
+            <input type="submit" value="查詢" title="查詢" />
+          </form>
+        </section>
+      </div>
+
+      <section class="filterByDevices">
+        <div class="device">狀態
+          <select>
+            <option>全部</option>
+            <option>啟用</option>
+            <option>未啟用</option>
+            <option>待審核</option>
+          </select>
+        </div>
+        <div class="device selectImitating">分類
+          <div class="selectBtn" data-title="請選擇"></div>
+          <div class="optionGroup">
+            <div class="pdCateSearch">
+              <span class="label">查詢產業</span>
+              <input type="text">
+              <input type="submit" value="查詢">
+            </div>
+            <ul class="selectOption pdCateList">
+              <li>Hardware -- 五金</li>
+              <li>Home Appliances -- 家庭用電器</li>
+              <li>Houseware -- 家庭用品</li>
+              <li>Lights &amp; Lighting -- 燈光及照明</li>
+              <li>Luggage, Bags &amp; Cases -- 箱包</li>
+              <li>Machinery -- 機械</li>
+              <li>Measurement & Analysis Instrument -- 量測及分析儀器</li>
+              <li>Mechanical Parts -- 機械零件</li>
+              <li>Medical & Health -- 醫療及保健</li>
+              <li>Mineral &amp; Metallurgy -- 礦產及金屬材料</li>
+              <li>Musical Instruments -- 樂器</li>
+              <li>Office & School Supplies -- 辦公室及學校用品</li>
+              <li>Packaging, Printing & Advertising -- 包裝、印刷及廣告</li>
+              <li>Security & Protection -- 安全</li>
+              <li>Services -- 服務業</li>
+              <li>Ships & Boats -- 船舶</li>
+              <li>Sports -- 運動用品</li>
+            </ul>
+          </div>
+        </div>
+        <div class="device selectImitating">自訂
+          <div class="selectBtn" data-title="請選擇"></div>
+          <div class="optionGroup">
+            <label><input type="checkbox">子分類 1 </label>
+            <label class="cascade"><input type="checkbox">子分類 1-1 </label>
+            <label class="cascade"><input type="checkbox">子分類 1-2 </label>
+            <label class="cascade"><input type="checkbox">子分類 1-3 </label>
+            <label><input type="checkbox">子分類 2 </label>
+            <label class="cascade"><input type="checkbox">子分類 2-1</label>
+            <label class="cascade"><input type="checkbox">子分類 2-2</label>
+          </div>
+        </div>
+        <div class="device selectImitating">語系
+          <div class="selectBtn" data-title="請選擇"></div>
+          <div class="optionGroup">
+            <label><input type="checkbox">英文 <span class="count">5</span></label>
+            <label><input type="checkbox">正體中文 <span class="count">4</span></label>
+            <label><input type="checkbox">日文 <span class="count">2</span></label>
+            <label><input type="checkbox">俄文 <span class="count">0</span></label>
+            <label><input type="checkbox">西班牙文 <span class="count">0</span></label>
+            <label><input type="checkbox">葡萄牙文 <span class="count">0</span></label>
+            <label><input type="checkbox">阿拉伯文 <span class="count">0</span></label>
+            <label><input type="checkbox">印尼文 <span class="count">0</span></label>
+            <label><input type="checkbox">德文 <span class="count">0</span></label>
+            <label><input type="checkbox">越南文 <span class="count">0</span></label>
+            <label><input type="checkbox">法文 <span class="count">0</span></label>
+            <label><input type="checkbox">土耳其文 <span class="count">0</span></label>
+            <label><input type="checkbox">泰文 <span class="count">0</span></label>
+            <label><input type="checkbox">伊朗波斯語 <span class="count">0</span></label>
+          </div>
+        </div>
+        <div class="device selectImitating">進階<div class="selectBtn" data-title="請選擇"></div>
+          <div class="optionGroup">
+            <label><input type="checkbox">360展示</label>
+            <label><input type="checkbox">3D展示</label>
+            <label><input type="checkbox">影音</label>
+            <label><input type="checkbox">產品認證</label>
+            <label><input type="checkbox">NEW</label>
+            <label><input type="checkbox">Featured</label>
+            <label><input type="checkbox">加密</label>
+          </div>
+        </div>
+      </section>
+
+      <section class="listTable">
+        <div class="onListTop">
+          <section class="funcBtnGp">
+            <ul>
+              <li class="trigPop notAvailable" id="pop-stopCata"><a>停用</a></li>
+              <li class="trigPop remove" id="pop-delCata"><a>刪除</a></li>
+              <li class="trigPop useLabel" id="pop-labelCata"><a>貼標</a></li>
+              <li class="trigPop changeGroup" id="pop-chgp"><a>移動分類</a></li>
+              <li class="export"><a>匯出</a></li>
+            </ul>
+          </section>
+
+          <section class="funcBtnGp">
+            <ul>
+              <li class="add"><a>新增</a></li>
+              <li class="trigPop checkColumn" id="pop-showColumn"><a>自選顯示欄位</a></li>
+            </ul>
+          </section>
+        </div>
+
+
+
+        <table>
+          <thead>
+            <tr>
+              <th><label class="ofallCheck checkAll" title="全選"><input type="checkbox"></label></th>
+              <th></th>
+              <th><span class="sortingTh ascending">序號</span></th>
+              <th><span class="sortingTh">產品資訊</span></th>
+              <th>英</th>
+              <th>正中</th>
+              <th>簡中</th>
+              <th>日</th>
+              <th></th>
+              <th><span class="sortingTh">完成度</span></th>
+              <th><span class="sortingTh">優化分數</span></th>
+              <th><span class="sortingTh">最後編修</span></th>
+              <th><span class="sortingTh">認證</span></th>
+              <th>類型</th>
+              <th>動作</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label class="listCheck"><input type="checkbox"></label></td>
+              <td>1</td>
+              <td>
+                <div class="pdNumbAndImg">
+                  <span class="pdNumber">1679469</span>
+                  <span class="pdImage"><img src="../publicData/pd41.jpg"></span>
+                </div>
+              </td>
+              <td>
+                <ul class="pdinfoIntd">
+                  <li class="pdName"><a href="x">(En)測試中英日文都有建的型錄</a></li>
+                  <li>產業別：多媒體機台</li>
+                  <li>自訂分類：TT-0305</li>
+                  <li>產品型號：A01</li>
+                </ul>
+              </td>
+              <td>
+                <div class="cataStatus">
+                  <span class="icon_activate" title="已啟用"></span>
+                  <span class="icon_trade" title="已販售"></span>
+                  <span class="icon_contentCheck" title="內容審核通過"></span>
+                  <span class="icon_sellCheck" title="販售審核通過"></span>
+                </div>
+              </td>
+              <td>
+                <div class="cataStatus">
+                  <span class="icon_inactivate" title="未啟用"></span>
+                </div>
+              </td>
+              <td>
+                <div class="cataStatus">
+                  <span class="icon_activate" title="已啟用"></span>
+                  <span class="icon_tradeNot" title="未販售"></span>
+                  <span class="icon_contentCheck" title="內容審核通過"></span>
+                </div>
+              </td>
+              <td>
+                <div class="cataStatus">
+                  <span class="icon_inactivate" title="未啟用"></span>
+                </div>
+              </td>
+              <td><span class="otherLangs" title="此型錄尚有7種語系">(7)</span></td>
+              <td class="aCenter">78%</td>
+              <td class="aCenter">70分</td>
+              <td><time>Mar 2, 2020, 02:09 PM</time></td>
+              <td class="aCenter">Y</td>
+              <td>
+                <ul class="cataTypes">
+                  <li class="m360" title="360 degree"></li>
+                  <li class="m3D" title="3D展示"></li>
+                  <li class="mVideo" title="Video"></li>
+                  <li class="new" title="新產品"></li>
+                  <li class="feature" title="特色產品"></li>
+                  <li class="lock" title="Lock"></li>
+                </ul>
+              </td>
+              <td>
+                <ul class="editThis vertical">
+                  <li class="edit showSlideinBox" data-id="sb01"><a title="編輯" href="cont_catalogEdit.html"></a></li>
+                  <li class="duplicate"><a title="複製"></a></li>
+                  <li class="preview"><a title="預覽"></a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><label class="listCheck"><input type="checkbox"></label></td>
+              <td>2</td>
+              <td>
+                <div class="pdNumbAndImg">
+                  <span class="pdNumber">87654321</span>
+                  <span class="pdImage"><img src="../publicData/ph17.jpg"></span>
+                </div>
+              </td>
+              <td>
+                <ul class="pdinfoIntd">
+                  <li class="pdName"><a href="x">HyRead Gaze X (10.3吋)</a></li>
+                  <li>產業別：多媒體機台</li>
+                  <li>自訂分類：myCategory</li>
+                  <li>產品型號：A01</li>
+                </ul>
+              </td>
+              <td>
+                <div class="cataStatus">
+                  <span class="icon_activate" title="已啟用"></span>
+                  <span class="icon_trade" title="已販售"></span>
+                  <span class="icon_contentCheck" title="內容審核通過"></span>
+                  <span class="icon_sellCheck" title="販售審核通過"></span>
+                </div>
+              </td>
+              <td><div class="cataStatus"><span class="icon_activate" title="未啟用"></span></div></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="aCenter">78%</td>
+              <td class="aCenter">70分</td>
+              <td><time>2020-10-10 10:26:15</time></td>
+              <td class="aCenter"></td>
+              <td>
+                <ul class="cataTypes">
+                  <li class="m360" title="360 degree"></li>
+                  <li class="m3D" title="3D展示"></li>
+                  <li class="mVideo" title="Video"></li>
+                  <li class="new" title="新產品"></li>
+                  <li class="feature" title="特色產品"></li>
+                  <li class="lock" title="Lock"></li>
+                </ul>
+              </td>
+              <td>
+                <ul class="editThis vertical">
+                  <li class="edit showSlideinBox" data-id="sb01"><a title="編輯" href="cont_catalogEdit.html"></a></li>
+                  <li class="duplicate"><a title="複製"></a></li>
+                  <li class="preview"><a title="預覽"></a></li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td><label class="listCheck"><input type="checkbox"></label></td>
+              <td>3</td>
+              <td>
+                <div class="pdNumbAndImg">
+                  <span class="pdNumber">87654321</span>
+                  <span class="pdImage"><img src="../publicData/ph17.jpg"></span>
+                </div>
+              </td>
+              <td>
+                <ul class="pdinfoIntd">
+                  <li class="pdName"><a href="x">hyRead 行動圖書館數位閱讀KIOSK</a></li>
+                  <li>產業別：未選取</li>
+                  <li>自訂分類：未分類</li>
+                  <li>產品型號：</li>
+                </ul>
+              </td>
+              <td>
+                <div class="cataStatus">
+                  <span class="icon_activate" title="已啟用"></span>
+                  <span class="icon_trade" title="已販售"></span>
+                  <span class="icon_contentCheck" title="內容審核通過"></span>
+                  <span class="icon_sellCheck" title="販售審核通過"></span>
+                </div>
+              </td>
+              <td></td>
+              <td>
+                <div class="cataStatus">
+                  <span class="icon_activate" title="未啟用"></span>
+                  <span class="icon_activate" title="未販售"></span></td>
+                </div>
+              <td></td>
+              <td></td>
+              <td class="aCenter">78%</td>
+              <td class="aCenter">70分</td>
+              <td><time>2020-11-30 13:26:19</time></td>
+              <td class="aCenter">Y</td>
+              <td>
+              </td>
+              <td>
+                <ul class="editThis vertical">
+                  <li class="edit showSlideinBox" data-id="sb01"><a title="編輯" href="cont_catalogEdit.html"></a></li>
+                  <li class="duplicate"><a title="複製"></a></li>
+                  <li class="preview"><a title="預覽"></a></li>
+                </ul>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+
+        <script>
+          //升降冪箭頭 demo
+          var _sortingTh = $('.sortingTh');
+          _sortingTh.click(function() {
+            _this = $(this);
+            _sortingTh.not(this).removeClass('descending').removeClass('ascending');
+            if ($(this).hasClass('descending')) {
+              $(this).removeClass('descending').addClass('ascending');
+            } else if ($(this).hasClass('ascending')) {
+              $(this).removeClass('ascending').addClass('descending');
+            } else {
+              $(this).addClass('ascending');
+            }
+          })
+        </script>
+  
+      </section>
+
+
+      <!-- pop messages -->
+      <section class="popMsg" id="stopCata">
+        <h3>型錄停用</h3>
+        <div class="popBody">
+          <p>是否確定停用型錄序號：<em class="bigger">1792201</em></p>
+        </div>
+        <div class="btnDv">
+          <input type="submit" value="確定" class="closePop">
+          <input type="button" value="取消" class="closePop">
+        </div>
+      </section>
+
+      <section class="popMsg" id="delCata">
+        <h3>型錄刪除</h3>
+        <div class="popBody">
+          <p>是否確定刪除型錄序號：<em class="bigger">1679469</em>, <em class="bigger">1618648</em></p>
+          <p>刪除時，會一併刪除其他語系的內容。</p>
+        </div>
+        <div class="btnDv">
+          <input type="submit" value="確定" class="closePop">
+          <input type="button" value="取消" class="closePop">
+        </div>
+      </section>
+
+      <section class="popMsg" id="labelCata">
+        <h3>請選擇貼標項目</h3>
+        <div class="popBody">
+          <div class="optionPool">
+            <label><input type="checkbox">NEW Product</label>
+            <label><input type="checkbox">Featured</label>
+          </div>
+        </div>
+        <div class="btnDv">
+          <input type="submit" value="確定" class="closePop">
+          <input type="button" value="取消" class="closePop">
+        </div>
+      </section>
+
+      <section class="popMsg" id="chgp">
+        <h3>請選擇移動至哪個類別</h3>
+        <div class="popBody">
+          <div class="optionPool">
+            <label><input type="checkbox">KIOSK</label>
+            <label><input type="checkbox">myCategory</label>
+            <label><input type="checkbox">未分類</label>
+          </div>
+        </div>
+        <div class="btnDv">
+          <input type="submit" value="確定" class="closePop">
+          <input type="button" value="取消" class="closePop">
+        </div>
+      </section>
+
+      <section class="popMsg" id="showColumn">
+        <h3>自選顯示欄位</h3>
+        <div class="popBody">
+          <div class="optionPool grid2">
+            <label><input type="checkbox" checked>產業別</label>
+            <label><input type="checkbox" checked>自訂分類</label>
+            <label><input type="checkbox" checked>產品型號</label>
+            <label><input type="checkbox">完成度</label>
+            <label><input type="checkbox">優化分數（分）</label>
+            <label><input type="checkbox" checked>最後編修</label>
+            <label><input type="checkbox" checked>認證</label>
+            <label><input type="checkbox" checked>類型</label>
+            <label class="hasSub"><input type="checkbox" checked>語系狀態（可選4項語系於條列頁顯示）</label>
+            <div class="subOption lang">
+              <label><input type="checkbox" checked>英文</label>
+              <label><input type="checkbox" checked>正體中文</label>
+              <label><input type="checkbox" checked>日文</label>
+              <label><input type="checkbox">俄文</label>
+              <label><input type="checkbox">西班牙文</label>
+              <label><input type="checkbox">葡萄牙文</label>
+              <label><input type="checkbox">阿拉伯文</label>
+              <label><input type="checkbox">印尼文</label>
+              <label><input type="checkbox">德文</label>
+              <label><input type="checkbox">越南文</label>
+              <label><input type="checkbox">法文</label>
+              <label><input type="checkbox">土耳其文</label>
+              <label><input type="checkbox">泰文</label>
+              <label><input type="checkbox">伊朗波斯語</label>
+            </div>
+          </div>
+        </div>
+        <div class="btnDv">
+          <input type="submit" value="確定" class="closePop">
+          <input type="button" value="取消" class="closePop">
+        </div>
+      </section>
+
+
+      
+
+      <section class="page">
+        <p>每頁顯示 <select name="perPage" id="perPage">
+          <option value="30">10</option>
+          <option value="30">25</option>
+          <option value="10">50</option>
+          <option value="30">全部</option>
+        </select> 筆</p>
+        <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+        <ul>
+          <li class="prev disabled"><a href="#">上一頁</a></li>
+          <li class="here"><a href="#">1</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">12</a></li>
+          <li class="next"><a href="#">下一頁</a></li>
+        </ul>
+      </section>
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+
+</body>
+
+</html>

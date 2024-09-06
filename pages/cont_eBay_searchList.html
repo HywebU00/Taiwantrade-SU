@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-匯出型錄至eBay（內容管理）</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>匯出型錄至eBay</h2>
+        <ul class="path">
+          <li><a href="#">內容管理</a></li>
+          <li>匯出型錄至eBay</li>
+        </ul>
+      </header>
+
+
+
+      <section class="search toggleDrawer always hidden">
+        <h3 class="searchCaption">型錄查詢</h3>
+        <button type="button" class="toggleCtrl">隱藏／展開查詢</button>
+        <div class="toggleArea">
+          <table class="formLayout">
+            <tr>
+              <td>型錄名稱／產品型號</td>
+              <td><input type="text"></td>
+            </tr>
+<!-- 20210219 移除
+            <tr>
+              <td>產業別</td>
+              <td>
+                <div class="addAndRemove">
+                  <div class="optionPool">
+                    <label><input type="checkbox">Furniture -- 家具</label>
+                    <label><input type="checkbox">Vehicle Equipment &amp; Repair Tools -- 汽機車儀器及維修工具</label>
+                    <label><input type="checkbox">Electrical & Electronic Components Making Machinery -- 電器及電子零組件製造機械</label>
+                    <label><input type="checkbox">Folding Bicycle -- 摺疊自行車</label>
+                    <label><input type="checkbox">Doors &amp; Windows -- 門窗</label>
+                    <label><input type="checkbox">Dining &amp; Kitchen Room Furniture -- 餐廳及廚房家具</label>
+                  </div>
+                  <div class="buttons">
+                    <button type="button">選取</button>
+                    <button type="submit">移除</button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>自訂分類</td>
+              <td>
+                <div class="addAndRemove">
+                  <div class="optionPool">
+                    <label><input type="checkbox">自訂分類A</label>
+                    <label><input type="checkbox">自訂分類B</label>
+                  </div>
+                  <div class="buttons">
+                    <button type="button">選取</button>
+                    <button type="submit">移除</button>
+                  </div>
+                </div>
+              </td>
+            </tr> -->
+
+<!-- 20210219 修改如下，「產業別」和「自訂分類」有層級樣式 -->
+            <tr>
+              <td>產業別</td>
+              <td>
+                <div class="optionPool block scroll">
+                  <label><input type="checkbox">Consumer Electronics -- 消費性電子</label>
+                  <label class="cascade1"><input type="checkbox">Mobile Phone & Tablet PC -- 手機及平板電腦</label><!-- 第二層分類 -->
+                  <label class="cascade2"><input type="checkbox">Handheld Holder -- 手持裝置立架</label><!-- 第三層分類 -->
+                  <label class="cascade2"><input type="checkbox">Handheld Screen Protector -- 手持裝置保護貼</label><!-- 第三層分類 -->
+                  <label class="cascade1"><input type="checkbox">Portable Audio, Video & Accessories -- 可攜式影音設備</label><!-- 第二層分類 -->
+                  <label><input type="checkbox">Furniture -- 家具</label>
+                  <label class="cascade1"><input type="checkbox">Office Furniture -- 辦公家具</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>自訂分類</td>
+              <td>
+                <div class="optionPool block scroll">
+                  <label><input type="checkbox">自訂分類A</label>
+                  <label class="cascade1"><input type="checkbox">自訂分類A-1</label>
+                  <label class="cascade2"><input type="checkbox">自訂分類A-1-1</label>
+                  <label><input type="checkbox">自訂分類B</label>
+                  <label class="cascade1"><input type="checkbox">自訂分類B-1</label>
+                  <label><input type="checkbox">自訂分類C</label>
+                  <label><input type="checkbox">自訂分類D</label>
+                </div>
+              </td>
+            </tr>
+
+
+            <tr>
+              <td>審核狀態</td>
+              <td>
+                <div class="optionPool">
+                  <label><input name="ifVerified" type="radio" checked>全部</label>
+                  <label><input name="ifVerified" type="radio">待審核</label>
+                  <label><input name="ifVerified" type="radio">通過</label>
+                  <label><input name="ifVerified" type="radio">不通過</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>是否啟用</td>
+              <td>
+                <div class="optionPool">
+                  <label><input name="ifActived" type="radio" checked>全部</label>
+                  <label><input name="ifActived" type="radio" value="true">是</label>
+                  <label><input name="ifActived" type="radio" value="false">否</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>是否為 New</td>
+              <td>
+                <div class="optionPool">
+                  <label><input name="ifNew" type="radio" checked>全部</label>
+                  <label><input name="ifNew" type="radio">是</label>
+                  <label><input name="ifNew" type="radio">否</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>是否為 Featured</td>
+              <td>
+                <div class="optionPool">
+                  <label><input name="ifFeatured" type="radio" checked>全部</label>
+                  <label><input name="ifFeatured" type="radio">是</label>
+                  <label><input name="ifFeatured" type="radio">否</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>是否有影音</td>
+              <td>
+                <div class="optionPool">
+                  <label><input name="ifHasVideo" type="radio" checked>全部</label>
+                  <label><input name="ifHasVideo" type="radio">是</label>
+                  <label><input name="ifHasVideo" type="radio">否</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>是否加密</td>
+              <td>
+                <div class="optionPool">
+                  <label><input name="ifEncrypt" type="radio" checked>全部</label>
+                  <label><input name="ifEncrypt" type="radio">是</label>
+                  <label><input name="ifEncrypt" type="radio">否</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>建立時間</td>
+              <td>
+                <div class="during">
+                  <input type="date" placeholder="yyyy/mm/dd" id="qryBeginReceiveDate" name="qryBeginReceiveDate">
+                  <a class="clearIcon" href="javascript:void(0)"></a>
+                  <span class="calendarIcon" for="dateStartIcon"></span>
+                  <input type="date" placeholder="yyyy/mm/dd" id="qryEndReceiveDate" name="qryEndReceiveDate">
+                  <a class="clearIcon" href="javascript:void(0)"></a>
+                  <span class="calendarIcon" for="dateEndIcon"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>更新時間</td>
+              <td>
+                <div class="during">
+                  <input type="date" placeholder="yyyy/mm/dd" id="qryBeginReceiveDate" name="qryBeginReceiveDate">
+                  <a class="clearIcon" href="javascript:void(0)"></a>
+                  <input type="date" placeholder="yyyy/mm/dd" id="qryEndReceiveDate" name="qryEndReceiveDate">
+                  <a class="clearIcon" href="javascript:void(0)"></a>
+                </div> 
+              </td>
+            </tr>
+          </table>
+          <div class="btnDv">
+            <input type="submit" value="查詢">
+            <input type="reset" value="清除">
+          </div>
+        </div>
+      </section><!-- /.aDrawer -->
+
+      <div class="funcList">
+        <ul>
+          <li><a href="cont_eBay_account.html">設定eBay帳號</a></li>
+          <li><a href="cont_eBay_message.html">我的eBay訊息</a></li>
+          <li><a href="cont_eBay_searchList2.html">查看產品上架紀錄</a></li>
+        </ul>
+      </div>
+
+
+      <section class="listTbNew">
+        <table>
+          <thead>
+            <tr>
+              <th>上傳 eBay</th>
+              <th><span class="sortingTh">產品名稱</span></th>
+              <th>產品型號</th>
+              <th>產業別 / 自訂分類</th>
+              <th>審核狀態</th>
+              <th>啟用</th>
+              <th>是否為NEW</th>
+              <th>是否有影音</th>
+              <th><span class="sortingTh">更新時間</span></th>
+              <th>產品圖片</th>
+              <th>販售</th>
+              <th>是否上架 eBay</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="smallBtn"><a href="cont_eBay_edit.html">上傳eBay</a></span></td>
+              <td><span class="title">(En)測試中英日文都有建的型錄-研發服務/hello hello hello</span></td>
+              <td>myproduct_serialnumber</td>
+              <td>研發服務/hello hello hello</td>
+              <td><span class="status">審核通過</span></td>
+              <td><span class="status">啟用</span></td>
+              <td><!-- <span class="status">NEW</span> -->
+                <span class="statusIcon yes" title="是"></span></td>
+              <td>
+                <!-- <span class="status">有影音</span> -->
+                <span class="statusIcon yes" title="有影音"></span>
+              </td>
+              <td><time>2020-03-04 23:42:19</time></td>
+              <td><img class="smallPdImg" src="../publicData/ph_photo1.jpg"></td>
+              <!-- <td><span class="status">未販售</span></td></td>
+              <td><span class="status">是</span></td> -->
+              <td><span class="statusIcon no" title="未販售"></span></td></td>
+              <td><span class="statusIcon yes" title="是"></span></td>
+
+            </tr>
+            <tr>
+              <td><span class="smallBtn"><a href="cont_eBay_edit.html">上傳eBay</a></span></td>
+              <td><span class="title">(En)測試中英日文都有建的型錄-研發服務/hello hello hello</span></td>
+              <td>20180107_Tes</td>
+              <td>研發服務/hello hello hello</td>
+              <td><span class="status">待審核</span></td>
+              <td><span class="status">未啟用</span></td>
+              <td><span class="statusIcon no" title="否"></span></td>
+              <td>
+                <!-- <span class="status">無影音</span> -->
+                <span class="statusIcon no" title="無影音"></span>
+              </td>
+              <td><time>2020-02-21 15:34:28</time></td>
+              <td><img class="smallPdImg" src="../publicData/ph_photo2.jpg"></td>
+              <td><span class="statusIcon yes" title="販售"></span></td>
+              <!-- <td><span class="status">販售</span></td>
+              <td><span class="status">否</span></td> -->
+              <td><span class="statusIcon no" title="否"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="page">
+        <p>每頁顯示 <select name="perPage" id="perPage">
+          <option value="30">10</option>
+          <option value="30">25</option>
+          <option value="10">50</option>
+          <option value="30">全部</option>
+        </select> 筆</p>
+        <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+
+        <ul>
+          <li class="prev disabled"><a href="#">上一頁</a></li>
+          <li class="here"><a href="#">1</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">12</a></li>
+          <li class="next"><a href="#">下一頁</a></li>
+        </ul>
+      </section>
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+  <script>
+    //升降冪箭頭 GUI demo, 2021 修改
+    var _sortingTr = $('.listTable').find('tr').has('.sortingTh');
+    _sortingTr.each(function(){
+      let _sortingTh = $(this).find('.sortingTh');
+      _sortingTh.click(function() {
+        _this = $(this);
+        _sortingTh.not(_this).removeClass('descending').removeClass('ascending');
+        if (_this.hasClass('descending')) {
+          _this.removeClass('descending').addClass('ascending');
+        } else if (_this.hasClass('ascending')) {
+          _this.removeClass('ascending').addClass('descending');
+        } else {
+          _this.addClass('ascending');
+        }
+      })
+    })
+    </script>  
+    
+
+</body>
+
+</html>

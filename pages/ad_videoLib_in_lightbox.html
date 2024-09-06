@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>影音燈箱</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+</head>
+
+<body>
+
+
+  <section class="mediaLib">
+
+    <div class="tabGroup">
+      <div class="tabs">
+        <ul>
+          <li class="active">SU 媒體庫</li>
+          <li>新增</li>
+        </ul>
+      </div>
+
+      <!-- SU 媒體庫 -->
+      <div class="tabContainer">
+        <section class="searchRow simple">
+          <form action="">
+            <input type="text" placeholder="可輸入中英文關鍵字，例如標題、影片網址等">
+            <input type="reset" value="清除">
+            <input type="submit" value="查詢">
+          </form>
+        </section>
+     
+        <section class="classify">
+          <ul>
+            <li class="active"><a href="javascript:;">全部</a></li>
+            <li><a href="javascript:;">未分組</a></li>
+            <li class="hasMoreFunc"><a href="javascript:;">公司介紹</a><span class="moreFunc"></span>
+              <ul class="action">
+                <li class="modifyThis trigPop" id="pop-editGp">修改</li>
+                <li class="deleteThis trigPop" id="pop-delGp">刪除</li>
+              </ul>
+            </li>
+            <li class="hasMoreFunc"><a href="javascript:;">產品介紹</a><span class="moreFunc"></span>
+              <ul class="action">
+                <li class="modifyThis trigPop" id="pop-editGp">修改</li>
+                <li class="deleteThis trigPop" id="pop-delGp">刪除</li>
+              </ul>
+            </li>
+            <li class="hasMoreFunc"><a href="javascript:;">產品使用說明</a><span class="moreFunc"></span>
+              <ul class="action">
+                <li class="modifyThis trigPop" id="pop-editGp">修改</li>
+                <li class="deleteThis trigPop" id="pop-delGp">刪除</li>
+              </ul>
+            </li>
+            <li class="hasMoreFunc"><a href="javascript:;">Excepteur proident</a><span class="moreFunc"></span>
+              <ul class="action">
+                <li class="modifyThis trigPop" id="pop-editGp">修改</li>
+                <li class="deleteThis trigPop" id="pop-delGp">刪除</li>
+              </ul>
+            </li>
+  
+            <li class="addNew">
+              <input type="text" placeholder="新增群組">
+              <button class="add" type="submit"></button>
+            </li>
+          </ul>
+        </section>
+        <script>
+          // 20210429：input 內是空字串時，mouseleave 才收合 
+          $(function(){
+            var _addNewClass = $('.classify').find('.addNew');
+            _addNewClass.hover(
+              function(){
+                $(this).addClass('typing');
+              },
+              function(){
+                if ($(this).find('input').val() === ''){
+                  $(this).removeClass('typing');
+                }
+              }
+            )
+          })
+        </script>
+  
+        <section class="mediaList checkingList">
+          <div class="onListTop">
+            <label class="ofallCheck checkAll"><input type="checkbox">全選</label>
+  
+            <div class="filter">
+              <label>排序條件</label>
+              <select>
+                <option value="">上傳時間：由新到舊</option>
+                <option value="">上傳時間：由舊到新</option>
+                <option value="">檔名：由Z到A</option>
+                <option value="">檔名：由A到Z</option>
+                <option value="">圖檔大小：由大到小</option>
+                <option value="">圖檔大小：由小到大</option>
+              </select>
+            </div>
+  
+            <div class="displayMode">
+              <ul>
+                <li class="array now"></li>
+                <li class="stack"></li>
+              </ul>
+            </div>
+          </div>
+  
+          <ul class="exchangeView grid">
+            <li class="oneMedia">
+              <label class="listCheck"><input type="checkbox"></label>
+              <iframe id="player93728" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Low Carbon Value of Smart Manufacturing with Robots" width="640" height="360" src="https://www.youtube.com/embed/zOm1Rwo0kMA?autoplay=0&amp;controls=1&amp;showinfo=1&amp;modestbranding=1&amp;loop=0&amp;fs=1&amp;cc_load_policty=0&amp;iv_load_policy=3&amp;autohide=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsu.ttstaging.com.tw&amp;widgetid=1" data-gtm-yt-inspected-84="true"></iframe>
+              <ul class="mInfo">
+                <li class="title"><span class="label">標題</span><em>MUSIC FOR HOPE</em></li>
+                <li><span class="label">群組</span><em>產品介紹</em></li>
+                <li><span class="label">來源影音平台</span><em>YouTube</em></li>
+                <li class="date"><span class="label">新增日期</span><em>2020-05-14 11:43:10</em></li>
+              </ul>
+            </li>
+            <li class="oneMedia">
+              <label class="listCheck"><input type="checkbox"></label>
+              <iframe id="youtubePlayer_91888" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player"  src="https://www.youtube.com/embed/H72GbE0tuUA?enablejsapi=1&amp;origin=https%3A%2F%2Fsu.ttstaging.com.tw&amp;widgetid=2"></iframe>
+              <ul class="mInfo">
+                <li class="title"><span class="label">標題</span><em>chiung's test chiung's test chiung's test chiung's test chiung's test chiung's test chiung's test chiung's test chiung's test chiung's test </em></li>
+                <li><span class="label">群組</span><em>產品使用說明</em></li>
+                <li><span class="label">來源影音平台</span><em>YouTube</em></li>
+                <li class="date"><span class="label">新增日期</span><em>2020-05-14 15:18:31</em></li>
+              </ul>
+            </li>
+            <li class="oneMedia">
+              <label class="listCheck"><input type="checkbox"></label>
+              <iframe id="youtubePlayer_74511" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/0M8V2jEvPYM?enablejsapi=1&amp;origin=https%3A%2F%2Fsu.ttstaging.com.tw&amp;widgetid=3"></iframe>
+              <ul class="mInfo">
+                <li class="title"><span class="label">標題</span><em>HyRead APP Tour Guide</em></li>
+                <li><span class="label">群組</span><em>產品介紹</em></li>
+                <li><span class="label">來源影音平台</span><em>YouTube</em></li>
+                <li class="date"><span class="label">新增日期</span><em>2018-01-05 11:26:29</em></li>
+              </ul>
+            </li>
+            <li class="oneMedia">
+              <label class="listCheck"><input type="checkbox"></label>
+              <iframe id="player93668" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="[English] :dc PM2.5 Mask Testing Video - Membrane Mask, Washable Mask" width="640" height="360" src="https://www.youtube.com/embed/SJqYo9lAmfo?autoplay=0&amp;controls=1&amp;showinfo=1&amp;modestbranding=1&amp;loop=0&amp;fs=1&amp;cc_load_policty=0&amp;iv_load_policy=3&amp;autohide=0&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fsu.ttstaging.com.tw&amp;widgetid=2" data-gtm-yt-inspected-84="true"></iframe>
+              <ul class="mInfo">
+                <li class="title"><span class="label">標題</span><em>台灣水果</em></li>
+                <li><span class="label">群組</span><em>未分類</em></li>
+                <li><span class="label">來源影音平台</span><em>YouTube</em></li>
+                <li class="date"><span class="label">新增日期</span><em>2018-06-22 15:21:53</em></li>
+              </ul>
+            </li>
+          </ul>
+          
+        </section>
+    
+        <section class="page">
+          <p>每頁顯示 <select name="perPage" id="perPage">
+              <option value="30">10</option>
+              <option value="30">25</option>
+              <option value="10">50</option>
+              <option value="30">全部</option>
+            </select> 筆</p>
+          <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+          <ul>
+            <li class="prev disabled"><a href="#">上一頁</a></li>
+            <li class="here"><a href="#">1</a></li>
+            <li class="ellipsis">...</li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li class="ellipsis">...</li>
+            <li><a href="#">12</a></li>
+            <li class="next"><a href="#">下一頁</a></li>
+          </ul>
+        </section>
+
+
+        <div class="btnDv">
+          <input type="button" value="選入" class="confirm">
+          <input type="reset" value="取消">
+        </div>
+        
+      </div>
+
+
+      <!-- 新增 -->
+      <div class="tabContainer">
+
+        <form action="">
+          <table class="formLayout">
+            <tr>
+              <td>群組</td>
+              <td>
+                <select name="" id="">
+                  <option value="" selected>不分組</option>
+                  <option value="">公司介紹</option>
+                  <option value="">產品介紹</option>
+                  <option value="">產品使用說明</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td><abbr title="必填欄位" class="required">*</abbr> 標題</td>
+              <td><input type="text" value="MUSIC FOR HOPE"></td>
+            </tr>
+            <tr>
+              <td><abbr title="必填欄位" class="required">*</abbr> 影音網址</td>
+              <td><input type="url" value="https://www.youtube.com/embed/huTUOek4LgU"></td>
+            </tr>
+          </table>
+          <div class="btnDv">
+            <input type="submit" value="儲存">
+            <input type="reset" value="還原">
+          </div>
+        </form>
+
+        <!-- <p class="note">上傳影片格式，請參閱<a href="https://support.google.com/google-ads/editor/answer/57755?hl=zh-Hant#zippy=%2C%E5%A4%9A%E5%AA%92%E9%AB%94%E5%BB%A3%E5%91%8A" target="_blank">瞭解詳情</a></p> -->
+
+      </div>
+      
+    </div>
+
+
+  </section>
+
+
+</body>
+
+</html>

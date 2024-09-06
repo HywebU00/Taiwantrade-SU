@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-型錄專輯設定</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>型錄專輯設定</h2>
+        <ul class="path">
+          <li><a href="#">內容管理</a></li>
+          <li>型錄專輯設定</li>
+          <!--li>選取新聞</li--><!--我覺得這個應該不是選單路徑-->
+        </ul>
+      </header>
+
+
+      <div class="navBtnsDv">
+        <span class="btnLook back"><a href="#">返回清單頁</a></span>
+      </div>
+
+      <section class="listTable">
+        <div class="onListTop">
+          <h3>型錄專輯名稱：20171129</h3>
+          <div class="funcBtnGp">
+            <ul>
+              <li class="add"><a href="#" class="showLightbox" id="newsFromLib">挑選更多</a></li>
+              <li class="remove"><a href="javascript:;">移除</a></li>
+            </ul>
+          </div>
+        </div>
+        <table>
+          <caption>已選取的新聞清單</caption>
+          <thead>
+            <tr>
+              <th>排序</th>
+              <th><label class="listCheck checkAll" title="全選"><input type="checkbox"></label></th>
+              <th><span class="sortingTh descending">
+                  <!--需要排序的表頭才加-->新聞ID</span></th>
+              <th><span class="sortingTh">新聞標題</span></th>
+              <th><span class="sortingTh">更新時間</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="changeOrder"><span class="dragStick"></span></td>
+              <td><label class="listCheck"><input type="checkbox"></label></td>
+              <td>1747288</td>
+              <td>靜宜大學「HyRead ebook靜宜雲端書庫」 提升50所大專校院師生閱讀競爭力</td>
+              <td><time>2020/07/20 14:11</time></td>
+            </tr>
+            <tr>
+              <td class="changeOrder"><span class="dragStick"></span></td>
+              <td><label class="listCheck"><input type="checkbox"></label></td>
+              <td>1747308</td>
+              <td>HyRead Gaze 電子紙閱讀器開箱文</td>
+              <td><time>2020/07/20 14:11</time></td>
+            </tr>
+            <tr>
+              <td class="changeOrder"><span class="dragStick"></span></td>
+              <td><label class="listCheck"><input type="checkbox"></label></td>
+              <td>123456</td>
+              <td>Kindle Unlimited: We try Amazon's subscription service for ebooks</td>
+              <td><time>2020/07/20 14:11</time></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="page">
+        <p>每頁顯示 <select name="perPage" id="perPage">
+          <option value="30">10</option>
+          <option value="30">25</option>
+          <option value="10">50</option>
+          <option value="30">全部</option>
+        </select> 筆</p>
+        <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+        <ul>
+          <li class="prev disabled"><a href="#">上一頁</a></li>
+          <li class="here"><a href="#">1</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">12</a></li>
+          <li class="next"><a href="#">下一頁</a></li>
+        </ul>
+      </section>
+
+
+      
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+    <!--挑選新聞-->
+    <section class="lightbox newsFromLib">
+      <button type="button" title="close" class="closeThis hideLightbox"></button>
+      <div class="head">
+        <h3>選取新聞</h3>
+        <!--p>型錄專輯名稱：<em>電子書閱讀器系列</em></p-->
+      </div>
+      <section class="search toggleDrawer always hidden">
+        <h4 class="searchCaption">新聞查詢</h4>
+        <button type="button" class="toggleCtrl">展開查詢</button>
+        <div class="toggleArea">
+          <table class="formLayout">
+            <tr>
+              <td>新聞標題</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>顯示於企業網首頁</td>
+              <td>
+                <div class="optionPool singleSelection">
+                  <label class="isSelected"><input type="radio" checked="" name="bbb">不分</label>
+                  <label><input type="radio" name="bbb">是</label>
+                  <label><input type="radio" name="bbb">否</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>上架日期區間</td>
+              <td>
+                <div class="during">
+                  <input type="date" placeholder="yyyy/mm/dd" id="qryBeginReceiveDate" name="qryBeginReceiveDate">
+                  <a class="clearIcon" href="javascript:void(0)"></a>
+                  <span class="calendarIcon" for="dateStartIcon"></span>
+                  <input type="date" placeholder="yyyy/mm/dd" id="qryEndReceiveDate" name="qryEndReceiveDate">
+                  <a class="clearIcon" href="javascript:void(0)"></a>
+                  <span class="calendarIcon" for="dateEndIcon"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>下架日期區間</td>
+              <td>
+                <div class="during">
+                  <input type="date" placeholder="yyyy/mm/dd" id="qryBeginReceiveDate" name="qryBeginReceiveDate">
+                  <a class="clearIcon" href="javascript:void(0)"></a>
+                  <span class="calendarIcon" for="dateStartIcon"></span>
+                  <!-- <b>~</b> -->
+                  <input type="date" placeholder="yyyy/mm/dd" id="qryEndReceiveDate" name="qryEndReceiveDate">
+                  <a class="clearIcon" href="javascript:void(0)"></a>
+                  <span class="calendarIcon" for="dateEndIcon"></span>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <div class="btnDv">
+            <input type="submit" value="查詢">
+            <input type="reset" value="清除">
+          </div>
+        </div>
+      </section>
+      <!--查詢後才出現查詢結果-->
+      <section class="listTable">
+        <!--查詢後才出現查詢結果-->
+        <table>
+          <thead>
+            <tr>
+              <th><label class="listCheck checkAll" title="全選"><input type="checkbox"></label></th>
+              <th><span class="sortingTh descending">
+                  <!--需要排序的表頭才加-->新聞ID</span></th>
+              <th><span class="sortingTh">新聞標題</span></th>
+              <th><span class="sortingTh">更新時間</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><label class="listCheck"><input type="checkbox"></label></td>
+              <td>123456</td>
+              <td>靜宜大學「HyRead ebook靜宜雲端書庫」 提升50所大專校院師生閱讀競爭力</td>
+              <td><time>2020/07/20 14:11</time></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="page">
+        <p>每頁顯示 <select name="perPage" id="perPage">
+            <option value="30">10</option>
+            <option value="30">25</option>
+            <option value="10">50</option>
+            <option value="30">全部</option>
+          </select> 筆</p>
+        <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+        <ul>
+          <li class="prev disabled"><a href="#">上一頁</a></li>
+          <li class="here"><a href="#">1</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">12</a></li>
+          <li class="next"><a href="#">下一頁</a></li>
+        </ul>
+      </section>
+      <div class="btnDv">
+        <input type="submit" class="hideLightbox" value="選入">
+        <!--input type="reset" class="hideLightbox" value="取消"-->
+      </div>
+    </section>
+
+      <!--訊息類Lightbox，單純說明文案Lightbox（Message, Alert, Confirm Lightbox）-->
+      <section class="popMsg" id="msg1">
+        <div class="popBody">
+          <p>「In Store Now」會顯示訂購數量最多的4則產品，會固定於左欄。<br>
+              顯示邏輯如後：本區域的產品，為訂購數量最多的產品，且還是啟用販售的產品。
+            不足4則時，系統則以最新異動的產品自動補足，完全沒有產品或設定「不顯示」，本區則會隱藏</p>
+        </div>
+        <div class="btnDv"><span class="btnLook closePop"><a onclick="">Ok</a></span></div>
+      </section>
+
+      <!-- 是否確定儲存 -->
+      <section class="popMsg" id="saveConfirm">
+        <div class="popBody">
+          <h3>確定儲存變更？</h3>
+          <p>點選「確定」儲存變更，或點選「取消」繼續編輯。</p>
+          <p>是否確定儲存變更？</p>
+        </div>
+        <div class="btnDv">
+          <button type="button" class="confirm trigPop" id="pop-saveDone">確定</button>
+          <button type="reset" class="closePop">取消</button>
+        </div>
+      </section>
+  
+      <!-- 儲存成功 --> 
+      <section class="popMsg" id="saveDone">
+        <div class="popBody">
+          <h3>變更儲存成功</h3>
+          <p>所有設定皆已儲存成功。</p>
+        </div>
+        <div class="btnDv">
+          <button type="button" class="confirm closePop">確定</button>
+        </div>
+      </section>
+
+<script>
+    $(function(){
+      $('#pop-saveDone').click(function(){
+        $('#saveConfirm').hide();
+      });
+      $('#saveDone').find('.closePop').click(function(){
+        $('.langWebData').add('.coverAll').fadeOut(200);
+      })
+    })
+</script>
+
+<script>
+    //升降冪箭頭 GUI demo, 2021 修改
+    var _sortingTr = $('.listTable').find('tr').has('.sortingTh');
+  _sortingTr.each(function(){
+    let _sortingTh = $(this).find('.sortingTh');
+    _sortingTh.click(function() {
+      _this = $(this);
+      _sortingTh.not(_this).removeClass('descending').removeClass('ascending');
+      if (_this.hasClass('descending')) {
+        _this.removeClass('descending').addClass('ascending');
+      } else if (_this.hasClass('ascending')) {
+        _this.removeClass('ascending').addClass('descending');
+      } else {
+        _this.addClass('ascending');
+      }
+    })
+  })
+</script>
+
+
+</body>
+
+</html>

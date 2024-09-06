@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-廣告管理</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li class="activated"><a href="javascript:;"><span class="menuIcon myaccount"></span>廣告管理</a></li>
+
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>廣告管理</h2>
+        <!-- <ul class="path">
+          <li><a href="#">廣告管理</a></li>
+          <li>廣告設定</li>
+        </ul> -->
+      </header>
+
+      <section class="processIndicator">
+        <ol>
+          <li class="now">廣告目標設定</li>
+          <li>廣告內容設定</li>
+          <li>檢查啟用</li>
+        </ol>
+      </section>
+      
+      <section class="formX">
+        <table class="formLayout strongLabel">
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> 選擇廣告目標</td>
+            <td>
+              <ul class="optionBox">
+                <li>
+                  <label>
+                    <input type="radio" id="aaa" name="aaa">銷售</label>
+                    <p>提升網路、應用程式、電話或實體店家等通路的銷售量</p>
+                </li>
+                <li>
+                  <label><input type="radio" id="aaa" name="aaa">待開發客戶</label>
+                    <p>鼓勵客戶採取行動、藉此吸引待開發客戶並促成其他轉換</p>
+                </li>
+                <li>
+                  <label><input type="radio" id="aaa" name="aaa">網站流量</label>
+                    <p>吸引目標客群造訪您的網站</p>
+                </li>
+              </ul>    
+            </td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> 選擇廣告類型</td>
+            <td>
+              <ul class="optionBox">
+                <li>
+                  <label><input type="radio" name="bbb">搜尋</label>
+                  <p>吸引目標客群造訪您的網站</p>
+                </li>
+                <li>
+                  <label><input type="radio" name="bbb">最高成效</label>
+                  <p>透過單一廣告活動觸及所有 Google 服務中的目標對象</p>
+                    <p><a class="trigPop" id="pop-msg2301">瞭解運作方式</a></p>
+                </li>
+                <li>
+                  <label><input type="radio" name="bbb">探索</label>
+                    <p>在YouTube、Gmail和看所等平台放送廣告</p>
+                </li>
+              </ul>    
+            </td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> 廣告活動名稱</td>
+            <td>
+              <input type="text" class="fullWidth" name="" id="" placeholder="請輸入廣告活動名稱">
+            </td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> 目標達成方式</td>
+            <td>
+              <!-- <label class="aloneCheck"></label> -->
+              <span class="label">網站造訪</span>
+              <div class="getUrlButtons">
+                <input type="text" placeholder="請貼上或選擇廣告到達網址">
+                <button type="button">首頁</button>
+                <button type="button">Abous Us</button>
+                <button type="button">All Products</button>
+                <!-- <button type="button" class="showLightbox" id="majorPdFromLib">單一產品頁</button> -->
+              </div>
+            </td>
+          </tr>
+        </table>
+
+  
+        <div class="btnDv">
+          <input type="button" value="下一步，廣告內容設定" class="confirm">
+          <input type="reset" value="取消">
+        </div>
+      </section>
+      
+
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+  
+  <!-- 小幫手 -->
+  <div class="instantData">
+    <div class="insController">
+      <span class="insCtrl minimize"></span>
+      <span class="insCtrl hideMe"></span>
+    </div>
+
+    <section class="adSummarize">
+      <div class="percentageBar">
+        <span class="percentage">51.1%</span>
+        <span class="bar"></span>
+        <p>內容完成度</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    var _instantData = $('.instantData');
+    var _insCtrlMini = _instantData.find('.insCtrl.minimize');
+    _insCtrlMini.click(function(){
+      _instantData.toggleClass('mini');
+    });
+    _instantData.find('.hideMe').click(function(){
+      _instantData.hide();
+    })
+  </script>
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+
+  <!-- 訊息燈箱：最高成效 -->
+  <section class="popMsg" id="msg2301">
+    <div class="popBody">
+      <h3>最高成效</h3>
+      <h4>更快達成您的目標</h4>
+      <p>在自動化功能的協助下，找到即時發生的轉換。最高成效廣告活動會根據您的目標，在各種 Google 聯播網中尋找潛在客戶 (包括新客戶)</p>
+      <h4>接觸最適合您目標的目標對象</h4>
+      <p>最高成效廣告活動會自動向符合您目標的使用者顯示廣告，可運用目標對象信號來引導自動化功能，更快獲得理想成效。</p>
+      <h4>顯示優質廣告</h4>
+      <p>最高成效廣告活動會使用您的素材資源，自動為每個聯播網測試和製作成效最佳的廣告。</p>
+    </div>
+    <div class="btnDv">
+      <span class="btnLook"><a href="https://support.google.com/google-ads/answer/10724817?hl=zh-Hant" target="_blank">了解詳情</a></span>
+      <span class="btnLook closePop"><a href="javascript:void(0);" onclick="">Ok</a></span></div>
+  </section>
+
+  <!-- 燈箱：挑選產品型錄 -->
+  <section class="lightbox majorPdFromLib">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <div class="head">
+      <h3>挑選產品型錄</h3>
+    </div>
+    <section class="search toggleDrawer always hidden">
+      <h4 class="searchCaption">產品型錄查詢</h4>
+      <span class="toggleCtrl">查詢</span>
+      <div class="toggleArea">
+        <table class="formLayout">
+          <tr>
+            <td>產品名稱/產品型號</td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td>建立時間</td>
+            <td>
+              <div class="during">
+                <input type="date" placeholder="yyyy/mm/dd">
+                <span class="clearIcon"></span>
+                <input type="date" placeholder="yyyy/mm/dd">
+                <span class="clearIcon"></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>語系</td>
+            <td>
+              <div class="optionPool">
+                <label cid="42" class="isSelected disabled"><input type="checkbox">英文</label>
+                <label cid="41" class="isSelected disabled"><input type="checkbox">正中</label>
+                <label cid="43" class=""><input type="checkbox">日文</label>
+                <label cid="44" class=""><input type="checkbox">簡中</label>
+                <label cid="992" class=""><input type="checkbox">俄文</label>
+                <label cid="1699" class=""><input type="checkbox">西文</label>
+                <label cid="2124" class=""><input type="checkbox">葡文</label>
+                <label cid="2127" class=""><input type="checkbox">阿文</label>
+                <label cid="2129" class=""><input type="checkbox">印尼文</label>
+                <label cid="2382" class=""><input type="checkbox">德文</label>
+                <label cid="2383" class=""><input type="checkbox">法文</label>
+                <label cid="2384" class=""><input type="checkbox">越文</label>
+                <label cid="4085" class=""><input type="checkbox">泰文</label>
+                <label cid="6627" class=""><input type="checkbox">土文</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>自訂分類</td>
+            <td>
+              <div class="optionPool block scroll">
+                <label><input type="checkbox">自訂分類A</label>
+                <label class="cascade1"><input type="checkbox">自訂分類A-1</label>
+                <label class="cascade2"><input type="checkbox">自訂分類A-1-1</label>
+                <label><input type="checkbox">自訂分類B</label>
+                <label class="cascade1"><input type="checkbox">自訂分類B-1</label>
+                <label><input type="checkbox">自訂分類C</label>
+                <label><input type="checkbox">自訂分類D</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>狀態</td>
+            <td>
+              <div class="optionPool singleSelection">
+                <label><input type="radio" name="sss" checked>啟用且審核通過</label>
+                <label><input type="radio" name="sss">線上販售</label>
+                <label><input type="radio" name="sss">未線上販售</label>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="btnDv">
+          <input type="submit" value="查詢">
+          <input type="reset" value="清除">
+        </div>
+      </div>
+    </section>
+
+    <p class="hint">請選擇一則。</p>
+
+    <section class="page">
+      每頁顯示 <select name="perPage" id="perPage">
+        <option value="12">12</option>
+        <option value="40">40</option>
+        <option value="80">80</option>
+        <option value="999">全部</option>
+        </select> 筆
+    </section>
+
+    <section class="thumbnail checkingList">
+      <ul>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph_photo3.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="檔名">HyRead_ebook.jpg</li>
+            <li class="class">電子產品</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph15.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="檔名">photo_file_name_photo_file_name.jpg</li>
+            <li class="class">未分類</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph16.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="檔名">photo_file_name.jpg</li>
+            <li class="class">未分類</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph11.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="檔名">photo_file_name.jpg</li>
+            <li class="class">未分類</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph12.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="檔名">photo_file_name.jpg</li>
+            <li class="class">未分類</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph13.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="檔名">photo_file_name.jpg</li>
+            <li class="class">未分類</li>
+          </ol>
+        </li>
+
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph01.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="檔名">photo_file_name.jpg</li>
+            <li class="class">未分類</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph03.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="檔名">photo_file_name.jpg</li>
+            <li class="class">未分類</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph04.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="檔名">photo_filenameX_12345678901234567890.jpg</li>
+            <li class="class">未分類</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph05.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="檔名">photo_file_name.jpg</li>
+            <li class="class">未分類</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph06.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="檔名">photo_file_name.jpg</li>
+            <li class="class">未分類</li>
+          </ol>
+        </li>
+        <li><label class="listCheck"><input type="checkbox"></label>
+          <div class="image"><img src="../publicData/ph08.jpg"></div>
+          <ol class="info">
+            <li class="filename" title="檔名">photo_file_name.jpg</li>
+            <li class="class">未分類</li>
+          </ol>
+        </li>
+      </ul>
+    </section>
+
+    <section class="page">
+      <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+      <ul>
+        <li class="prev disabled"><a href="#">上一頁</a></li>
+        <li class="here"><a href="#">1</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">12</a></li>
+        <li class="next"><a href="#">下一頁</a></li>
+      </ul>
+    </section>
+
+    <p class="hint">尚可選取<em>3</em> 則，已選取 <em>0</em> 則。</p>
+
+    <div class="btnDv">
+      <input type="submit" class="hideLightbox" value="確定">
+      <input type="reset" class="hideLightbox" value="取消">
+    </div>
+
+  </section>
+
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-匯出型錄至eBay</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/froala/froala_editor.min.css">
+  <link href="../js-vue-pack/siteBuildBlock.bundle.css" rel="stylesheet" type="text/css"><!-- froala 編輯器 toolbar 用 -->
+
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>匯出型錄至eBay</h2>
+        <ul class="path">
+          <li><a href="#">內容管理</a></li>
+          <li>匯出型錄至eBay</li>
+        </ul>
+      </header>
+      <div class="navBtnsDv">
+        <span class="btnLook back"><a href="cont_eBay_searchList.html">回 eBay 上架主畫面</a></span>
+      </div>
+
+      
+      <section class="noteDv expansile">
+        <p><em>本功能維修中，請勿使用。</em></p>
+        <p>將商品上架至eBay前，請先閱讀eBay政策與規定： <a href="http://pages.ebay.com.hk/help/policies/overview.html" target="_blank">http://pages.ebay.com.hk/help/policies/overview.html</a> ，其中，eBay美國站特別針對圖片限制及規定： <a href="http://pages.ebay.com/sellerinformation/sellingresources/picturestandards.html" target="_blank">http://pages.ebay.com/sellerinformation/sellingresources/picturestandards.html</a> 您點選「試算商品刊登費並確認是否上架」按鈕，跳出視窗所試算之商品刊登費，可能會與「上架完成狀態」中的實際商品刊登費不同，實際商品刊登費會因eBay各站點是否有促銷活動等情形而異。</p>
+        <p>eBay美國、英國、澳洲、新加坡4個站點，收取之刊登費及成交費等方式不盡相同，建議您刊登前先了解：</p>
+        <ol>
+          <li>於eBay銷售成本：<a href="http://education.ebay.com.tw/newtoselling/sellingfees/sellingfees.html" target="_blank">http://education.ebay.com.tw/newtoselling/sellingfees/sellingfees.html</a></li>
+          <li>各站點收費規定： <ul>
+              <li>美國：<a href="http://pages.ebay.com/help/sell/fees.html" target="_blank">http://pages.ebay.com/help/sell/fees.html</a></li>
+              <li>英國：<a href="http://pages.ebay.co.uk/help/sell/fees.html" target="_blank">http://pages.ebay.co.uk/help/sell/fees.html</a></li>
+              <li>澳洲：<a href="http://pages2.ebay.com.au/Hub/How_to_sell/Selling_basics/Seller_fees" target="_blank">http://pages2.ebay.com.au/Hub/How_to_sell/Selling_basics/Seller_fees</a></li>
+              <li>新加坡：<a href="http://pages.ebay.com.sg/help/sell/fees.html" target="_blank">http://pages.ebay.com.sg/help/sell/fees.html</a></li>
+            </ul>
+          </li>
+        </ol>
+        <p>上述4個eBay站皆為英文語系國家，故「匯出商品型錄至eBay」功能僅提供買賣旺英文語系型錄使用。</p>
+      </section>
+<!-- 
+      <style>/*  ＧＵＩ測試＊必填未填錯誤訊息用，套版請刪除 */
+        .errorMsg{ display: none}
+      </style> -->
+
+      <section class="formX">
+        <h3>匯出商品型錄至 eBay - 設定上架資料（請輸入英文）</h3>
+        <table class="formLayout">
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> Site</td>
+            <td>
+              <select>
+                <option value="0" selected>美國</option>
+                <option value="15">澳洲</option>
+                <option value="216">新加坡</option>
+                <option value="3">英國</option>							
+              </select>
+              <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+            </td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> Categories</td>
+            <td>
+              <div class="tripleSelect">
+                <select>
+                  <option value="20081">Antiques</option>
+                  <option value="550">Art</option>
+                  <option value="267">Books</option>
+                  <option value="12576">Business &amp; Industrial</option>
+                  <option value="625">Cameras &amp; Photo</option>
+                  <option value="15032">Cell Phones &amp; Accessories</option>
+                  <option value="11450">Clothing, Shoes &amp; Accessories</option>
+                  <option value="11116">Coins &amp; Paper Money</option>
+                  <option value="58058">Computers/Tablets &amp; Networking</option>
+                </select>
+                <select name="category2" id="category2">
+                  <option value="37903">Antiquities</option>
+                  <option value="4707">Architectural &amp; Garden</option>
+                  <option value="20082">Asian Antiques</option>
+                  <option value="20086">Decorative Arts</option>
+                  <option value="2207">Ethnographic</option>
+                  <option value="163091">Mercantile, Trades &amp; Factories</option>
+                </select>
+                <select name="category3" id="category3">
+                  <option value="162922">Byzantine</option>
+                  <option value="162923">Celtic</option>
+                  <option value="37905">Egyptian</option>
+                  <option value="162916">Far Eastern</option>
+                  <option value="156322">Other Antique Instruments</option>
+                </select>
+              </div>
+              <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+            </td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> Title</td>
+            <td><input type="text" value="patty_test_copy">
+              <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+            <p class="hint">標題描述最多80個字元</p>
+          </td>
+          </tr>
+          <tr>
+            <td>Photo</td>
+            <td>
+              <div class="thumbnail checkingList">
+                <ul>
+                  <li><label class="listCheck"><input type="checkbox"></label>
+                    <div class="image"><img src="../publicData/ph06.jpg"></div>
+                  </li>
+                  <li><label class="listCheck"><input type="checkbox"></label>
+                    <div class="image"><img src="../publicData/ph08.jpg"></div>
+                  </li>
+                  <li><label class="listCheck"><input type="checkbox"></label>
+                    <div class="image"><img src="../publicData/ph07.jpg"></div>
+                  </li>
+
+                  <li><label class="listCheck"><input type="checkbox"></label>
+                    <div class="image"><img src="../publicData/ph01.jpg"></div>
+                  </li>
+                  <li><label class="listCheck"><input type="checkbox"></label>
+                    <div class="image"><img src="../publicData/ph02.jpg"></div>
+                  </li>
+                  <li><label class="listCheck"><input type="checkbox"></label>
+                    <div class="image"><img src="../publicData/ph04.jpg"></div>
+                  </li>
+
+                </ul>
+              </div>
+              <p class="hint">你選擇的第一張照片將成為eBay商品型錄首圖，並建議你選擇圖片前，先詳閱eBay圖片收費規定及相關限制。</p>
+            </td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> Listing Type</td>
+            <td>
+              <div class="optionPool">
+                <label><input type="radio"> Fixed Price</label>
+                <label><input type="radio"> Online Auction</label>
+              </div>
+              <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+            </td>
+          </tr>
+          <tr>
+            <td>Fixed Price</td>
+            <td>
+              <div class="priceValidDate">
+                <label>Buy Now to the listing USD <input type="text" value="13.4"></label>
+                <label>Lasting for 
+                  <select>
+                    <option value="999" selected>Good 'Til Cancelled</option>
+                    <option value="">... ... ...</option>
+                  </select>
+                </label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> Quantity</td>
+            <td><input type="number" value="1" class="mini"><div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div></td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> Item location</td>
+            <td>
+              <div class="arbitrary">
+                <label>Country</label>
+                <select>
+                  <option value="" selected>請選擇</option>
+                  <option value="IS">Iceland(冰島)</option>
+                  <option value="IE">Ireland(愛爾蘭)</option>
+                  <option value="JP">Japan(日本)</option>
+                  <option value="JE">Jersey(澤西島)</option>
+                  <option value="KE">Kenya(肯亞)</option>
+                  <option value="TW" selected>Taiwan(台灣)</option>
+                  <option value="TH">Thailand(泰國)</option>
+                  <option value="">... ... ...</option>
+                </select>
+              </div>
+              <div class="arbitrary">
+                <label>City, State</label>
+                <input type="text">
+              </div>
+              <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+            </td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> 第１組運費</td>
+            <td>
+              <div class="shippingFee">
+                <div class="areaAndServices">
+                  <label for="shippingService1">Destination: <em>美國</em></label>
+                  <select name="shippingService1" id="shippingService1">
+                    <option value="USPSFirstClass">USPS First Class Package</option>
+                    <option value="USPSPriority">USPS Priority Mail</option>
+                    <option value="FedExHomeDelivery">FedEx Ground or FedEx Home Delivery</option>
+                    <option value="UPSGround">UPS Ground</option>
+                    <option value="USPSParcel">... ... ...</option>
+                    <option value="USPSExpressMailInternationalLegalFlatRateEnvelope">USPS Priority Mail Express International Legal Flat Rate Envelope</option>
+                    <option value="USPSParcel">... ... ...</option>
+                  </select>
+                </div>
+                <label>Cost to buyer: USD（美金）<input type="text" class="mini"></label>
+                <label class="aloneCheck"><input type="checkbox">免運費</label>
+                <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>第２組運費<!-- （選填） --></td>
+            <td>
+              <div class="shippingFee">
+                <div class="areaAndServices">
+                  <span class="label">Destination: </span>
+                  <select name="shippingType2" id="shippingType2">
+                    <option>請選擇</option>
+                    <option value="0" id="ebaySiteName2" selected>美國</option>
+                    <option value="1">Worldwide</option>
+                  </select>
+                  <select name="shippingService2" id="shippingService2">
+                    <option value="InternationalPriorityShipping">International Priority Shipping</option>
+                    <option value="USPSGlobalExpress">USPS Global Express Mail</option>
+                    <option value="USPSGlobalPriority">USPS Global Priority Mail</option>
+                    <option value="USPSEconomyLetter">USPS Economy Letter Post</option>
+                    <option value="USPSEconomyParcel">USPS Economy Parcel Post</option>
+                    <option value="USPSAirmailLetter">USPS Airmail Letter Post</option>
+                    <option value="US_eBaySendInternationalStandard">eBay International Standard Delivery</option>
+                    <option value="USPSAirmailParcel">USPS Airmail Parcel Post</option>
+                    <option value="USPSFirstClassMailInternational">USPS First Class Mail Intl / First Class Package Intl Service</option>
+                    <option value="USPSPriorityMailInternational">USPS Priority Mail International</option>
+                    <option value="USPSPriorityMailInternationalFlatRateEnvelope">USPS Priority Mail International Flat Rate Envelope</option>
+                    <option value="USPSPriorityMailInternationalSmallFlatRateBox">USPS Priority Mail International Small Flat Rate Box</option>
+                    <option value="USPSPriorityMailInternationalFlatRateBox">USPS Priority Mail International Medium Flat Rate Box</option>
+                    <option value="USPSPriorityMailInternationalLargeFlatRateBox">USPS Priority Mail International Large Flat Rate Box</option>
+                    <option value="USPSPriorityMailInternationalPaddedFlatRateEnvelope">USPS Priority Mail International Padded Flat Rate Envelope</option>
+                    <option value="USPSPriorityMailInternationalLegalFlatRateEnvelope">USPS Priority Mail International Legal Flat Rate Envelope</option>
+                    <option value="USPSExpressMailInternational">USPS Priority Mail Express International</option>
+                    <option value="USPSExpressMailInternationalFlatRateEnvelope">USPS Priority Mail Express International Flat Rate Envelope</option>
+                    <option value="USPSExpressMailInternationalLegalFlatRateEnvelope">USPS Priority Mail Express International Legal Flat Rate Envelope</option>
+                    <option value="USPSFirstClassMailInternationalLetter">USPS First Class Mail International Letter</option>
+                    <option value="USPSFirstClassMailInternationalLargeEnvelope">USPS First Class Mail International Large Envelope</option>
+                    <option value="USPSFirstClassMailInternationalParcel">USPS First Class Mail International Parcel</option>
+                    <option value="UPSWorldWideExpressPlus">UPS Worldwide Express Plus</option>
+                    <option value="UPSWorldWideExpress">UPS Worldwide Express</option>
+                    <option value="UPSWorldWideExpedited">UPS Worldwide Expedited</option>
+                    <option value="UPSWorldwideSaver">UPS Worldwide Saver</option>
+                    <option value="UPSStandardToCanada">UPS Standard to Canada</option>
+                    <option value="FedExInternationalEconomy">FedEx International Economy</option>
+                    <option value="FedExInternationalPriority">FedEx International Priority</option>
+                    <option value="FedExGroundInternationalToCanada">FedEx Ground International to Canada</option>
+                    <option value="StandardInternational">Standard International Shipping</option>
+                    <option value="ExpeditedInternational">Expedited International Shipping</option>
+                    <option value="OtherInternational">Economy International Shipping</option>
+                    <option value="USPSGlobalExpressGuaranteed">USPS Global Express Guaranteed</option>
+                    <option value="PromotionalShippingMethod">Promotional Shipping Service</option>
+                    <option value="USPSExpressMailInternationalFlatRateBox">USPS Express Mail International Flat Rate Box</option>
+                    <option value="USPSExpressMailInternationalPaddedFlatRateEnvelope">USPS Priority Mail Express International Padded Flat Rate Envelope</option>
+                    <option value="ExpeditedDeliveryToRussia">Expedited International Courier Delivery to Russia</option>
+                    <option value="US_RUTrackedFromChina">RU Tracked Packet from China</option>
+                    <option value="US_IntlEconomyShippingFromGC">Economy Shipping from China/Hong Kong/Taiwan to worldwide</option>
+                    <option value="US_IntlStandardShippingFromGC">Standard Shipping from China/Hong Kong/Taiwan to worldwide</option>
+                    <option value="US_IntlExpeditedShippingFromGC">Expedited Shipping from China/Hong Kong/Taiwan to worldwide</option>
+                    <option value="US_MiniSpeedPAK_int">SpeedPAK Mini from Greater China</option>
+                    <option value="US_IntlEconomySppedPAK">Economy SpeedPAK from China/Hong Kong/Taiwan </option>
+                    <option value="US_IntlStandardSppedPAK">Standard SpeedPAK from China/Hong Kong/Taiwan</option>
+                    <option value="US_IntlExpeditedSppedPAK">Expedited SpeedPAK from China/Hong Kong/Taiwan</option>
+                  </select>
+                </div>
+                <label>Cost to buyer: USD（美金）<input class="mini" id="shippingFee2" type="text"></label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>第３組運費<!-- （選填） --></td>
+            <td>
+              <div class="shippingFee">
+                <div class="areaAndServices">
+                  <span class="label">Destination: </span>
+                  <select name="shippingType3" id="shippingType3">
+                    <option>請選擇</option>
+                    <option value="0" id="ebaySiteName2">美國</option>
+                    <option value="1">Worldwide </option>
+                  </select>
+                  <select name="shippingService3" id="shippingService3" disabled>
+                  </select>
+                </div>
+                <label>Cost to buyer: USD（美金）<input class="mini" id="shippingFee3" type="text"></label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Handling Time</td>
+            <td>
+              <select class="autoWidth">
+                <option value="1">1</option> 
+                <option value="2">2</option>
+                <option value="3" selected>3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+              </select>
+              business days
+            </td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> Payment Method</td>
+            <td>
+              <div class="arbitrary">
+                <label for="paypalAccount">Accept payment with PayPal</label>
+                <input id="paypalAccount" type="email" value="daphny.ina@gmail.com">
+              </div>
+              <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+              <p class="hint">系統預設帶入您eBay帳戶中的PayPal帳號，請務必確認是否正確</p>
+            </td>
+          </tr>
+          <tr>
+            <td>Item condition</td>
+            <td><div class="asAnInput">Brand New</div></td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> Description</td>
+            <td>
+              <!-- Froala html editor -->
+              <div class="fr-box fr-basic fr-top">
+                <div class="fr-toolbar fr-desktop fr-top fr-basic fr-sticky-off" style="top: 0px;"><button id="fullscreen-1" type="button" tabindex="-1" role="button" aria-pressed="false" title="Fullscreen" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="fullscreen"><i class="fa fa-expand" aria-hidden="true"></i><span class="fr-sr-only">Fullscreen</span></button><button id="bold-1" type="button" tabindex="-1" role="button" aria-pressed="false" title="Bold (⌘B)" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="bold"><i class="fa fa-bold" aria-hidden="true"></i><span class="fr-sr-only">Bold</span></button><button id="italic-1" type="button" tabindex="-1" role="button" aria-pressed="false" title="Italic (⌘I)" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="italic"><i class="fa fa-italic" aria-hidden="true"></i><span class="fr-sr-only">Italic</span></button><button id="underline-1" type="button" tabindex="-1" role="button" aria-pressed="false" title="Underline (⌘U)" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="underline"><i class="fa fa-underline" aria-hidden="true"></i><span class="fr-sr-only">Underline</span></button><button id="strikeThrough-1" type="button" tabindex="-1" role="button" aria-pressed="false" title="Strikethrough (⌘S)" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="strikeThrough"><i class="fa fa-strikethrough" aria-hidden="true"></i><span class="fr-sr-only">Strikethrough</span></button><button id="subscript-1" type="button" tabindex="-1" role="button" aria-pressed="false" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="subscript"><i class="fa fa-subscript" aria-hidden="true"></i><span class="fr-sr-only">Subscript</span></button><button id="superscript-1" type="button" tabindex="-1" role="button" aria-pressed="false" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="superscript"><i class="fa fa-superscript" aria-hidden="true"></i><span class="fr-sr-only">Superscript</span></button><button id="fontFamily-1" type="button" tabindex="-1" role="button" aria-controls="dropdown-menu-fontFamily-1" aria-expanded="false" aria-haspopup="true" title="Font Family" class="fr-command fr-btn fr-dropdown fr-btn-font_awesome fr-selection" data-cmd="fontFamily"><i class="fa fa-font" aria-hidden="true"></i><span class="fr-sr-only">Font Family</span></button>
+                  <div id="dropdown-menu-fontFamily-1" class="fr-dropdown-menu" role="listbox" aria-labelledby="fontFamily-1" aria-hidden="true">
+                    <div class="fr-dropdown-wrapper" role="presentation">
+                      <div class="fr-dropdown-content" role="presentation">
+                        <ul class="fr-dropdown-list" role="presentation">
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontFamily" data-param1="Arial,Helvetica,sans-serif" style="font-family: Arial,Helvetica,sans-serif" title="Arial">Arial</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontFamily" data-param1="Georgia,serif" style="font-family: Georgia,serif" title="Georgia">Georgia</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontFamily" data-param1="Impact,Charcoal,sans-serif" style="font-family: Impact,Charcoal,sans-serif" title="Impact">Impact</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontFamily" data-param1="Times New Roman,Times,serif,-webkit-standard" style="font-family: Times New Roman,Times,serif,-webkit-standard" title="Times New Roman">Times New Roman</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontFamily" data-param1="Tahoma,Geneva,sans-serif" style="font-family: Tahoma,Geneva,sans-serif" title="Tahoma">Tahoma</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontFamily" data-param1="Verdana,Geneva,sans-serif" style="font-family: Verdana,Geneva,sans-serif" title="Verdana">Verdana</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontFamily" data-param1="Microsoft JhengHei,Helvetica,sans-serif" style="font-family: Microsoft JhengHei,Helvetica,sans-serif" title="微軟正黑體">微軟正黑體</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontFamily" data-param1="PMingLiU,Helvetica,sans-serif" style="font-family: PMingLiU,Helvetica,sans-serif" title="新細明體">新細明體</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontFamily" data-param1="MingLiU,Helvetica,sans-serif" style="font-family: MingLiU,Helvetica,sans-serif" title="細明體">細明體</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontFamily" data-param1="DFKai-sb,Helvetica,sans-serif" style="font-family: DFKai-sb,Helvetica,sans-serif" title="標楷體">標楷體</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div><button id="fontSize-1" type="button" tabindex="-1" role="button" aria-controls="dropdown-menu-fontSize-1" aria-expanded="false" aria-haspopup="true" class="fr-command fr-btn fr-dropdown fr-btn-font_awesome fr-selection" data-cmd="fontSize"><i class="fa fa-text-height" aria-hidden="true"></i><span class="fr-sr-only">Font Size</span></button>
+                  <div id="dropdown-menu-fontSize-1" class="fr-dropdown-menu" role="listbox" aria-labelledby="fontSize-1" aria-hidden="true">
+                    <div class="fr-dropdown-wrapper" role="presentation">
+                      <div class="fr-dropdown-content" role="presentation">
+                        <ul class="fr-dropdown-list" role="presentation">
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="8px" title="8">8</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="9px" title="9">9</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="10px" title="10">10</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="11px" title="11">11</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="12px" title="12">12</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="14px" title="14">14</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="18px" title="18">18</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="24px" title="24">24</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="30px" title="30">30</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="36px" title="36">36</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="48px" title="48">48</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="60px" title="60">60</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="72px" title="72">72</a></li>
+                          <li role="presentation"><a class="fr-command" tabindex="-1" role="option" data-cmd="fontSize" data-param1="96px" title="96">96</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fr-separator fr-vs" role="separator" aria-orientation="vertical"></div><button id="color-1" type="button" tabindex="-1" role="button" title="Colors" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="color" data-popup="true"><i class="fa fa-tint" aria-hidden="true"></i><span class="fr-sr-only">Colors</span></button>
+                  <div class="fr-separator fr-hs" role="separator" aria-orientation="horizontal"></div><button id="align-1" type="button" tabindex="-1" role="button" aria-controls="dropdown-menu-align-1" aria-expanded="false" aria-haspopup="true" title="Align" class="fr-command fr-btn fr-dropdown fr-btn-font_awesome" data-cmd="align"><i class="fa fa-align-left" aria-hidden="true"></i><span class="fr-sr-only">Align</span></button>
+                  <div id="dropdown-menu-align-1" class="fr-dropdown-menu" role="listbox" aria-labelledby="align-1" aria-hidden="true">
+                    <div class="fr-dropdown-wrapper" role="presentation">
+                      <div class="fr-dropdown-content" role="presentation">
+                        <ul class="fr-dropdown-list" role="presentation">
+                          <li role="presentation"><a class="fr-command fr-title" tabindex="-1" role="option" data-cmd="align" data-param1="left" title="Align Left"><i class="fa fa-align-left" aria-hidden="true"></i><span class="fr-sr-only">Align Left</span></a></li>
+                          <li role="presentation"><a class="fr-command fr-title" tabindex="-1" role="option" data-cmd="align" data-param1="center" title="Align Center"><i class="fa fa-align-center" aria-hidden="true"></i><span class="fr-sr-only">Align Center</span></a></li>
+                          <li role="presentation"><a class="fr-command fr-title" tabindex="-1" role="option" data-cmd="align" data-param1="right" title="Align Right"><i class="fa fa-align-right" aria-hidden="true"></i><span class="fr-sr-only">Align Right</span></a></li>
+                          <li role="presentation"><a class="fr-command fr-title" tabindex="-1" role="option" data-cmd="align" data-param1="justify" title="Align Justify"><i class="fa fa-align-justify" aria-hidden="true"></i><span class="fr-sr-only">Align Justify</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div><button id="formatOL-1" type="button" tabindex="-1" role="button" title="Ordered List" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="formatOL"><i class="fa fa-list-ol" aria-hidden="true"></i><span class="fr-sr-only">Ordered List</span></button><button id="formatUL-1" type="button" tabindex="-1" role="button" title="Unordered List" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="formatUL"><i class="fa fa-list-ul" aria-hidden="true"></i><span class="fr-sr-only">Unordered List</span></button><button id="outdent-1" type="button" tabindex="-1" role="button" title="Decrease Indent (⌘[)" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="outdent"><i class="fa fa-outdent" aria-hidden="true"></i><span class="fr-sr-only">Decrease Indent</span></button><button id="indent-1" type="button" tabindex="-1" role="button" title="Increase Indent (⌘])" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="indent"><i class="fa fa-indent" aria-hidden="true"></i><span class="fr-sr-only">Increase Indent</span></button>
+                  <div class="fr-separator fr-hs" role="separator" aria-orientation="horizontal"></div><button id="insertLink-1" type="button" tabindex="-1" role="button" title="Insert Link (⌘K)" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="insertLink" data-popup="true"><i class="fa fa-link" aria-hidden="true"></i><span class="fr-sr-only">Insert Link</span></button><button id="insertTable-1" type="button" tabindex="-1" role="button" title="Insert Table" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="insertTable" data-popup="true"><i class="fa fa-table" aria-hidden="true"></i><span class="fr-sr-only">Insert Table</span></button>
+    
+                  <div class="fr-separator fr-vs" role="separator" aria-orientation="vertical"></div><button id="undo-1" type="button" tabindex="-1" role="button" aria-disabled="true" title="Undo (⌘Z)" class="fr-command fr-btn fr-btn-font_awesome fr-disabled" data-cmd="undo"><i class="fa fa-rotate-left" aria-hidden="true"></i><span class="fr-sr-only">Undo</span></button><button id="redo-1" type="button" tabindex="-1" role="button" aria-disabled="true" title="Redo (⌘⇧Z)" class="fr-command fr-btn fr-btn-font_awesome fr-disabled" data-cmd="redo"><i class="fa fa-rotate-right" aria-hidden="true"></i><span class="fr-sr-only">Redo</span></button><button id="clearFormatting-1" type="button" tabindex="-1" role="button" title="Clear Formatting" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="clearFormatting"><i class="fa fa-eraser" aria-hidden="true"></i><span class="fr-sr-only">Clear Formatting</span></button><button id="selectAll-1" type="button" tabindex="-1" role="button" title="Select All" class="fr-command fr-btn fr-btn-font_awesome" data-cmd="selectAll"><i class="fa fa-mouse-pointer" aria-hidden="true"></i><span class="fr-sr-only">Select All</span></button>
+                  
+                </div>
+                <div class="fr-sticky-dummy"></div>
+                <div class="fr-wrapper show-placeholder" dir="auto"><iframe src="about:blank" frameborder="0" class="fr-iframe" ></iframe><span class="fr-placeholder" style="margin: 0; line-height: 1.3;padding:5px 5px 0; text-align: start;font-size: 15px">插入的智慧型模板顯示於工作區</span></div>
+              </div>
+              <!-- <div class="textCount"><em>0</em>/8000</div> -->
+              <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+            </td>
+          </tr>
+        </table>
+        <div class="btnDv">
+          <input type="button" value="試算商品刊登費並確認是否上架存" class="confirm trigPop" id="pop-msg01">
+          <input type="reset" value="重填">
+        </div>
+      </section>
+
+
+
+
+
+
+      
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+
+
+      <!-- 訊息燈箱 -->
+      <section class="popMsg" id="msg01">
+        <h3>確定上架到 eBay ？</h3><!-- 訊息標題，不需要請刪除 -->
+        <div class="popBody">
+          <p>此商品上架後，eBay 將收取刊登費 UDS 0.0，其中，確認上架請按「確定」，繼續編輯請按「取消」</p>
+          <p>eBay 試算刊登費用明細：</p>
+        </div>
+        <div class="btnDv">
+          <input type="button" value="確定" class="confirm">
+          <input type="button" value="取消" class="closePop">
+        </div>
+      </section>
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+</body>
+
+</html>

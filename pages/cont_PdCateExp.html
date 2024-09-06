@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-型錄匯入匯出</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>型錄匯入匯出</h2>
+        <ul class="path">
+          <li><a href="#">內容管理</a></li>
+          <li>型錄匯入匯出</li>
+        </ul>
+      </header>
+
+
+      <section class="noteDv expansile">
+        <p>系統提供您可利用匯入匯出功能來新增、編輯、刪除管理型錄。請依操作流程依序下載範本、編修資料、匯入編輯完的檔案，即可以完成型錄匯入。</p>
+        <p>若要同時匯入多語圖片副檔，請務必先將圖片上傳至圖庫、並取得圖片對應連結，再將圖片連結貼入即可。詳細請見<a href="x">匯入匯出影片教學</a>說明。</p>
+        <ol>
+          <li>此功能只限匯入產品的文字資料，不含圖片/影片、檔案資訊及販售資料。</li>
+          <li>匯入excel表單須由系統取得，並依系統格式編輯，請勿自行調整各欄位格式或位置，以及增減excel表單的欄位或合併儲存格等。</li>
+          <li>有「單語主檔」、「多語副檔」兩種excel表單；「單語主檔」表單欄位中包含型錄【共用】的欄位，而「多語副檔」不支援【共用】欄位。</li>
+          <li>「單語主檔」可用於新增與修改產品型錄，而「多語副檔」限用於修改產品型錄。</li>
+          <li>匯入excel表單部份欄位須填入代碼，請下載並參照「代碼對應表」填寫。</li>
+          <li>excel表單上的「產品序號」欄位，新增產品時請留空白，修改產品時請填入該產品序號。</li>
+          <li>匯入成功後，型錄新增或修改即覆蓋，務必請於匯入前，檢查excel表單資料的正確性。 </li>
+          <li><em>範本資料會適時更新，建議每次下載最新範本編輯後再匯入，以免儲存失敗。</em></li>
+        </ol>
+      </section>
+
+      <section class="importAndExport toggleDrawer always">
+        <div class="head">
+          <h3>匯入匯出作業</h3>
+          <span class="toggleCtrl closeIt">收合</span>
+        </div>
+
+        <div class="toggleArea">
+
+          <section class="importing">
+            <h4>型錄匯入作業</h4>
+            <div class="flex3Set">
+              <div class="procedure">
+                <div class="heading">步驟一：下載範本</div>
+                <ul class="actions">
+                  <li><a href="x">下載單語主檔範本</a></li>
+                  <li><a href="x">下載多語副檔範本</a></li>
+                </ul>
+                <p class="hint">下載型錄匯入範本，依序填寫「單語主檔／多語副檔」。範本資料會適時更新，建議每次下載最新範本編輯後再匯入，以免儲存失敗。</p>
+              </div>
+              <div class="procedure">
+                <div class="heading">步驟二：填寫匯入資料</div>
+                <ul class="actions">
+                  <li><a href="x">下載系統代碼對應表</a></li>
+                  <li><a href="x">匯出自定義產品分類</a></li>
+                  <li><a href="x">產業 TAITRACODE 查詢</a></li>
+                </ul>
+                <p class="hint">下載／匯出型錄匯入範本所需要的系統代碼。並依據欄位需求填入代碼</p>
+              </div>
+              <div class="procedure">
+                <div class="heading">步驟三：上傳匯入檔案</div>
+                <ul class="actions">
+                  <li class="fileBtn" title="上傳匯入單語檔案"><input type="file"></li>
+                  <li class="fileBtn" title="上傳匯入多語檔案"><input type="file"></li>
+                  <li class="trigPop" id="pop-msg01"><a>＊＊訊息燈箱測試＊＊</a></li>
+
+                  <!-- <li><a href="x">上傳匯入單語檔案</a></li>
+                  <li><a href="x">上傳匯入多語檔案</a></li> -->
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="exporting">
+            <div class="flex2Set">
+              <div class="procedure">
+                <h4>型錄匯出作業</h4>
+                <ul class="actions">
+                  <li class="trigPop" id="pop-msg02"><a>匯出所有型錄</a></li>
+                  <li><a>匯出指定型錄</a></li>
+                </ul>
+              </div>
+              <div class="procedure">
+                <h4>圖庫匯出作業</h4>
+                <ul class="actions">
+                  <li><a>匯出所有圖片清單</a></li>
+                  <li><a>匯出指定圖片清單</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="hint">匯出您的現行所有或指定的型錄作為匯入參照範本，並依序編修現行型錄的「單語主檔」「多語副檔」檔案。不編修的資料請務必刪除，以避免變動到現行型錄。</p>
+          </section>
+
+        </div>
+
+
+
+      </section>
+      
+      <section class="searchRow simple">
+        <div class="during">
+          <input type="date" placeholder="yyyy/mm/dd">
+          <input type="date" placeholder="yyyy/mm/dd">
+        </div>
+        <input type="button" value="查詢">
+      </section>
+<!-- 有清除圖示
+      <section class="searchRow simple">
+        <div class="during">
+          <input type="date" placeholder="yyyy/mm/dd">
+          <span class="clearIcon"></span>
+          <input type="date" placeholder="yyyy/mm/dd">
+          <span class="clearIcon"></span>
+        </div>
+        <input type="button" value="查詢">
+      </section>
+ -->
+
+
+      <section class="filterBy">
+        <span>快速選單</span>
+        <div class="simuInput">全部</div>
+        <ul class="filterOptions">
+          <li class="isPicked">全部 <span class="count">41</span></li>
+          <li>匯入<span class="count">20</span></li>
+          <li>匯出<span class="count">21</span></li>
+        </ul>
+      </section>
+
+      <section class="listTable">
+ 
+        <table>
+          <thead>
+            <tr>
+              <th>動作</th>
+              <th>匯入／匯出檔案</th>
+              <th>異動結果</th>
+              <th>提交時間</th>
+              <th>完成時間</th>
+              <th>編修帳號</th>
+            </tr>
+          <tbody>
+            <tr>
+              <td>匯入單語主檔</td>
+              <td><a href="x">product_200726update_xlsx</a></td>
+              <td>
+                <ul>
+                  <li><span class="stress">格式錯誤：1 筆</span></li>
+                  <li>錯誤報告：<a href="x">error_product_200726update_xlsx</a></li>
+                </ul>
+              </td>
+              <td><time>2020-07-26 14:43</time></td>
+              <td><time>2020-07-26 14:43</time></td>
+              <td class="aCenter">LiuccHywebSU</td>
+            </tr>
+
+            <tr>
+              <td>匯出指定型錄</td>
+              <td><span class="stress">匯出執行中,請稍候</span></td>
+              <td>
+              </td>
+              <td><time>2020-07-26 14:43</time></td>
+              <td><time>2020-07-26 14:43</time></td>
+              <td class="aCenter">野原長明</td>
+            </tr>
+
+
+            <tr>
+              <td>匯出指定型錄</td>
+              <td>
+                <ul>
+                  <li>單語主檔：<a href="x">main_product_147927.xlsx</a></li>
+                  <li>多語副檔：<a href="x">multi_product_147927.xlsx</a></li>
+                </ul>
+              </td>
+              <td>
+                <ul>
+                  <li>匯出指定型錄</li>
+                  <li>主檔：11筆</li>
+                  <li>副檔：32筆</li>
+                </ul>
+              </td>
+              <td><time>2020-07-26 14:43</time></td>
+              <td><time>2020-07-26 14:43</time></td>
+              <td class="aCenter">Liucc</td>
+            </tr>
+            <tr>
+              <td>匯出自訂分類</td>
+              <td><a href="x">product_catagory_147927.xlsx</a>
+                <br>
+                <span class="stress">錯誤報告：<a href="file">error_main655223412029612361355.xlsx</a>
+                </span>
+              </td>
+              <td></td>
+              <td><time>2020-07-26 14:43</time></td>
+              <td><time>2020-07-26 14:43</time></td>
+              <td class="aCenter">boan</td>
+            </tr>
+            <tr>
+              <td>匯入多語副檔</td>
+              <td><a href="x">multi_product_147927.xlsx</a> </td>
+              <td>
+                <ul>
+                  <li>匯入型錄多語副檔</li>
+                  <li>新增：日文 1筆／簡體中文 1筆</li>
+                  <li>修改：正中 1筆</li>
+                </ul>
+              </td>
+              <td><time>2020-07-26 14:43</time></td>
+              <td><time>2020-07-26 14:43</time></td>
+              <td class="aCenter">LiuccHywebSU</td>
+            </tr>
+            <tr>
+              <td>匯入單語主檔</td>
+              <td><a href="x">product_200726update_xlsx</a></td>
+              <td>
+                <ul>
+                  <li>匯入型錄單語主檔</li>
+                  <li>新增：英文 3筆</li>
+                  <li>修改：英文 1筆／中文 1筆</li>
+                </ul>
+              </td>
+              <td><time>2020-07-26 14:43</time></td>
+              <td><time>2020-07-26 14:43</time></td>
+              <td class="aCenter">LiuccHywebSU</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+
+      <section class="page">
+        <p>每頁顯示 <select name="perPage" id="perPage">
+          <option value="30">10</option>
+          <option value="30">25</option>
+          <option value="10">50</option>
+          <option value="30">全部</option>
+        </select> 筆</p>
+        <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+        <ul>
+          <li class="prev disabled"><a href="#">上一頁</a></li>
+          <li class="here"><a href="#">1</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">12</a></li>
+          <li class="next"><a href="#">下一頁</a></li>
+        </ul>
+      </section>
+
+
+      
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+
+  <!-- 以下是訊息燈箱 -->
+  <section class="popMsg" id="msg02">
+    <h3>開始匯出</h3>
+    <div class="popBody">
+      <p>系統即將開始整理您要匯出的所有檔案，匯出需要一些時間來運算。</p>
+      <p>離開本畫面，並不會中斷匯出的作業，您可以稍後再回到本畫面，於下方的歷史紀錄中查看是否匯出成功。</p>
+    </div>
+    <div class="btnDv">
+      <input type="button" value="確定" class="confirm trigPop" id="pop-done2">
+      <input type="button" value="取消" class="closePop">
+    </div>
+  </section>
+
+
+  <section class="popMsg" id="done2">
+    <h3>送出成功</h3>
+    <div class="popBody">
+      <p>資料送出，匯出執行中，請稍候。</p>
+    </div>
+    <div class="btnDv">
+      <input type="button" value="確定" class="confirm closePop">
+    </div>
+  </section>
+
+
+  <section class="popMsg" id="msg01">
+    <h3>確定開始匯入？</h3>
+    <div class="popBody">
+      <p>匯入檔案：<em>1234567update.xls</em></p>
+      <p>匯入主要是新增或修改型錄，無異動的項目請於Excel檔案中刪除</p>
+      <p>型錄ID為空白者，會以新增方式處理；型錄ID非空白者，會以修改方式覆蓋現有對應的型錄。</p>
+      <p>選擇上傳檔案成功後，系統會先進行格式的檢查，需要一些時間來運算。離開本畫面，並不會中斷匯入的作業；您可以稍後再回到本畫面，於下方的歷史紀錄中查看是否匯入成功。</p>
+      <p>如果有格式上的問題，資料將不予匯入，並提供錯誤報告，請您修訂完成後，再重新匯入。</p>
+    </div>
+    <div class="btnDv">
+      <input type="button" value="確定" class="confirm trigPop" id="pop-done1">
+      <input type="button" value="取消" class="closePop">
+    </div>
+  </section>
+
+  <section class="popMsg" id="done1">
+    <h3>送出成功</h3>
+    <div class="popBody">
+      <p>匯入資料已送出。格式檢查中，請稍候。</p>
+    </div>
+    <div class="btnDv">
+      <input type="button" value="確定" class="confirm closePop">
+    </div>
+  </section>
+
+
+  <script>
+    $(function(){
+      $('#pop-done1, #pop-done2').click(function(){
+        $(this).parents('.popMsg').hide();
+      });
+    })
+  </script>
+
+
+</body>
+
+</html>

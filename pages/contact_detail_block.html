@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-線上商機</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/froala/froala_editor.min.css">
+  <link rel="stylesheet" href="../css/dropzone.css">
+
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li><a href="#">商機管理 <span class="count">3</span></a></li>
+            <li><a href="#">訂單管理 <span class="count">10</span></a></li>
+            <li><a href="#">前往企業網 <span class="count">1</span></a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">會員重要公告</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">3 Items</a>
+          <ul><li>Goods1</li><li>Goods2</li><li>Goods3</li></ul>
+        </li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a></li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="main">
+      <header class="pageHeading">
+        <h2>商機訊息通</h2>
+        <ul class="path">
+          <li><a href="#">商機管理</a></li>
+          <li>商機訊息通</li>
+        </ul>
+      </header>
+
+      <div class="navBtnsDv">
+        <span class="btnLook back"><a href="#">返回</a></span>
+      </div>
+      <div class="searchOnTop">
+        <form action="">
+          <input type="text" placeholder="查詢關鍵字">
+          <input type="reset" value="清除" title="清除">
+          <input type="submit" value="查詢">
+        </form>
+      </div>
+  
+
+      
+      <section class="threads">
+        <div class="thisCompanyNow">
+          <h3><span class="locationLabel">日本</span>Nana (liucc@gmail.com.tw) - Company Name Duis aute irure dolor in reprehaaa enderit in voluptate<span class="alertThis off disabled"></span></h3>
+          <div class="rating">
+            <div class="gotPoint">
+              <span class="point scored"></span><span class="point scored"></span><span class="point scored"></span><span class="point"></span>
+              <span class="point"></span>
+            </div>
+            <div class="andComment">評價備註摘要文字，Duis aute irure dolor in reprehaaa enderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </div>
+            <span class="btnLookSmall trigPop" id="pop-rate"><a href="javascript:;">編輯評價</a></span>
+          </div>
+          <span class="avatar inactive"><img src="../images/avatar2.png"></span>
+          <ul>
+            <li>首次聯絡：<time>2019-02-13</time></li>
+            <li>最近一次詢問：<em>Product - HyRead Kiosk Self-help Reading System</em></li>
+          </ul>
+          <!-- <span class="btnLook keep"><a href="#"><em>3</em>則收藏訊息</a></span> -->
+        </div><!-- /.thisCompanyNow  -->
+        <div class="infoCard ofThisComp">
+          <div class="header">
+            <div class="companyName">Company Name Duis aute irure dolor in reprehaaa enderit in voluptate</div>
+            <span class="locationLabel">日本</span>
+            <span class="alertLabel off"></span>
+            <div class="ratings">
+              <div class="gotPoint">
+                <span class="point scored"></span><span class="point scored"></span><span class="point scored"></span><span class="point"></span><span class="point"></span>
+              </div>
+            </div>
+          </div>
+          <div class="middle">
+            <span class="avatar inactive"><img src="../images/avatar2.png"></span>
+            <div class="thePerson"><span class="title">Mr.</span> <span class="name">Nana Liou</span></div>
+            <div class="email">Nana (liucc@gmail.com.tw)</div>
+            <div class="contactTime">最後訊息發送日期: <time>2019-07-08</time></div>
+            <ul class="myLabels">
+              <li>Regular customer</li>
+              <li>other label</li>
+            </ul>
+          </div>
+          <h4>商機互動數據</h4>
+          <ul class="statistics">
+            <li>
+              <span class="caption">發送商機數</span>
+              <span class="value">211</span>
+            </li>
+            <li>
+              <span class="caption">回覆次數</span>
+              <span class="value">77</span>
+            </li>
+            <li>
+              <span class="caption">互動商機數</span>
+              <span class="value">33</span>
+            </li>
+          </ul>
+          <div class="navBtnsDv"><span class="btnLook"><a href="contact_detail.html">檢視買主詳細資訊</a></span></div>
+        </div><!-- /.infoCard ofThisComp-->
+  
+        <!-- <div class="loadMore"><span class="btnLook"><a href="javascript:;">載入更多訊息</a></span></div> -->
+
+        <ul>
+            <li class="marker" id="marker_end"><span>已無更多訊息</span></li>
+            <li class="loadMore"><span class="btnLook"><a href="javascript:;">載入更多訊息</a></span></li>
+            <li>
+            <div class="talkingBox">              
+              <p><a href="javascript:;" class="showLightbox" id="lbx-1"><span class="pdPhoto"><img src="../publicData/ph03.jpg"></span>Product: HyRead Kiosk Self-help Reading System <span class="more">檢視詳細</span></a></p>
+              <time>2018-06-24 11:22:33 GMT+8</time>
+            </div>
+            <span class="replyThis">回覆這則</span>
+            <span class="keepThis">收藏這則</span>
+          </li>
+          <li><span class="avatar">J</span>
+            <div class="talkingBox mine">
+              <span class="msgStatis">Initial quation</span>
+              <p><a href="javascript:;" class="showLightbox" id="lbx-2">The articles can be made specially according to your own specifications. As shown the attached files for detail. <span class="more">檢視詳細</span></a>
+              </p>
+              <ul class="attList">
+                <li><a href="Spec_190327.pdf">Spec_190327.pdf</a></li>
+              </ul>
+              <time>2018-06-28 12:01:27 GMT+8 <span class="beenRead" title="read"></span></time>
+            </div>
+          </li>
+          <li><span class="avatar">C</span>
+            <div class="talkingBox mine">
+              <span class="msgStatis">審核不通過</span>
+              <span class="msgStatis">Initial quation</span>
+              <p>Thank you for your enquiry and for your interest in our products. To enable us to provide you with a detailed quotation, please fill in and return the attached Request for Quotation by E-mail, fax or mail.</p>
+              <ul class="attList">
+                <li><a href="Attachment_quest-for-Quotation.pdf">Attachment_quest-for-Quotation.pdf</a></li>
+                <li><a href="Quotation.pdf">Quotation.pdf</a></li>
+              </ul>
+              <time>2018-06-28 12:01:27 GMT+8 <span class="beenRead" title="read"></span></time>
+            </div>
+          </li>
+          <li>
+            <div class="talkingBox">
+              <div class="reSubject">Initial Quotation: specifications as shown the attached files</div>
+              <p><a href="javascript:;" class="showLightbox" id="lbx-3">Thank you very much for your reply. I am looking forward to hearing the good news from you. <span class="more">檢視詳細</span></a></p>
+              <ul class="attList">
+                <li><a href="Quest for Quotation_190327.pdf" download>Quest for Quotation_190327.pdf</a></li>
+              </ul>
+              <time>2018-07-01 15:20:27 GMT+8</time>
+            </div>
+            <span class="replyThis">回覆這則</span>
+            <span class="keepThis kept">已收藏</span>
+          </li>
+          <li><span class="avatar">K</span>
+            <div class="talkingBox mine">
+              <p><a href="javascript:;">Thank you for your enquiry and for your interest in our products. To enable us to provide you with a detailed quotation, please fill in and return the attached Request for Quotation by E-mail, fax or mail. <span class="more">檢視詳細</span></a></p>
+              <div class="inThreadQt">Quotation: <span class="checkThisQt"><a title="Check this quotation" href="javascript:;" onclick="">Q-2019080515002100001</a></span>
+                <span class="keepThisQt"><a title="Keep this quotation" href="../publicData/Q-2019041916020701104.pdf" download>Q-2019080515002100001.pdf</a></span>
+              </div>
+              <time>2018-06-28 12:01:27 GMT+8 <span class="beenRead" title="read"></span></time>
+            </div>
+          </li>
+          <li class="marker" id="marker_2019"><span>2019</span></li>
+          <li>
+            <div class="talkingBox">
+              <p>Thank you very much for your reply. I am looking forward to hearing the good news from you.</p>
+
+              <time>2018-06-26 09:20:27 GMT+8</time>
+            </div>
+            <span class="replyThis">回覆這則</span>
+            <span class="keepThis kept">已收藏</span>
+          </li>
+          <li><span class="avatar"><img src="../images/avatar3.png"></span>
+            <div class="talkingBox mine">
+              <p> Thank you for your enquiry and for your interest in our products. To enable us to provide you with a detailed quotation, please fill in and return the attached Request for Quotation, Reply or by E-mail, fax or mail. <br> email: j123456789@hyweb.com.tw fax number: 886-123456789</p>
+              <time>07-07 19:22:44 GMT+8 <span class="beenRead" title="read"></span></time>
+            </div>
+          </li>
+          <li>
+            <div class="talkingBox">
+              <p>Thank You. We will keep you posted for any updated. If you are interested in our products, please feel free to contact me.</p>
+              <time>07-07 08:35:22 GMT+8</time>
+            </div>
+            <span class="replyThis">回覆這則</span>
+            <span class="keepThis kept">已收藏</span>
+          </li>
+          <li><span class="avatar"><img src="../images/avatar1.png"></span>
+            <div class="talkingBox mine">
+              <span class="msgStatis">待審核</span>
+              <span class="msgStatis">Initial quation</span>
+              <p><a href="javascript:;">IN ACCORDANCE WITH YOUR REQUEST INQUIRY, WE ARE PLEASED TO SUBMIT THE FOLLOWING QUOTATION. <span class="more">檢視詳細</span></a></p>
+              <ul class="attList">
+                <li><a href="Spec_190327.pdf">Spec_190327.pdf</a></li>
+              </ul>
+              <time>07-09 11:19:49 GMT+8 <span class="beenRead" title="read"></span></time>
+            </div>
+          </li>
+
+          <!-- <li class="marker" id="marker_new"><span>以下為未讀訊息</span></li> -->
+
+          <li>
+            <div class="talkingBox">
+              <p> Thank you for your enquiry and for your interest in our products. To enable us to provide you with a detailed quotation, please fill in and return the attached Request for Quotation, Reply or by E-mail, fax or mail. <br> email: j123456789@hyweb.com.tw fax number: 886-123456789</p>
+              <time>07-07 19:22:44 GMT+8<</time>
+            </div>
+            <span class="replyThis">回覆這則</span>
+            <span class="keepThis">收藏這則</span>
+          </li>
+          <li>
+            <div class="talkingBox">
+              <div class="reSubject">Thank you for your enquiry and for your interest in our products.</div>
+              <p>Detail as attachments.</p>
+              <ul class="attList">
+                <li><img src="../publicData/pd_tea01.jpg" alt=""></li>
+                <li><a href="Attachment_for_Detail.pdf" download>Attachment_for_Detail.pdf</a></li>
+              </ul>
+              <time>07-07 19:22:44 GMT+8</time>
+            </div>
+            <span class="replyThis">回覆這則</span>
+            <span class="keepThis">收藏這則</span>
+          </li>
+          <li class="marker" id="marker_end"><span>已無更多訊息</span></li>
+        </ul>
+      </section><!-- /.threads -->
+      <section class="replyDrawer inactive fixed">
+        <p>此聯絡人已被加入刪除名單。移出後可回覆。<button class="recover trigPop" id="pop-msg1" type="button">移出刪除名單</button></p>
+      </section>
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+  <section class="lightbox fromThread lbx-1">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <div class="personInHead">
+      <span class="avatar"><img src="../images/avatar4.png"></span>
+      <div class="account"><em>Nana</em> (nana@sevencompany.com.tw)</div>
+      <div class="company">Seven International CO., LTD.</div>
+    </div>
+    <section class="dataTable">
+      <span class="btnLookSmall disabled"><a href="javascript:;">拒絕</a></span>
+      <h3>Original Inquiry Information (lightbox-1)</h3>
+      <table>
+        <tr>
+          <th>商機類型</th>
+          <td>Inquiry: Product</td>
+        </tr>
+        <tr>
+          <th>發送日期</th>
+          <td>2019-06-27 16:42:25 GMT+8</td>
+        </tr>
+        <tr>
+          <th>主旨</th>
+          <td>Product: HyRead Kiosk Self-help Reading System</td>
+        </tr>
+        <tr>
+          <th>訊息</th>
+          <td>Dear Sir,<br> Would you kindly give us detailed information about the “Nokia 2100” mobile sets recently advertised by you in the “Daily Star.” we are impressed by the description of the respective mobile set as advertised by you and expected to purchase if terms and conditions are found to be suitable. Our annual requirement of such a set is around twenty-five thousand (25,000) pieces. As we handle a lot of mobile sets each year, we hope and trust you will quote the most favorable prices and terms. The articles can be made specially according to your own specifications. As shown the attached files for detail. Our popular product specifications as attacment.</td>
+        </tr>
+        <tr>
+          <th>預計採購金額</th>
+          <td>USD 1000</td>
+        </tr>
+        <tr>
+          <th>數量</th>
+          <td>100</td>
+        </tr>
+        <tr>
+          <th>附件</th>
+          <td>
+            <ol class="attachment">
+              <li><a title="Download" href="https://file01.ttstaging.com.tw/68d0b3de-b326-42cf-b93a-3e44eef056f7/specification_requirements1.pdf">specification requirements1.pdf</a></li>
+            </ol>
+          </td>
+        </tr>
+        <tr>
+          <th>型錄連結</th>
+          <td><a href="https://www.ttstaging.com.tw/product/1618648" target="new"> (En)測試中英日文都有建的型錄</a></td>
+        </tr>
+        <tr>
+          <th>發送者資訊</th>
+          <td>
+            <ul class="noBullet">
+              <li><span class="label">公司名稱</span> Comapny Seven</li>
+              <li><span class="label">聯絡人</span> Mr. Nana</li>
+              <li><span class="label">聯繫電話</span> 886-1234567890</li>
+              <li><span class="label">國家/州/省/市</span> 日本/大阪府</li>
+              <li><span class="label">地址</span> 5F.-6, No.8, Taiyuan 1st St., Zhubei City, Hsinchu County 302, Taiwan (R.O.C.) from test</li>
+              <li><span class="label">公司網址</span> 未提供</li>
+            </ul>
+          </td>
+        </tr>
+  
+      </table>
+    </section>
+  </section>
+  <section class="lightbox fromThread lbx-2">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <div class="personInHead">
+      <span class="avatar"><img src="../images/avatar4.png"></span>
+      <div class="account"><em>Nana</em> (nana@sevencompany.com.tw)</div>
+      <div class="company">Seven International CO., LTD.</div>
+    </div>
+    <article class="mailContent">
+      <div>Hi, I'm wondering if this is still available? Needs are as shown in the table below.</div>
+      <div>div margin test. div margin test. div margin test. div margin test. div margin test. div margin test. div margin test. div margin test. div margin test. div margin test. (lightbox-2)</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Part No</th>
+            <th>Operating Voltage</th>
+            <th>ROM Density</th>
+            <th>ROM ISP</th>
+            <th>RAM</th>
+            <th>System Clock - X`tal</th>
+            <th>System Clock - IHOSC</th>
+            <th>System Clock - ILOSC</th>
+            <th>System Clock - Fcpu (Max MHz)</th>
+            <th>I/O - GPIO</th>
+            <th>I/O - Wake-up</th>
+            <th>Interrupt - Internal</th>
+            <th>Interrupt - External</th>
+            <th>Timer - 16-bit</th>
+            <th>Timer - 32bit</th>
+            <th>Timer - RTC</th>
+            <th>Timer - Capture</th>
+            <th>PWM - Resolution</th>
+            <th>PWM - Ch</th>
+            <th>ADC - Resolution</th>
+            <th>ADC - Ch</th>
+            <th>DAC - Resolution</th>
+            <th>DAC - Ch</th>
+            <th>Comparator</th>
+            <th>Int Ref</th>
+            <th>SPI/SIO set</th>
+            <th>I2C/MSP - set</th>
+            <th>I2S - set</th>
+            <th>UART - set</th>
+            <th>LCD - Dots</th>
+            <th>LCD - Bias</th>
+            <th>USB</th>
+            <th>Noise Immunity - Noraml</th>
+            <th>Noise Immunity - Excellent</th>
+            <th>Operating Temperature</th>
+            <th>Package</th>
+            <th>Other Features</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="article-tw-155-15311">SN32F107</a></td>
+            <td>1.8V~3.6V</td>
+            <td>64K-Flash</td>
+            <td>Y</td>
+            <td>8KB</td>
+            <td>10M~25M</td>
+            <td>12M</td>
+            <td>16K</td>
+            <td>50 M</td>
+            <td>32</td>
+            <td>32</td>
+            <td>12</td>
+            <td>4</td>
+            <td>2</td>
+            <td>2</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>16-bit
+              <hr style="margin: 0px;">32-bit</td>
+            <td>4</td>
+            <td>16bit</td>
+            <td>1</td>
+            <td>16bit</td>
+            <td>1</td>
+            <td>8</td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td></td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>-40~85</td>
+            <td>LQFP48</td>
+            <td>Boot loader</td>
+          </tr>
+          <tr>
+            <td><a href="article-tw-155-15310">SN32F108</a></td>
+            <td>1.8V~3.6V</td>
+            <td>64K-Flash</td>
+            <td>Y</td>
+            <td>8KB</td>
+            <td>10M~25M</td>
+            <td>12M</td>
+            <td>16K</td>
+            <td>50 M</td>
+            <td>46</td>
+            <td>46</td>
+            <td>13</td>
+            <td>4</td>
+            <td>2</td>
+            <td>2</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>16-bit
+              <hr style="margin: 0px;">32-bit</td>
+            <td>6</td>
+            <td>16bit</td>
+            <td>1</td>
+            <td>16bit</td>
+            <td>1</td>
+            <td>17</td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td></td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>-40~85</td>
+            <td>LQFP64</td>
+            <td>Boot loader</td>
+          </tr>
+          <tr>
+            <td><a href="article-tw-155-15309">SN32F109</a></td>
+            <td>1.8V~3.6V</td>
+            <td>64K-Flash</td>
+            <td>Y</td>
+            <td>8KB</td>
+            <td>10M~25M</td>
+            <td>12M</td>
+            <td>16K</td>
+            <td>50 M</td>
+            <td>62</td>
+            <td>62</td>
+            <td>15</td>
+            <td>4</td>
+            <td>2</td>
+            <td>2</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>16-bit
+              <hr style="margin: 0px;">32-bit</td>
+            <td>6</td>
+            <td>16bit</td>
+            <td>1</td>
+            <td>16bit</td>
+            <td>1</td>
+            <td>24</td>
+            <td></td>
+            <td>2</td>
+            <td>2</td>
+            <td>1</td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>-40~85</td>
+            <td>LQFP80</td>
+            <td>Boot loader</td>
+          </tr>
+          <tr>
+            <td><a href="article-tw-155-15310">SN32F108</a></td>
+            <td>1.8V~3.6V</td>
+            <td>64K-Flash</td>
+            <td>Y</td>
+            <td>8KB</td>
+            <td>10M~25M</td>
+            <td>12M</td>
+            <td>16K</td>
+            <td>50 M</td>
+            <td>46</td>
+            <td>46</td>
+            <td>13</td>
+            <td>4</td>
+            <td>2</td>
+            <td>2</td>
+            <td>Y</td>
+            <td>Y</td>
+            <td>16-bit
+              <hr style="margin: 0px;">32-bit</td>
+            <td>6</td>
+            <td>16bit</td>
+            <td>1</td>
+            <td>16bit</td>
+            <td>1</td>
+            <td>17</td>
+            <td></td>
+            <td>1</td>
+            <td>2</td>
+            <td></td>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>-40~85</td>
+            <td>LQFP64</td>
+            <td>Boot loader</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+    <div class="attachList">
+      <h4>Attachments</h4>
+      <ol class="fileDownload">
+        <li><a href="#">Spec.pdf</a></li>
+        <li><a href="#">Attachment.pdf</a></li>
+      </ol>
+    </div>
+  </section>
+  <section class="lightbox fromThread lbx-3">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <div class="personInHead">
+      <span class="avatar">U</span>
+      <div class="account"><em>User Name</em></div>
+      <div class="company">Hyweb International CO., LTD.</div>
+    </div>
+    <section class="dataTable">
+      <h3>Original Inquiry Information (lightbox-3)</h3>
+      <table>
+        <tr>
+          <th>Type</th>
+          <td>Initial quation</td>
+        </tr>
+        <tr>
+          <th>Date-Time</th>
+          <td>2019-06-27 16:42:25 GMT+8</td>
+        </tr>
+        <tr>
+          <th>Subject</th>
+          <td>Initial Quotation: specifications as shown the attached files</td>
+        </tr>
+        <tr>
+          <th>Message</th>
+          <td>Dear Sir,<br>Would you kindly give us detailed information about the “Nokia 2100” mobile sets recently advertised by you in the “Daily Star.” we are impressed by the description of the respective mobile set as advertised by you and expected to purchase if terms and conditions are found to be suitable. Our annual requirement of such a set is around twenty-five thousand (25,000) pieces. <br> As we handle a lot of mobile sets each year, we hope and trust you will quote the most favorable prices and terms. The articles can be made specially according to your own specifications. As shown the attached files for detail. <br>Our popular product specifications as attacment.</td>
+        </tr>
+        <tr>
+          <th>Quotation</th>
+          <td><span class="quotationLink"><a href="javascript:void(0)">Q-2019042511111101161</a></span></td>
+        </tr>
+        <tr>
+          <th>From</th>
+          <td>
+            <ul class="companyContactSet">
+              <li>Company Name：HYWEB TECHNOLOGY CO., LTD.</li>
+              <li>Contact person：Mr. Liucc</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </section>
+
+  <section class="popMsg" id="msg1">
+    <div class="popBody">
+      <p>確定移除刪除名單並進行回覆?</p>
+    </div>
+    <div class="btnDv">
+      <input type="submit" value="好" id="pop-msg2" class="trigPop">
+      <input type="button" value="取消" class="closePop">
+    </div>
+  </section>
+  <section class="popMsg" id="msg2">
+    <div class="popBody">
+      <p>成功移出刪除名單</p>
+    </div>
+    <div class="btnDv">
+      <span class="btnLook closePop"><a href="javascript:;">關閉</a></span>
+    </div>
+  </section>
+   
+
+  
+
+</body>
+
+</html>

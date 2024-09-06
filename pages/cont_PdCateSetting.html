@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU- 產品分類設定（內容管理）</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>產品分類設定</h2>
+        <ul class="path">
+          <li><a href="#">內容管理</a></li>
+          <li>產品分類設定</li>
+        </ul>
+      </header>
+
+      <div class="noteDv expansile">
+        <p>利用產品分類功能，將產品型錄群組化、系統化、方便買主瀏覽，快速找到有興趣的產品。</p> 
+        <p>產品分類設定提供二層式的分類結構，並提供系統或自訂二種分類方式，您可選擇要使用系統、或自行擴充自定義二層自定義分類</p>
+      </div>
+
+      <div class="formInline">
+        <table class="formLayout">
+          <tr>
+            <td>預設分類設定</td>
+            <td>
+              <div class="optionPool singleSelection">
+                <label><input type="radio" checked="checked">自定義產品分類</label>
+                <label><input type="radio">系統預設產品分類</label>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="btnDv">
+          <input type="submit" value="儲存">
+        </div>
+      </div>
+
+
+
+
+      <section class="navSetting">
+
+        <div class="onListTop">
+          <span class="head">自定義產品分類</span>
+          <section class="funcBtnGp">
+            <ul>
+              <li class="add"><a>新增主分類</a></li>
+              <li class="changeOrder"><a>設定產品排序</a></li>
+            </ul>
+          </section>
+        </div>
+        <p class="hint">Tips: 拖拉區塊可移動選單排序，點選編輯可管理單元內容或開啟關閉。About us 和 More 單元可「增加下層選單」、添加您自定義的單元內容</p>
+        <section class="navItem">
+          <div class="threeColumn"><span class="dragStick"></span>
+            <h3 class="pageName">Application software</h3>
+            <ul class="langList">
+              <li>英 <span class="count">9</span></li>
+              <li>繁中 <span class="count">123</span></li>
+              <li>日 <span class="count">5</span></li>
+              <li>簡中 <span class="count">5</span></li>
+              <li>共 <em>13</em> 語系</li>
+            </ul>
+            <div class="right">
+              <ul class="editThis">
+                <li class="add"><a title="增加下層"></a></li>
+                <li class="edit"><a title="編輯" href="cont_PdCateEdit.html"></a></li>
+                <li class="changeOrder"><a title="設定排序" href="cont_PdCateOrder.html"></a></li>
+                <li class="remove"><a title="刪除"></a></li>
+              </ul>
+            </div>
+          </div>
+
+          <section class="navItemSub"><span class="dragStick"></span>
+            <div class="threeColumn">
+              <h3 class="pageName">Data management</h3>
+              <ul class="langList">
+                <li>英 <span class="count">5</span></li>
+                <li>繁中 <span class="count">9</span></li>
+                <li>日 <span class="count">2</span></li>
+                <li>印尼文 <span class="count">3</span></li>
+              </ul>
+              <div class="right">
+                <ul class="editThis">
+                  <li class="edit"><a title="編輯" href="cont_PdCateEdit.html"></a></li>
+                  <li class="changeOrder"><a title="設定排序" href="cont_PdCateOrder.html"></a></li>
+                  <li class="remove"><a title="刪除"></a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="navItemSub"><span class="dragStick"></span>
+            <div class="threeColumn">
+              <h3 class="pageName">Workflow software</h3>
+              <ul class="langList">
+                <li>英 <span class="count">7</span></li>
+                <li>繁中 <span class="count">9</span></li>
+                <li>日 <span class="count">3</span></li>
+              </ul>
+              <div class="right">
+                <ul class="editThis">
+                  <li class="edit"><a title="編輯" href="cont_PdCateEdit.html"></a></li>
+                  <li class="changeOrder"><a title="設定排序" href="cont_PdCateOrder.html"></a></li>
+                  <li class="remove"><a title="刪除"></a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="navItemSub"><span class="dragStick"></span>
+            <div class="threeColumn">
+              <h3 class="pageName">DummyDummyDummyDummyDummyDummy DummyDummyａDummyDummyDummy</h3>
+              <div class="right">
+                <ul class="editThis">
+                  <li class="edit"><a title="編輯" href="cont_PdCateEdit.html"></a></li>
+                  <li class="changeOrder"><a title="設定排序" href="cont_PdCateOrder.html"></a></li>
+                  <li class="remove"><a title="刪除"></a></li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </section>
+
+        <section class="navItem">
+          <div class="threeColumn"><span class="dragStick"></span>
+            <h3 class="pageName">CloudServiceDummyDummyDummyDummyDummyDummyDummyDummyDummy</h3>
+            <div class="right">
+              <ul class="editThis">
+                <li class="add"><a title="增加下層"></a></li>
+                <li class="edit"><a title="編輯" href="cont_PdCateEdit.html"></a></li>
+                <li class="changeOrder"><a title="設定排序" href="cont_PdCateOrder.html"></a></li>
+                <li class="remove"><a title="刪除"></a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+
+
+      </section>
+
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+</body>
+
+</html>

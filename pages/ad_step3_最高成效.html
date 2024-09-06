@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-廣告管理</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li class="activated"><a href="javascript:;"><span class="menuIcon myaccount"></span>廣告管理</a></li>
+
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>廣告管理</h2>
+      </header>
+
+      <section class="processIndicator">
+        <ol>
+          <li>廣告目標設定</li>
+          <li>廣告內容設定</li>
+          <li class="now">檢查啟用</li>
+        </ol>
+      </section>
+
+      <section class="adReport">
+        <div class="waitingResult">
+          <span class="waiting">檢查錯誤中...</span>
+          <p>查看廣告活動</p>
+        </div>
+
+        <div class="report">
+          <div class="heading">問題</div>
+          <p class="hint">發布之前，請仔細檢查詳細資料</p>
+          <ul>
+            <li>
+              <p>預算：這是必填欄位</p>
+              <span role="button" class="funcBtn edit">修正問題</span>
+            </li>
+          </ul>
+        </div>
+        <div class="report">
+          <div class="heading">總覽</div>
+          <table>
+            <tr>
+              <th>廣告活動名稱</th>
+              <td><input type="text" class="fullWidth" placeholder="請輸入名稱" value="廣告活動名稱一二三" ></td>
+            </tr>
+            <tr>
+              <th>廣告活動類型</th>
+              <td>最高成效</td>
+            </tr>
+            <tr>
+              <th>目標</th>
+              <td>銷售</td>
+            </tr>
+          </table>
+        </div>
+        <div class="report">
+          <div class="heading">出價</div>
+          <table>
+            <tr>
+              <th>出價</th>
+              <td>盡量爭取轉換</td>
+            </tr>
+          </table>
+        </div>
+        <div  class="report">
+          <div class="heading">廣告活動設定</div>
+          <table>
+            <tr>
+              <th>地區</th>
+              <td>所有國家/地區和領域</td>
+            </tr>
+            <tr>
+              <th>語言</th>
+              <td>英文</td>
+            </tr>
+            <tr>
+              <th>自動建立的素材資源</th>
+              <td>文字素材資源(含最終到達網址)</td>
+            </tr>
+          </table>
+        </div> 
+        <div class="report">
+          <div class="heading">素材資源群組</div>
+          <table>
+            <tr>
+              <th>素材資源群組名稱</th>
+              <td>素材資源群組1</td>
+            </tr>
+            <tr>
+              <th>素材資源</th>
+              <td>3張圖片、1個標誌、1部影片、3個廣告標題、2則說明</td>
+            </tr>
+          </table>
+        </div>
+        <div class="report">
+          <div class="heading">預算</div>
+          <table>
+            <tr>
+              <th>預算</th>
+              <td>每日 $200.00</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="btnDv">
+          <button class="confirm" type="button">發布啟用</button>
+          <span class="btnLook back"><a href="">返回上一步</a></span>
+        </div>
+
+      </section>
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+  <!-- 小幫手 -->
+  <div class="instantData">
+    <div class="insController">
+      <span class="insCtrl minimize"></span>
+      <span class="insCtrl hideMe"></span>
+    </div>
+    <!-- 內容完成度 -->
+    <section class="adSummarize">
+      <div class="percentageBar">
+        <span class="percentage">55.5%</span>
+        <span class="bar"></span>
+        <p>內容完成度</p>
+      </div>
+    </section> 
+
+    <!-- <section class="adSummarize">
+      <div class="values">
+        <div class="heading">每週預估值</div>
+        <p>以每日預算和出價設定做為預測依據</p>
+        <dl>
+          <div>
+            <dt>轉換</dt>
+            <dd>2</dd>
+          </div>
+          <div>
+            <dt>轉換價值</dt>
+            <dd>$4,300.00</dd>
+          </div>
+          <div>
+            <dt>廣告投資報酬率</dt>
+            <dd>2.062.1%</dd>
+          </div>
+        </dl>
+      </div>
+    </section> -->
+
+  </div>
+  <script>
+    var _instantData = $('.instantData');
+    var _insCtrlMini = _instantData.find('.insCtrl.minimize');
+    _insCtrlMini.click(function(){
+      _instantData.toggleClass('mini');
+    });
+    _instantData.find('.hideMe').click(function(){
+      _instantData.hide();
+    })
+  </script>
+  
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+
+
+  
+</body>
+
+</html>
