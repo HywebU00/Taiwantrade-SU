@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>營運分析：重要行為報表 - SU-2024</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>My Taiwantrade</a>
+            <ul>
+              <li><a href="javascript:;">我的提醒</a></li>
+              <li><a href="javascript:;">商機資料庫查詢</a></li>
+              <li><a href="javascript:;">成功案例分享</a></li>
+              <li><a href="javascript:;">會員買賣訊息刊登</a></li>
+              <li><a href="javascript:;">我的追蹤清單</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>重要行為報表</h2>
+        <ul class="path">
+          <li><a href="#">營運分析</a></li>
+          <li>重要行為報表</li>
+        </ul>
+      </header>
+
+      <div class="navBtnsDv">
+        <span class="btnLook back"><a href="myTT_dashboard2024.html">返回營運分析</a></span>
+      </div>
+
+      <!-- 選擇國家與日期​區間 -->
+      <div class="areaAndTime">
+        <div class="selectSet">
+          <div class="multiSelection">
+            <button type="button" class="placeholder">國家</button>
+            <div class="options">
+              <div class="searchHere">
+                <input type="text" placeholder="輸入字詞以查詢">
+                <input type="submit" value="查詢">
+              </div>
+              <label class="checkAll"><input type="checkbox" value="">國家（全選）瀏覽</label>
+              <label><input type="checkbox" value="">India<span>86.1萬</span></label>
+              <label><input type="checkbox" value="">Taiwan<span>64.7萬</span></label>
+              <label><input type="checkbox" value="">Indonesia<span>26.5萬</span></label>
+              <label><input type="checkbox" value="">United States<span>22.6萬</span></label>
+              <label><input type="checkbox" value="">Japan<span>15.4萬</span></label>
+              <label><input type="checkbox" value="">Philippines<span>8.1萬</span></label>
+              <label><input type="checkbox" value="">Netherlands<span>6.7萬</span></label>
+              <label><input type="checkbox" value="">Nigeria<span>6.6萬</span></label>
+              <label><input type="checkbox" value="">Malaysia<span>6.2萬</span></label>
+              <label><input type="checkbox" value="">China<span>6萬</span></label>
+              <label><input type="checkbox" value="">Vietnam<span>5.4萬</span></label>
+              <label><input type="checkbox" value="">Bangladesh<span>5.1萬</span></label>
+              <label><input type="checkbox" value="">Pakistan<span>4.8萬</span></label>
+              <label><input type="checkbox" value="">Singapore<span>4.8萬</span></label>
+              <label><input type="checkbox" value="">Germany<span>4.4萬</span></label>
+              <label><input type="checkbox" value="">United Kingdom<span>4.1萬</span></label>
+              <label><input type="checkbox" value="">Brazil<span>3.7萬</span></label>
+              <label><input type="checkbox" value="">Thailand<span>3.6萬</span></label>
+              <label><input type="checkbox" value="">Hong Kong<span>3.5萬</span></label>
+              <label><input type="checkbox" value="">Australia<span>2.9萬</span></label>
+              <label><input type="checkbox" value="">＊最後一項＊<span>測試</span></label>
+            </div>
+          </div>
+          <button class="icon_search" type="button" aria-label="查詢"></button>
+          <p>選擇國家，查看各國訪客重要行為分佈</p>
+        </div>
+
+        <div class="dateRangePicker" data-label="最後可查詢日為4天前">
+          <input class="dateRange" type="text" name="dates" value="2024年7月26日 ~ 2024年8月11日">
+          <div class="pickRange">
+            <div class="rangeList">
+              <ul>
+                <li><button type="button">7天</button></li>
+                <li><button type="button">30天</button></li>
+                <li><button type="button">60天</button></li>
+                <li><button type="button">90天</button></li>
+                <li class="active"><button type="button">自選日期</button></li>
+                </ul>
+            </div>
+
+            <!-- 選日期範圍套件  -->
+            <div class="daterangepicker ltr show-calendar opensleft">
+              <!-- <div class="ranges"></div> -->
+              <div class="drp-calendar left">
+                <div class="calendar-table">
+                  <table class="table-condensed">
+                    <thead>
+                      <tr>
+                        <th class="prev available"><span></span></th>
+                        <th colspan="5" class="month">2024 七月</th>
+                        <th></th>
+                      </tr>
+                      <tr>
+                        <th>日</th>
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                        <th>六</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="weekend off ends available" data-title="r0c0">30</td>
+                        <td class="available" data-title="r0c1">1</td>
+                        <td class="available" data-title="r0c2">2</td>
+                        <td class="available" data-title="r0c3">3</td>
+                        <td class="available" data-title="r0c4">4</td>
+                        <td class="available" data-title="r0c5">5</td>
+                        <td class="weekend available" data-title="r0c6">6</td>
+                      </tr>
+                      <tr>
+                        <td class="weekend available" data-title="r1c0">7</td>
+                        <td class="available" data-title="r1c1">8</td>
+                        <td class="available" data-title="r1c2">9</td>
+                        <td class="available" data-title="r1c3">10</td>
+                        <td class="available" data-title="r1c4">11</td>
+                        <td class="available" data-title="r1c5">12</td>
+                        <td class="weekend available" data-title="r1c6">13</td>
+                      </tr>
+                      <tr>
+                        <td class="weekend available" data-title="r2c0">14</td>
+                        <td class="available" data-title="r2c1">15</td>
+                        <td class="available" data-title="r2c2">16</td>
+                        <td class="available" data-title="r2c3">17</td>
+                        <td class="available" data-title="r2c4">18</td>
+                        <td class="available" data-title="r2c5">19</td>
+                        <td class="weekend available" data-title="r2c6">20</td>
+                      </tr>
+                      <tr>
+                        <td class="weekend available" data-title="r3c0">21</td>
+                        <td class="available" data-title="r3c1">22</td>
+                        <td class="available" data-title="r3c2">23</td>
+                        <td class="available" data-title="r3c3">24</td>
+                        <td class="available" data-title="r3c4">25</td>
+                        <td class="active start-date available" data-title="r3c5">26</td>
+                        <td class="in-range weekend available" data-title="r3c6">27</td>
+                      </tr>
+                      <tr>
+                        <td class="in-range weekend available" data-title="r4c0">28</td>
+                        <td class="in-range today available in-range" data-title="r4c1">29</td>
+                        <td class="in-range available" data-title="r4c2">30</td>
+                        <td class="in-range available" data-title="r4c3">31</td>
+                        <td class="in-range off ends available" data-title="r4c4">1</td>
+                        <td class="in-range off ends available" data-title="r4c5">2</td>
+                        <td class="weekend off ends available in-range" data-title="r4c6">3</td>
+                      </tr>
+                      <tr>
+                        <td class="weekend off ends available in-range" data-title="r5c0">4</td>
+                        <td class="off ends available in-range" data-title="r5c1">5</td>
+                        <td class="off ends available in-range" data-title="r5c2">6</td>
+                        <td class="off ends available in-range" data-title="r5c3">7</td>
+                        <td class="off ends available in-range" data-title="r5c4">8</td>
+                        <td class="off ends available in-range" data-title="r5c5">9</td>
+                        <td class="weekend off ends available in-range" data-title="r5c6">10</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="drp-calendar right">
+                <div class="calendar-table">
+                  <table class="table-condensed">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th colspan="5" class="month">2024 八月</th>
+                        <th class="next available"><span></span></th>
+                      </tr>
+                      <tr>
+                        <th>日</th>
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                        <th>六</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="weekend off ends available" data-title="r0c0">28</td>
+                        <td class="today off ends active start-date available in-range" data-title="r0c1">29</td>
+                        <td class="off ends available" data-title="r0c2">30</td>
+                        <td class="off ends available" data-title="r0c3">31</td>
+                        <td class="in-range available" data-title="r0c4">1</td>
+                        <td class="in-range available" data-title="r0c5">2</td>
+                        <td class="in-range weekend available" data-title="r0c6">3</td>
+                      </tr>
+                      <tr>
+                        <td class="in-range weekend available" data-title="r1c0">4</td>
+                        <td class="in-range available" data-title="r1c1">5</td>
+                        <td class="in-range available" data-title="r1c2">6</td>
+                        <td class="in-range available" data-title="r1c3">7</td>
+                        <td class="active in-range available" data-title="r1c4">8</td>
+                        <td class="in-range available" data-title="r1c5">9</td>
+                        <td class="in-range weekend available" data-title="r1c6">10</td>
+                      </tr>
+                      <tr>
+                        <td class="end-date in-range weekend available" data-title="r2c0">11</td>
+                        <td class="available" data-title="r2c1">12</td>
+                        <td class="available" data-title="r2c2">13</td>
+                        <td class="available" data-title="r2c3">14</td>
+                        <td class="available" data-title="r2c4">15</td>
+                        <td class="available" data-title="r2c5">16</td>
+                        <td class="weekend available" data-title="r2c6">17</td>
+                      </tr>
+                      <tr>
+                        <td class="weekend available" data-title="r3c0">18</td>
+                        <td class="available" data-title="r3c1">19</td>
+                        <td class="available" data-title="r3c2">20</td>
+                        <td class="available" data-title="r3c3">21</td>
+                        <td class="available" data-title="r3c4">22</td>
+                        <td class="available" data-title="r3c5">23</td>
+                        <td class="weekend available" data-title="r3c6">24</td>
+                      </tr>
+                      <tr>
+                        <td class="weekend available" data-title="r4c0">25</td>
+                        <td class="available" data-title="r4c1">26</td>
+                        <td class="available" data-title="r4c2">27</td>
+                        <td class="available" data-title="r4c3">28</td>
+                        <td class="available" data-title="r4c4">29</td>
+                        <td class="available" data-title="r4c5">30</td>
+                        <td class="weekend available" data-title="r4c6">31</td>
+                      </tr>
+                      <tr>
+                        <td class="weekend off ends available" data-title="r5c0">1</td>
+                        <td class="off ends available" data-title="r5c1">2</td>
+                        <td class="off ends available" data-title="r5c2">3</td>
+                        <td class="off ends available" data-title="r5c3">4</td>
+                        <td class="off ends available" data-title="r5c4">5</td>
+                        <td class="off ends available" data-title="r5c5">6</td>
+                        <td class="weekend off ends available" data-title="r5c6">7</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="calendar-time" style="display: none;"></div>
+              </div>
+              <div class="drp-buttons">
+                <span class="drp-selected">2024/7/26 - 2024/8/11</span>
+                <button class="cancelBtn btn btn-sm btn-default" type="button">取消</button>
+                <button class="applyBtn btn btn-sm btn-primary" type="button">確定</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="userBehavior">
+
+        <div class="colx-11r">
+
+          <!-- 新聞瀏覽量 -->
+          <section class="chartAndTable block">
+            <div class="heading">
+              <h3>新聞瀏覽量 <span class="icon_i trigPop" id=""></span></h3>
+              <div class="sumUp">
+                <em>4,344</em>
+                <span class="trend down">-34.8%</span>
+                <p>與30天前比</p>
+              </div>
+            </div>
+
+            <div class="chartHere">
+              <img class="fake-chart" src="../publicData/fakechart01-4-1.png" alt="佔位假統計圖">
+            </div> 
+
+            <div class="listTable">
+              <span class="funcBtn download"><a download="" href="filename.xxx">下載</a></span>
+              <div class="scrollY">
+                <table>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th style="width: 50%;"><span class="ellipsis">網頁標題（前10項）</span></th>
+                      <th style="width: 15%;"><span class="sortingTh ellipsis">訪客數</span></th>
+                      <th style="width: 15%;"><span class="sortingTh ellipsis descending">瀏覽量</span></th>
+                      <th style="width: 15%;"><span class="sortingTh ellipsis">平均停留時間</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="rowOrder">1</td>
+                      <td><span class="nowrapTitle">Exciting News from New Fonming Tea Company! | NEW FONMING TEA BUSINESS CO., LTD. </span></td>
+                      <td class="digit grade_01"><span class="ellipsis">1,112</span></td>
+                      <td class="digit grade_01"><span class="ellipsis">1,261</span></td>
+                      <td class="digit grade_05"><time>01:45</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">2</td>
+                      <td><span class="nowrapTitle">New Department-Pefume Sprayer / Perfume Atomizer Factory. Perufme Sprayer Pump Supplier. | JING DAI CO., LTD.</span></td>
+                      <td class="digit grade_06"><span class="ellipsis">56</span></td>
+                      <td class="digit grade_03"><span class="ellipsis">133</span></td>
+                      <td class="digit grade_07"><time>01:33</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">3</td>
+                      <td><span class="nowrapTitle">Transforming Innovation: A New Era of Product Integration | i-FATO Automation Company</span></td>
+                      <td class="digit grade_04"><span class="ellipsis">44</span></td>
+                      <td class="digit grade_05"><span class="ellipsis">92</span></td>
+                      <td class="digit grade_06"><time>01:41</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">4</td>
+                      <td><span class="nowrapTitle">FoundFair Plastic Industrial Co., Ltd. to Showcase Sustainable Sportswear Materials and Protective Equipment at ISPO Munich 2023 | FOUND FAIR PLASTIC INDUSTRIAL CO., LTD.</span></td>
+                      <td class="digit grade_05"><span class="ellipsis">38</span></td>
+                      <td class="digit grade_05"><span class="ellipsis">90</span></td>
+                      <td class="digit grade_01"><time>02:12</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">5</td>
+                      <td><span class="nowrapTitle">Taiwan Healthcare Hub - News</span></td>
+                      <td class="digit grade_08"><span class="ellipsis">19</span></td>
+                      <td class="digit grade_06"><span class="ellipsis">86</span></td>
+                      <td class="digit grade_03"><time>01:53</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">6</td>
+                      <td><span class="nowrapTitle">Taiwan expert A variety of customized cable assembly and Wire Harness UL RoHS REACH certificated | SECONN INTERNATIONAL ENTERPRISE CO., LTD. </span></td>
+                      <td class="digit grade_09"><span class="ellipsis">39</span></td>
+                      <td class="digit grade_06"><span class="ellipsis">85</span></td>
+                      <td class="digit grade_10"><time>00:31</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">7</td>
+                      <td><span class="nowrapTitle">Magic tools in the garden: a gardening must-have from shoveling to pruning The new multi-functional garden shovel is now available for gardening enthusiasts! | SUIT ENTERPRISE CORPORATION. </span></td>
+                      <td class="digit grade_09"><span class="ellipsis">37</span></td>
+                      <td class="digit grade_06"><span class="ellipsis">83</span></td>
+                      <td class="digit grade_08"><time>01:19</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">8</td>
+                      <td><span class="nowrapTitle">Technical Support | GENG XIN PRECISION CO., LTD</span></td>
+                      <td class="digit grade_09"><span class="ellipsis">34</span></td>
+                      <td class="digit grade_06"><span class="ellipsis">82</span></td>
+                      <td class="digit grade_04"><time>01:50</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">9</td>
+                      <td><span class="nowrapTitle">HOWTOOL Hardware Offers Local US-Based Service for Growing Global Hardware Demand | HSI YI ENTERPRISE CO., LTD.</span></td>
+                      <td class="digit grade_09"><span class="ellipsis">35</span></td>
+                      <td class="digit grade_07"><span class="ellipsis">76</span></td>
+                      <td class="digit grade_09"><time>01:11</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">10</td>
+                      <td><span class="nowrapTitle">TOP WELL: Leading the Manufacturing Sector with Innovation and Environmental Responsibility | TOP WELL TOOLS INDUSTRIAL CO., LTD. </span></td>
+                      <td class="digit grade_09"><span class="ellipsis">30</span></td>
+                      <td class="digit grade_07"><span class="ellipsis">74</span></td>
+                      <td class="digit grade_02"><time>02:01</time></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- 加到最愛 -->
+          <section class="chartAndTable block">
+            <div class="heading">
+              <h3>加到最愛 <span class="icon_i trigPop" id=""></span></h3>
+              <div class="sumUp">
+                <em>5,728</em>
+                <span class="trend up">10.6%</span>
+                <p>與30天前比</p>
+              </div>
+            </div>
+            <div class="chartHere">
+              <img class="fake-chart" src="../publicData/fakechart01-4-2.png" alt="佔位假統計圖">
+            </div> 
+
+            <div class="listTable">
+              <span class="funcBtn download"><a download="" href="filename.xxx">下載</a></span>
+              <div class="scrollY">
+                <table>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th style="width: 64%;"><span class="ellipsis">產品名稱（前10項）</span></th>
+                      <th style="width: 16%;"><span class="sortingTh ellipsis">訪客數</span></th>
+                      <th style="width: 16%;"><span class="sortingTh ellipsis descending">事件計數</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="rowOrder">1</td>
+                      <td><span class="nowrapTitle">Quality Custom OEM Flexible Rubber Impellers</span></td>
+                      <td class="digit grade_01"><span class="ellipsis">1,176</span></td>
+                      <td class="digit grade_01"><span class="ellipsis">1,246</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">2</td>
+                      <td><span class="nowrapTitle">Solar camera 4G/WiFi</span></td>
+                      <td class="digit grade_09"><span class="ellipsis">41</span></td>
+                      <td class="digit grade_03"><span class="ellipsis">170</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">3</td>
+                      <td><span class="nowrapTitle">Worm Gear(4)</span></td>
+                      <td class="digit grade_02"><span class="ellipsis">103</span></td>
+                      <td class="digit grade_03"><span class="ellipsis">152</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">4</td>
+                      <td><span class="nowrapTitle">Various Gears(10)</span></td>
+                      <td class="digit grade_04"><span class="ellipsis">84</span></td>
+                      <td class="digit grade_03"><span class="ellipsis">123</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">5</td>
+                      <td><span class="nowrapTitle">FB-P14 fiber 3D scan head</span></td>
+                      <td class="digit grade_04"><span class="ellipsis">76</span></td>
+                      <td class="digit grade_03"><span class="ellipsis">110</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">6</td>
+                      <td
+                       td><span class="nowrapTitle">Bitter Melon & Cinnamon Capsule, Hualien Bitter Melon No. 6, supporting healthy blood
+                          sugar levels a</span></td>
+                      <td class="digit grade_08"><span class="ellipsis">57</span></td>
+                      <td class="digit grade_03"><span class="ellipsis">106</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">7</td>
+                      <td><span class="nowrapTitle">TPVMS by TYREDOG</span></td>
+                      <td class="digit grade_08"><span class="ellipsis">57</span></td>
+                      <td class="digit grade_03"><span class="ellipsis">104</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">8</td>
+                      <td><span class="nowrapTitle">UV-3D dynamic (focus after) P10</span>
+                      </td>
+                      <td class="digit grade_08"><span class="ellipsis">56</span></td>
+                      <td class="digit grade_05"><span class="ellipsis">79</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">9</td>
+                      <td><span class="nowrapTitle">[ Taiwan Buder ] OEM/ODM low temperature under sink chilled water dispenser for home and
+                          kitchen</span></td>
+                      <td class="digit grade_09"><span class="ellipsis">49</span></td>
+                      <td class="digit grade_05"><span class="ellipsis">71</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">10</td>
+                      <td><span class="nowrapTitle">valve for Beverage</span></td>
+                      <td class="digit grade_09"><span class="ellipsis">40</span></td>
+                      <td class="digit grade_04"><span class="ellipsis">64</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- 影片播放 -->
+          <section class="chartAndTable block">
+            <div class="heading">
+              <h3>影片播放 <span class="icon_i trigPop" id=""></span></h3>
+              <div class="sumUp">
+                <em>5,572</em>
+                <span class="trend up">15.9%</span>
+                <p>與30天前比</p>
+              </div>
+            </div>
+            <div class="chartHere">
+              <img class="fake-chart" src="../publicData/fakechart01-4-3.png" alt="佔位假統計圖">
+            </div> 
+            <div class="listTable">
+              <span class="funcBtn download"><a download="" href="filename.xxx">下載</a></span>
+              <div class="scrollY">
+                <table>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th style="width: 50%;"><span class="ellipsis">影片標題（前10項）</span></th>
+                      <th style="width: 15%;"><span class="sortingTh ellipsis">訪客數</span></th>
+                      <th style="width: 15%;"><span class="sortingTh ellipsis descending">播放次數</span></th>
+                      <th style="width: 15%;"><span class="sortingTh ellipsis">平均停留時間</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="rowOrder">1</td>
+                      <td><span class="nowrapTitle">益佳元生物科技</span></td>
+                      <td class="digit grade_06">59</td>
+                      <td class="digit grade_01">1,630</td>
+                      <td class="digit grade_04"><time>01:30</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">2</td>
+                      <td><span class="nowrapTitle">臺日共同拓展第三國市場計劃 專案介紹 R8 online video cutter com</span></td>
+                      <td class="digit grade_08"><span class="ellipsis">30</span></td>
+                      <td class="digit grade_02"><span class="ellipsis">471</span></td>
+                      <td class="digit grade_02"><time>02:11</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">3</td>
+                      <td><span class="nowrapTitle">OEM customized Screw and Nut Manufacturing | KO YING HARDWARE INDUSTRY CO., LTD. | Taiwantrade</span></td>
+                      <td class="digit grade_05"><span class="ellipsis">99</span></td>
+                      <td class="digit grade_03"><span class="ellipsis">278</span></td>
+                      <td class="digit grade_08"><time>00:53</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">4</td>
+                      <td><span class="nowrapTitle">Custom relaxation supplements, made in Taiwan</span></td>
+                      <td class="digit grade_10"><span class="ellipsis">2</span></td>
+                      <td class="digit grade_03"><span class="ellipsis">243</span></td>
+                      <td class="digit grade_01"><time>07:44</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">5</td>
+                      <td><span class="nowrapTitle">FULLY-AUTOMATIC HYDRAULIC CHAMFERING MACHINES | POWERCHANNEL MANUFACTURERS CORPORATION | Taiwantrade</span></td>
+                      <td class="digit grade_01"><span class="ellipsis">1,163</span></td>
+                      <td class="digit grade_03"><span class="ellipsis">204</span></td>
+                      <td class="digit grade_07"><time>00:55</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">6</td>
+                      <td><span class="nowrapTitle">PU caster production process how to made caster products ENJOY CASTER Taiwan manufacturer</span></td>
+                      <td class="digit grade_03"><span class="ellipsis">146</span></td>
+                      <td class="digit grade_03"><span class="ellipsis">201</span></td>
+                      <td class="digit grade_10"><time>00:36</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">7</td>
+                      <td><span class="nowrapTitle">TOP WELL fast release locking pliers</span></td>
+                      <td class="digit grade_05"><span class="ellipsis">122</span></td>
+                      <td class="digit grade_05"><span class="ellipsis">172</span></td>
+                      <td class="digit grade_06"><time>00:56</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">8</td>
+                      <td><span class="nowrapTitle">SAN CHIA PRECISION INDUSTRY CO., LTD. </span></td>
+                      <td class="digit grade_05"><span class="ellipsis">80</span></td>
+                      <td class="digit grade_07"><span class="ellipsis">140</span></td>
+                      <td class="digit grade_09"><time>00:48</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">9</td>
+                      <td><span class="nowrapTitle">Air-Operated Pneumatic Diaphragm Pump Manufacturer | DYISHENG</span></td>
+                      <td class="digit grade_05"><span class="ellipsis">127</span></td>
+                      <td class="digit grade_07"><span class="ellipsis">136</span></td>
+                      <td class="digit grade_03"><time>01:39</time></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">10</td>
+                      <td><span class="nowrapTitle">Flexible Rubber Impeller. Factory Direct Purchase | SHENG JAAN INDUSTRIAL CO., LTD. | Taiwantrade</span></td>
+                      <td class="digit grade_05"><span class="ellipsis">100</span></td>
+                      <td class="digit grade_09"><span class="ellipsis">111</span></td>
+                      <td class="digit grade_05"><time>01:22</time></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <!-- 加入購物車 -->
+          <section class="chartAndTable block">
+            <div class="heading">
+              <h3>加入購物車 <span class="icon_i trigPop" id=""></span></h3>
+              <div class="sumUp">
+                <em>1,183</em>
+                <span class="trend up">29.3% </span>
+                <p>與30天前比</p>
+              </div>
+            </div>
+            <div class="chartHere">
+              <img class="fake-chart" src="../publicData/fakechart01-4-4.png" alt="佔位假統計圖">
+            </div> 
+            <div class="listTable">
+              <span class="funcBtn download"><a download="" href="filename.xxx">下載</a></span>
+              <div class="scrollY">
+                <table>
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th style="width: 64%;"><span class="ellipsis">產品名稱（前10項）</span></th>
+                      <th style="width: 16%;"><span class="sortingTh ellipsis">訪客數</span></th>
+                      <th style="width: 16%;"><span class="sortingTh ellipsis descending">加入購物車</span></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="rowOrder">1</td>
+                      <td><span class="nowrapTitle">[Internal antenna, Male DB9] Bluetooth BLE V5.2 RS422 RS485 adapter, support iOS, Android</span></td>
+                      <td class="digit grade_07"><span class="ellipsis">3</span></td>
+                      <td class="digit grade_01"><span class="ellipsis">178</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">2</td>
+                      <td><span class="nowrapTitle">Drainage pipe 4.6 X 6.3 mm (100m)</span></td>
+                      <td class="digit grade_10"><span class="ellipsis">1</span></td>
+                      <td class="digit grade_04"><span class="ellipsis">111</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">3</td>
+                      <td><span class="nowrapTitle">TPVMS by TYREDOG</span></td>
+                      <td class="digit grade_02"><span class="ellipsis">15</span></td>
+                      <td class="digit grade_06"><span class="ellipsis">36</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">4</td>
+                      <td><span class="nowrapTitle">Topwork Gear Hob Grinder</span></td>
+                      <td class="digit grade_04"><span class="ellipsis">14</span></td>
+                      <td class="digit grade_08"><span class="ellipsis">28</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">5</td>
+                      <td><span class="nowrapTitle">Open the Door to Miracles The Beginner's Course in Manifestation + Wish Fulfillment Tutorial Hand</span></td>
+                      <td class="digit grade_01"><span class="ellipsis">16</span></td>
+                      <td class="digit grade_08"><span class="ellipsis">27</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">6</td>
+                      <td><span class="nowrapTitle">أدوات غسيل بغطاء كامل Kingpump مخصص لمكيفات الهواء المُجزئ (غطاء تنظيف)/ كيس غسيل</span></td>
+                      <td class="digit grade_02"><span class="ellipsis">15</span></td>
+                      <td class="digit grade_08"><span class="ellipsis">24</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">7</td>
+                      <td><span class="nowrapTitle">Unique Taiwan Dried Banana Fruit, Non-fried Food</span></td>
+                      <td class="digit grade_10"><span class="ellipsis">1</span></td>
+                      <td class="digit grade_08"><span class="ellipsis">20</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">8</td>
+                      <td><span class="nowrapTitle">52 mm Mechanical Car 0~4 Bar Turbo Boost Gauge</span></td>
+                      <td class="digit grade_09"><span class="ellipsis">2</span></td>
+                      <td class="digit grade_09"><span class="ellipsis">18</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">9</td>
+                      <td><span class="nowrapTitle">【King Kung】Vegetable Drink (15g x 60 packs)</span></td>
+                      <td class="digit grade_05"><span class="ellipsis">9</span></td>
+                      <td class="digit grade_09"><span class="ellipsis">17</span></td>
+                    </tr>
+                    <tr>
+                      <td class="rowOrder">10</td>
+                      <td><span class="nowrapTitle">Environment friendly children'sT-shirt: Bunny Adventures Collection</span></td>
+                      <td class="digit grade_06"><span class="ellipsis">6</span></td>
+                      <td class="digit grade_09"><span class="ellipsis">16</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </section>
+        </div>
+      </section>
+
+
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+    
+</body>
+
+</html>

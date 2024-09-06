@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-買主清單</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="#not_a_link">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li><a href="#">商機管理 <span class="count">3</span></a></li>
+            <li><a href="#">訂單管理 <span class="count">10</span></a></li>
+            <li><a href="#">前往企業網 <span class="count">1</span></a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">會員重要公告</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="javascript:void(0);">3 Items</a>
+          <div class="top-cart">
+            <button class="closeCart" type="button">close</button>
+            <span class="viewcart">view cart &amp; check out</span>
+            <div class="block-title">Items in My Cart</div>
+            <div class="block">
+              <div class="order-title"><span class="seller-name"><a href="https://tt.tw.ttstaging.com.tw" target="_blank">TAIWAN EXTERNAL TRADE DEVELOPMENT COUNCIL</a></span><span class="number">1</span></div>
+              <div class="product-info-detail">
+                <div class="product-pic"><a href="javascript:void(0);" class="product-remove"><i class="glyphicon glyphicon-trash"></i></a><img class="product-pic-image" alt="NaluTest_7662" src="https://im01.ttstaging.com.tw/090ae4d7-686f-4a03-84a9-090bba3fe300/ImgScrTest-100x100.jpg"></div>
+                <div class="product-info"><span class="product-price">USD 18.00</span><span class="old-price"><del>USD 20.00</del></span>
+                  <div class="product-name"><a href="https://www.ttstaging.com.tw/product/nalutest-7662-1593880.html" target="_blank">NaluTest_7662</a></div>
+                  <div class="quantity">Quantity：2</div>
+                  <div class="spec">size：S</div><span class="product-freeshipping">Free Shipping</span><span class="discount">10</span>
+                </div>
+              </div>
+            </div>
+            <div class="block">
+              <div class="order-title"><span class="seller-name"><a href="https://www.ttstaging.com.tw/company/li-chuan-biotechnology-development-co-ltd-327725.html" target="_blank">LI CHUAN BIOTECHNOLOGY DEVELOPMENT CO., LTD.</a></span><span class="number">2</span></div>
+              <div class="product-info-detail">
+                <div class="product-pic"><a href="javascript:void(0);" class="product-remove"><i class="glyphicon glyphicon-trash"></i></a><img class="product-pic-image" alt="Li Chuan Golden Clam Tablets(100 tablets)" src="//im01.ttstaging.com.tw/640eccdb-4078-48c6-b693-7e34958438ce/88825_500-100x100.jpg"></div>
+                <div class="product-info"><span class="product-price">USD 122.40</span><span class="old-price"><del>USD 136.00</del></span>
+                  <div class="product-name"><a href="https://www.ttstaging.com.tw/product/li-chuan-golden-clam-tablets-100-tablets-1476500.html" target="_blank">Li Chuan Golden Clam Tablets(100 tablets)</a></div>
+                  <div class="quantity">Quantity：2</div><span class="product-freeshipping">Free Shipping</span><span class="discount">10</span>
+                </div>
+              </div>
+              <div class="product-info-detail">
+                <div class="product-pic"><a href="javascript:void(0);" class="product-remove"><i class="glyphicon glyphicon-trash"></i></a><img class="product-pic-image" alt="Li Chuan Iron-containing collagen Clam Tablets(100 tablets)" src="//im01.ttstaging.com.tw/3ecfebb3-39de-4bda-9e05-975e4f94c082/88826_%E4%B8%BB%E5%9C%96500X500-100x100.jpg"></div>
+                <div class="product-info"><span class="product-price">USD 232.23</span><span class="old-price"><del>USD 258.00</del></span>
+                  <div class="product-name"><a href="https://www.ttstaging.com.tw/product/li-chuan-iron-containing-collagen-clam-tablets-100-tablets-1476501.html" target="_blank">Li Chuan Iron-containing collagen Clam Tablets(100 tablets)</a></div>
+                  <div class="quantity">Quantity：3</div><span class="product-freeshipping">Free Shipping</span><span class="discount">10</span>
+                </div>
+              </div>
+            </div>
+            <span class="viewcart">view cart &amp; check out</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">The First Item</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">The Last Item</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">故意加長</a></li>
+              <li><a href="javascript:;">The Last Item</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a></li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+                <li><a href="javascript:;">The First Item</a></li>
+                <li><a href="javascript:;">故意加長</a></li>
+                <li><a href="javascript:;">故意加長</a></li>
+                <li><a href="javascript:;">故意加長</a></li>
+                <li><a href="javascript:;">故意加長</a></li>
+                <li><a href="javascript:;">故意加長</a></li>
+                <li><a href="javascript:;">故意加長</a></li>
+                <li><a href="javascript:;">故意加長</a></li>
+                <li><a href="javascript:;">故意加長</a></li>
+                <li><a href="javascript:;">故意加長</a></li>
+                <li><a href="javascript:;">故意加長</a></li>
+                <li><a href="javascript:;">The Last Item</a></li>
+              </ul>
+ 
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="main">
+      <header class="pageHeading">
+        <h2>買主清單</h2>
+        <ul class="path">
+          <li><a href="#">商機管理</a></li>
+          <li>買主清單</li>
+        </ul>
+      </header>
+      <div class="searchAndFilter toggleDrawer"><span class="toggleCtrl">Search & Filter</span>
+        <div class="toggleArea">
+          <section class="searchOrders">
+            <form action="">
+              <input type="text" placeholder="查詢關鍵字" />
+              <input type="reset" value="清除" title="清除" />
+              <select name="" id="">
+                <option value="99"">所有欄位</option>
+                <option value=" 0">買主email</option>
+                <option value="1">買主姓名</option>
+                <option value="2">買主公司名</option>
+                <option value="3">買主註冊國別</option>
+              </select>
+              <input type="submit" value="查詢" title="查詢" />
+            </form>
+          </section>
+          <section class="filterBy">
+            <span>過濾條件</span>
+            <div class="simuInput">All status</div>
+            <ul class="filterOptions">
+              <li>全部 <span class="count">51</span></li>
+              <li>半年內有互動 <span class="count">26</span></li>
+              <li>同意開放email者 <span class="count">21</span></li>
+              <li>刪除名單者 <span class="count">4</span></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+
+
+      <section class="contactList">
+        <ul>
+          <li class="infoCard"><a href="#">
+              <div class="header">
+                <div class="companyName">Seven International CO., LTD.</div>
+                <span class="locationLabel">日本</span>
+                <span class="alertLabel"></span>
+                <div class="ratings">
+                  <div class="gotPoint">
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point"></span>
+                    <span class="point"></span>
+                </div>
+                </div>
+                <ul class="myLabels">
+                  <li>Regular customer</li>
+                  <li>other label</li>
+                </ul>
+              </div>
+              <div class="middle">
+                <span class="avatar">J</span>
+                <div class="thePerson"><span class="title">Mr.</span> <span class="name">Nana Liou</span></div>
+                <div class="email">買主不提供 email</div>
+                <div class="url">公司網址：<em>買主未提供</em></div>
+                <!-- <div class="contactTime">最後訊息發送日期: <time>2019-07-08</time></div> -->
+              </div>
+              <h4>商機互動數據</h4>
+              <ul class="statistics">
+                <li>
+                  <span class="value">211</span>
+                  <span class="caption">發送商機數</span>
+                </li>
+                <li>
+                  <span class="value">77</span>
+                  <span class="caption">回覆次數</span>
+                </li>
+                <li>
+                  <span class="value">33</span>
+                  <span class="caption">互動商機數</span>
+                </li>
+              </ul>
+            </a></li>
+          <li class="infoCard"><a href="#">
+              <div class="header">
+                <div class="companyName">Company Name The very very very Long Company Name Test</div>
+                <span class="locationLabel">國別</span>
+                <span class="alertLabel off"></span>
+                <div class="ratings">無評價</div>
+                <ul class="myLabels"></ul><!-- 無資料時元件要留著，撐高度用 -->
+              </div>
+              <div class="middle">
+                <span class="avatar">X</span>
+                <div class="thePerson"><span class="title">Mr.</span> <span class="name">Name of Contact Person, And The very very very Long Name Test</span></div>
+                <div class="email">Ian@mail.com</div>
+                <div class="url">公司網址：<em>https://u00.hyweb.com.tw/GUI/2019Taiwantrade/su/pages/myContact_list.html</em></div>
+              </div>
+              <h4>商機互動數據</h4>
+              <ul class="statistics">
+                <li>
+                  <span class="value">19</span>
+                  <span class="caption">發送商機數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">回覆次數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">互動商機數</span>
+                </li>
+              </ul>
+            </a></li>
+            <li class="infoCard"><a href="#">
+              <div class="header">
+                <div class="companyName">Tortor Urna Porttitor CO., LTD.</div>
+                <span class="locationLabel">巴西</span>
+                <span class="alertLabel off"></span>
+                <div class="ratings">無評價</div>
+                <ul class="myLabels">
+                  <li>自訂標籤1</li><li>自訂標籤2</li><li>自訂標籤3</li><li>自訂標籤4</li><li>自訂標籤5</li><li>自訂標籤6</li><li>自訂標籤7</li><li>自訂標籤8</li>
+                </ul>
+              </div>
+              <div class="middle">
+                <span class="avatar">S</span>
+                <!-- <div class="thePerson"><span class="title">Ms.</span> <span class="name">Spencer Garcia xxxx xxx xxxxx xxxx</span></div> -->
+                <div class="email">spencer_garcia@company.mail.com</div>
+                <div class="url">公司網址：<em>買主未提供</em></div>
+              </div>
+              <h4>商機互動數據</h4>
+              <ul class="statistics">
+                <li>
+                  <span class="value">19</span>
+                  <span class="caption">發送商機數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">回覆次數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">互動商機數</span>
+                </li>
+              </ul>
+            </a></li>
+
+          <li class="infoCard"><a href="#">
+              <div class="header">
+                <div class="companyName">Tortor posuere ac ut consequat</div>
+                <span class="locationLabel">荷蘭</span>
+                <span class="alertLabel"></span>
+                <div class="ratings">
+                  <div class="gotPoint">
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point"></span>
+                </div>
+                </div>
+                <ul class="myLabels"></ul>
+              </div>
+              <div class="middle">
+                <span class="avatar">A</span>
+                <div class="thePerson"><span class="title">Ms.</span> <span class="name">Alyssa Bledel</span></div>
+                <div class="email">alyssa@mail.com</div>
+                <div class="url">公司網址：<em>https://www.hyweb.com.tw</em></div>
+              </div>
+              <h4>商機互動數據</h4>
+              <ul class="statistics">
+                <li>
+                  <span class="value">19</span>
+                  <span class="caption">發送商機數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">回覆次數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">互動商機數</span>
+                </li>
+              </ul>
+            </a></li>
+          <li class="infoCard"><a href="#">
+              <div class="header">
+                <div class="companyName">買主公司名稱</div>
+                <span class="locationLabel">國別</span>
+                <span class="alertLabel"></span>
+                <div class="ratings">
+                  <div class="gotPoint">
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point"></span>
+                    <span class="point"></span>
+                    <span class="point"></span>
+                </div>
+                </div>
+                <ul class="myLabels">
+                  <li>label</li>
+                </ul>
+              </div>
+              <div class="middle">
+                <span class="avatar">U</span>
+                <div class="thePerson"><span class="title">Mr.</span> <span class="name">Dylan Paisley</span></div>
+                <div class="email">回覆後取得 email</div>
+                <div class="url">公司網址：<em>https://www.hyweb.com.tw</em></div>
+              </div>
+              <h4>商機互動數據</h4>
+              <ul class="statistics">
+                <li>
+                  <span class="value">191</span>
+                  <span class="caption">發送商機數</span>
+                </li>
+                <li>
+                  <span class="value">61</span>
+                  <span class="caption">回覆次數</span>
+                </li>
+                <li>
+                  <span class="value">36</span>
+                  <span class="caption">互動商機數</span>
+                </li>
+              </ul>
+            </a></li>
+          <li class="infoCard"><a href="#">
+              <div class="header">
+                <div class="companyName">Fringilla Urna Porttitor CO., LTD.</div>
+                <span class="locationLabel">巴西</span>
+                <span class="alertLabel"></span>
+                <div class="ratings">
+                  <div class="gotPoint">
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point"></span>
+                    <span class="point"></span>
+                </div>
+                </div>
+                <ul class="myLabels"></ul>
+              </div>
+              <div class="middle">
+                <span class="avatar">E</span>
+                <div class="thePerson"><span class="title">Ms.</span> <span class="name">Emily Butler</span></div>
+                <div class="email">emily@mail.com</div>
+                <div class="url">公司網址：<em>買主未提供</em></div>
+              </div>
+              <h4>商機互動數據</h4>
+              <ul class="statistics">
+                <li>
+                  <span class="value">19</span>
+                  <span class="caption">發送商機數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">回覆次數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">互動商機數</span>
+                </li>
+              </ul>
+            </a></li>
+          <li class="infoCard"><a href="#">
+              <div class="header">
+                <div class="companyName">Volutpat Diam Ut Venenatis Tellus</div>
+                <span class="locationLabel">馬來西亞</span>
+                <span class="alertLabel"></span>
+                <div class="ratings">
+                  <div class="gotPoint">
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point"></span>
+                    <span class="point"></span>
+                </div>
+                </div>
+                <ul class="myLabels"></ul>
+              </div>
+              <div class="middle">
+                <span class="avatar">S</span>
+                <div class="thePerson"><span class="title">Ms.</span> <span class="name">Carley White</span></div>
+                <div class="email">carley@mail.com</div>
+                <div class="url">公司網址：<em>買主未提供</em></div>
+              </div>
+              <h4>商機互動數據</h4>
+              <ul class="statistics">
+                <li>
+                  <span class="value">19</span>
+                  <span class="caption">發送商機數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">回覆次數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">互動商機數</span>
+                </li>
+              </ul>
+            </a></li>
+          <li class="infoCard"><a href="#">
+              <div class="header">
+                <div class="companyName">Velit Egestas International CO., LTD.</div>
+                <span class="locationLabel">越南</span>
+                <span class="alertLabel"></span>
+                <div class="ratings">
+                  <div class="gotPoint">
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                </div>
+                </div>
+                <ul class="myLabels"></ul>
+              </div>
+              <div class="middle">
+                <span class="avatar">T</span>
+                <div class="thePerson"><span class="title">Mr.</span> <span class="name">Timothy George</span></div>
+                <div class="email">timothy@mail.com</div>
+                <div class="url">公司網址：<em>https://www.hyweb.com.tw</em></div>
+              </div>
+              <h4>商機互動數據</h4>
+              <ul class="statistics">
+                <li>
+                  <span class="value">19</span>
+                  <span class="caption">發送商機數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">回覆次數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">互動商機數</span>
+                </li>
+              </ul>
+            </a></li>
+          <li class="infoCard"><a href="#">
+              <div class="header">
+                <div class="companyName">Tortor posuere ac ut consequat</div>
+                <span class="locationLabel">日本</span>
+                <span class="alertLabel off"></span>
+                <div class="ratings">
+                  <div class="gotPoint">
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point scored"></span>
+                    <span class="point"></span>
+                </div>
+                </div>
+                <ul class="myLabels"></ul>
+              </div>
+              <div class="middle">
+                <span class="avatar">K</span>
+                <div class="thePerson"><span class="title">Ms.</span> <span class="name">Kelly Rupert</span></div>
+                <div class="email">kelly_rupert@mail.com</div>
+                <div class="url">公司網址：<em>買主未提供</em></div>
+              </div>
+              <h4>商機互動數據</h4>
+              <ul class="statistics">
+                <li>
+                  <span class="value">19</span>
+                  <span class="caption">發送商機數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">回覆次數</span>
+                </li>
+                <li>
+                  <span class="value">6</span>
+                  <span class="caption">互動商機數</span>
+                </li>
+              </ul>
+            </a></li>
+        </ul>
+      </section>
+      <section class="page">
+        <p>每頁顯示 <select name="perPage" id="perPage">
+          <option value="30">10</option>
+          <option value="30">25</option>
+          <option value="10">50</option>
+          <option value="30">全部</option>
+        </select> 筆</p>
+        <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+        <ul>
+          <li class="prev disabled"><a href="#">上一頁</a></li>
+          <li class="here"><a href="#">1</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">12</a></li>
+          <li class="next"><a href="#">下一頁</a></li>
+        </ul>
+      </section>
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088 © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+</body>
+
+</html>

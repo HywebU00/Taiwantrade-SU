@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-線上報價（銷貨管理）</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>線上報價</h2>
+        <ul class="path">
+          <li><a href="#">銷貨管理</a></li>
+          <li>線上報價</li>
+        </ul>
+      </header>
+
+      <section class="processIndicator">
+        <ol>
+          <li class="now">新增報價單</li>
+          <li>選擇寄送對象</li>
+          <li>選擇報價型錄</li>
+          <li>填寫寄送資訊</li>
+          <li>送出</li>
+        </ol>
+      </section>
+
+      <section class="search toggleDrawer always hidden">
+        <h3 class="searchCaption">報價單查詢</h3>
+        <button type="button" class="toggleCtrl">隱藏／展開查詢</button>
+        <div class="toggleArea">
+          <table class="formLayout">
+            <tr>
+              <td>狀態</td>
+              <td>
+                <div class="optionPool singleSelection">
+                  <label><input name="xxx" type="radio" checked>全部</label>
+                  <label><input name="xxx" type="radio">已送出</label>
+                  <label><input name="xxx" type="radio">未送出</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>國別</td>
+              <td>
+                <div id="qryCountryDiv">
+                  <div class="ms-options-wrap">
+                    <button type="button">請選擇</button>
+                    <div class="ms-options">
+                      <div class="ms-search"><input type="text" value="" placeholder="查詢""></div>
+                      <a href="javascript:void(0)" class="ms-selectall global">選擇全部</a>
+                      <ul>
+                        <li class="optgroup">
+                          <span class="label">North America - 北美洲</span>
+                          <a href="javascript:void(0)" class="ms-selectall">選擇全部</a>
+                          <ul>
+                            <li>
+                              <label for="ms-opt-8"><input type="checkbox" value="667" title="Canada - 加拿大" id="ms-opt-8"> Canada - 加拿大</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-9"><input type="checkbox" value="477" title="Greenland - 格陵蘭" id="ms-opt-9"> Greenland - 格陵蘭</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-10"><input type="checkbox" value="478" title="Guadeloupe - 瓜達康納爾島" id="ms-opt-10"> Guadeloupe - 瓜達康納爾島</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-15">
+                                <input type="checkbox" value="481" title="United States of America - 美國" id="ms-opt-15"> United States of America - 美國</label>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="optgroup">
+                          <span class="label">Asia - 亞洲</span>
+                          <a href="javascript:void(0)" class="ms-selectall">選擇全部</a>
+                          <ul>
+                            <li>
+                              <label for="ms-opt-16">
+                                <input type="checkbox" value="563" title="Bangladesh - 孟加拉" id="ms-opt-16"> Bangladesh - 孟加拉</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-17">
+                                <input type="checkbox" value="686" title="Bhutan - 不丹" id="ms-opt-17"> Bhutan - 不丹</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-18">
+                                <input type="checkbox" value="564" title="Brunei Darussalam - 汶萊" id="ms-opt-18"> Brunei Darussalam - 汶萊</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-19">
+                                <input type="checkbox" value="570" title="Cambodia - 柬埔寨" id="ms-opt-19"> Cambodia - 柬埔寨</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-20">
+                                <input type="checkbox" value="566" title="Hong Kong - 香港" id="ms-opt-20"> Hong Kong - 香港</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-21">
+                                <input type="checkbox" value="568" title="India - 印度" id="ms-opt-21"> India - 印度</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-22">
+                                <input type="checkbox" value="567" title="Indonesia - 印尼" id="ms-opt-22"> Indonesia - 印尼</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-23">
+                                <input type="checkbox" value="569" title="Japan - 日本" id="ms-opt-23"> Japan - 日本</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-24">
+                                <input type="checkbox" value="623" title="Kazakhstan - 哈薩克" id="ms-opt-24"> Kazakhstan - 哈薩克</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-25">
+                                <input type="checkbox" value="571" title="Korea, Democratic People's Rep. Of - 北韓" id="ms-opt-25"> Korea, Democratic People's Rep. Of - 北韓</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-26">
+                                <input type="checkbox" value="573" title="Lao People's Democratic Republic - 寮國" id="ms-opt-26"> Lao People's Democratic Republic - 寮國</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-27">
+                                <input type="checkbox" value="576" title="Macau - 澳門" id="ms-opt-27"> Macau - 澳門</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-28">
+                                <input type="checkbox" value="565" title="Mainland China - 中國" id="ms-opt-28"> Mainland China - 中國</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-29">
+                                <input type="checkbox" value="577" title="Malaysia - 馬來西亞" id="ms-opt-29"> Malaysia - 馬來西亞</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-30">
+                                <input type="checkbox" value="575" title="Mongolia - 蒙古" id="ms-opt-30"> Mongolia - 蒙古</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-31">
+                                <input type="checkbox" value="574" title="Myanmar - 緬甸" id="ms-opt-31"> Myanmar - 緬甸</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-32">
+                                <input type="checkbox" value="578" title="Nepal - 尼泊爾" id="ms-opt-32"> Nepal - 尼泊爾</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-33">
+                                <input type="checkbox" value="472" title="Other Asia - 其他亞洲國家" id="ms-opt-33"> Other Asia - 其他亞洲國家</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-34">
+                                <input type="checkbox" value="579" title="Pakistan - 巴基斯坦" id="ms-opt-34"> Pakistan - 巴基斯坦</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-35">
+                                <input type="checkbox" value="688" title="Philippines - 菲律賓群島" id="ms-opt-35"> Philippines - 菲律賓群島</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-36">
+                                <input type="checkbox" value="572" title="Republic Of Korea - 南韓" id="ms-opt-36"> Republic Of Korea - 南韓</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-37">
+                                <input type="checkbox" value="584" title="Ryukyu - 琉球" id="ms-opt-37"> Ryukyu - 琉球</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-38">
+                                <input type="checkbox" value="580" title="Singapore - 新加坡" id="ms-opt-38"> Singapore - 新加坡</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-39">
+                                <input type="checkbox" value="687" title="Sri Lanka - 斯里蘭卡" id="ms-opt-39"> Sri Lanka - 斯里蘭卡</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-40">
+                                <input type="checkbox" value="5785" title="State of Palestine - 巴勒斯坦國" id="ms-opt-40"> State of Palestine - 巴勒斯坦國</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-41">
+                                <input type="checkbox" value="582" title="Taiwan, ROC - 台灣" id="ms-opt-41"> Taiwan, ROC - 台灣</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-42">
+                                <input type="checkbox" value="581" title="Thailand - 泰國" id="ms-opt-42"> Thailand - 泰國</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-43">
+                                <input type="checkbox" value="583" title="Viet Nam - 越南" id="ms-opt-43"> Viet Nam - 越南</label>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="optgroup">
+                          <span class="label">Oceania - 大洋洲</span><a href="javascript:void(0)" class="ms-selectall">選擇全部</a>
+                          <ul>
+                            <li><label for="ms-opt-34"><input type="checkbox" value="529" title="Kiribati - 吉里巴斯" id="ms-opt-34">Kiribati - 吉里巴斯</label></li>
+                            <li><label for="ms-opt-35"><input type="checkbox" value="544" title="Tuvalu - 吐瓦魯" id="ms-opt-35">Tuvalu - 吐瓦魯</label></li>
+                            <li><label for="ms-opt-36"><input type="checkbox" value="548" title="Tahiti - 大溪地" id="ms-opt-36">Tahiti - 大溪地</label></li>
+                            <li><label for="ms-opt-37"><input type="checkbox" value="683" title="Micronesia, Federated States Of - 密克羅尼西亞" id="ms-opt-37">Micronesia, Federated States Of - 密克羅尼西亞</label></li>
+                            <li><label for="ms-opt-38"><input type="checkbox" value="442" title="Niue - 尼烏亞島" id="ms-opt-38">Niue - 尼烏亞島</label></li>
+                            <li><label for="ms-opt-39"><input type="checkbox" value="538" title="Papua New Guinea - 巴布亞新幾內亞" id="ms-opt-39">Papua New Guinea - 巴布亞新幾內亞</label></li>
+                            <li><label for="ms-opt-40"><input type="checkbox" value="539" title="Palau - 帛琉" id="ms-opt-40">Palau - 帛琉</label></li>
+                            <li><label for="ms-opt-41"><input type="checkbox" value="543" title="East Timor - 帝汶" id="ms-opt-41">East Timor - 帝汶</label></li>                            </ul>
+                        </li>
+                      </ul>
+                      <button class="closeOpt" type="button">確定</button>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <script>//模擬條件查詢的[商機類型][國別]下拉選單效果，套版時請刪除
+                $('.ms-options-wrap').find('button').click(function(ev) {
+                  ev.preventDefault();
+                  $(this).next('.ms-options').toggle();
+                });
+                // 小螢幕時，選單改為全螢幕，需一個關閉按鈕 20200217
+                $('.closeOpt').click(function(){
+                  $('.ms-options').hide();
+                })
+                $('.ms-options').find('li').find('input').click(function(){
+                  $(this).parent('label').parent('li').toggleClass('selected');
+                })
+              </script>
+
+            </tr>
+            <tr>
+              <td>公司</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>報價對象</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>報價單編號</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>報價日期</td>
+              <td>
+                <div class="during">
+                  <input type="date" placeholder="yyyy/mm/dd" id="qryBeginReceiveDate" name="qryBeginReceiveDate">
+                  <a class="clearIcon" href="javascript:void(0)"></a>
+                  <span class="calendarIcon" for="dateStartIcon"></span>
+                  <input type="date" placeholder="yyyy/mm/dd" id="qryEndReceiveDate" name="qryEndReceiveDate">
+                  <a class="clearIcon" href="javascript:void(0)"></a>
+                  <span class="calendarIcon" for="dateEndIcon"></span>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <div class="btnDv">
+            <input type="submit" value="查詢">
+            <input type="reset" value="清除">
+          </div>
+
+        </div>
+      </section>
+
+      <!-- <div class="funcList">
+        <ul>
+          <li><a href="#">新增報價單</a></li>
+        </ul>
+      </div> -->
+
+
+      <section class="listTbNew">
+        <div class="funcBtnGp">
+          <ul>
+            <li class="add"><a href="#">新增報價單</a></li>
+          </ul>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>商機類型</th>
+              <th>國別</th>
+              <th>公司</th>
+              <th>報價對象</th>
+              <th>編號</th>
+              <th>報價日期</th>
+              <th>狀態</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>主動報價</td>
+              <td>加拿大</td>
+              <td>Individual buyer</td>
+              <td>hyweb_yuying</td>
+              <td><span class="quotaNo showLightbox"><a href="javascript:void(0)">Q-2020030514052000001</a></span></td>
+              <td><time>2020-03-05 14:05:41</time></td>
+              <td>已送出</td>
+            </tr>
+            <tr>
+              <td>主動報價</td>
+              <td>美屬薩摩亞</td>
+              <td>Individual buyer</td>
+              <td>Ching</td>
+              <td><span class="quotaNo showLightbox"><a href="javascript:void(0)">Q-2020030288888800008</a></span></td>
+              <td><time>2020-03-02 14:09:34</time></td>
+              <td>已送出</td>
+            </tr>
+            <tr>
+              <td>主動報價</td>
+              <td>加拿大</td>
+              <td>HYWEB TECHNOLOGY CO., LTD.</td>
+              <td>hyweb_yuying</td>
+              <td><span class="quotaNo showLightbox"><a href="javascript:void(0)">Q-2020022715324200001</a></span></td>
+              <td><time>2020-02-27 15:32:48</time></td>
+              <td>已送出</td>
+            </tr>
+            <tr>
+              <td>主動報價</td>
+              <td>紐西蘭</td>
+              <td>中華民國對外貿易發展協會</td>
+              <td>頭像字母檢查-iucc910</td>
+              <td><span class="quotaNo"><a href="javascript:void(0)">Q-2020021515193600001</a></span></td>
+              <td><time></time></td>
+              <td>未送出</td>
+            </tr>
+            <tr>
+              <td>主動報價</td>
+              <td>紐西蘭</td>
+              <td>Individual buyer</td>
+              <td>頭像字母檢查-iucc910</td>
+              <td><span class="quotaNo"><a href="javascript:void(0)">Q-2020021409290100001</a></span></td>
+              <td><time></time></td>
+              <td>未送出</td>
+            </tr>
+            <tr>
+              <td>主動報價</td>
+              <td>紐西蘭</td>
+              <td>Individual buyer</td>
+              <td>頭像字母檢查-iucc910</td>
+              <td><span class="quotaNo showLightbox"><a href="javascript:void(0)">Q-2020021317361000001</a></span></td>
+              <td><time>2020-02-13 17:36:34</time></td>
+              <td>已送出</td>
+            </tr>
+            <tr>
+              <td>主動報價</td>
+              <td>新加坡</td>
+              <td>Individual buyer</td>
+              <td>KKKLiuccforBU</td>
+              <td><span class="quotaNo"><a href="javascript:void(0)">Q-2020021315494800001</a></span></td>
+              <td><time></time></td>
+              <td>未送出</td>
+            </tr>
+            <tr>
+              <td>主動報價</td>
+              <td>紐西蘭</td>
+              <td>Individual buyer</td>
+              <td>頭像字母檢查-iucc910</td>
+              <td><span class="quotaNo"><a href="javascript:void(0)">Q-2020021315425100001</a></span></td>
+              <td><time></time></td>
+              <td>未送出</td>
+            </tr>
+            <tr>
+              <td>主動報價</td>
+              <td>加拿大</td>
+              <td>Individual buyer</td>
+              <td>hyweb_yuying</td>
+              <td><span class="quotaNo"><a href="javascript:void(0)">Q-2020021315071200001</a></span></td>
+              <td><time></time></td>
+              <td>未送出</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      
+      <section class="page">
+        <p>每頁顯示 <select name="perPage" id="perPage">
+          <option value="30">10</option>
+          <option value="30">25</option>
+          <option value="10">50</option>
+          <option value="30">全部</option>
+        </select> 筆</p>
+        <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+        <ul>
+          <li class="prev disabled"><a href="#">上一頁</a></li>
+          <li class="here"><a href="#">1</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">12</a></li>
+          <li class="next"><a href="#">下一頁</a></li>
+        </ul>
+      </section>
+
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+</body>
+
+</html>

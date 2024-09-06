@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU - 帳號設定（會員管理）</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>帳號設定</h2>
+        <ul class="path">
+          <li><a href="#">會員管理</a></li>
+          <li>帳號設定</li>
+        </ul>
+      </header>
+
+      <div class="funcBtnGp">
+        <ul>
+          <li><a href="x" target="_blank">變更密碼</a></li>
+          <li><a href="x" target="_blank">設定社群帳號</a></li>
+        </ul>
+      </div>
+
+      <section class="formX">
+        <table class="formLayout">
+          <tr>
+            <td>帳號</td>
+            <td>
+              <div class="asAnInput">nalu.lai@hyweb.com.tw</div>
+            </td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> 權限</td>
+            <td>
+              <ul class="inlineList">
+                <li><a class="showLightbox" id="lbx01">企業網維護</a></li>
+                <li><a class="showLightbox" id="lbx01">商機管理</a></li>
+                <li><a class="showLightbox" id="lbx01">成員資料管理</a></li>
+                <li><a class="showLightbox" id="lbx01">總管理者</a></li>
+                <li><a class="showLightbox" id="lbx01">買主管理權限</a></li>
+              </ul>
+
+              <section class="lightbox lbx01">
+                <button type="button" title="close" class="closeThis hideLightbox"></button>
+                <div class="head">
+                  <h3>EP-總管理者</h3>
+                </div>
+              
+                <section class="dataTable">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>功能</th>
+                        <td>權限</td>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <th colspan="2">My Taiwantrade</th>
+                      </tr>
+                      <tr>
+                        <th>我的提醒測試</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li class="checked">資訊現狀</li>
+                            <li class="checked">重點訊息公告</li>
+                            <li class="checked">資訊儀表板-產業分析</li>
+                            <li>資訊儀表板-營運總覽</li>
+                            <li>資訊儀表板-流量分析</li>
+                            <li>資訊儀表板-買主行為</li>
+                            <li class="checked">資訊儀表板-銷售分析</li>
+                            <li class="checked">資訊儀表板-報價分析</li>
+                            <li>訂單動態</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>商機資料庫查詢</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li class="checked">商機資料庫查詢</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>成功案例分享</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li class="checked">列表</li>
+                            <li class="checked">新增</li>
+                            <li class="checked">編輯</li>
+                            <li class="checked">刪除</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>會員買賣訊息刊登</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li class="checked">查詢</li>
+                            <li class="checked">新增</li>
+                            <li class="checked">修改</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>個人化訂閱(開發中)</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li>查詢</li>
+                            <li>新增</li>
+                            <li>修改</li>
+                            <li>刪除</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>導覽列設定</th>
+                        <td><ul class="permissionList">
+                          <li class="checked">編輯More選單及明細 </li>
+                          <li class="checked">修改More名稱</li>
+                          <li class="checked">編輯</li>
+                          <li class="checked">調整排序</li>
+                          <li class="checked">新增</li></ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>一頁式網頁建站引導</th>
+                        <td><ul class="permissionList">
+                          <li>建站引導頁列表</li>
+                          <li>版型設定步驟</li>
+                          <li>版型設定步驟</li>
+                          <li>首頁資料設定</li></ul>
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody>
+                      <tr>
+                        <th colspan="2">企業網管理</th>
+                      </tr>
+                      <tr>
+                        <th>版型設定</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li class="checked">編輯</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>導覽列設定</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li class="checked">編輯More選單及明細</li>
+                            <li class="checked">修改More名稱</li>
+                            <li class="checked">編輯</li>
+                            <li class="checked">調整排序</li>
+                            <li>新增</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>首頁設定</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li>設定</li>
+                            <li>Product 資料aa</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>首頁大圖設定</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li class="checked">新增</li>
+                            <li class="checked">調整排序</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>網址設定</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li class="checked">網址異動申請</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>公司資料設定</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li>公司資料設定</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>公司介紹設定</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li>公司介紹設定</li>
+                            <li>編輯標題</li>
+                            <li>新增次標題</li>
+                            <li class="checked">修改次標題</li>
+                            <li class="checked">修改次標題(多語)</li>
+                            <li class="checked">調整排序</li>
+                            <li class="checked">調整排序</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>海外據點設定</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li class="checked">海外據點維護列表</li>
+                            <li class="checked">海外據點修改</li>
+                            <li class="checked">海外據點新增</li>
+                            <li class="checked">海外據點排序</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>台灣經貿網Logo申請</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li class="checked">編輯</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>多媒體輪播設定功能</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li class="checked">編輯</li>
+                            <li class="checked">新增</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>建站引導(2020)</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li>首頁(Home)資料編輯</li>
+                            <li>首頁(Home)版型設定</li>
+                            <li>首頁(Home)版型設定</li>
+                            <li>建站引導頁列表</li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+
+                    <tbody>
+                      <tr>
+                        <th colspan="2">公司資料管理</th>
+                      </tr>
+                      <tr>
+                        <th>公司資料設定</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li>公司資料設定</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>公司資料設定(2020)</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li>編輯公司資料設定(2020)</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>台灣經貿網Logo申請</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li>列表</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>退換貨政策管理</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li>新增修改</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>多媒體輪播設定功能</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li>編輯</li>
+                            <li>新增</li>
+                          </ul>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>一頁式網頁建站引導</th>
+                        <td>
+                          <ul class="permissionList">
+                            <li>首頁資料設定
+                            <li>版型設定步驟 1</li>
+                            <li>版型設定步驟 1</li>
+                            <li>建站引導頁列表</li>
+                          </ul>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </section>
+              
+              </section>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> 姓名</td>
+            <td>
+              <div class="nameSet">
+                <select required>
+                  <option selected="selected">Mr.</option>
+                  <option>Ms.</option>
+                  <option>Mrs.</option>
+                </select>
+                <input type="text" value="賴***">
+              </div>
+              <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+            </td>
+          </tr>
+          <tr>
+            <td>英文姓名</td>
+            <td><input type="text" value="nalu"></td>
+          </tr>
+          <tr>
+            <td>所屬部門</td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td>職稱</td>
+            <td><input type="text" value="test"></td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr> 電話</td>
+            <td>
+              <label class="aloneCheck"><input type="checkbox">同公司電話</label>
+              <div class="phoneNumbSet business">
+                <span class="preSymbol">+</span>
+                <input class="countryCode" type="tel" placeholder="886" value="886">
+                <div class="errorMsg" style="display: none;"><abbr class="required">*</abbr>必須填寫</div>
+                <span class="preSymbol">-</span>
+                <input class="areaCode" type="tel" value="">
+                <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                <span class="preSymbol">-</span>
+                <input class="mainNumber" type="tel" value="">
+                <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                <span class="preSymbol">#</span>
+                <input class="ext" type="tel" value="2345">
+              </div>
+              <p class="hint"><a href="https://countrycode.org/" target="_blank">參照國碼請點我</a></p>
+            </td>
+          </tr>
+          <tr>
+            <td>傳真</td>
+            <td>
+              <label class="aloneCheck"><input type="checkbox">同公司傳真</label>
+              <div class="phoneNumbSet business">
+                <span class="preSymbol">+</span>
+                <input class="countryCode" type="tel" placeholder="886" value="886">
+                <span class="preSymbol">-</span>
+                <input class="areaCode" type="tel" value="2">
+                <span class="preSymbol">-</span>
+                <input class="mainNumber" type="tel" value="27576245">
+              </div>
+
+            </td>
+          </tr>
+          <tr>
+            <td>行動電話</td>
+            <td><input type="tel"></td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr>通訊地址</td>
+            <td>
+              <label class="aloneCheck"><input type="checkbox">同公司通訊地址</label>
+              <div class="addressSet">
+                <div class="countySelection">
+                  <select>
+                    <option value="">- 請選擇 -</option>
+                    <option value="" selected="selected">臺北市</option>
+                    <option value="">Fringilla Turpis Rhoncus</option>
+                    <option value="">...</option>
+                  </select>
+                  <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                  <select>
+                    <option value="">選擇鄉鎮</option>
+                    <option value="">Sollicitudinaliquam</option>
+                    <option value="">...</option>
+                  </select>
+                  <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                </div>
+                <div class="zipcodeAndAddr">
+                  <label class="zipcode">郵遞區號 <input type="number" value="4321" placeholder="請輸入郵遞區號"><div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div></label>
+                  <input type="text" value="5F.-6, No.8, Taiyuan 1st St., Zhubei City, Hsinchu County 302, Taiwan (R.O.C.)">
+                  <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+
+
+          <!--
+            <tr>
+              <td><abbr title="必填欄位" class="required">*</abbr> 通訊地址</td>
+              <td>
+                <label class="aloneCheck"><input type="checkbox">同公司通訊地址</label>
+                <div class="addressSet">
+                  <div class="zipcodeSet">
+                    <label for="zzzzipcode">郵遞區號</label>
+                    <input id="zzzzipcode" type="number" value="100" placeholder="請輸入郵遞區號">
+                    <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                    <button type="button" class="trigPop" id="pop-findZipCode">選取</button>
+                  </div>
+                  <div class="countySelection">
+                    <select required>
+                      <option value="">- 請選擇 -</option>
+                      <option value="931" selected="selected">臺北市</option><option value="932">基隆市</option><option value="933">新北市</option><option value="934">宜蘭縣</option><option value="935">新竹市</option><option value="936">新竹縣</option><option value="937">桃園市</option><option value="938">苗栗縣</option><option value="939">臺中市</option><option value="940">彰化縣</option><option value="941">南投縣</option><option value="942">嘉義市</option><option value="943">嘉義縣</option><option value="944">雲林縣</option><option value="945">臺南市</option><option value="946">高雄市</option><option value="947">澎湖縣</option><option value="948">屏東縣</option><option value="949">臺東縣</option><option value="950">花蓮縣</option><option value="951">金門縣</option><option value="952">連江縣</option><option value="953">南海諸島</option><option value="954">釣魚台列嶼</option>
+                    </select>
+                    <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                    <select required>
+                      <option value="">選擇鄉鎮</option>
+                      <option value="">...</option>
+                    </select>
+                    <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                  </div>
+                  <input type="text" value="5F.-6, No.8, Taiyuan 1st St., Zhubei City, Hsinchu County 302, Taiwan (R.O.C.)">
+                  <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                </div>
+              </td>
+            </tr>
+          -->
+
+          <tr>
+            <td>訂閱電子報</td>
+            <td><label class="aloneCheck"><input type="checkbox">訂閱</label></td>
+          </tr>
+
+        </table>
+        <div class="btnDv">
+          <input type="button" value="儲存" class="confirm">
+          <input type="reset" value="取消">
+        </div>
+      </section>
+
+
+
+      
+
+
+
+ 
+
+
+      
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+
+  
+    
+</body>
+
+</html>

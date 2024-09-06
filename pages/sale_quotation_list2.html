@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-線上報價：查詢＋列表，新增從過去報價單（銷貨管理）</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+
+
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>線上報價</h2>
+        <ul class="path">
+          <li><a href="#">銷貨管理</a></li>
+          <li>線上報價</li>
+        </ul>
+      </header>
+
+
+
+
+      <div class="searchRow newQtFrom">
+        <h3>新增從</h3>
+        <div class="optionPool">
+          <label><input name="" type="radio">空白</label> 
+          <label><input name="" type="radio" checked>過去的報價單</label>
+        </div>
+        <!-- <button type="button" class="confirm">確定</button> -->
+      </div>
+
+
+      <section class="search toggleDrawer always hidden">
+        <h3 class="searchCaption">報價單查詢</h3>
+        <span class="toggleCtrl">查詢</span>
+        <div class="toggleArea">
+          <table class="formLayout">
+            <tr>
+              <td>商機類型</td>
+              <td>
+                <select>
+                  <option value=""請選擇></option>
+                  <option value="">主動報價</option>
+                  <option value="">推薦商機</option>
+                  <option value="">...</option>
+                  <option value="">...</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>狀態</td>
+              <td>
+                <div class="optionPool">
+                  <label><input name="xxx" type="radio">已送出</label>
+                  <label><input name="xxx" type="radio">未送出</label>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>國別</td>
+              <td>
+                <div id="qryCountryDiv">
+                  <div class="ms-options-wrap">
+                    <button type="button">請選擇</button>
+                    <div class="ms-options">
+                      <div class="ms-search"><input type="text" value="" placeholder="查詢""></div>
+                      <a href="javascript:void(0)" class="ms-selectall global">選擇全部</a>
+                      <ul>
+                        <li class="optgroup">
+                          <span class="label">North America - 北美洲</span>
+                          <a href="javascript:void(0)" class="ms-selectall">選擇全部</a>
+                          <ul>
+                            <li>
+                              <label for="ms-opt-8"><input type="checkbox" value="667" title="Canada - 加拿大" id="ms-opt-8"> Canada - 加拿大</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-9"><input type="checkbox" value="477" title="Greenland - 格陵蘭" id="ms-opt-9"> Greenland - 格陵蘭</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-10"><input type="checkbox" value="478" title="Guadeloupe - 瓜達康納爾島" id="ms-opt-10"> Guadeloupe - 瓜達康納爾島</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-15">
+                                <input type="checkbox" value="481" title="United States of America - 美國" id="ms-opt-15"> United States of America - 美國</label>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="optgroup">
+                          <span class="label">Asia - 亞洲</span>
+                          <a href="javascript:void(0)" class="ms-selectall">選擇全部</a>
+                          <ul>
+                            <li>
+                              <label for="ms-opt-16">
+                                <input type="checkbox" value="563" title="Bangladesh - 孟加拉" id="ms-opt-16"> Bangladesh - 孟加拉</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-17">
+                                <input type="checkbox" value="686" title="Bhutan - 不丹" id="ms-opt-17"> Bhutan - 不丹</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-18">
+                                <input type="checkbox" value="564" title="Brunei Darussalam - 汶萊" id="ms-opt-18"> Brunei Darussalam - 汶萊</label>
+                            </li>
+                            <li>
+                              <label for="ms-opt-19">
+                                <input type="checkbox" value="570" title="Cambodia - 柬埔寨" id="ms-opt-19"> Cambodia - 柬埔寨</label>
+                            </li>
+                            <li><input type="checkbox">...</li>
+                          </ul>
+                        </li>
+                        <li class="optgroup">
+                          <span class="label">Oceania - 大洋洲</span><a href="javascript:void(0)" class="ms-selectall">選擇全部</a>
+                          <ul>
+                            <li><label for="ms-opt-34"><input type="checkbox" value="529" title="Kiribati - 吉里巴斯" id="ms-opt-34">Kiribati - 吉里巴斯</label></li>
+                            <li><label for="ms-opt-35"><input type="checkbox" value="544" title="Tuvalu - 吐瓦魯" id="ms-opt-35">Tuvalu - 吐瓦魯</label></li>
+                            <li><input type="checkbox">...</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <!-- <button class="closeOpt" type="button">確定</button> -->
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <script>//模擬條件查詢的[商機類型][國別]下拉選單效果，套版時請刪除
+                $('.ms-options-wrap').find('button').click(function(ev) {
+                  ev.preventDefault();
+                  $(this).next('.ms-options').toggle();
+                });
+                // 小螢幕時，選單改為全螢幕，需一個關閉按鈕 20200217
+                $('.closeOpt').click(function(){
+                  $('.ms-options').hide();
+                })
+                $('.ms-options').find('li').find('input').click(function(){
+                  $(this).parent('label').parent('li').toggleClass('selected');
+                })
+              </script>
+
+            </tr>
+            <tr>
+              <td>公司</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>報價對象</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>報價單編號</td>
+              <td><input type="text"></td>
+            </tr>
+            <tr>
+              <td>報價日期</td>
+              <td>
+                <div class="during">
+                  <input type="date" placeholder="yyyy/mm/dd" id="" name="">
+                  <input type="date" placeholder="yyyy/mm/dd" id="" name="">
+                </div>
+              </td>
+            </tr>
+          </table>
+          <div class="btnDv">
+            <input type="submit" value="查詢">
+            <input type="reset" value="清除">
+          </div>
+        </div>
+      </section>
+
+      <section class="listTbNew">
+        <table>
+          <thead>
+            <tr>
+              <th>選取</th>
+              <th>商機類型</th>
+              <th>國別</th>
+              <th>公司</th>
+              <th>報價對象</th>
+              <th>編號</th>
+              <th>報價日期</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="checkThis"><a href="x"></a></span></td>
+              <td>主動報價</td>
+              <td>加拿大</td>
+              <td>Individual buyer</td>
+              <td>hyweb_yuying</td>
+              <td><span class="quotaNo"><a href="x">Q-2020030514052000001</a></span></td>
+              <td><time>2020-03-05 14:05:41</time></td>
+            </tr>
+            <tr>
+              <td><span class="checkThis"><a href="x"></a></span></td>
+              <td>主動報價</td>
+              <td>美屬薩摩亞</td>
+              <td>Individual buyer</td>
+              <td>－無連結測試－</td>
+              <td><span class="quotaNo">Q-2020030288888800008</span></td>
+              <td><time>2020-03-02 14:09:34</time></td>
+            </tr>
+            <tr>
+              <td><span class="checkThis"><a href="x"></a></span></td>
+              <td>主動報價</td>
+              <td>加拿大</td>
+              <td>HYWEB TECHNOLOGY CO., LTD.</td>
+              <td>hyweb_yuying</td>
+              <td><span class="quotaNo"><a href="x">Q-20200227153242111111</a></span></td>
+              <td><time>2020-02-27 15:32:48</time></td>
+            </tr>
+            <tr>
+              <td><span class="checkThis"><a href="x"></a></span></td>
+              <td>主動報價</td>
+              <td>紐西蘭</td>
+              <td>中華民國對外貿易發展協會</td>
+              <td>Liucc910</td>
+              <td><span class="quotaNo"><a href="x">Q-2020021515193611115</a></span></td>
+              <td><time>2020-02-27 15:32:48</time></td>
+            </tr>
+            <tr>
+              <td><span class="checkThis"><a href="x"></a></span></td>
+              <td>主動報價</td>
+              <td>紐西蘭</td>
+              <td>Individual buyer</td>
+              <td>Liucc910</td>
+              <td><span class="quotaNo"><a href="x">Q-2020021409290111886</a></span></td>
+              <td><time>2020-02-27 15:32:48</time></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      
+      <section class="page">
+        <p>每頁顯示 <select name="perPage" id="perPage">
+          <option value="30">10</option>
+          <option value="30">25</option>
+          <option value="10">50</option>
+          <option value="30">全部</option>
+        </select> 筆</p>
+        <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+        <ul>
+          <li class="prev disabled"><a href="#">上一頁</a></li>
+          <li class="here"><a href="#">1</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li class="ellipsis">...</li>
+          <li><a href="#">12</a></li>
+          <li class="next"><a href="#">下一頁</a></li>
+        </ul>
+      </section>
+
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+</body>
+
+</html>

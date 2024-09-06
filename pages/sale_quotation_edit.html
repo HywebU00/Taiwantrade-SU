@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-線上報價：新增、編輯（銷貨管理）</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+
+  <script src="../js/slick.min.js"></script>
+  <!-- <script type="text/javascript" src="http://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script> 20210304-->
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>線上報價</h2>
+        <ul class="path">
+          <li><a href="#">銷貨管理</a></li>
+          <li>線上報價</li>
+        </ul>
+      </header>
+
+
+
+      <div class="noteDv expansile">
+        <ol>
+          <li>建議您主動告知買主，若買主以信用卡付款，且選擇的付款幣別與其所持信用卡的結算貨幣不同，買主的發卡行將依其規定計算匯差，並另向買主收取國外交易服務費。</li>
+          <li><em>台灣經貿網目前合作銀行所承作線上刷卡收單業務只收受新台幣</em>，故若您選擇申請線上刷卡金流管道，供買主以信用卡線上刷卡付款，買主僅能依商品標示的新台幣價格支付新台幣。</li>
+          <li>台灣經貿網僅為線上交易平台提供者，並非本網站之交易之任何買主、供應商、交易相對人或當事人，亦未代表供應商或買主或以任何形式涉入該等交易。</li>
+          <li><b>交易爭議處理：經由本網站所進行之交易所生或隨附之爭議或事件，如與PayPal之服務相關，應透過PayPal提供之調解機制處理，如與銀行之服務相關，由會員洽網際威信及/或銀行處理。就於本網站或透過本網站所進行之交易所生或隨附之爭議或事件，以中華民國法律為準據法。您應審閱您與PayPal、網際威信及/或銀行間之約定，以了解您的權利義務。</b></li>
+          <li>交易風險及責任：<em>會員應自行負責於本網站進行商品及服務買賣之全部風險及責任</em>，外貿協會對於任何由交易風險及責任（包括但不限於：商品或服務之合法性、對供應商得銷售（包括但不限於存貨及物流事項）或買主得購買之能力、品質、數量、安全、不實陳述、錯誤標示、物品或權利瑕疵、給付不能或給付遲延、詐欺行為、保證之違反及交付事故）所生或與之有關之損害、責任、費用、不便、營業中斷或支出，概不負責。供應商應對上述交易風險及責任依法自負其責。</li>
+          <li>交易條款與條件：會員對於經由本網站所進行之交易之全部條款與條件，包括但不限於付款條件、退貨政策、保固、運送方式、費用、稅金、貯藏、交付及保險，應自負其責。</li>
+          <li>就於本網站或透過本網站所進行之交易所生或隨附之爭議或事件，以中華民國法律為準據法（不適用其選法規則）。</li>
+          <li><b>線上交易風險與權責，請參閱「台灣經貿網/台灣經貿網供應商會員條款」第7條各款規定。</b></li>
+        </ol>
+      </div>
+
+
+
+
+      <section class="quotationTo">
+
+        <section class="qtHead">
+          <!-- 20210308: 回饋意見修改，加「報價單編號」-->
+          <span class="qtNumber">報價單編號：<em>Q-20210528175923980004</em></span> 
+          <span class="currencyInUsed">報價幣別：<em>USD</em></span>
+          <label>製作日期<input type="date" value="2021-03-22"></label>
+          <label>有效日期<input type="date" value="2021-03-27"></label>
+        </section>
+
+
+        <div class="onListTop">
+          <h3>報價對象</h3>
+          <div class="funcBtnGp">
+            <ul>
+              <li class="add"><a class="showLightbox" id="lbx01">新增報價對象</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="slideContainer">
+          <div class="single-item">
+            <div class="infoCell">
+              <span class="ficon delete"><a title="刪除"></a></span>
+              <table class="formLayout">
+                <caption>報價對象：1/3</caption>
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 買主姓名</td>
+                  <td><input type="text" name="buyerName-8" value="" required>
+                    <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                  </td>
+                  <td>買主國別</td>
+                  <td><input type="text" name="buyerNationName" value="Taiwan"></td>
+                </tr>
+                <tr>
+                  <td>買主公司名稱</td>
+                  <td colspan="3"><input type="text" name="buyerCompanyName" value="富橋五金建材有限公司"></td>
+                </tr>
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 買主地址</td>
+                  <td colspan="3"><input type="text" name="buyerAddr-8" value="" required>
+                    <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div></td>
+                </tr>
+              </table>
+            </div>
+            <div class="infoCell active">
+              <span class="ficon delete"><a title="刪除"></a></span>
+              <table class="formLayout">
+                <caption>報價對象：2/3</caption>
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 買主姓名</td>
+                  <td><input type="text" name="buyerName-8" value="Roy-uat123" required></td>
+                  <td>買主國別</td>
+                  <td><input type="text" name="buyerNationName" value="Taiwan"></td>
+                </tr>
+                <tr>
+                  <td>買主公司名稱</td>
+                  <td colspan="3"><input type="text" name="buyerCompanyName" value="逢盟企業有限公司"></td>
+                </tr>
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 買主地址</td>
+                  <td colspan="3"><input type="text" name="buyerAddr-8" value="高***********************" required></td>
+                </tr>
+              </table>
+
+            </div>
+            <div class="infoCell">
+              <span class="ficon delete"><a title="刪除"></a></span>
+              <table class="formLayout">
+                <caption>報價對象：3/3</caption>
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 買主姓名</td>
+                  <td><input type="text" name="buyerName-8" value="陳****" required></td>
+                  <td>買主國別</td>
+                  <td><input type="text" name="buyerNationName" value="Taiwan"></td>
+                </tr>
+                <tr>
+                  <td>買主公司名稱</td>
+                  <td colspan="3"><input type="text" name="buyerCompanyName" value="芊岱企業有限公司"></td>
+                </tr>
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 買主地址</td>
+                  <td colspan="3"><input type="text" name="buyerAddr-8" value="台*******************" required></td>
+                </tr>
+              </table>
+
+            </div>
+          </div>
+          <button type="button" id="switchSlick" data-switch="on">展開</button>
+
+        </div>
+    
+
+        <section class="expFolderGp">
+          <!-- 報價型錄 -->
+          <div class="fieldSet expFolder">
+            <div class="legend expCtrl reveal">
+              <h3>報價型錄</h3>
+              <p>編輯要報價的型錄項目及金額。</p>
+            </div>
+            <div class="expContent">
+              <div class="funcBtnGp">
+                <ul>
+                  <li class="add"><a class="showLightbox" id="lbx02">新增報價型錄</a></li>
+                </ul>
+              </div>
+
+              <section class="dm">
+                <div class="header">
+                  <h4>型錄名稱型錄名稱</h4>
+                  <p class="pn">m123456</p>
+                </div>
+
+                <div class="flexBox">
+                  <div class="photo">
+                    <img src="../publicData/ph16.jpg">
+                    <ul class="editThis">
+                      <li class="edit"><a title="編輯"></a></li>
+                      <li class="delete"><a title="刪除"></a></li>
+                    </ul>
+                  </div>
+                  <div class="spec">
+                    <h5><abbr title="必填欄位" class="required">*</abbr>規格</h5>
+                    <label><span class="sepcName">COLOR</span>
+                      <select>
+                        <option>請選擇</option>
+                        <option>red</option>
+                        <option>green</option>
+                        <option>black</option>
+                      </select>
+                      <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                    </label>
+  
+                    <label><span class="sepcName">Size</span>
+                      <select required>
+                        <option>請選擇</option>
+                        <option>large</option>
+                        <option>small</option>
+                      </select>
+                      <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                  </label>
+                  </div>
+                  <div class="price">
+                    <div class="calculate">
+                      <label>
+                        <abbr title="必填欄位" class="required">*</abbr> 數量
+                        <input required type="number" min="1" size="3" value="">
+                        <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                      </label>
+                      <label>單位<input type="text" value="Boxes" readonly></label>
+                      <label>
+                        <abbr title="必填欄位" class="required">*</abbr> 單價
+                        <input required type="text" value="">
+                        <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                      </label>
+                      <label>小計(<span class="currencyTd">USD</span>)<input type="text" disabled></label>
+                    </div>
+                    <div class="listTable">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>型錄數量</th>
+                            <th>型錄定價(<span class="currencyTd">USD</span>)</th>
+                            <th>型錄折扣價(<span class="currencyTd">USD</span>)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>8~20</td>
+                            <td><span class="usdPrice">5</span></td>
+                            <td data-discount=""><span data-usd-price="5" class="usdPrice">5</span></td>
+                          </tr>
+                          <tr>
+                            <td>21~40</td>
+                            <td><span class="usdPrice">4</span></td>
+                            <td data-discount=""><span data-usd-price="4" class="usdPrice">4</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    <!-- </div>
+                    <div class="shipping">運費估算
+                      <select name="deliveryCompany">
+                        <option>DHL</option>
+                        <option>UPS</option>
+                        <option>FEDEX</option>
+                        <option>EMS</option>
+                        <option>TNT</option>
+                        <option>OTHER</option>
+                      </select>
+                      <input type="text" class="productShippingFee" value=""><span class="currencyTd">USD</span>
+                      <input type="button" value="試算" onclick="deliveryOpen(this)">
+                    </div> -->
+                  </div>
+                </div>
+
+              </section>
+              
+              <section class="dm">
+                <div class="header">
+                  <h4>roy-test未販售 s</h4>
+                  <p class="pn"></p>
+                </div>
+
+                <div class="flexBox">
+                  <div class="photo">
+                    <img src="../publicData/pd41.jpg">
+                    <ul class="editThis">
+                      <li class="edit"><a title="編輯"></a></li>
+                      <li class="delete"><a title="刪除"></a></li>
+                    </ul>
+                  </div>
+                  <div class="spec">
+                    <h5><abbr title="必填欄位" class="required">*</abbr>規格</h5>
+                    <label><span class="sepcName">COLOR</span>
+                      <select>
+                        <option>請選擇</option>
+                        <option>red</option>
+                        <option>green</option>
+                        <option>black</option>
+                      </select>
+                    </label>
+  
+                    <label><span class="sepcName">Size</span>
+                      <select required>
+                        <option>請選擇</option>
+                        <option>large</option>
+                        <option>small</option>
+                      </select>
+                  </label>
+
+                  <label><span class="sepcName">OtherSpec</span>
+                    <select required>
+                      <option>請選擇</option>
+                      <option>...</option>
+                      <option>...</option>
+                    </select>
+                  </label>
+                </div>
+
+                  <div class="price">
+                    <div class="calculate">
+                      <label><abbr title="必填欄位" class="required">*</abbr> 數量 <input required type="number" min="1" size="3" value=""></label>
+                      <label>單位<input type="text" value="Boxes" readonly></label>
+                      <label><abbr title="必填欄位" class="required">*</abbr> 單價 <input required type="text" value=""></label>
+                      <label>小計(<span class="currencyTd">USD</span>)<input type="text" readonly></label>
+                    </div>
+                    <div class="listTable">
+                      <table>
+                        <thead>
+                          <tr>
+                            <th>型錄數量</th>
+                            <th>型錄定價(<span class="currencyTd">USD</span>)</th>
+                            <th>型錄折扣價(<span class="currencyTd">USD</span>)</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>8~20</td>
+                            <td><span class="usdPrice">5</span></td>
+                            <td data-discount=""><span data-usd-price="5" class="usdPrice">5</span></td>
+                          </tr>
+                          <tr>
+                            <td>21~40</td>
+                            <td><span class="usdPrice">4</span></td>
+                            <td data-discount=""><span data-usd-price="4" class="usdPrice">4</span></td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    <!-- </div>
+                    <div class="shipping">運費估算
+                      <select name="deliveryCompany">
+                        <option>DHL</option>
+                        <option>UPS</option>
+                        <option>FEDEX</option>
+                        <option>EMS</option>
+                        <option>TNT</option>
+                        <option>OTHER</option>
+                      </select>
+                      <input type="text" class="productShippingFee" value=""><span class="currencyTd">USD</span>
+                      <input type="button" value="試算" onclick="deliveryOpen(this)">
+                    </div> -->
+                  </div>
+                </div>
+
+              </section>
+
+              <section class="buyerAndShipping">
+                <div class="buyer">
+                  <h4>買主 <span class="num">2</span></h4>
+                  <ul>
+                    <li>Roy-uat123 / Taiwan</li>
+                    <li>逢盟企業有限公司</li>
+                    <li>高*******************</li>
+                  </ul>
+                </div>
+
+                <table class="formLayout">
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr>運送方式</td>
+                    <td>
+                      <select required>
+                        <option data-url="" value="">請選擇</option>
+                        <option data-url="" value="1">DHL</option>
+                        <option data-url="" value="2">UPS</option>
+                        <option data-url="" value="3">FEDEX</option>
+                        <option data-url="" value="4">EMS</option>
+                        <option data-url="" value="5">TNT</option>
+                        <option data-url="" value="6">OTHER</option>
+                      </select>
+                      <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>小計</td>
+                    <td>
+                      <input type="text" readonly>
+                      <span class="currency">USD</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr>運費</td>
+                    <td>
+                      <input type="text" required>
+                      <span class="currency">USD</span>
+                      <div class="errorMsg" style="display: none;"><abbr class="required">*</abbr>必須填寫</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr>稅金</td>
+                    <td>
+                      <input type="text" required>
+                      <span class="currency">USD</span>
+                      <div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr>總額</td>
+                    <td>
+                      <input type="text" required readonly>
+                      <span class="currency">USD</span>
+                      <div class="errorMsg" style="display: none;"><abbr class="required">*</abbr>必須填寫</div>
+                    </td>
+                  </tr>
+                </table>
+
+
+              </section>
+
+
+
+      
+        
+            </div>
+          </div>
+          <!-- 備註資料 -->
+          <div class="fieldSet expFolder">
+            <div class="legend expCtrl">
+              <h3>備註資料</h3>
+              <p>每位買主獨立編輯內容</p>
+            </div>
+            <div class="expContent">
+              <table class="formLayout">
+                <tr>
+                  <td>買主 2</td>
+                  <td><div class="asAnInput">J************/Company Name</div></td>
+                </tr>
+                <tr>
+                  <td>備註</td>
+                  <td>
+                    <textarea placeholder="可填寫如 Lead Time、Shipping Method、Payment Terms、Packaging Information (NW/GW/CUFT)等訊息。">備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註備註
+  1. Shipping Method:                                          
+  2. Packaging Information (NW/GW/CUFT):
+  3. MOQ:                                                                 
+  4. Lead Time:
+  5. Payment Method:
+  6. Payment Terms:
+  7. Return Policy:   
+                    </textarea>
+                    <div class="textCount"><em>5150</em>/6000</div>
+                    <p class="hint">可填寫如 Lead Time、Shipping Method、Payment Terms、Packaging Information (NW/GW/CUFT)等訊息。</p>
+                  </td>
+                </tr>
+              </table>
+            </div>
+  
+          </div>
+
+          <!-- 公司資料 -->
+          <div class="fieldSet expFolder">
+            <div class="legend expCtrl">
+              <h3>公司資料</h3>
+              <p>編輯報價單的公司資料。</p>
+            </div>
+            <div class="expContent">
+              <table class="formLayout">
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 公司名稱</td>
+                  <td><input type="text" value="TAIWAN EXTERNAL TRADE DEVELOPMENT COUNCIL">
+                    <div class="errorMsg" style="display: none;"><abbr class="required">*</abbr>必須填寫</div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 公司地址</td>
+                  <td><input type="text"><div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div></td>
+                </tr>
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 業務聯絡人</td>
+                  <td><input type="text"><div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div></td>
+                </tr>
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 聯絡人E-mail</td>
+                  <td><input type="text" value="fhyb3@yahoo.com.tw"><div class="errorMsg" style="display: none;"><abbr class="required">*</abbr>必須填寫</div></td>
+                </tr>
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 聯絡電話</td>
+                  <td><input type="tel"><div class="errorMsg"><abbr class="required">*</abbr>必須填寫</div></td>
+                </tr>
+                <tr>
+                  <td>傳真電話</td>
+                  <td><input type="tel"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          
+          <div class="btnDv"><input type="submit" value="儲存" class="confirm"></div>
+        </section>
+
+      </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+
+  <section class="lightbox lbx01">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <div class="head">
+      <h3>新增報價對象</h3>
+    </div>
+
+    <section class="search toggleDrawer always hidden">
+      <h3 class="searchCaption">報價對象查詢</h3>
+      <span class="toggleCtrl">查詢</span>
+      <div class="toggleArea">
+        <table class="formLayout">
+          <tr>
+            <td>買主公司</td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td>買主公司統編</td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td>買主姓名</td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td>買主國別</td>
+            <td>
+              <div id="qryCountryDiv">
+                <div class="ms-options-wrap">
+                  <button type="button">請選擇</button>
+                  <div class="ms-options">
+                    <div class="ms-search"><input type="text" value="" placeholder="查詢""></div>
+                    <a href="javascript:void(0)" class="ms-selectall global">選擇全部</a>
+                    <ul>
+                      <li class="optgroup">
+                        <span class="label">North America - 北美洲</span>
+                        <a href="javascript:void(0)" class="ms-selectall">選擇全部</a>
+                        <ul>
+                          <li>
+                            <label for="ms-opt-8"><input type="checkbox" value="667" title="Canada - 加拿大" id="ms-opt-8"> Canada - 加拿大</label>
+                          </li>
+                          <li>
+                            <label for="ms-opt-9"><input type="checkbox" value="477" title="Greenland - 格陵蘭" id="ms-opt-9"> Greenland - 格陵蘭</label>
+                          </li>
+                          <li>
+                            <label for="ms-opt-10"><input type="checkbox" value="478" title="Guadeloupe - 瓜達康納爾島" id="ms-opt-10"> Guadeloupe - 瓜達康納爾島</label>
+                          </li>
+                          <li>
+                            <label for="ms-opt-15">
+                              <input type="checkbox" value="481" title="United States of America - 美國" id="ms-opt-15"> United States of America - 美國</label>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="optgroup">
+                        <span class="label">Asia - 亞洲</span>
+                        <a href="javascript:void(0)" class="ms-selectall">選擇全部</a>
+                        <ul>
+                          <li>
+                            <label for="ms-opt-16">
+                              <input type="checkbox" value="563" title="Bangladesh - 孟加拉" id="ms-opt-16"> Bangladesh - 孟加拉</label>
+                          </li>
+                          <li>
+                            <label for="ms-opt-17">
+                              <input type="checkbox" value="686" title="Bhutan - 不丹" id="ms-opt-17"> Bhutan - 不丹</label>
+                          </li>
+                          <li>
+                            <label for="ms-opt-18">
+                              <input type="checkbox" value="564" title="Brunei Darussalam - 汶萊" id="ms-opt-18"> Brunei Darussalam - 汶萊</label>
+                          </li>
+                          <li>
+                            <label for="ms-opt-19">
+                              <input type="checkbox" value="570" title="Cambodia - 柬埔寨" id="ms-opt-19"> Cambodia - 柬埔寨</label>
+                          </li>
+                          <li><input type="checkbox">...</li>
+                        </ul>
+                      </li>
+                      <li class="optgroup">
+                        <span class="label">Oceania - 大洋洲</span><a href="javascript:void(0)" class="ms-selectall">選擇全部</a>
+                        <ul>
+                          <li><label for="ms-opt-34"><input type="checkbox" value="529" title="Kiribati - 吉里巴斯" id="ms-opt-34">Kiribati - 吉里巴斯</label></li>
+                          <li><label for="ms-opt-35"><input type="checkbox" value="544" title="Tuvalu - 吐瓦魯" id="ms-opt-35">Tuvalu - 吐瓦魯</label></li>
+                          <li><input type="checkbox">...</li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <!-- <button class="closeOpt" type="button">確定</button> -->
+                  </div>
+                </div>
+              </div>
+            </td>
+            <script>//模擬條件查詢的[商機類型][國別]下拉選單效果，套版時請刪除
+              $('.ms-options-wrap').find('button').click(function(ev) {
+                ev.preventDefault();
+                $(this).next('.ms-options').toggle();
+              });
+              // 小螢幕時，選單改為全螢幕，需一個關閉按鈕 20200217
+              $('.closeOpt').click(function(){
+                $('.ms-options').hide();
+              })
+              $('.ms-options').find('li').find('input').click(function(){
+                $(this).parent('label').parent('li').toggleClass('selected');
+              })
+            </script>
+          </tr>
+          <tr>
+            <td>最近互動日期</td>
+            <td>
+              <div class="during">
+                <input type="date" placeholder="yyyy/mm/dd" id="" name="">
+                <input type="date" placeholder="yyyy/mm/dd" id="" name="">
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="btnDv">
+          <input type="submit" value="查詢">
+          <input type="reset" value="清除">
+        </div>
+      </div>
+    </section>
+
+    <section class="listTable">
+      <table>
+        <thead>
+          <tr>
+            <th>買主公司</th>
+            <th>買主姓名</th>
+            <th>買主帳號</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>資能人天機有限公司</td>
+            <td>黃**</td>
+            <td>a*****z@m********w</td>
+            <td class="aCenter">已加入報價單</td>
+          </tr>
+          <tr>
+            <td>可文經點電有限公司</td>
+            <td>林**</td>
+            <td>c***y@h*********w</td>
+            <td class="aCenter"><button type="button">報價給買主</button></td>
+          </tr>
+          <tr>
+            <td>路西果加系的大書在地時為然</td>
+            <td>趙**</td>
+            <td>d***********y@h**********w</td>
+            <td class="aCenter"><button type="button">報價給買主</button></td>
+          </tr>
+          <tr>
+            <td>舉物工小標巴灣水合春出華字廣地</td>
+            <td>李**</td>
+            <td>k*****y@h**********w</td>
+            <td class="aCenter"><button type="button">報價給買主</button></td>
+          </tr>
+          <tr>
+            <td>展太長也氣有限公司</td>
+            <td>吳**</td>
+            <td>g*****y@m*************w</td>
+            <td class="aCenter"><button type="button">報價給買主</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page">
+      <p>每頁顯示 <select name="perPage" id="perPage">
+        <option value="30">10</option>
+        <option value="30">25</option>
+        <option value="10">50</option>
+        <option value="30">全部</option>
+      </select> 筆</p>
+      <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+      <ul>
+        <li class="prev disabled"><a href="#">上一頁</a></li>
+        <li class="here"><a href="#">1</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">12</a></li>
+        <li class="next"><a href="#">下一頁</a></li>
+      </ul>
+    </section>
+
+
+  </section>
+
+  <section class="lightbox lbx02">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <div class="head">
+      <h3>新增報價型錄</h3>
+    </div>
+
+    <section class="langTab">
+      <ul>
+        <li class="active"><a href="#lang-panel-42">英文 <span class="count">287</span></a></li>
+        <li><a href="#lang-panel-41">正體中文 <span class="count">1</span></a></li>
+        <li><a href="#lang-panel-43">日文 <span class="count">0</span></a></li>
+        <li><a href="#lang-panel-44">中文(簡體) <span class="count">1</span></a></li>
+        <li class="moreLang"><a>其他語系</a>
+          <ul>
+            <li><a href="#lang-panel-992">俄文 <span class="count">0</span></a></li>
+            <li><a href="#lang-panel-1699">西班牙文 <span class="count">5</span></a></li>
+            <li><a href="#lang-panel-2124">葡萄牙文 <span class="count">3</span></a></li>
+            <li><a href="#lang-panel-2127">阿拉伯文 <span class="count">0</span></a></li>
+            <li><a href="#lang-panel-2129">印尼文 <span class="count">20</span></a></li>
+            <li><a href="#lang-panel-2382">德文 <span class="count">9</span></a></li>
+            <li><a href="#lang-panel-2383">法文 <span class="count">0</span></a></li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="search toggleDrawer always hidden">
+      <h3 class="searchCaption">型錄查詢</h3>
+      <span class="toggleCtrl">查詢</span>
+      <div class="toggleArea">
+        <table class="formLayout">
+          <tr>
+            <td>產品名稱/產品型號</td>
+            <td><input type="text"></td>
+          </tr>
+          <tr>
+            <td>產業別</td>
+            <td>
+              <div class="addAndRemove">
+                <div class="optionPool">
+                  <label><input type="checkbox">Furniture -- 家具</label>
+                  <label><input type="checkbox">Vehicle Equipment &amp; Repair Tools -- 汽機車儀器及維修工具</label>
+                  <label><input type="checkbox">Electrical &amp; Electronic Components Making Machinery -- 電器及電子零組件製造機械</label>
+                  <label><input type="checkbox">Folding Bicycle -- 摺疊自行車</label>
+                  <label><input type="checkbox">Doors &amp; Windows -- 門窗</label>
+                  <label><input type="checkbox">Dining &amp; Kitchen Room Furniture -- 餐廳及廚房家具</label>
+                </div>
+                <div class="buttons">
+                  <button type="button">選取</button>
+                  <button type="submit">移除</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>自訂分類</td>
+            <td>
+              <div class="addAndRemove">
+                <div class="optionPool">
+                  <label><input type="checkbox">自訂分類A</label>
+                  <label><input type="checkbox">自訂分類B</label>
+                </div>
+                <div class="buttons">
+                  <button type="button">選取</button>
+                  <button type="submit">移除</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>是否為 NEW</td>
+            <td>
+              <div class="optionPool">
+                <label><input name="xxx" type="radio" checked>全部</label>
+                <label><input name="xxx" type="radio">是</label>
+                <label><input name="xxx" type="radio">否</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>是否為 Featured</td>
+            <td>
+              <div class="optionPool">
+                <label><input name="xxx" type="radio" checked>全部</label>
+                <label><input name="xxx" type="radio">是</label>
+                <label><input name="xxx" type="radio">否</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>是否加密</td>
+            <td>
+              <div class="optionPool">
+                <label><input name="xxx" type="radio" checked>全部</label>
+                <label><input name="xxx" type="radio">是</label>
+                <label><input name="xxx" type="radio">否</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>建立時間</td>
+            <td>
+              <div class="during">
+                <input type="date" placeholder="yyyy/mm/dd" id="" name="">
+                <input type="date" placeholder="yyyy/mm/dd" id="" name="">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>更新時間</td>
+            <td>
+              <div class="during">
+                <input type="date" placeholder="yyyy/mm/dd" id="" name="">
+                <input type="date" placeholder="yyyy/mm/dd" id="" name="">
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="btnDv">
+          <input type="submit" value="查詢">
+          <input type="reset" value="清除">
+        </div>
+      </div>
+    </section>
+
+    <section class="listTable hasThumbImg noCheckAll">
+      <div class="btnDv">
+        <input type="button" value="加入報價單（＊測試）" class="confirm trigPop" id="pop_mgs01">
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>勾選
+              <label class="listCheck checkAll" title="全選"><input type="checkbox"></label></th>
+            <th>型號</th>
+            <th>圖片</th>
+            <th>產品名稱</th>
+            <th>???</th>
+            <th>單位</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><label class="listCheck"><input type="checkbox"></label></td>
+            <td>1234567890abcdefg</td>
+            <td><img class="thumbImg" src="../publicData/ph01.jpg"></td>
+            <td>ImgScrTest</td>
+            <td>BM-187005</td>
+            <td>pieces</td>
+          </tr>
+          <tr>
+            <td><label class="listCheck"><input type="checkbox"></label></td>
+            <td>1234567890abcdefg</td>
+            <td><img class="thumbImg" src="../publicData/ph02.jpg"></td>
+            <td>high-quality-wallpaper</td>
+            <td>AB-123</td>
+            <td>sets</td>
+          </tr>
+          <tr>
+            <td><label class="listCheck"><input type="checkbox"></label></td>
+            <td>1234567890</td>
+            <td><img class="thumbImg" src="../publicData/ph07.jpg"></td>
+            <td>rhinestone appliques | crystals wholesale 22</td>
+            <td>AB-123</td>
+            <td>Pack (12 Bags)</td>
+          </tr>
+          <tr>
+            <td><label class="listCheck"><input type="checkbox"></label></td>
+            <td>abc123456789</td>
+            <td><img class="thumbImg" src="../publicData/ph04.jpg"></td>
+            <td>PORTech IS-640P IP Wall Wood POE Speaker</td>
+            <td>ABCD-1234</td>
+            <td>pieces</td>
+          </tr>
+          <tr>
+            <td><label class="listCheck"><input type="checkbox"></label></td>
+            <td>1234567890abcdefg</td>
+            <td><img class="thumbImg" src="../publicData/ph05.jpg"></td>
+            <td>F1442829100332</td>
+            <td>ABCD-1234</td>
+            <td>pieces</td>
+          </tr>
+          <tr>
+            <td><label class="listCheck"><input type="checkbox"></label></td>
+            <td>1234567890abcdefg</td>
+            <td><img class="thumbImg" src="../publicData/ph06.jpg"></td>
+            <td>CAZP3R1C</td>
+            <td>WH-037AO</td>
+            <td>pieces</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page">
+      <p>每頁顯示 <select name="perPage" id="perPage">
+        <option value="30">10</option>
+        <option value="30">25</option>
+        <option value="10">50</option>
+        <option value="30">全部</option>
+      </select> 筆</p>
+      <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+      <ul>
+        <li class="prev disabled"><a href="#">上一頁</a></li>
+        <li class="here"><a href="#">1</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">12</a></li>
+        <li class="next"><a href="#">下一頁</a></li>
+      </ul>
+    </section>
+
+    <div class="btnDv">
+      <input type="button" value="加入報價單" class="confirm">
+    </div>
+
+
+    <section class="popMsg" id="mgs01">
+      <div class="popBody">
+        <p><span class="ok"></span>新增成功</p>
+      </div>
+      <div class="btnDv">
+        <span class="btnLook closePop"><a>Ok</a></span>
+      </div>
+    </section>
+
+  </section>
+
+  <script>
+    // slick 參數  
+    $(".single-item").slick({ dots: true });
+    $("#switchSlick").click(function(){
+      if ($("#switchSlick").data("switch") == "on") {
+        $("#switchSlick").text('收合').addClass('closeIt');
+        $("#switchSlick").data("switch", "off");
+        $(".single-item").slick("unslick");
+      } else {
+        $("#switchSlick").data("switch", "on");
+        $("#switchSlick").text('展開').removeClass('closeIt');
+        $(".single-item").slick({
+          dots: true
+        });   
+      } 
+    });
+  
+  </script>
+  
+
+</body>
+
+</html>

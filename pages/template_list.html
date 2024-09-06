@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-回覆函範本</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="#not_a_link">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li><a href="#">商機管理 <span class="count">3</span></a></li>
+            <li><a href="#">訂單管理 <span class="count">10</span></a></li>
+            <li><a href="#">前往企業網 <span class="count">1</span></a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">會員重要公告</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">3 Items</a>
+          <ul>
+            <li>Goods1</li>
+            <li>Goods2</li>
+            <li>Goods3</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a></li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a></li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="main">
+      <header class="pageHeading">
+        <h2>回覆函範本</h2>
+        <ul class="path">
+          <li><a href="#">商機管理</a></li>
+          <li>回覆函範本</li>
+        </ul>
+      </header>
+      <section class="noteDv expansile">
+        <h3>使用說明</h3>
+        <p>「訊息樣板功能」是為了簡化您回覆買主詢函而設計的，您可預先設定常用的訊息樣板，回覆線上商機時可選取指定樣板，修改內容後即可送出。</p>
+        <ol>
+          <li>公司成員皆可新增/修改/刪除訊息樣板資訊。</li>
+          <li>系統內建6款樣板，會員最多可新增20款常用訊息樣板。</li>
+          <li>自訂樣板皆可以排列順序，在序號欄輸入排序值、或是使用滑鼠左鍵按住，拖曳欲調整的項目排序。</li>
+        </ol>
+      </section>
+      <section class="msgTemplate">
+      <div class="searchOnTop">
+        <form action="">
+          <input type="text" placeholder="請輸入樣板名稱關鍵字">
+          <input type="reset" value="clear" title="clear">
+          <input type="submit" value="search">
+        </form>
+      </div>
+      <div class="funcBtnGp">
+        <ul>
+          <li class="add"><a href="template_detail.html">新增</a></li>
+          <li class="duplicate disabled"><a href="javascript:void(0)">複製</a></li>
+          <li class="remove disabled"><a href="javascript:void(0)">Remove</a></li>
+        </ul>
+      </div><!-- /.funcBtnGp -->
+
+        <div class="tabset">
+          <h3 class="tabItem active">自訂樣板</h3>
+          <div class="tabContent">
+            <table class="msgTempList">
+              <tr>
+                <th class="changeOrder">移動順序</th>
+                <th class="check"><label class="checkAll" title="全選"><input type="checkbox"></label></th>
+                <th class="serialNum">序號</th>
+                <th class="title">樣板名稱</th>
+                <th class="status">是否啟用</th>
+                <th class="time">編修日期</th>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">1</td>
+                <td class="title"><a href="template_detail.html">Service Price Quotation</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">2</td>
+                <td class="title"><a href="template_detail.html">Samples of Product Quotation Emails</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-08-30 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">3</td>
+                <td class="title"><a href="template_detail.html">Sample of Service Price Quotation Email</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">4</td>
+                <td class="title"><a href="template_detail.html">Service Price Quotation</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">5</td>
+                <td class="title"><a href="template_detail.html">Product Price Quotation Letter</a></td>
+                <td class="status">未啟用</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">6</td>
+                <td class="title"><a href="template_detail.html">Service Price Quotation</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">7</td>
+                <td class="title"><a href="template_detail.html">Service Price Quotation</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">8</td>
+                <td class="title"><a href="template_detail.html">Service Price Quotation</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">9</td>
+                <td class="title"><a href="template_detail.html">Service Price Quotation</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">10</td>
+                <td class="title"><a href="template_detail.html">Samples of Product Quotation Emails</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-08-30 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">11</td>
+                <td class="title"><a href="template_detail.html">Sample of Service Price Quotation Email</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">12</td>
+                <td class="title"><a href="template_detail.html">Service Price Quotation</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">13</td>
+                <td class="title"><a href="template_detail.html">Product Price Quotation Letter</td>
+                <td class="status">未啟用</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">14</td>
+                <td class="title"><a href="template_detail.html">Service Price Quotation</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">15</td>
+                <td class="title"><a href="template_detail.html">Service Price Quotation</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">16</td>
+                <td class="title"><a href="template_detail.html">Service Price Quotation</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">17</td>
+                <td class="title"><a href="template_detail.html">Product Price Quotation Letter</a></td>
+                <td class="status">未啟用</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">18</td>
+                <td class="title"><a href="template_detail.html">Service Price Quotation</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">19</td>
+                <td class="title"><a href="template_detail.html">Service Price Quotation</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="changeOrder"><span class="dragStick"></span></td>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">20</td>
+                <td class="title"><a href="template_detail.html">Service Price Quotation</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+            </table>
+          </div>
+          <h3 class="tabItem">系統樣板</h3>
+          <div class="tabContent">
+            <table class="msgTempList">
+              <tr>
+                <th class="check"><label class="checkAll" title="全選"><input type="checkbox"></label></th>
+                <th class="serialNum">序號</th>
+                <th class="title">樣板名稱</th>
+                <th class="status">是否啟用</th>
+                <th class="time">編修日期</th>
+              </tr>
+              <tr>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">1</td>
+                <td class="title"><a href="#">寄送產品目錄，並詢問買主是否需要報價</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">2</td>
+                <td class="title"><a href="#">請買主提供更明確的產品需求</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-08-30 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">3</td>
+                <td class="title"><a href="#">請買主提供更完整的公司資料</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">4</td>
+                <td class="title"><a href="#">無意願接單(訂購量太小)</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">5</td>
+                <td class="title"><a href="#">無意願接單(無出貨至該地區)</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+              <tr>
+                <td class="check"><label><input type="checkbox"></label></td>
+                <td class="serialNum">6</td>
+                <td class="title"><a href="#">公司已不再供應該產品</a></td>
+                <td class="status">啟用中</td>
+                <td class="time"><time>2019-06-12 13:40:31</time></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088 © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-購物車</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>購物車</h2>
+        <ul class="path">
+          <li><a href="#">購物車 (新)</a></li>
+          <li>購物車</li>
+        </ul>
+      </header>
+      <div class="navBtnsDv">
+        <span class="btnLook back"><a href="shoppingCart.html">返回</a></span>
+      </div>
+      <section class="processIndicator">
+        <ol>
+          <li>方案選擇</li>
+          <li class="now">購物車</li>
+          <li>資料確認</li>
+          <li>訂單完成</li>
+        </ol>
+      </section>
+
+
+
+      <section class="brief">
+        <ul>
+          <li><span class="dt">統一編號</span><span class="dd">03702716</span></li>
+          <li><span class="dt">公司名稱</span><span class="dd">中華民國對外貿易發展協會</span></li>
+          <li><span class="dt">目前會期身份</span><span class="dd">尊爵會員會期有效至2155年5月13日</span></li>
+          <li><span class="dt">最近一次購買之台灣產品雜誌</span>
+            <ul>
+              <li>-無-無,</li>
+              <li>-無-無,</li>
+              <li>-無-無</li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li><span class="dt">目前啟用可使用之企業網語系</span><span class="dd">正中、英文、日文、簡體中文、阿拉伯文、蒙古文（禁用）、泰文、土耳其文</span></li>
+          <li><span class="dt">產品型錄可刊登</span><span class="dd">無上限</span></li>
+          <li><span class="dt">最近一筆訂單付款方式</span><span class="dd">郵局付款 / 超商繳款 / 銀行匯款</span></li>
+        </ul>
+      </section>
+
+      
+
+      <section class="tpInCart">
+        <h3>您選購的方案</h3>
+
+        <ul>
+          <li>
+            <ul class="head">
+              <li class="programName">2020年三年期尊爵新會員5.9萬</li>
+              <li class="unitPrice"><span class="dt">單價</span> <em>NT$59,000</em>	</li>
+              <li class="subTotalPrice"><span class="dt">小計</span> <em>NT$59,000</em></li>
+            </ul>
+            <div class="duration">
+              <p>本訂單預計會期起訖日：2158/05/13~2161/05/13</p>
+              <span class="btn_delete" title="刪除"></span> 
+            </div>
+            <div class="">
+              填寫台灣產品雜誌資訊
+            </div>
+
+          </li>
+          <li>
+            <ul class="head">
+              <li class="programName">紅利商城專用方案</li>
+              <li class="unitPrice"><span class="dt">單價</span> <em>NT$50,000</em>	</li>
+              <li class="subTotalPrice"><span class="dt">小計</span> <em>NT$50,000</em></li>
+            </ul>
+            <div class="duration">
+              <p>本訂單預計會期起訖日：2158/05/13~2161/05/13</p>
+              <span class="btn_delete" title="刪除"></span> 
+            </div>
+
+            <div class="form">填寫台灣產品雜誌資訊</div>
+          </li>
+        </ul>
+
+        <div class="totalPrice">
+          <span class="dt">總價 NT$</span>
+          <em>109,000</em>
+        </div>
+
+
+      </section>
+      <section>
+        <div class="formX">
+          <h3>發票寄送資料</h3>
+          <table class="formLayout">
+            <tr>
+              <td>公司名稱</td>
+              <td><div class="asAnInput">中華民國對外貿易發展協會</div></td>
+            </tr>
+            <tr>
+              <td>會員帳號</td>
+              <td><div class="asAnInput">nalu.lai@hyweb.com.tw</div></td>
+            </tr>
+            <tr>
+              <td><abbr title="必填欄位" class="required">*</abbr>訂購人員</td>
+              <td>
+                <input type="text" value="ZZ***Zerg" required="required">
+              </td>
+            </tr>
+            <tr>
+              <td><abbr title="必填欄位" class="required">*</abbr>電話號碼</td>
+              <td>
+                <div class="phoneNumbSet business">
+                  <span class="preSymbol">+</span>
+                  <input class="countryCode" type="tel" placeholder="國碼" value="886"">
+                  <span class="preSymbol">-</span>
+                  <input class="areaCode" type="tel" placeholder="區碼" value="2">
+                  <span class="preSymbol">-</span>
+                  <input class="mainNumber" type="tel" placeholder="電話號碼" value="234567890">
+                  <span class="preSymbol">#</span>
+                  <input class="ext" type="tel" placeholder="分機" value="311">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>傳真號碼</td>
+              <td>
+                <div class="phoneNumbSet business">
+                  <span class="preSymbol">+</span>
+                  <input class="countryCode" type="tel" placeholder="國碼">
+                  <span class="preSymbol">-</span>
+                  <input class="areaCode" type="tel" placeholder="區碼">
+                  <span class="preSymbol">-</span>
+                  <input class="mainNumber" type="tel" placeholder="傳真號碼">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>手機號碼</td>
+              <td>
+                <div class="phoneNumbSet">
+                  <span class="preSymbol">+</span>
+                  <input class="countryCode" type="tel" placeholder="國碼">
+                  <span class="preSymbol">-</span>
+                  <input class="mainNumber" type="tel" placeholder="手機號碼">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><abbr title="必填欄位" class="required">*</abbr>電子郵件</td>
+              <td>
+                <input type="email" value="zerg@taitra.org.tw" required="required">
+              </td>
+            </tr>
+            <tr>
+              <td><abbr title="必填欄位" class="required">*</abbr>發票寄送地址</td>
+              <td>
+                <div class="addressSet">
+                  <div class="zipcodeSet">
+                    <label for="zzzzipcode">郵遞區號</label>
+                    <input id="zzzzipcode" type="number" value="302">
+                    <button>選取</button>
+                  </div>
+                  <div class="countySelection">
+                    <select required="">
+                      <option value="">- 請選擇 -</option>
+                      <option value="931" selected="selected">臺北市</option><option value="932">基隆市</option><option value="933">新北市</option><option value="934">宜蘭縣</option><option value="935">新竹市</option><option value="936">新竹縣</option><option value="937">桃園市</option><option value="938">苗栗縣</option><option value="939">臺中市</option><option value="940">彰化縣</option><option value="941">南投縣</option><option value="942">嘉義市</option><option value="943">嘉義縣</option><option value="944">雲林縣</option><option value="945">臺南市</option><option value="946">高雄市</option><option value="947">澎湖縣</option><option value="948">屏東縣</option><option value="949">臺東縣</option><option value="950">花蓮縣</option><option value="951">金門縣</option><option value="952">連江縣</option><option value="953">南海諸島</option><option value="954">釣魚台列嶼</option>
+                    </select> 
+                  </div>
+                  <input type="text" value="台北市重慶南路二段51號5樓 ">
+                </div>
+              </td>
+            </tr>
+
+          </table>
+  
+        </div>
+
+        <div class="formX">
+          <h3>台灣產品雜誌寄送資料</h3>
+          <div class="optionPool">
+            <label><input type="radio" name="bbb">同步回我與台灣經貿網台灣產品雜誌聯絡人資訊</label>
+            <label><input type="radio" name="bbb">同發票聯絡人資訊</label>
+          </div>
+          <table class="formLayout">
+            <tr>
+              <td><abbr title="必填欄位" class="required">*</abbr>收件人</td>
+              <td>
+                <input type="text" value="將小姐" required="required">
+              </td>
+            </tr>
+            <tr>
+              <td><abbr title="必填欄位" class="required">*</abbr>電話號碼</td>
+              <td>
+                <div class="phoneNumbSet business">
+                  <span class="preSymbol">+</span>
+                  <input class="countryCode" type="tel" placeholder="國碼" value="886"">
+                  <span class="preSymbol">-</span>
+                  <input class="areaCode" type="tel" placeholder="區碼" value="2">
+                  <span class="preSymbol">-</span>
+                  <input class="mainNumber" type="tel" placeholder="電話號碼" value="234567890">
+                  <span class="preSymbol">#</span>
+                  <input class="ext" type="tel" placeholder="分機" value="311">
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>傳真號碼</td>
+              <td>
+                <div class="phoneNumbSet business">
+                  <span class="preSymbol">+</span>
+                  <input class="countryCode" type="tel" placeholder="國碼">
+                  <span class="preSymbol">-</span>
+                  <input class="areaCode" type="tel" placeholder="區碼">
+                  <span class="preSymbol">-</span>
+                  <input class="mainNumber" type="tel" placeholder="傳真號碼">
+                </div>
+              </td>
+            </tr>
+
+          </table>
+          <label class="aloneCheck"><input type="checkbox">我已閱讀且同意會員合約及網站使用條款</label>
+          <label class="aloneCheck"><input type="checkbox">我已閱讀且同意個人資料保護聲明</label>
+
+
+        </div>
+      </section>
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+</body>
+
+</html>

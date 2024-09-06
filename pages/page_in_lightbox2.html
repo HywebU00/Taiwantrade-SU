@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard records for lightbox</title>
+    <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/design.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/basic.js"></script>
+  </head>
+  
+<body>
+  <section class="forLightbox">
+
+    <div class="head"><h3>型錄瀏覽量</h3>
+        <button class="openNewWin" onclick="window.open('page_in_lightbox2.html');" type="button">在新視窗開啟</button>
+    </div>
+    <!-- <button class="openNewWin" onclick="window.open('suEnWidgetFlow?range=');" type="button">在新視窗開啟</button> -->
+
+
+    <div class="chartSet">
+      <section class="noteDv">
+        <ul>
+          <li>本報表統計訪客於企業網中，瀏覽型錄的數據統計，包含瀏覽量、訪客數及平均停留時間。</li>
+          <li>企業網的每一則型錄均可各別顯示數據．並且可從報表中看出熱門型錄排序。</li>
+          <li>您可透過最近30、60及90天的維度，查看型錄數據。如果您想比較最近30天與前一期的型錄瀏覽數，請勾選「查看成長率」。</li>
+        </ul>
+      </section>
+
+      <section class="chartArea">
+        <!-- 成長率 -->
+        <div class="switch">
+          <ul>
+            <li><a href="page_in_lightbox.html">回瀏覽量</a></li>
+            <li class="active"><a>成長率</a></li>
+          </ul>
+        </div>
+        <div id="chart-2-container"><img class="fakeChart" src="../publicData/fakeBarChart.png" style="width: 800px;"><!-- 模擬圖表 --></div>
+        <div class="Chartjs-legend" style="width: 800px;">
+          <ul id="legend-2-container">
+            <li><i style="background:rgba(151,187,205,0.5)"></i>2020/11/22 - 2020/12/21</li>
+            <li><i style="background:rgba(255, 204, 128,0.5)"></i>2020/10/23 - 2020/11/21</li>
+          </ul>
+          <div id="rate_div" class="rate">+65.38% UP</div>
+        </div>
+        <div id="chart-1-container"><img class="fakeChart" src="../publicData/fakeWaveChart.png" style="width: 800px;"><!-- 模擬圖表 --></div>
+      </section>
+
+    </div>
+
+  </section>
+
+</body>
+</html>

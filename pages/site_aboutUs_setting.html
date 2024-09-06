@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU- About Us 設定</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>導覽列設定</h2>
+        <ul class="path">
+          <li><a href="#">企業網管理</a></li>
+          <li>導覽列設定</li>
+        </ul>
+      </header>
+
+      <section class="templateSetting">
+        <div class="settingNav fixArea">
+          <h3>目前設定單元：<em>About us</em></h3>
+          <div class="tempBtns">
+            <span class="btnLook back"><a href="x">回導覽列管理</a></span>
+          </div>
+        </div>
+
+        <div class="noteDv">
+          <p>關於我們將顯示「公司資料設定」中的重要資訊，包括「Basic information／About us／Certification／Factory／Oversea branch」等欄位區塊，您可以於「企業網管理 ><a href="x">公司資料設定</a>」管理各區塊欄位，並可於此處新增「海外據點 Oversea branch」的資料</p>
+        </div>
+        
+        <section class="aboutUsBlockList">
+          <ul>
+            <li><a href="x"><span class="number">1</span>
+              <h3>關於我們 About us 簡介</h3>
+              <p>可編輯語系簡介文案並搭配圖片／影片介紹您的企業資訊</p>
+              <span class="buttonLike">立即設定</span>
+            </a></li>
+
+            <li><a href="x"><span class="number">2</span>
+              <h3>基本資料 Basic information</h3>
+              <p>以名片模式顯示公司資本額、品牌、公司類型、資本額；主要產品等重要資訊</p>
+              <span class="buttonLike">立即設定</span>
+            </a></li>
+            <li><a href="x"><span class="number">3</span>
+              <h3>公司主打產品 Products</h3>
+              <p>自動或自訂挑選您公司的主要產品</p>
+              <span class="buttonLike">立即設定</span>
+            </a></li>
+            <li><a href="x"><span class="number">4</span>
+              <h3>認證資料 Certification</h3>
+              <p>顯示您公司與產品的認證資訊</p>
+              <span class="buttonLike">立即設定</span>
+            </a></li>
+            <li><a href="x"><span class="number">5</span>
+              <h3>工廠資料 Factory</h3>
+              <p>顯示您公司工廠相關資訊</p>
+              <span class="buttonLike">立即設定</span>
+            </a></li>
+            <li><a href="x"><span class="number">6</span>
+              <h3>得獎資訊 Award</h3>
+              <p>顯示您的得獎資料，更容易促成買主的採購決策</p>
+              <span class="buttonLike">立即設定</span>
+            </a></li>
+            <li><a href="x"><span class="number">7</span>
+              <h3>官方紀錄 Official Records</h3>
+              <p>顯示您參與貿協相關活動</p>
+              <span class="buttonLike">立即設定</span>
+            </a></li>
+            <li><a href="x"><span class="number">8</span>
+              <h3>Taiwan Product Magazine</h3>
+              <p>顯示您公司所刊登的TP專輯雜誌（此區塊為自動產生）</p>
+              <span class="buttonLike">立即設定</span>
+            </a></li>
+            <li><a href="x"><span class="number">9</span>
+              <h3>Contact Information</h3>
+              <p>顯示您公司的連絡資訊</p>
+              <span class="buttonLike">立即設定</span>
+            </a></li>
+            <li><a class="showSlideinBox" data-id="sb11"><span class="number">10</span>
+              <h3>海外據點 Overseas Branches</h3>
+              <p>建立您公司的海外據點資料</p>
+              <span class="buttonLike">立即設定</span>
+            </a></li>
+
+          </ul>
+        </section>
+
+        <div class="btnsBelow">
+          <div class="tempBtns">
+            <span class="btnLook back"><a href="x">回導覽列管理</a></span>
+          </div>
+        </div>
+
+      </section>
+
+
+
+
+
+
+
+
+
+      <!-- 由右滑入的編輯視窗______________ -->
+      <!-- 首頁多媒體設定 -->
+      <section class="slideinBox show in" data-id="sb11">
+        <button type="button" title="close" class="closeThis hideBox"></button>
+        <div class="head">
+          <h3>海外據點設定</h3>
+        </div>
+        <!--20210506 <button class="funcBtn add" type="button">新增一組設定</button> 此元件請協助修改套版如下-->
+        <span class="funcBtn add">新增一組設定</span>
+
+        <section class="branchSetting">
+          <div class="expFolder"><span class="dragStick"></span>
+            <div class="branchName expCtrl reveal">Branch Name: <em>Hyweb Japan</em></div>
+            <div class="settings expContent">
+              <section class="langTab">
+                <ul>
+                  <li><a href="#lang-panel-42">英文</a></li>
+                  <li><a href="#lang-panel-41">正體中文</a></li>
+                  <li><a href="#lang-panel-43">日文</a></li>
+                  <li><a href="#lang-panel-44">中文(簡體)</a></li>
+                  <li class="moreLang"><a>其他語系</a>
+                    <ul>
+                      <li><a href="#lang-panel-992">俄文</a></li>
+                      <li class="active"><a href="#lang-panel-1699">西班牙文</a></li>
+                      <li><a href="#lang-panel-2124">葡萄牙文</a></li>
+                      <li><a href="#lang-panel-2127">阿拉伯文</a></li>
+                      <li><a href="#lang-panel-2129">印尼文</a></li>
+                      <li><a href="#lang-panel-2382">德文</a></li>
+                      <li><a href="#lang-panel-2383">法文</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </section>
+
+              <div class="twoColumn">
+                <table class="formLayout">
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr> 啟用</td>
+                    <td>
+                      <div class="optionPool singleSelection">
+                        <label><input type="radio">顯示</label>
+                        <label class="isSelected"><input type="radio">關閉</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr> 國別（語系共用）</td>
+                    <td>
+                      <select>
+                        <option value="0">*請選擇*</option>
+                        <option value="586">Afghanistan - 阿富汗</option>
+                        <option value="692">Albania - 阿爾巴尼亞</option>
+                        <option value="658">Algeria - 阿爾及利亞</option>
+                        <option value="523">American Samoa - 美屬薩摩亞</option>
+                        <option value="600">Andorra - 安道爾</option>
+                        <option value="647">Angola - 安哥拉</option>
+                        <option value="483">Anguilla - 安圭拉島</option>
+                        <option value="551">Antarctica - 南極洲</option>
+                        <option value="669">Antigua And Barbuda - 安提瓜和巴爾布達</option>
+                        <option value="510">Argentina - 阿根廷</option>
+                        <option value="">...</option>
+                        <option value="683">Micronesia, Federated States Of - 密克羅尼西亞</option>
+                        <option value="">... ... ...</option>
+                        </select>
+                      <button type="button">帶入其他語系資料</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr> 海外據點名稱</td>
+                    <td><input type="text" value="" placeholder="請輸入"></td>
+                  </tr>
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr> 通訊地址</td>
+                    <td><input type="text" value="" placeholder="請輸入"></td>
+                  </tr>
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr> 聯絡人</td>
+                    <td>
+                      <div class="nameSet">
+                        <select required="">
+                          <option selected="selected">Mr.</option>
+                          <option>Ms.</option>
+                          <option>Mrs.</option>
+                        </select>
+                        <input type="text" placeholder="請輸入">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr> 連絡電話</td>
+                    <td>
+                      <div class="phoneNumbSet business">
+                        <!-- <span class="preSymbol">+</span> -->
+                        <input class="countryCode" type="tel" placeholder="國碼">
+                        <span class="preSymbol">-</span>
+                        <input class="areaCode" type="tel" placeholder="區碼">
+                        <span class="preSymbol">-</span>
+                        <input class="mainNumber" type="tel" placeholder="請輸入電話號碼">
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+      
+                <section class="gMap"><h5>地圖預覽</h5>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52611.14090985335!2d135.5145150540387!3d34.49790721821226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000d7146b477175%3A0x4fb43c9149f91552!2sSayama%20Pond!5e0!3m2!1szh-TW!2stw!4v1600670640493!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </section>
+              </div>
+
+              <!-- <button class="funcBtn remove" type="button">移除此組設定</button> -->
+              <span class="funcBtn remove">移除此組設定</span>
+            </div>
+          </div>
+          
+          <div class="expFolder"><span class="dragStick"></span>
+            <div class="branchName expCtrl reveal">Branch Name: <em>凌網北京</em></div>
+            <div class="settings expContent">
+              <section class="langTab">
+                <ul>
+                  <li class="active"><a href="#lang-panel-42">英文</a></li>
+                  <li><a href="#lang-panel-41">正體中文</a></li>
+                  <li><a href="#lang-panel-43">日文</a></li>
+                </ul>
+              </section>
+
+              <div class="twoColumn">
+                <table class="formLayout">
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr> 啟用</td>
+                    <td>
+                      <div class="optionPool singleSelection">
+                        <label><input type="radio">顯示</label>
+                        <label class="isSelected"><input type="radio">關閉</label>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr> 國別（語系共用）</td>
+                    <td>
+                      <select name="" id="">
+                        <option value="0">*請選擇*</option>
+                        <option value="669">Antigua And Barbuda - 安提瓜和巴爾布達</option>
+                        <option value="510">Argentina - 阿根廷</option>
+                        <option value="">...</option>
+                        <option value="683">Micronesia, Federated States Of - 密克羅尼西亞</option>
+                        <option value="">... ... ...</option>
+                      </select>
+                      <button type="button">帶入其他語系資料</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr> 海外據點名稱</td>
+                    <td><input type="text" value="" placeholder="請輸入"></td>
+                  </tr>
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr> 通訊地址</td>
+                    <td><input type="text" value="" placeholder="請輸入"></td>
+                  </tr>
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr> 聯絡人</td>
+                    <td>
+                      <div class="nameSet">
+                        <select required="">
+                          <option selected="selected">Mr.</option>
+                          <option>Ms.</option>
+                          <option>Mrs.</option>
+                        </select>
+                        <input type="text" placeholder="請輸入">
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><abbr title="必填欄位" class="required">*</abbr> 連絡電話</td>
+                    <td>
+                      <div class="phoneNumbSet business">
+                        <!-- <span class="preSymbol">+</span> -->
+                        <input class="countryCode" type="tel" placeholder="國碼">
+                        <span class="preSymbol">-</span>
+                        <input class="areaCode" type="tel" placeholder="區碼">
+                        <span class="preSymbol">-</span>
+                        <input class="mainNumber" type="tel" placeholder="請輸入電話號碼">
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+        
+                <section class="gMap"><h5>地圖預覽</h5>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52611.14090985335!2d135.5145150540387!3d34.49790721821226!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000d7146b477175%3A0x4fb43c9149f91552!2sSayama%20Pond!5e0!3m2!1szh-TW!2stw!4v1600670640493!5m2!1szh-TW!2stw" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </section>
+              </div>
+
+              <!-- 20210506 <button class="funcBtn remove" type="button">移除此組設定</button> -->
+              <span class="funcBtn remove">移除此組設定</span>
+            </div>
+          </div>
+          
+
+          <div class="btnDv">
+            <button type="submit" class="confirm hideBox">儲存變更</button>
+            <button type="reset" class="hideBox">取消編修</button>
+          </div>
+        </section>
+
+      </section>
+
+
+
+
+
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+
+
+
+
+
+
+</body>
+
+</html>

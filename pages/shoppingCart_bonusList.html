@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-點數查詢（購物車）</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <div class="main">
+      <header class="pageHeading">
+        <h2>點數查詢</h2>
+        <ul class="path">
+          <li><a href="#">購物車</a></li>
+          <li>點數查詢</li>
+        </ul>
+      </header>
+      <section class="noteDv expansile">
+        <p>點數查詢說明：兌換後的點數及商品，可透過此查詢取得相關資料。</p>
+      </section>
+
+      <section class="pointSummary">
+        <h3>現有點數</h3>
+        <table>
+          <tr class="bonus1">
+            <th>免費商機點數</th>
+            <td><em>4,000</em>點</td>
+          </tr>
+          <tr class="bonus2">
+            <th>免費TT幣</th>
+            <td><em>878,013</em>點</td>
+          </tr>
+        </table>
+      </section>
+      <section class="search toggleDrawer always hidden">
+        <h3 class="searchCaption">點數查詢</h3>
+        <span class="toggleCtrl">查詢</span>
+        <div class="toggleArea">
+          <table class="formLayout">
+            <tr>
+              <td>取得／使用區間</td>
+              <td>
+                <div class="during">
+                  <input type="date" placeholder="yyyy/mm/dd">
+                  <span class="clearIcon"></span>
+                  <span class="calendarIcon"></span>
+                  <input type="date" placeholder="yyyy/mm/dd">
+                  <span class="clearIcon"></span>
+                  <span class="calendarIcon"></span>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>點數類型</td>
+              <td>
+                <div class="optionPool">
+                  <label><input type="radio" id="orderType" checked>全部</label>
+                  <label class="bonus1"><input type="radio" id="orderType">免費商機點數</label><!-- 20210322：加 class name -->
+                  <label class="bonus2"><input type="radio" id="orderType">免費紅利點數</label><!-- 20210322：加 class name -->
+                </div>
+              </td>
+            </tr>
+          </table>
+          <div class="btnDv">
+            <input type="submit" value="查詢">
+            <input type="reset" value="重填">
+          </div>
+        </div>
+      </section>
+      <section class="listTable">
+        <table>
+          <thead>
+            <tr>
+              <th><span class="sortingTh descending">取得/使用時間</span></th>
+              <th>點數類型</th>
+              <th>使用產品/取得來源</th>
+              <th><span class="sortingTh">取得數量</span></th>
+              <th><span class="sortingTh">使用數量</span></th>
+              <th><span class="sortingTh">有效期限</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><time>2020/05/05 10:12:04</time></td>
+              <td>免費商機點數</td>
+              <td>訂單每月免費商機查詢點數</td>
+              <td><span class="digit">100</span></td>
+              <td><span class="digit"></span></td>
+              <td><time>2020/12/31 23:59:59</time></td>
+            </tr>
+            <tr>
+              <td><time>2020/05/05 10:12:04</time></td>
+              <td>免費商機點數</td>
+              <td>商機資料庫查詢</td>
+              <td><span class="digit"></span></td>
+              <td><span class="digit">10</span></td>
+              <td><time></time></td>
+            </tr>
+            <tr>
+              <td><time>2020/05/05 10:12:04</time></td>
+              <td>免費紅利點數</td>
+              <td><a href="#" class="showLightbox" id="sslbx">紅利商品兌換 W2020021500001(兌換商品要開Lightbox)</a></td>
+              <td><span class="digit"></span></td>
+              <td><span class="digit">300</span></td>
+              <td><time></time></td>
+            </tr>
+            <tr>
+              <td><time>2020/05/05 10:12:04</time></td>
+              <td>免費紅利點數</td>
+              <td>購買方案贈送紅利</td>
+              <td><span class="digit">6,000</span></td>
+              <td><span class="digit"></span></td>
+              <td><time>2020/12/31 23:59:59</time></td>
+            </tr>
+          </tbody>
+          <tfoot class="summary">
+            <tr>
+              <td colspan="3">查詢區間點數總計</td>
+              <td><span class="digit">6,100</span></td>
+              <td><span class="digit">310</span></td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088 © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+  <!--Lightbox-->
+  <section class="lightbox sslbx">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <div class="head">
+      <h3>兌換資訊</h3>
+      <div class="labelAndData"><span class="label">兌換編號</span> <em class="data">W2020021500001</em></div>
+    </div>
+    <section class="dataTable">
+      <table>
+        <tbody>
+          <tr>
+            <th>兌換總點數</th>
+            <td>300</td>
+          </tr>
+          <tr>
+            <th>兌換日期</th>
+            <td><span class="time">2020/05/05 10:12:04
+                <!--待確認統一日期顯示規格 Dec 31, 2019 AM--></span></td>
+          </tr>
+          <tr>
+            <th>商品資訊</th>
+            <td>
+              <div class="catelogSet">
+                <img src="../publicData/pd_tea01.jpg" alt="兌換商品">
+                <ul>
+                  <li>商品名稱：下午茶點心券</li>
+                  <li>兌換點數：200</li>
+                  <li>兌換數量：1 件</li>
+                  <li>狀態：<span class="status received">待處理</span></li><!-- 20210308: 回饋意見修改 -->
+                </ul>
+              </div>
+              <div class="catelogSet">
+                <img src="../publicData/pd41s.jpg" alt="兌換商品">
+                <ul>
+                  <li>商品名稱：下午茶飲料券</li>
+                  <li>兌換點數：100</li>
+                  <li>兌換數量：1 件</li>
+                  <li>狀態：<span class="status done">已完成</span></li><!-- 20210308: 回饋意見修改 -->
+                </ul>
+              </div>
+
+              <div class="catelogSet">
+                <img src="../publicData/ph_photo2.jpg" alt="兌換商品">
+                <ul>
+                  <li>商品名稱：下午茶飲料券</li>
+                  <li>兌換點數：100</li>
+                  <li>兌換數量：1 件</li>
+                  <li>狀態：<span class="status abandoned">放棄出貨</span></li><!-- 20210308: 回饋意見修改 -->
+                </ul>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>兌換資訊</th>
+            <td>
+              <ul>
+                <li>兌換會員帳號：chiou@tpe.hyweb.com.tw</li>
+                <li>收件人姓名：邱阿輝</li>
+                <li>電話號碼：86-2-25432222#777</li>
+                <li>傳真號碼：886-2-4325432</li>
+                <li>手機號碼：886-0930835960</li>
+                <li>Email：chiou@tpe.hyweb.com.tw</li>
+                <li>寄送地址：302 新竹縣竹北市測試地址</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </section>
+
+  <script>
+    //升降冪箭頭 GUI demo, 2021 修改
+    var _sortingTr = $('.listTable').find('tr').has('.sortingTh');
+    _sortingTr.each(function() {
+      let _sortingTh = $(this).find('.sortingTh');
+      _sortingTh.click(function() {
+        _this = $(this);
+        _sortingTh.not(_this).removeClass('descending').removeClass('ascending');
+        if (_this.hasClass('descending')) {
+          _this.removeClass('descending').addClass('ascending');
+        } else if (_this.hasClass('ascending')) {
+          _this.removeClass('ascending').addClass('descending');
+        } else {
+          _this.addClass('ascending');
+        }
+      })
+    })
+  </script>
+</body>
+
+</html>

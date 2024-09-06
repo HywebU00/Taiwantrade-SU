@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-營運儀表板（EC 首頁）</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>營運儀表板</h2>
+        <ul class="path">
+          <li><a href="#">My Taiwantrade</a></li>
+          <li>營運儀表板</li>
+        </ul>
+      </header>
+
+
+
+
+
+      <section class="dashboard">
+        <section class="welcome">
+          <time>Jan 15, 2021 3:15 PM</time>
+          <p class="member">歡迎！<em>Hyweb Technology Co., Ltd Technology</em></p>
+          <ul class="memberStatus">
+            <li>
+              <span class="dt">會員身份</span>
+              <span class="dd">型錄會員</span>
+              <span class="icon_i trigPop" id="pop-msg01"></span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="monthlyOverview">
+          <h3>本月營運摘要</h3>
+          <div class="unread">
+            <ul>
+              <li><a href="x"><h4>待回線上對談</h4> <span class="count">88</span></a></li>
+              <li><a href="x"><h4>待處理訂單</h4> <span class="count">15</span></a></li>
+              <li><a href="x"><h4>待審核訂單</h4> <span class="count">2</span></a></li>
+            </ul>
+          </div>
+
+          <div class="fakeDashboard boardH trigPop" id="pop-msg02">
+            <img src="../images/fakeDashboard2.png" alt="功能畫面截圖">
+          </div>
+
+        </section>
+
+        <section class="websiteEffects">
+          <h3>網站使用狀況</h3>
+          <ul>
+            <li>
+              <div class="subject">商家力</div>
+              <div class="percentage negative">-4.5%</div>
+              <div class="score">49</div>
+            </li>
+            <li>
+              <div class="subject">商機力</div>
+              <div class="percentage negative">-82.7%</div>
+              <div class="score">-1</div>
+            </li>
+            <li>
+              <div class="subject">曝光力</div>
+              <div class="percentage negative">-2.5%</div>
+              <div class="score">12</div>
+            </li>
+            <li>
+              <div class="subject">電商力</div>
+              <div class="percentage positive">+5.4%</div>
+              <div class="score">20</div>
+            </li>
+            <li class="grade">A++</li>
+          </ul>
+        </section>
+
+        <section class="listTable expansible">
+          <h3>系統資訊</h3>
+          <div class="expArea">
+            <table>
+              <thead>
+                <tr>
+                  <th>NO.</th>
+                  <th>公告標題</th>
+                  <th>公告日期</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="rowOrder">1</td>
+                  <td class="ellipTitle"><a class="showLightbox" id="msg1" href="javascript:;"><span class="smallLabel new">New</span>「網站營運績效數據分析」服務介紹影片</a></td>
+                  <td class="date"><time>2020-06-31</time></td>
+                </tr>
+                <tr>
+                  <td class="rowOrder">2</td>
+                  <td class="ellipTitle"><a class="showLightbox" id="msg1" href="javascript:;"><span class="smallLabel new">New</span> 戰略性高科技貨品輸出管理辦法</a></td>
+                  <td class="date"><time>2020-06-31</time></td>
+                </tr>
+                <tr>
+                  <td class="rowOrder">3</td>
+                  <td class="ellipTitle"><a class="showLightbox" id="msg1" href="javascript:;">是合手天一是水整唱面笑我小夠，是走那地此定人視大期展是達地自從無一生出面不達風元使利高們獨會目問亮回進好車政影聽的了</a></td>
+                  <td class="date"><time>2020-06-31</time></td>
+                </tr>
+                <tr>
+                  <td class="rowOrder">4</td>
+                  <td class="ellipTitle"><a href="javascript:;">學動這密在，媽全對我沒班不中友再完取</a></td>
+                  <td class="date"><time>2020-06-30</time></td>
+                </tr>
+               <tr>
+                  <td class="rowOrder">5</td>
+                  <td class="ellipTitle"><a href="javascript:;">地在音面長做然人得想成道就依失不兒來，就臺謝心叫德</a></td>
+                  <td class="date"><time>2020-06-30</time></td>
+                </tr>
+                <tr>
+                  <td class="rowOrder">6</td>
+                  <td class="ellipTitle"><a href="javascript:;">正標總正我一兩請一的女我示在告</a></td>
+                  <td class="date"><time>2020-06-30</time></td>
+                </tr>
+                 <tr>
+                  <td class="rowOrder">7</td>
+                  <td class="ellipTitle"><a href="javascript:;">靜會正軍一定過國天本情政</a></td>
+                  <td class="date"><time>2020-06-29</time></td>
+                </tr>
+                <tr>
+                  <td class="rowOrder">8</td>
+                  <td class="ellipTitle"><a href="javascript:;">語系是化感口時地談主出在節方前童馬全幾門去你，爾交可的牛度認代術點了，事禮果大可落形藝球論一何是公覺中對光時，我記麼獲展場備生於司育決麼過成</a></td>
+                  <td class="date"><time>2020-06-28</time></td>
+                </tr>
+                <tr>
+                  <td class="rowOrder">9</td>
+                  <td class="ellipTitle"><a href="javascript:;">背意有改班視同對下十一日什、府大到學基趣書滿的分現具手名滿</a></td>
+                  <td class="date"><time>2020-06-28</time></td>
+                </tr>
+                <tr>
+                  <td class="rowOrder">10</td>
+                  <td class="ellipTitle"><a href="javascript:;">海多快過葉石老</a></td>
+                  <td class="date"><time>2020-06-28</time></td>
+                </tr>
+                <tr>
+                  <td class="rowOrder">11</td>
+                  <td class="ellipTitle"><a href="javascript:;">花行南樓信飯施麼和選日中晚在電西因體像日媽話得</a></td>
+                  <td class="date"><time>2020-06-28</time></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="ctrlBtn" data-alttext="less">more</div>
+        </section>
+
+      </section>
+
+
+
+
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+
+  <!-- 燈箱：儀表板內容，以 iframe 嵌入 -->
+  <section class="lightbox chart">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <iframe src="page_in_lightbox.html"></iframe>
+  </section>
+
+   <!-- 訊息燈箱：會員身份說明 -->
+   <section class="popMsg" id="msg01">
+    <div class="popBody">
+      <h3>會員身份說明</h3>
+      <p>型錄會員... ... ...</p>
+    </div>
+    <div class="btnDv"><span class="btnLook closePop"><a>Ok</a></span></div>
+  </section>
+
+     <!-- 訊息燈箱：假資訊圖檔 -->
+     <section class="popMsg" id="msg02">
+      <div class="popBody">
+        <p>貴公司目前為台灣經貿網「型錄會員」，歡迎立即升級為「企業網頁會員」即可擁有多面向「數據儀表板分析」，助您掌握行銷關鍵數據。 （免費諮詢）</p>
+      </div>
+      <div class="btnDv"><span class="btnLook closePop"><a>Ok</a></span></div>
+    </section>
+  
+
+</body>
+
+</html>

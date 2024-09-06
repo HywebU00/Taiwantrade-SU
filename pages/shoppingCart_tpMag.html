@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-台灣產品雜誌稿件（購物車）</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>台灣產品雜誌稿件</h2>
+        <ul class="path">
+          <li><a href="#">購物車</a></li>
+          <li>台灣產品雜誌稿件</li>
+        </ul>
+      </header>
+
+      <div class="noteDv expansile">
+        <p>線上閱讀<a href="https://ibook.taiwantrade.com/" target="_blank">台灣產品雜誌</a>(Taiwan Products)10本產業專輯；欲刊登「台灣產品雜誌」特別頁廣告請<a href="https://info.taiwantrade.com/index/ad-tp" target="_blank">按此</a>。</p>
+      </div>
+
+      <div class="sepHeader">您將刊登的TP專輯雜誌項目</div>
+      <section class="adList">
+        <p>以下是您已登記、還未出刊的專輯，請於各專輯截稿日期前上傳符合<span class="trigPop" id="pop-msg1">稿件格式</span>的檔案，逾期即視同放棄刊登。</p>
+        <ul>
+          <li>2020年《綠能、電子、通訊及週邊123》；截稿日2020年11月30日。</li>
+          <li>2020年《綠能、電子、通訊及週邊123》；截稿日2020年11月30日。</li>
+          <li>2020年《綠能、電子、通訊及週邊123》；截稿日2020年11月30日。</li>
+        </ul>
+      </section>
+
+      <section class="classify">
+        <span class="label">專輯年度</span>
+        <ul>
+          <li><a href="javascript:;">全部</a></li>
+          <li><a href="javascript:;">2018</a></li>
+          <li><a href="javascript:;">2019</a></li>
+          <li class="active"><a href="javascript:;">2020</a></li>
+          <li><a href="javascript:;">2021</a></li>
+          <li><a href="javascript:;">2022</a></li>
+        </ul>
+      </section>
+
+      <section class="adOnMag">
+        <ul>
+          <li>
+            <ul class="head">
+              <li><span class="dt">訂單編號：</span><em class="dd">W2018072400011</em></li>
+              <li><span class="dt">方案名稱：</span><em class="dd">2018尊爵3年尊爵續約會員-5萬(全語系)</em></li>
+            </ul>
+            <h3>TP專輯資訊</h3>
+            <!-- <div class="caption"><h3>TP專輯資訊</h3></div> 20210218 修改 html -->
+            <ul class="adDetail">
+              <li><span class="dt">年度：</span><em class="dd">2020</em></li>
+              <li><span class="dt">專輯名稱：</span><em class="dd">異北會是期車之展女決木樣候玩如最</em></li>
+              <li><span class="dt">產業代碼：</span><em class="dd">自行車</em></li>
+              <li><span class="dt">版位：</span><em class="dd">贈送1/4內頁版位</em></li>
+              <li><span class="dt">位置：</span><em class="dd">1/4內頁</em></li>
+              <li><span class="dt">稿件提供方式：</span><em class="dd">提供新稿</em></li>
+              <li class="image"><span class="dt">圖檔：</span>
+                <div class="thumb"><span class="placehoder">無圖檔</span></div>
+              </li>
+            </ul>
+            <ul class="closingInfo">
+              <li class="expired">已於2019年10月17日截稿,無法變更,請來電</li>
+              <li><span class="dt">最後上傳：</span><em class="dd">e******</em></li>
+              <li><span class="dt">最後異動時間：</span><time>2018/07/30 12:14:10</time></li>
+            </ul>
+
+            <ul class="adDetail">
+              <li><span class="dt">年度：</span><em class="dd">2020</em></li>
+              <li><span class="dt">專輯名稱：</span><em class="dd">同筆資料的另一部分同筆資料的另一部分</em></li>
+              <li><span class="dt">產業代碼：</span><em class="dd">自行車</em></li>
+              <li><span class="dt">版位：</span><em class="dd">贈送1/4內頁版位</em></li>
+              <li><span class="dt">位置：</span><em class="dd">1/4內頁</em></li>
+              <li><span class="dt">稿件提供方式：</span><em class="dd">提供新稿</em></li>
+              <li class="image"><span class="dt">圖檔：</span>
+                <div class="thumb"><a href="../publicData/news04.jpg" target="_blank"><img src="../publicData/news04.jpg"></a></div>
+              </li>
+            </ul>
+            <ul class="closingInfo">
+              <li class="expired">已於2019年10月17日截稿,無法變更,請來電</li>
+              <li><span class="dt">最後上傳：</span><em class="dd">e******</em></li>
+              <li><span class="dt">最後異動時間：</span><time>2018/07/30 12:14:10</time></li>
+            </ul>
+
+          </li>
+          <li>
+            <ul class="head">
+              <li><span class="dt">訂單編號：</span><em class="dd">W2018112300005</em></li>
+              <li><span class="dt">方案名稱：</span><em class="dd">2018尊爵續約會員3年-4.5萬</em></li>
+            </ul>
+            <!-- 20210218 修改 -->
+            <h3>TP專輯資訊</h3>
+            <div class="action">
+              <label class="aloneCheck"><input type="checkbox">放棄刊登</label>
+              <button type="button">儲存</button>
+            </div>
+            <!-- <div class="caption">
+              <h3>TP專輯資訊</h3>
+              <label class="aloneCheck"><input type="checkbox">放棄刊登</label>
+              <button type="button">儲存</button>
+            </div> -->
+            <ul class="adDetail">
+              <li><span class="dt">年度：</span><em class="dd">2020</em></li>
+              <li><span class="dt">專輯名稱：</span><em class="dd">綠能、電子、通訊及週邊123456789 123456789 123456789123456789</em></li>
+              <li>
+                <span class="dt">產業代碼：</span>
+                <select>
+                  <option value="">請選擇產業代碼</option>
+                  <option value="11">61-機械</option>
+                  <option value="12">62-機械零件</option>
+                  <option value="166">6250-模具</option>
+                  <option value="168">6302-發電機</option>
+                  <option value="169">6304-馬達</option>
+                  <option value="170">6306-馬達零配件</option>
+                  <option value="171">6308-電線及電纜</option>
+                  <option value="172">6310-配線器材</option>
+                  <option value="173">6312-斷路器及保險絲</option>
+                  <option value="174">6314-開關</option>
+                  <option value="175">6316-插頭及插座</option>
+                  <option value="">... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">版位：</span><em class="dd">贈送1/4內頁版位</em></li>
+              <li><span class="dt">位置：</span><em class="dd">1/4內頁</em></li>
+              <li><span class="dt">稿件提供方式：</span>
+                <select>
+                  <option value="0" selected="selected">提供新稿</option>
+                  <option value="1">沿用舊稿</option>
+                  <option value="2" disabled>需代製稿</option>
+                </select>
+              </li>
+              <li class="image">
+                <span class="dt">圖檔：</span>
+                <div class="thumb"><!-- 20210326 修改 -->
+                  <button type="button" class="trigPop" id="pop-msg03">上傳檔案</button>
+                  <span title="稿件格式" class="icon_i trigPop" id="pop-msg1"></span>
+                </div>
+              </li>
+            </ul>
+            <ul class="closingInfo">
+              <li class="expired">本專輯截稿日為2020年11月30日。如更換已上傳的稿件，請務必來電客服告知</li>
+              <li><span class="dt">最後上傳：</span><em class="dd">y******</em></li>
+              <li><span class="dt">最後異動時間：</span><time>2018/07/30 12:14:10</time></li>
+            </ul>
+
+            <!-- 同一筆資料的另一部分 -->
+            <div class="action">
+              <label class="aloneCheck"><input type="checkbox">放棄刊登</label>
+              <button type="button">儲存</button>
+            </div>
+            <ul class="adDetail">
+              <li><span class="dt">年度：</span><em class="dd">2020</em></li>
+              <li><span class="dt">專輯名稱：</span><em class="dd">同筆資料的另一部分同筆資料的另一部分</em></li>
+              <li>
+                <span class="dt">產業代碼：</span>
+                <select>
+                  <option value="">請選擇產業代碼</option>
+                  <option value="11">61-機械</option>
+                  <option value="12">62-機械零件</option>
+                  <option value="166">6250-模具</option>
+                  <option value="168">6302-發電機</option>
+                  <option value="169">6304-馬達</option>
+                  <option value="">... ... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">版位：</span><em class="dd">贈送1/4內頁版位</em></li>
+              <li><span class="dt">位置：</span><em class="dd">1/4內頁</em></li>
+              <li><span class="dt">稿件提供方式：</span>
+                <select>
+                  <option value="0" selected="selected">提供新稿</option>
+                  <option value="1">沿用舊稿</option>
+                  <option value="2" disabled>需代製稿</option>
+                </select>
+              </li>
+              <li class="image">
+                <span class="dt">圖檔：</span>
+                <div class="thumb"><!-- 20210326 修改 -->
+                  <button type="button" class="trigPop" id="pop-msg03">上傳檔案</button>
+                  <span title="稿件格式" class="icon_i trigPop" id="pop-msg1"></span>
+                </div>
+              </li>
+            </ul>
+            <ul class="closingInfo">
+              <li class="expired">本專輯截稿日為2020年11月30日。如更換已上傳的稿件，請務必來電客服告知</li>
+              <li><span class="dt">最後上傳：</span><em class="dd">y******</em></li>
+              <li><span class="dt">最後異動時間：</span><time>2018/07/30 12:14:10</time></li>
+            </ul>
+
+          </li>
+
+          <li>
+            <ul class="head">
+              <li><span class="dt">訂單編號：</span><em class="dd">W2018072400011</em></li>
+              <li><span class="dt">方案名稱：</span><em class="dd">human方案年底方案</em></li>
+            </ul>
+
+            <h3>TP專輯資訊</h3>
+            <div class="action">
+              <label class="aloneCheck"><input type="checkbox">放棄刊登</label>
+              <button type="button">儲存</button>
+            </div>
+            <ul class="adDetail">
+              <li><span class="dt">年度：</span><em class="dd">2020</em></li>
+              <li><span class="dt">專輯名稱：</span><em class="dd">華生在測試</em></li>
+              <li><span class="dt">產業代碼：</span><em class="dd">自行車</em></li>
+              <li><span class="dt">版位：</span><em class="dd">贈送1/4內頁版位</em></li>
+              <li><span class="dt">位置：</span><em class="dd">1/4內頁</em></li>
+              <li><span class="dt">稿件提供方式：</span><em class="dd">提供新稿</em></li>
+              <li class="image"><span class="dt">圖檔：</span>
+                <div class="thumb">
+                  <!-- <p class="filename">longAndNoSpaceFilename21884220204903030945_012345678901234567890123456789.jpg</p>  20210326 removed -->
+                  <a href="../publicData/mag1.jpg" target="_blank"><img src="../publicData/mag1.jpg"></a>
+                  <button type="button" class="showLightbox" id="lbx01">選擇檔案</button>
+                  <span title="稿件格式" class="icon_i trigPop" id="pop-msg1"></span>
+                </div>
+              </li>
+            </ul>
+            <ul class="closingInfo">
+              <li class="expired">已於2019年10月17日截稿,無法變更,請來電</li>
+              <li><span class="dt">最後上傳：</span><em class="dd">j******</em></li>
+              <li><span class="dt">最後異動時間：</span><time>2018/07/30 12:14:10</time></li>
+            </ul>
+
+            <!-- 20210218 修改 -->
+            <!-- <div class="caption">
+              <h3>TP專輯資訊</h3>
+              <label class="aloneCheck"><input type="checkbox">放棄刊登</label>
+              <button type="button">儲存</button>
+            </div> -->
+            <!-- 同一筆資料的另一部分 -->
+            <div class="action">
+              <label class="aloneCheck"><input type="checkbox">放棄刊登</label>
+              <button type="button">儲存</button>
+            </div>
+            <ul class="adDetail">
+              <li><span class="dt">年度：</span><em class="dd">2020</em></li>
+              <li><span class="dt">專輯名稱：</span><em class="dd">同筆資料的另一部分同筆資料的另一部分</em></li>
+              <li><span class="dt">產業代碼：</span><em class="dd">自行車</em></li>
+              <li><span class="dt">版位：</span><em class="dd">贈送1/4內頁版位</em></li>
+              <li><span class="dt">位置：</span><em class="dd">1/4內頁</em></li>
+              <li><span class="dt">稿件提供方式：</span><em class="dd">提供新稿</em></li>
+              <li class="image"><span class="dt">圖檔：</span>
+                <div class="thumb">
+                  <a href="../publicData/mag2.jpg" target="_blank"><img src="../publicData/mag2.jpg"></a>
+                  <button type="button" class="showLightbox" id="lbx01">選擇檔案</button>
+                  <span title="稿件格式" class="icon_i trigPop" id="pop-msg1"></span>
+                </div>
+              </li>
+            </ul>
+            <ul class="closingInfo">
+              <li class="expired">已於2019年10月17日截稿,無法變更,請來電</li>
+              <li><span class="dt">最後上傳：</span><em class="dd">j******</em></li>
+              <li><span class="dt">最後異動時間：</span><time>2018/07/30 12:14:10</time></li>
+            </ul>
+
+          </li>
+          <li>
+            <ul class="head">
+              <li><span class="dt">訂單編號：</span><em class="dd">W2018112300005</em></li>
+              <li><span class="dt">方案名稱：</span><em class="dd">2018尊爵續約會員3年-4.5萬</em></li>
+            </ul>
+            
+            <!-- 20210218 修改 -->
+            <h3>TP專輯資訊</h3>
+            <div class="action">
+              <label class="aloneCheck"><input type="checkbox">放棄刊登</label>
+              <button type="button">儲存</button>
+            </div>
+            <!-- <div class="caption">
+              <h3>TP專輯資訊</h3>
+              <label class="aloneCheck"><input type="checkbox">放棄刊登</label>
+              <button type="button">儲存</button>
+            </div> -->
+            <ul class="adDetail">
+              <li><span class="dt">年度：</span><em class="dd">2020</em></li>
+              <li><span class="dt">專輯名稱：</span><em class="dd">綠能、電子、通訊及週邊123</em></li>
+              <li>
+                <span class="dt">產業代碼：</span>
+                <select>
+                  <option value="">請選擇產業代碼</option>
+                  <option value="11">61-機械</option>
+                  <option value="12">62-機械零件</option>
+                  <option value="166">6250-模具</option>
+                  <option value="168">6302-發電機</option>
+                  <option value="169">6304-馬達</option>
+                  <option value="170">6306-馬達零配件</option>
+                  <option value="">... ... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">版位：</span><em class="dd">HumanTest2019版位</em></li>
+              <li><span class="dt">位置：</span><em class="dd">HumanTest2019版位 1/4</em></li>
+              <li><span class="dt">稿件提供方式：</span>
+                <select>
+                  <option value="0" selected="selected">提供新稿</option>
+                  <option value="1">沿用舊稿</option>
+                  <option value="2" disabled>需代製稿</option>
+                </select>
+              </li>
+              <li class="image">
+                <span class="dt">圖檔：</span>
+                <div class="thumb"><!-- 20210326 修改 -->
+                  <button type="button" class="trigPop" id="pop-msg03">上傳檔案</button>
+                  <span title="稿件格式" class="icon_i trigPop" id="pop-msg1"></span>
+                </div>
+              </li>
+            </ul>
+            <ul class="closingInfo">
+              <li class="expired">本專輯截稿日為2020年12月25日。如更換已上傳的稿件，請務必來電客服告知</li>
+              <li><span class="dt">最後上傳：</span><em class="dd">Roy-uat123</em></li>
+              <li><span class="dt">最後異動時間：</span><time>2020/02/05</time></li>
+            </ul>
+
+            <div class="action">
+              <label class="aloneCheck"><input type="checkbox">放棄刊登</label>
+              <button type="button">儲存</button>
+            </div>
+            <ul class="adDetail">
+              <li><span class="dt">年度：</span><em class="dd">2020</em></li>
+              <li><span class="dt">專輯名稱：</span><em class="dd">同筆資料的另一部分同筆資料的另一部分</em></li>
+              <li>
+                <span class="dt">產業代碼：</span>
+                <select>
+                  <option value="">請選擇產業代碼</option>
+                  <option value="11">61-機械</option>
+                  <option value="12">62-機械零件</option>
+                  <option value="166">6250-模具</option>
+                  <option value="168">6302-發電機</option>
+                  <option value="169">6304-馬達</option>
+                  <option value="170">6306-馬達零配件</option>
+                  <option value="">... ... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">版位：</span><em class="dd">HumanTest2019版位</em></li>
+              <li><span class="dt">位置：</span><em class="dd">HumanTest2019版位 1/4</em></li>
+              <li><span class="dt">稿件提供方式：</span>
+                <select>
+                  <option value="0" selected="selected">提供新稿</option>
+                  <option value="1">沿用舊稿</option>
+                  <option value="2" disabled>需代製稿</option>
+                </select>
+              </li>
+              <li class="image">
+                <span class="dt">圖檔：</span>
+                <div class="thumb"><!-- 20210326 修改 -->
+                  <button type="button" class="trigPop" id="pop-msg03">上傳檔案</button>
+                  <span title="稿件格式" class="icon_i trigPop" id="pop-msg1"></span>
+                </div>
+              </li>
+            </ul>
+            <ul class="closingInfo">
+              <li class="expired">本專輯截稿日為2020年12月25日。如更換已上傳的稿件，請務必來電客服告知</li>
+              <li><span class="dt">最後上傳：</span><em class="dd">Roy-uat123</em></li>
+              <li><span class="dt">最後異動時間：</span><time>2020/02/05</time></li>
+            </ul>
+
+          </li>
+        </ul>
+      </section>
+
+
+      
+      <div class="sepHeader">您放棄刊登的TP專輯雜誌項目</div>
+      <section class="adOnMag">
+        <ul>
+          <li>
+            <ul class="head">
+              <li><span class="dt">訂單編號：</span><em class="dd">W2020112300021</em></li>
+              <li><span class="dt">方案名稱：</span><em class="dd">2020尊爵續約會員3年-4.5萬</em></li>
+            </ul>
+            <h3>TP專輯資訊</h3>
+            <div class="action">
+              <label class="aloneCheck"><input type="checkbox" checked>放棄刊登</label>
+              <button type="button">儲存</button>
+            </div>
+            <ul class="adDetail">
+              <li><span class="dt">年度：</span>
+                <select>
+                  <option value="">2021</option>
+                  <option value="">2022</option>
+                  <option value="">2023</option>
+                  <option value="">2024</option>
+                  <option value="">... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">專輯名稱：</span>
+                <select>
+                  <option value="">綠能、電子、通訊及週邊</option>
+                  <option value="">際還演一時說公市黃中了眼海日現體會非養而、懷比麼心</option>
+                  <option value="">... ...</option>
+                </select>
+              </li>
+              <li>
+                <span class="dt">產業代碼：</span>
+                <select>
+                  <option value="">請選擇產業代碼</option>
+                  <option value="11">61-機械</option>
+                  <option value="12">62-機械零件</option>
+                  <option value="166">6250-模具</option>
+                  <option value="168">6302-發電機</option>
+                  <option value="169">6304-馬達馬達馬達馬達馬達馬達馬達馬達馬達馬達馬達</option>
+                  <option value="">... ... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">版位：</span>
+                <select>
+                  <option>贈送1/4內頁版位</option>
+                  <option>... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">位置：</span>
+                <select>
+                  <option>1/4內頁</option>
+                  <option>1/2 上半頁</option>
+                  <option>... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">稿件提供方式：</span>
+                <select>
+                  <option value="0" selected="selected">提供新稿</option>
+                  <option value="1">沿用舊稿</option>
+                  <option value="2" disabled>需代製稿</option>
+                </select>
+              </li>
+              <li class="image">
+                <span class="dt">圖檔：</span>
+                <div class="thumb"><!-- 20210326 修改 -->
+                  <button type="button" class="trigPop" id="pop-msg03">上傳檔案</button>
+                  <span title="稿件格式" class="icon_i trigPop" id="pop-msg1"></span>
+                </div>
+              </li>
+            </ul>
+            <ul class="closingInfo">
+              <li class="expired">本專輯截稿日為2020年11月30日。如更換已上傳的稿件，請務必來電客服告知</li>
+              <li><span class="dt">最後上傳：</span><em class="dd">y******</em></li>
+              <li><span class="dt">最後異動時間：</span><time>2018/07/30 12:14:10</time></li>
+            </ul>
+
+            <div class="action">
+              <label class="aloneCheck"><input type="checkbox" checked>放棄刊登</label>
+              <button type="button">儲存</button>
+            </div>
+            <ul class="adDetail">
+              <li><span class="dt">年度：</span><em class="dd">2020</em></li>
+              <li><span class="dt">專輯名稱：</span><em class="dd">同筆資料的另一部分同筆資料的另一部分</em></li>
+              <li>
+                <span class="dt">產業代碼：</span>
+                <select>
+                  <option value="">請選擇產業代碼</option>
+                  <option value="11">61-機械</option>
+                  <option value="12">62-機械零件</option>
+                  <option value="166">6250-模具</option>
+                  <option value="168">6302-發電機</option>
+                  <option value="169">6304-馬達</option>
+                  <option value="">... ... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">版位：</span>
+                <select>
+                  <option>贈送1/4內頁版位</option>
+                  <option>... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">位置：</span><em class="dd">1/4內頁</em></li>
+              <li><span class="dt">稿件提供方式：</span>
+                <select>
+                  <option value="0" selected="selected">提供新稿</option>
+                  <option value="1">沿用舊稿</option>
+                  <option value="2" disabled>需代製稿</option>
+                </select>
+              </li>
+              <li class="image">
+                <span class="dt">圖檔：</span>
+                <div class="thumb"><!-- 20210326 修改 -->
+                  <button type="button" class="trigPop" id="pop-msg03">上傳檔案</button>
+                  <span title="稿件格式" class="icon_i trigPop" id="pop-msg1"></span>
+                </div>
+              </li>
+            </ul>
+            <ul class="closingInfo">
+              <li class="expired">本專輯截稿日為2020年11月30日。如更換已上傳的稿件，請務必來電客服告知</li>
+              <li><span class="dt">最後上傳：</span><em class="dd">y******</em></li>
+              <li><span class="dt">最後異動時間：</span><time>2018/07/30 12:14:10</time></li>
+            </ul>
+
+          </li>
+
+          <li>
+            <ul class="head">
+              <li><span class="dt">訂單編號：</span><em class="dd">W2021112300021</em></li>
+              <li><span class="dt">方案名稱：</span><em class="dd">2021尊爵續約會員3年-4.5萬</em></li>
+            </ul>
+            <h3>TP專輯資訊</h3>
+            <div class="action">
+              <label class="aloneCheck"><input type="checkbox" checked>放棄刊登</label>
+              <button type="button">儲存</button>
+            </div>
+            <ul class="adDetail">
+              <li><span class="dt">年度：</span>
+                <select>
+                  <option value="">2021</option>
+                  <option value="">2022</option>
+                  <option value="">2023</option>
+                  <option value="">2024</option>
+                  <option value="">... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">專輯名稱：</span>
+                <select>
+                  <option value="">綠能、電子、通訊及週邊</option>
+                  <option value="">際還、演一、時說公市、黃中、了眼海日現體會非養而懷比麼心</option>
+                  <option value="">... ...</option>
+                </select>
+              </li>
+              <li>
+                <span class="dt">產業代碼：</span>
+                <select>
+                  <option value="">請選擇產業代碼</option>
+                  <option value="11">61-機械</option>
+                  <option value="12">62-機械零件</option>
+                  <option value="166">6250-模具</option>
+                  <option value="168">6302-發電機</option>
+                  <option value="169">6304-馬達馬達馬達馬達馬達馬達馬達馬達馬達馬達馬達</option>
+                  <option value="">... ... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">版位：</span>
+                <select>
+                  <option>贈送1/4內頁版位</option>
+                  <option>... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">位置：</span>
+                <select>
+                  <option>1/4內頁</option>
+                  <option>1/2 上半頁</option>
+                  <option>... ...</option>
+                </select>
+              </li>
+              <li><span class="dt">稿件提供方式：</span>
+                <select>
+                  <option value="0" selected="selected">提供新稿</option>
+                  <option value="1">沿用舊稿</option>
+                  <option value="2" disabled>需代製稿</option>
+                </select>
+              </li>
+              <li class="image">
+                <span class="dt">圖檔：</span>
+                <div class="thumb"><!-- 20210326 修改 -->
+                  <button type="button" class="trigPop" id="pop-msg03">上傳檔案</button>
+                  <span title="稿件格式" class="icon_i trigPop" id="pop-msg1"></span>
+                </div>
+              </li>
+            </ul>
+            <ul class="closingInfo">
+              <li class="expired">本專輯截稿日為2022年11月30日。如更換已上傳的稿件，請務必來電客服告知</li>
+              <li><span class="dt">最後上傳：</span><em class="dd">y******</em></li>
+              <li><span class="dt">最後異動時間：</span><time>2021/02/19 12:14:10</time></li>
+            </ul>
+
+          </li>
+        </ul>
+
+      </section>
+
+
+
+
+
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+
+  <!-- 以下為燈箱 -->
+  <section class="popMsg" id="msg1">
+    <div class="popBody">
+      <h3>廣告稿件說明</h3>
+      <ol>
+        <li>廣告格式：ai, psd, jpg, doc, docx, pdf檔，文字轉外框，色彩模式為CMYK之印刷檔，廣告稿內容以英文為主，且大小以10M為限。</li>
+        <li>廣告解析度：300dpi以上，解析度不足印刷出來稿件會模糊。</li>
+        <li>台灣產品雜誌電子版可參考：<a href="#">http://ibook.taiwantrade.com</a></li>
+      </ol>
+    </div>
+    <div class="btnDv"><span class="btnLook closePop"><a href="javascript:void(0);" onclick="">Ok</a></span></div>
+  </section>
+
+  <section class="popMsg" id="msg03">
+    <h3>台灣產品雜誌-上傳檔案</h3>
+    <form>
+      <div class="popBody">
+        <input type="file">
+        <p class="hint">請選擇欲上傳之檔案(ai,psd,jpg,doc,docx,pdf,檔案大小限制 10 MB)</p>
+      </div>
+      <div class="btnDv">
+        <input type="button" value="確定上傳" class="confirm closePop">
+        <input type="button" value="取消" class="closePop">
+      </div>
+    </form>
+  </section>
+
+
+  <section class="lightbox lbx01">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <div class="head"><h3>TP專輯檔案選擇</h3></div>
+    
+    <section class="listTable hasThumbImg">
+      <table>
+        <thead>
+          <tr>
+            <th>選取</th>
+            <th>年度</th>
+            <th>TP專輯</th>
+            <th>版位</th>
+            <th>位置</th>
+            <th>產業代碼</th>
+            <th>檔案</th>
+            <th>原始檔名</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <!-- <td><input type="radio" name="attachment" onclick="" value=""></td> -->
+            <td><label class="listRadio"><input name="attachment" type="radio"></label></td>
+            <td><time class="year">2024</time></td>
+            <td class="aLeft">機械產品</td>
+            <td>杯緣版位</td>
+            <td>下</td>
+            <td>農業機械</td>
+            <td><a href="../publicData/mag1.jpg" download><img class="thumbImg magCover" src="../publicData/mag1.jpg"></a></td>
+            <td class="aLeft">12666620173927110955.jpg</td>
+          </tr>
+          <tr>
+            <!-- <td><input type="radio" name="attachment" onclick="" value=""></td> -->
+            <td><label class="listRadio"><input type="radio" name="attachment"></label></td>
+            <td><time class="year">2022</time></td>
+            <td class="aLeft">綠能、電子、通訊及週邊123</td>
+            <td>動漫版位</td>
+            <td>上</td>
+            <td>積體電路</td>
+            <td><a href="../publicData/mag2.jpg" download><img class="thumbImg magCover" src="../publicData/mag2.jpg"></a></td>
+            <td class="aLeft">23335008優嘉實業股份有限公司_四分之一頁.jpg</td>
+          </tr>
+          <tr>
+            <td><label class="listRadio"><input type="radio" name="attachment"></label></td>
+            <td><time class="year">2021</time></td>
+            <td class="aLeft">禮品、文具、家用品及文創 </td>
+            <td>贈送1/4內頁版位</td>
+            <td>1/4內頁</td>
+            <td>客廳家具</td>
+            <td><a href="x">下載</a></td>
+            <td class="aLeft">TP配合拓展團(new)1.pdf</td>
+          </tr>
+          <tr>
+            <td><label class="listRadio"><input type="radio" name="attachment"></label></td>
+            <td><time class="year">2021</time></td>
+            <td class="aLeft">動漫專輯</td>
+            <td>TP專輯內頁全頁</td>
+            <td>內頁版位位置</td>
+            <td>資訊傳播及出版服務</td>
+            <td><img class="thumbImg magCover" src="../publicData/ofr03.jpg"></td>
+            <td class="aLeft">12666620173927110955.jpg</td>
+          </tr>
+          <tr>
+            <td><label class="listRadio"><input type="radio" name="attachment"></label></td>
+            <td><time class="year">2021</time></td>
+            <td class="aLeft">自行車及運動用品</td>
+            <td>贈送1/4內頁版位</td>
+            <td>1/4內頁</td>
+            <td>振盪器及諧振器</td>
+            <td><img class="thumbImg magCover" src="../publicData/news04.jpg"></td>
+            <td class="aLeft">23335008優嘉實業股份有限公司_四分之一頁.jpg</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+
+    <section class="page">
+      <p>每頁顯示 <select name="perPage" id="perPage">
+          <option value="30">10</option>
+          <option value="30">25</option>
+          <option value="10">50</option>
+          <option value="30">全部</option>
+        </select> 筆 </p>
+      <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+      <ul>
+        <li class="prev disabled"><a href="#">上一頁</a></li>
+        <li class="here"><a href="#">1</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">12</a></li>
+        <li class="next"><a href="#">下一頁</a></li>
+      </ul>
+    </section>
+
+  </section>
+
+
+
+
+</body>
+
+</html>

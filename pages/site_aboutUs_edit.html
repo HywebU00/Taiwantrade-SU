@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-公司介紹/編輯 </title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>公司介紹設定</h2>
+        <ul class="path">
+          <li><a href="#">企業網管理</a></li>
+          <li>公司介紹設定</li>
+        </ul>
+      </header>
+
+      <div class="navBtnsDv">
+        <span class="btnLook back"><a href="javascript: history.go(-1)">返回</a></span>
+      </div>
+      <section class="formX">
+        <table class="formLayout">
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr>次標題名稱</td>
+            <td><input type="text" value="Detailed machine operation manual"></td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr>狀態</td>
+            <td>
+              <div class="optionPool singleSelection">
+                <label><input type="radio" checked>顯示</label>
+                <label><input type="radio">隱藏</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr>型態</td>
+            <td>
+              <div class="optionPool singleSelection">
+                <label><input type="radio" checked>連結</label> <label><input type="radio">內文</label>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr>連結網址</td>
+            <td><input type="text" type="url"></td>
+          </tr>
+          <tr>
+            <td>網址開啟方式</td>
+            <td>
+              <div class="optionPool singleSelection"><label><input type="radio" checked>原視窗開啟</label> <label><input type="radio">新視窗開啟</label></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td><abbr title="必填欄位" class="required">*</abbr>內文</td>
+            <td>（（（ Froala Editor）））</td>
+          </tr>
+          <tr>
+            <td>圖片上傳</td>
+            <td>
+              <div class="imageInputSet">
+                <input type="text" placeholder="請輸入圖片說明文字">
+                <div class="buttons"><!-- ＊未上傳圖片時 -->
+                  <button type="button" class="showLightbox" id="upload">上傳</button>
+                  <button type="button" class="showLightbox" id="imgInLib">從圖庫挑選</button>
+                </div>
+                <div class="previewImage"><!-- ＊已上傳圖片時 -->
+                  <a href="//" download=""><img src="../publicData/ph02.jpg" alt=""></a>
+                  <p class="imgFilename">imgFileName.jpg</p>
+                  <span class="removeThis"></span>
+                </div>
+                <div class="buttons" style="display: none;">
+                  <button type="button" class="showLightbox" id="upload">重新上傳</button>
+                  <button type="button" class="showLightbox" id="imgInLib">從圖庫挑選</button>
+                  <button type="button" class="restore">還原</button>
+                </div>
+              </div>
+                
+              <div class="hint">
+                <p>圖檔限制</p>
+                <ol>
+                  <li>圖檔規格：(寬)360* (高)360像素，如上傳檔案超過顯示，則系統自動縮圖為(寬)360* (高)360像素</li>
+                  <li>圖檔格式：jpg、gif、png</li>
+                  <li>圖檔大小：1MB為內</li>
+                  <li>圖檔名稱：建議以公司名稱命名，有利於SEO搜尋</li>
+                  <li>建議最佳解析度：72dpi</li>
+                </ol>
+              </div>
+            </td>
+          </tr>
+
+
+          <tr>
+            <td>影音上傳</td>
+            <td>
+              <div class="videoInputSet">
+                <input type="text" placeholder="請輸入影音說明文字">
+                <span class="label">影音URL</span>
+                <select name="" id=""><option value="">Youtube</option></select>
+                <input type="url" placeholder="請輸入Youtube影音連結" value="https://youtu.be/b-DZr3vq3oY">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/b-DZr3vq3oY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="buttons">
+                  <button type="button" class="showLightbox" id="videoInLib">從影片庫挑選</button>
+                  <button type="button" class="trigPop" id="pop-delConfirm">刪除影音</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="btnDv">
+          <input type="submit" value="儲存">
+        </div>
+      </section>
+
+
+
+
+
+     
+
+
+      
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+  <!-- 上傳圖片 -->
+  <section class="lightbox upload">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <div class="head">
+      <h3>上傳圖片</h3>
+    </div>
+    <section class="formX">
+      <table class="formLayout">
+        <tr>
+          <td><abbr title="必填欄位" class="required">*</abbr>群組</td>
+          <td>
+            <select>
+              <option value="" selected="">請選擇</option>
+              <option value="46302">MOBILE</option>
+              <option value="46301">TV</option>
+              <option value="46201">iDealEz2</option>
+              <option value="46181">idealez</option>
+              <option value="1">未分類(Unclassified)</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>圖片上傳</td>
+          <td>
+            <div class="file-drop-zone">
+              <div class="file-drop-zone-title">請將檔案拖曳至此</div>
+              <div class="file-preview-thumbnails"></div>
+              <div class="file-preview-status text-center text-success"></div>
+              <div class="kv-fileinput-error file-error-message" style="display: none;"></div>
+              <div class="inputFileSet">
+                <div class="filname"></div>
+                <input type="file" title="選擇檔案">
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>浮水印</td>
+          <td>
+            <label class="aloneCheck applyWaterMark"><input type="checkbox">疊加浮水印</label>
+            <div class="waterMarkSetting">
+              <label class="waterMark-text"><span class="label">浮水印文字</span><input type="text" disabled></label>
+              <div class="waterMark-position">
+                <span class="label">浮水印位置</span>
+                <div class="optionPool">
+                  <label><input type="checkbox">左上</label>
+                  <label><input type="checkbox">左下</label>
+                  <label><input type="checkbox">置中</label>
+                  <label><input type="checkbox">右上</label>
+                  <label><input type="checkbox">右下</label>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+
+      </table>
+      <div class="btnDv"><input class="hideLightbox" type="button" value="關閉"></div>
+    </section>
+  </section>
+
+  <!-- 從圖庫挑選 -->
+  <section class="lightbox imgInLib">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <div class="head">
+      <h3>從圖庫挑選</h3>
+    </div>
+    <section class="search">
+      <table class="formLayout">
+        <tr>
+          <td>群組</td>
+          <td>
+            <select>
+              <option value="" selected="">請選擇</option>
+              <option value="46701">CRM16</option>
+              <option value="46302">MOBILE</option>
+              <option value="46301">TV</option>
+              <option value="45422">Alcohol &amp; Tobaccoa</option>
+              <option value="45421">Staring Staring</option>
+              <option value="45164">Bicycle</option>
+              <option value="45221">Nature</option>
+              <option value="45201">Bicycle Parts</option>
+              <option value="45165">Cartney</option>
+              <option value="141">Member</option>
+              <option value="42">Taiwantrade</option>
+              <option value="1">未分類(Unclassified)</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>圖片檔案名稱</td>
+          <td><input type="text"></td>
+        </tr>
+      </table>
+      <div class="btnDv">
+        <input type="submit" value="查詢">
+        <input type="reset" value="清除">
+      </div>
+    </section>
+
+    <section class="page">
+      每頁顯示 <select name="perPage" id="perPage">
+        <option value="30">10</option>
+        <option value="30">25</option>
+        <option value="10">50</option>
+        <option value="30">全部</option>
+        </select> 筆
+    </section>
+
+    <section class="listTable hasThumbImg">
+      <table>
+        <thead>
+          <tr>
+            <th>選擇</th>
+            <th>圖片</th>
+            <th>檔名</th>
+            <th>圖片大小</th>
+            <th>圖檔寬高（寬, 高）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><label class="listRadio"><input name="aaa" type="radio" checked></label></td>
+            <td><img class="thumbImg" src="../publicData/ph01.jpg"></td>
+            <td>ImgScrTest.jpg</td>
+            <td>57KB</td>
+            <td>(360, 360)</td>
+          </tr>
+          <tr>
+            <td><label class="listRadio"><input name="aaa" type="radio"></label></td>
+            <td><img class="thumbImg" src="../publicData/ph02.jpg"></td>
+            <td>high-quality-wallpaper-360x360.jpg</td>
+            <td>74KB</td>
+            <td>(360, 225)</td>
+          </tr>
+          <tr>
+            <td><label class="listRadio"><input name="aaa" type="radio"></label></td>
+            <td><img class="thumbImg" src="../publicData/ph07.jpg"></td>
+            <td>F1446270654495.jpg</td>
+            <td>49KB</td>
+            <td>(620, 414)</td>
+          </tr>
+          <tr>
+            <td><label class="listRadio"><input name="aaa" type="radio"></label></td>
+            <td><img class="thumbImg" src="../publicData/ph04.jpg"></td>
+            <td>F1442829043658.jpg</td>
+            <td>44KB</td>
+            <td>(620, 600)</td>
+          </tr>
+          <tr>
+            <td><label class="listRadio"><input name="aaa" type="radio"></label></td>
+            <td><img class="thumbImg" src="../publicData/ph05.jpg"></td>
+            <td>F1442829100332.jpg</td>
+            <td>69KB</td>
+            <td>(620, 465)</td>
+          </tr>
+          <tr>
+            <td><label class="listRadio"><input name="aaa" type="radio"></label></td>
+            <td><img class="thumbImg" src="../publicData/ph06.jpg"></td>
+            <td>CAZP3R1C.jpg</td>
+            <td>4KB</td>
+            <td>(215, 121)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page">
+      <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+      <ul>
+        <li class="prev disabled"><a href="#">上一頁</a></li>
+        <li class="here"><a href="#">1</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">12</a></li>
+        <li class="next"><a href="#">下一頁</a></li>
+      </ul>
+    </section>
+
+    <div class="btnDv">
+      <input type="submit" class="hideLightbox" value="確定">
+      <input type="reset" class="hideLightbox" value="取消">
+    </div>
+
+  </section>
+
+  <!-- 從影片庫挑選 -->
+  <section class="lightbox videoInLib">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <div class="head">
+      <h3>從影片庫挑選</h3>
+    </div>
+
+    <div class="searchOnTop">
+      群組
+      <select>
+        <option value="" selected="">請選擇</option>
+        <option value="111">videoGroup1</option>
+        <option value="222">videoGroup22</option>
+        <option value="333">videoGroup1</option>
+        <option value="444">videoGroup4</option>
+        <option value="5">videoGroup5</option>
+        <option value="6">videoGroup6</option>
+        <option value="7">Nature</option>
+        <option value="1">未分類(Unclassified)</option>
+      </select>
+    </div>
+
+    <section class="page">
+      每頁顯示 <select name="perPage" id="perPage">
+        <option value="30">10</option>
+        <option value="30">25</option>
+        <option value="10">50</option>
+        <option value="30">全部</option>
+        </select> 筆
+    </section>
+
+    <section class="listTable hasEmbVideo">
+      <table>
+        <thead>
+          <tr>
+            <th>選擇</th>
+            <th>序號</th>
+            <th>標題</th>
+            <th>影片</th>
+            <th>影音平台來源</th>
+            <th>新增日期</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><label class="listRadio"><input name="vvv" type="radio" checked></label></td>
+            <td>12431</td>
+            <td class="title"><a href="#">6月4號全球市場趨勢線上報告會－中東：TR土耳其、SA沙烏地阿拉伯</a></td>
+            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/GQvsNITNgGA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+            <td>Youtube</td>
+            <td><time>2020-06-04</time></td>
+          </tr>
+          <tr>
+            <td><label class="listRadio"><input name="vvv" type="radio" checked></label></td>
+            <td>12871</td>
+            <td class="title"><a href="#">諮詢服務實戰篇- 物流x電商 『疫』起挖商機</a></td>
+            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/aOrYwKVORUM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+            <td>Youtube</td>
+            <td><time>2012-09-13 5:31</time></td>
+          </tr>
+          <tr>
+            <td><label class="listRadio"><input name="vvv" type="radio" checked></label></td>
+            <td>14831</td>
+            <td class="title"><a href="#">Taipei time: 9:30-11:00 Global G.A.P. Certified Taiwanese Agricultural &Food Products Launch.</a></td>
+            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/Fhbb_c8HEwA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+            <td>Youtube</td>
+            <td><time>2020-05-27 10:10</time></td>
+          </tr>
+          <tr>
+            <td><label class="listRadio"><input name="vvv" type="radio" checked></label></td>
+            <td>16666</td>
+            <td class="title"><a href="#">貿協組團搶攻邊境商機</a></td>
+            <td><iframe id="youtubePlayer_16762" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="206" height="122" src="https://www.youtube.com/embed/o0JHXCHBKPY?enablejsapi=1&amp;origin=https%3A%2F%2Fsu.ttstaging.com.tw&amp;widgetid=6"></iframe></td>
+            <td>Youtube</td>
+            <td><time>2012-09-13</time></td>
+          </tr>
+          <tr>
+            <td><label class="listRadio"><input name="vvv" type="radio" checked></label></td>
+            <td>16682</td>
+            <td class="title"><a href="#">Leo vel fringilla est ullamcorper eget</a></td>
+            <td><iframe id="youtubePlayer_16772" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="206" height="122" src="https://www.youtube.com/embed/0PIv_WQFqng?enablejsapi=1&amp;origin=https%3A%2F%2Fsu.ttstaging.com.tw&amp;widgetid=13"></iframe></td>
+            <td>Youtube</td>
+            <td><time>2012-09-13</time></td>
+          </tr>
+          <tr>
+            <td><label class="listRadio"><input name="vvv" type="radio" checked></label></td>
+            <td>16742</td>
+            <td class="title"><a href="#">外貿協會線上「防疫國家館」記者會</a></td>
+            <td><iframe width="560" height="315" src="https://www.youtube.com/embed/82bhO_gq8Zw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+            <td>Youtube</td>
+            <td><time>2020-06-04 11:20</time></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <section class="page">
+      <p>本頁顯示 <em>1</em> 到 <em>10</em> 筆，共有 <em>57</em> 筆</p>
+      <ul>
+        <li class="prev disabled"><a href="#">上一頁</a></li>
+        <li class="here"><a href="#">1</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">5</a></li>
+        <li class="ellipsis">...</li>
+        <li><a href="#">12</a></li>
+        <li class="next"><a href="#">下一頁</a></li>
+      </ul>
+    </section>
+
+    <div class="btnDv">
+      <input type="submit" class="hideLightbox" value="確定">
+      <input type="reset" class="hideLightbox" value="取消">
+    </div>
+
+  </section>
+
+  <!-- 確定刪除 ?-->
+  <section class="popMsg" id="delConfirm">
+    <div class="popBody">
+      <p>確定刪除?</p>
+    </div>
+    <div class="btnDv">
+      <button type="submit" class="closePop confirm">確定</button>
+      <button type="button" class="closePop">取消</button>
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,2199 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My TT 儀表板 - 2024 營運分析、市場分析、銷售分析</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>My Taiwantrade</a>
+            <ul>
+              <li><a href="javascript:;">我的提醒</a></li>
+              <li><a href="javascript:;">商機資料庫查詢</a></li>
+              <li><a href="javascript:;">成功案例分享</a></li>
+              <li><a href="javascript:;">會員買賣訊息刊登</a></li>
+              <li><a href="javascript:;">我的追蹤清單</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>營運儀表板</h2>
+        <ul class="path">
+          <li><a href="#">My Taiwantrade</a></li>
+          <li>營運儀表板</li>
+        </ul>
+      </header>
+
+      <!-- 模擬日期套件效果 -->
+      <div class="dateRangePicker" data-label="最後可查詢日為4天前">
+        <input class="dateRange" type="text" name="dates" value="2024年7月26日 ~ 2024年8月11日">
+        <div class="pickRange">
+          <div class="rangeList">
+            <ul>
+              <li><button type="button">7天</button></li>
+              <li><button type="button">30天</button></li>
+              <li><button type="button">60天</button></li>
+              <li><button type="button">90天</button></li>
+              <li class="active"><button type="button">自選日期</button></li>
+            </ul>
+          </div>
+
+          <!-- 選日期範圍套件  -->
+          <div class="daterangepicker ltr show-calendar opensleft">
+            <div class="drp-calendar left">
+              <div class="calendar-table">
+                <table class="table-condensed">
+                  <thead>
+                    <tr>
+                      <th class="prev available"><span></span></th>
+                      <th colspan="5" class="month">2024 七月</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <th>日</th>
+                      <th>一</th>
+                      <th>二</th>
+                      <th>三</th>
+                      <th>四</th>
+                      <th>五</th>
+                      <th>六</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="weekend off ends available" data-title="r0c0">30</td>
+                      <td class="available" data-title="r0c1">1</td>
+                      <td class="available" data-title="r0c2">2</td>
+                      <td class="available" data-title="r0c3">3</td>
+                      <td class="available" data-title="r0c4">4</td>
+                      <td class="available" data-title="r0c5">5</td>
+                      <td class="weekend available" data-title="r0c6">6</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend available" data-title="r1c0">7</td>
+                      <td class="available" data-title="r1c1">8</td>
+                      <td class="available" data-title="r1c2">9</td>
+                      <td class="available" data-title="r1c3">10</td>
+                      <td class="available" data-title="r1c4">11</td>
+                      <td class="available" data-title="r1c5">12</td>
+                      <td class="weekend available" data-title="r1c6">13</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend available" data-title="r2c0">14</td>
+                      <td class="available" data-title="r2c1">15</td>
+                      <td class="available" data-title="r2c2">16</td>
+                      <td class="available" data-title="r2c3">17</td>
+                      <td class="available" data-title="r2c4">18</td>
+                      <td class="available" data-title="r2c5">19</td>
+                      <td class="weekend available" data-title="r2c6">20</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend available" data-title="r3c0">21</td>
+                      <td class="available" data-title="r3c1">22</td>
+                      <td class="available" data-title="r3c2">23</td>
+                      <td class="available" data-title="r3c3">24</td>
+                      <td class="available" data-title="r3c4">25</td>
+                      <td class="active start-date available" data-title="r3c5">26</td>
+                      <td class="in-range weekend available" data-title="r3c6">27</td>
+                    </tr>
+                    <tr>
+                      <td class="in-range weekend available" data-title="r4c0">28</td>
+                      <td class="in-range today available in-range" data-title="r4c1">29</td>
+                      <td class="in-range available" data-title="r4c2">30</td>
+                      <td class="in-range available" data-title="r4c3">31</td>
+                      <td class="in-range off ends available" data-title="r4c4">1</td>
+                      <td class="in-range off ends available" data-title="r4c5">2</td>
+                      <td class="weekend off ends available in-range" data-title="r4c6">3</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend off ends available in-range" data-title="r5c0">4</td>
+                      <td class="off ends available in-range" data-title="r5c1">5</td>
+                      <td class="off ends available in-range" data-title="r5c2">6</td>
+                      <td class="off ends available in-range" data-title="r5c3">7</td>
+                      <td class="off ends available in-range" data-title="r5c4">8</td>
+                      <td class="off ends available in-range" data-title="r5c5">9</td>
+                      <td class="weekend off ends available in-range" data-title="r5c6">10</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="drp-calendar right">
+              <div class="calendar-table">
+                <table class="table-condensed">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th colspan="5" class="month">2024 八月</th>
+                      <th class="next available"><span></span></th>
+                    </tr>
+                    <tr>
+                      <th>日</th>
+                      <th>一</th>
+                      <th>二</th>
+                      <th>三</th>
+                      <th>四</th>
+                      <th>五</th>
+                      <th>六</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="weekend off ends available" data-title="r0c0">28</td>
+                      <td class="today off ends active start-date available in-range" data-title="r0c1">29</td>
+                      <td class="off ends available" data-title="r0c2">30</td>
+                      <td class="off ends available" data-title="r0c3">31</td>
+                      <td class="in-range available" data-title="r0c4">1</td>
+                      <td class="in-range available" data-title="r0c5">2</td>
+                      <td class="in-range weekend available" data-title="r0c6">3</td>
+                    </tr>
+                    <tr>
+                      <td class="in-range weekend available" data-title="r1c0">4</td>
+                      <td class="in-range available" data-title="r1c1">5</td>
+                      <td class="in-range available" data-title="r1c2">6</td>
+                      <td class="in-range available" data-title="r1c3">7</td>
+                      <td class="active in-range available" data-title="r1c4">8</td>
+                      <td class="in-range available" data-title="r1c5">9</td>
+                      <td class="in-range weekend available" data-title="r1c6">10</td>
+                    </tr>
+                    <tr>
+                      <td class="end-date in-range weekend available" data-title="r2c0">11</td>
+                      <td class="available" data-title="r2c1">12</td>
+                      <td class="available" data-title="r2c2">13</td>
+                      <td class="available" data-title="r2c3">14</td>
+                      <td class="available" data-title="r2c4">15</td>
+                      <td class="available" data-title="r2c5">16</td>
+                      <td class="weekend available" data-title="r2c6">17</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend available" data-title="r3c0">18</td>
+                      <td class="available" data-title="r3c1">19</td>
+                      <td class="available" data-title="r3c2">20</td>
+                      <td class="available" data-title="r3c3">21</td>
+                      <td class="available" data-title="r3c4">22</td>
+                      <td class="available" data-title="r3c5">23</td>
+                      <td class="weekend available" data-title="r3c6">24</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend available" data-title="r4c0">25</td>
+                      <td class="available" data-title="r4c1">26</td>
+                      <td class="available" data-title="r4c2">27</td>
+                      <td class="available" data-title="r4c3">28</td>
+                      <td class="available" data-title="r4c4">29</td>
+                      <td class="available" data-title="r4c5">30</td>
+                      <td class="weekend available" data-title="r4c6">31</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend off ends available" data-title="r5c0">1</td>
+                      <td class="off ends available" data-title="r5c1">2</td>
+                      <td class="off ends available" data-title="r5c2">3</td>
+                      <td class="off ends available" data-title="r5c3">4</td>
+                      <td class="off ends available" data-title="r5c4">5</td>
+                      <td class="off ends available" data-title="r5c5">6</td>
+                      <td class="weekend off ends available" data-title="r5c6">7</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="calendar-time" style="display: none;"></div>
+            </div>
+            <div class="drp-buttons">
+              <span class="drp-selected">2024/7/26 - 2024/8/11</span>
+              <button class="cancelBtn btn btn-sm btn-default" type="button">取消</button>
+              <button class="applyBtn btn btn-sm btn-primary" type="button">確定</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="tabGroup">
+        <div class="tabs">
+          <ul>
+            <li class="active">營運分析</li>
+            <li class="">市場分析</li>
+            <li class="">銷售分析</li>
+          </ul>
+        </div>
+
+
+        <!-- ***營運分析*** -->
+        <div class="tabContainer">
+          <section class="operationalAnalysis">
+            <div class="colx-211">
+              <section class="block">
+                <div class="heading">
+                  <h3>企業網瀏覽量<span class="icon_i trigPop" id="pop-msg001"></span></h3>
+                  <div class="sumUp">
+                    <em>342.1萬</em>
+                    <span class="trend up">18.9%</span>
+                    <p>與10天前比</p>
+                  </div>
+                </div>
+  
+                <div class="listTable">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th style="width: 55%;"><span class="sortingTh ellipsis">網頁標題</span></th>
+                        <th style="width: 22%;"><span class="sortingTh ellipsis">訪客數</span></th>
+                        <th style="width: 22%;"><span class="sortingTh descending ellipsis">瀏覽量</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="rowOrder">1</td>
+                        <td>
+                          <span class="nowrapTitle">Taiwantrade | （此處示範使用刪節號） Sourcing quality Taiwan products, suppliers, manufacturers and exporters.</span>
+                        </td>
+                        <td class="digit grade_02"><span class="ellipsis">78,891</span></td>
+                        <td class="digit grade_01"><span class="ellipsis">123,456,789,012</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">2</td>
+                        <td>
+                          <span class="nowrapTitle">Ariyoshi Industrial CO., LTD. | Taiwantrade</span>
+                        </td>
+                        <td class="digit grade_08"><span class="ellipsis">1,149</span></td>
+                        <td class="digit grade_02"><span class="ellipsis">160,888</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">3</td>
+                        <td>
+                          <span class="nowrapTitle">？？？數字資料是否使用刪節號？</span>
+                        </td>
+                        <td class="digit grade_01"><span class="ellipsis">987,654,321,012</span></td>
+                        <td class="digit grade_03"><span class="ellipsis">116,141</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">4</td>
+                        <td>
+                          <span class="nowrapTitle">Solar camera 4G/WiFi | Yiwei Automobile Technology CO., LTD</span>
+                        </td>
+                        <td class="digit grade_07"><span class="ellipsis">4,209</span></td>
+                        <td class="digit grade_04"><span class="ellipsis">68,690</span></td>
+                      </tr <tr>
+                      <td class="rowOrder">5</td>
+                      <td>
+                        <span class="nowrapTitle">4G GPS Tracker | Yiwei Automobile Technology CO., LTD</span>
+                      </td>
+                      <td class="digit grade_03"><span class="ellipsis">21,963</span></td>
+                      <td class="digit grade_05"><span class="ellipsis">46,175</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">6</td>
+                        <td>
+                          <span class="nowrapTitle">Multifunctional Folding Mat for Exercise and Camping - 6-Fold | Ariyoshi Industrial CO., LTD</span>
+                        </td>
+                        <td class="digit grade_09"><span class="ellipsis">124</span></td>
+                        <td class="digit grade_06"><span class="ellipsis">45,826</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">7</td>
+                        <td>
+                          <span class="nowrapTitle">All Products | Ariyoshi Industrial CO., LTD</span>
+                        </td>
+                        <td class="digit grade_04"><span class="ellipsis">14,710</span></td>
+                        <td class="digit grade_07"><span class="ellipsis">32,018</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">8</td>
+                        <td>
+                          <span class="nowrapTitle">Streamline Your Connections with Hub | TITAN ELECTRONICS INC. </span>
+                        </td>
+                        <td class="digit grade_06"><span class="ellipsis">4,957</span></td>
+                        <td class="digit grade_08"><span class="ellipsis">28,105</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">9</td>
+                        <td>
+                          <span class="nowrapTitle">All Products | Creative Laser Tech Co. Ltd.</span>
+                        </td>
+                        <td class="digit grade_05"><span class="ellipsis">10,551</span></td>
+                        <td class="digit grade_09"><span class="ellipsis">24,257</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">10</td>
+                        <td>
+                          <span class="nowrapTitle">CAN-Link USB Adapter: Industrial CAN Bus Communication Solution | TITAN ELECTRONICS INC.</span>
+                        </td>
+                        <td class="digit grade_10"><span class="ellipsis">21</span></td>
+                        <td class="digit grade_10"><span class="ellipsis">20,522</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="more"><a href="myTT_dashboard03_網頁瀏覽報表.html">查看網頁瀏覽報表</a></div>
+              </section>
+  
+              <section class="block">
+                <div class="heading">
+                  <h3>訪客數<span class="icon_i trigPop" id="pop-msg002"></span></h3>
+                  <div class="sumUp">
+                    <em>81.7萬</em>
+                    <span class="trend up">24.5%</span>
+                    <p>與10天前比</p>
+                  </div>
+                </div>
+                <div class="listTable">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th><span class="sortingTh ellipsis">國家／地區</span></th>
+                        <th style="width: 29%;"><span class="sortingTh ellipsis descending">訪客數</span></th>
+                        <th style="width: 29%;"><span class="sortingTh ellipsis">國家佔比</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="rowOrder">1</td>
+                        <td>India</td>
+                        <td class="digit grade_01"><span class="ellipsis">3,707,000,999</span></td>
+                        <td class="digit grade_01">20.3%</td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">2</td>
+                        <td>Taiwan</td>
+                        <td class="digit grade_03"><span class="ellipsis">127,406</span></td>
+                        <td class="digit grade_03">18.5%</td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">3</td>
+                        <td>Indonesia</td>
+                        <td class="digit grade_05"><span class="ellipsis">62,171</span></td>
+                        <td class="digit grade_05">10.8%</td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">4</td>
+                        <td>United States</td>
+                        <td class="digit grade_07"><span class="ellipsis">44,125</span></td>
+                        <td class="digit grade_07">8.9%</td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">5</td>
+                        <td>Philippines</td>
+                        <td class="digit grade_09"><span class="ellipsis">26,908</span></td>
+                        <td class="digit grade_09">2.6%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="more"><a href="myTT_dashboard01_使用者資訊.html">查看使用者資訊</a></div>
+              </section>
+  
+              <section class="block">
+                <div class="heading">
+                  <h3>商機數<span class="icon_i trigPop" id=""></span></h3>
+                  <div class="sumUp">
+                    <em>893</em>
+                    <span class="trend down">-168</span>
+                    <p>與10天前比</p>
+                  </div>
+                </div>
+                <div class="listTable">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>商機</th>
+                        <th><span class="sortingTh descending">次數</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="rowOrder">1</td>
+                        <td>Inquiry (Company)</td>
+                        <td class="digit grade_01" ><span class="ellipsis">1,533,333,333</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">2</td>
+                        <td>Inquiry (Product)</td>
+                        <td class="digit grade_03"><span class="ellipsis">211</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">3</td>
+                        <td>Trade Inquiry</td>
+                        <td class="digit grade_05"><span class="ellipsis">36</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="more"><a href="#">查看商機清單</a></div>
+              </section>
+            </div>
+
+            <div class="colx-211">
+              <section class="block">
+                <div class="heading">
+                  <h3>型錄瀏覽量<span class="icon_i trigPop" id=""></span></h3>
+                  <div class="sumUp">
+                    <em>60.8萬</em>
+                    <span class="trend up">73.2%</span>
+                    <p>與10天前比</p>
+                  </div>
+                </div>
+                <div class="listTable">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th style="width: 55%;">產品名稱</th>
+                        <th style="width: 22%;"><span class="sortingTh descending ellipsis">訪客數</span></th>
+                        <th style="width: 22%;"><span class="sortingTh ellipsis">瀏覽量</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="rowOrder">1</td>
+                        <td>(not set)</td>
+                        <td class="digit grade_01"><span class="ellipsis">159,427</span></td>
+                        <td class="digit grade_01"><span class="ellipsis">300,459</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">2</td>
+                        <td>
+                          <span class="nowrapTitle">4G GPS Tracker | Yiwei Automobile Technology CO., LTD</span>
+                        </td>
+                        <td class="digit grade_02"><span class="ellipsis">21,957</span></td>
+                        <td class="digit grade_02"><span class="ellipsis">23,317</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">3</td>
+                        <td>
+                          <span class="nowrapTitle">Solar camera 4G/WiFi | Yiwei Automobile Technology CO., LTD</span>
+                        </td>
+                        <td class="digit grade_03"><span class="ellipsis">13,160</span></td>
+                        <td class="digit grade_03"><span class="ellipsis">21,423</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">4</td>
+                        <td>
+                          <span class="nowrapTitle">4G GPS Tracker</span>
+                        </td>
+                        <td class="digit grade_04"><span class="ellipsis">10,169</span></td>
+                        <td class="digit"><span class="ellipsis">0</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">5</td>
+                        <td>
+                          <span class="nowrapTitle">Solar camera 4G/WiFi | Yiwei Automobile Technology CO., LTD</span>
+                        </td>
+                        <td class="digit grade_05"><span class="ellipsis">9,167</span></td>
+                        <td class="digit grade_05"><span class="ellipsis">14,954</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">6</td>
+                        <td>
+                          <span class="nowrapTitle">Solar camera 4G/WiFi</span>
+                        </td>
+                        <td class="digit grade_06"><span class="ellipsis">7,030</span></td>
+                        <td class="digit"><span class="ellipsis">0</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">7</td>
+                        <td>
+                          <span class="nowrapTitle">Solar camera 4G/WiFi</span>
+                        </td>
+                        <td class="digit grade_07"><span class="ellipsis">6,499</span></td>
+                        <td class="digit"><span class="ellipsis">0</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">8</td>
+                        <td>
+                          <span class="nowrapTitle">Streamline Your Connections with Hub | TITAN ELECTRONICS INC</span>
+                        </td>
+                        <td class="digit grade_08"><span class="ellipsis">4,945</span></td>
+                        <td class="digit grade_04"><span class="ellipsis">15,038</span></td>
+                      </tr>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">9</td>
+                        <td>
+                          <span class="nowrapTitle">Quality Custom OEM Flexible Rubber Impellers | SHENG JAAN INDUSTRIAL CO., LTD.</span>
+                        </td>
+                        <td class="digit grade_09"><span class="ellipsis">4,316</span></td>
+                        <td class="digit grade_06"><span class="ellipsis">4,648</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">10</td>
+                        <td>
+                          <span class="nowrapTitle">Quality Custom OEM Flexible Rubber Impellers</span>
+                        </td>
+                        <td class="digit grade_10"><span class="ellipsis">3,508</span></td>
+                        <td class="digit"><span class="ellipsis">0</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="more"><a href="myTT_dashboard03_網頁瀏覽報表.html">查看網頁瀏覽報表</a></div>
+              </section>
+  
+              <section class="block">
+                <div class="heading">
+                  <h3>流量進站來源<span class="icon_i trigPop" id=""></span></h3>
+                </div>
+                <div class="chartHere">
+                  <!-- 這裡放長條圖 -->
+                  <img class="fake-chart" src="../publicData/fakechart01-1.png" alt="佔位假統計圖">
+                </div>
+  
+                <div class="more"><a href="myTT_dashboard02_來源管道報表.html">查看來源管道報表</a></div>
+              </section>
+  
+              <section class="block">
+                <div class="heading">
+                  <h3>重要互動行為<span class="icon_i trigPop" id=""></span></h3>
+                </div>
+
+                <div class="listTable">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th><span class="ellipsis">重要互動行為</span></th>
+                        <th style="width: 30%;"><span class="sortingTh descending ellipsis">次數</span></th>
+                        <th style="width: 30%;"><span class="sortingTh ellipsis">事件數變化</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="rowOrder">1</td>
+                        <td>瀏覽新聞</td>
+                        <td class="digit grade_01"><span class="ellipsis">1,888,589</span></td>
+                        <td class="digit"><span class="ellipsis">-43</span><span class="indiArrow down" aria-label="減少"></span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">2</td>
+                        <td>加到最愛</td>
+                        <td class="digit grade_03"><span class="ellipsis">155,728</span></td>
+                        <td class="digit"><span class="ellipsis">1,234,567,890</span><span class="indiArrow up" aria-label="增加"></span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">3</td>
+                        <td>觀看影片</td>
+                        <td class="digit grade_05"><span class="ellipsis">5,572</span></td>
+                        <td class="digit"><span class="ellipsis">15</span><span class="indiArrow up" aria-label="增加"></span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">4</td>
+                        <td>加入購物車</td>
+                        <td class="digit grade_07"><span class="ellipsis">1,183</span></td>
+                        <td class="digit"><span class="ellipsis">29</span><span class="indiArrow up" aria-label="增加"></span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="more"><a href="myTT_dashboard04_重要行為報表.html">查看重要行為報表</a></div>
+              </section>
+            </div>
+
+          </section>
+        </div>
+
+        <!-- ***市場分析*** -->
+        <div class="tabContainer">
+          <section class="marketAnalysis">
+
+            <div class="industryCategory">
+              <span class="label">比較產業：</span>
+
+              <div class="multiCategory">
+                <div class="inputAndBtns">
+                  <input id="pdCategory" type="text" readonly>
+                  <button type="button" id="pdCateSel" data-alttext="取消">選擇分類</button>
+                  <button type="button" id="pdCateOk">確定</button>
+                </div>
+                <div class="cateSelect">
+                  <div class="cateSearch">
+                    <span class="label">查詢產業</span>
+                    <input type="text" placeholder="請輸入6碼代碼或中英關鍵字">
+                    <input type="submit" value="查詢">
+                  </div>
+                  <div class="cateList">
+                    <ul>
+                      <li>Agricultural &amp; Foods -- 農產及食品</li>
+                      <li>Apparel &amp; Accessories -- 服飾及配件</li>
+                      <li>Automobiles &amp;amp; Motorcycles -- 汽機車</li>
+                      <li>Beauty &amp; Personal Care -- 美容及個人用品</li>
+                      <li>Bicycles -- 自行車</li>
+                      <li>Chemicals -- 化學品</li>
+                      <li>Computer -- 電腦</li>
+                      <li>Construction -- 建材及衛浴設備</li>
+                      <li>Consumer Electronics -- 消費性電子</li>
+                      <li>Electrical &amp;amp; Electronics -- 電機及電子</li>
+                      <li>Furniture -- 家具</li>
+                      <li>Gifts &amp; Crafts -- 禮品及藝品</li>
+                      <li>Hardware -- 五金</li>
+                      <li>Home Appliances -- 家庭用電器</li>
+                      <li>Houseware -- 家庭用品</li>
+                      <li>Lights &amp;amp; Lighting -- 燈光及照明</li>
+                      <li>Luggage, Bags &amp;amp; Cases -- 箱包</li>
+                      <li>Machinery -- 機械</li>
+                      <li>Measurement &amp; Analysis Instrument -- 量測及分析儀器</li>
+                      <li>Mechanical Parts -- 機械零件</li>
+                      <li>Medical &amp; Health -- 醫療及保健</li>
+                      <li>Mineral &amp;amp; Metallurgy -- 礦產及金屬材料</li>
+                      <li>Musical Instruments -- 樂器</li>
+                      <li>Office &amp; School Supplies -- 辦公室及學校用品</li>
+                      <li>Packaging, Printing &amp; Advertising -- 包裝、印刷及廣告</li>
+                      <li>Security &amp; Protection -- 安全</li>
+                      <li>Services -- 服務業</li>
+                      <li>Ships &amp; Boats -- 船舶</li>
+                      <li>Sports -- 運動用品</li>
+                      <li>Telecom Products -- 電信</li>
+                      <li>Textile &amp; Leather -- 紡織及皮革</li>
+                      <li>Timepiece, Jewelry &amp; Eyewear -- 鐘錶、珠寶及眼鏡</li>
+                      <li>Tools -- 工具</li>
+                      <li>Toys, Baby &amp; Pet Products -- 玩具、嬰幼兒及寵物用品</li>
+                    </ul>
+                    <ul>
+                      <li>Analyzer -- 分析儀器</li>
+                      <li>Electrical &amp; Electronic Measuring Instruments -- 電機及電子測量儀器</li>
+                      <li>Flow &amp; Level Measuring Instruments -- 流量及液位測量儀器</li>
+                      <li>Instrument Parts &amp; Accessories -- 儀器零配件</li>
+                      <li>Lab Supplies -- 實驗室器材</li>
+                      <li>Measuring Tools &amp; Calibrators -- 量測工具及校正器</li>
+                      <li>Optical Instruments -- 光學儀器</li>
+                      <li>Physical Measurng Instruments -- 物理測量儀器</li>
+                      <li>Pressure &amp; Temperature Measuring Instruments -- 壓力及溫度測量儀器</li>
+                      <li>Testing Equipment -- 測試儀器</li>
+                      <li>Weighing Scales -- 重量測量儀器</li>
+                    </ul>                    
+                    <ul>
+                      <li>Other Pressure &amp; Temprature Measuring Instrument -- 其他壓力及溫度測量器</li>
+                      <li>Pressure Gauge -- 壓力表</li>
+                      <li>Pressure Transmitter -- 壓力傳送器</li>
+                      <li>Temperature Controller &amp; Transitter -- 溫度控制器及傳送器</li>
+                      <li>Thermometer -- 溫度計</li>
+                    </ul>                    
+                  </div>
+                  <div class="cateList bySearch" style="display: none">
+                    <ul>
+                      <li>Coffee &amp; Side Table -- 咖啡桌及茶几</li>
+                      <li>Coffee &amp; Tea Maker -- 咖啡及茶沖泡器</li>
+                      <li>Electric Airpot &amp; Kettle -- 電茶壺及電熱水瓶</li>
+                      <li>Herbal Tea -- 花草茶</li>
+                      <li>Slimming Tea -- 減肥茶</li>
+                      <li>Tea Drinks -- 茶葉飲料</li>
+                      <li>Tea Leaves -- 茶葉</li>
+                      <li>Tea Processing Machine -- 製茶機</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 
+                <div class="selectImitating">
+                  <div class="selectBtn" data-title="產業分類 第一階">
+                    <span class="placeholder">產業分類 第一階</span>
+                  </div>
+                  <div class="optionGroup">
+                    <div class="pdCateSearch">
+                      <input type="text" placeholder="輸入字詞以查詢">
+                      <input type="submit" value="查詢">
+                    </div>
+                    <label class="checkAll"><input type="checkbox" value="">全選</label>
+                    <label><input type="checkbox" value="">Aerospace -- 航太</label>
+                    <label><input type="checkbox" value="">Agricultural &amp; Foods -- 農產及食品</label>
+                    <label><input type="checkbox" value="">Apparel &amp; Accessories -- 服飾及配件</label>
+                    <label><input type="checkbox" value="">Automobiles &amp; Motorcycles -- 汽機車</label>
+                    <label><input type="checkbox" value="">Beauty &amp; Personal Care -- 美容及個人用品</label>
+                    <label><input type="checkbox" value="">Bicycles -- 自行車</label>
+                    <label><input type="checkbox" value="">Chemicals -- 化學品</label>
+                    <label><input type="checkbox" value="">Computer -- 電腦</label>
+                    <label><input type="checkbox" value="">Construction -- 建材及衛浴設備</label>
+                    <label><input type="checkbox" value="">Consumer Electronics -- 消費性電子</label>
+                    <label><input type="checkbox" value="">Electrical &amp; Electronics -- 電機及電子</label>
+                    <label><input type="checkbox" value="">Furniture -- 家具</label>
+                    <label><input type="checkbox" value="">Gifts &amp; Crafts -- 禮品及藝品</label>
+                    <label><input type="checkbox" value="">Hardware -- 五金</label>
+                    <label><input type="checkbox" value="">Home Appliances -- 家庭用電器</label>
+                    <label><input type="checkbox" value="">Houseware -- 家庭用品</label>
+                    <label><input type="checkbox" value="">Lights &amp; Lighting -- 燈光及照明</label>
+                    <label><input type="checkbox" value="">Luggage, Bags &amp; Cases -- 箱包</label>
+                    <label><input type="checkbox" value="">Machinery -- 機械</label>
+                    <label><input type="checkbox" value="">Measurement &amp; Analysis Instrument -- 量測及分析儀器</label>
+                    <label><input type="checkbox" value="">Mechanical Parts -- 機械零件</label>
+                    <label><input type="checkbox" value="">Medical &amp; Health -- 醫療及保健</label>
+                    <label><input type="checkbox" value="">Mineral &amp; Metallurgy -- 礦產及金屬材料</label>
+                    <label><input type="checkbox" value="">Musical Instruments -- 樂器</label>
+                    <label><input type="checkbox" value="">Office &amp; School Supplies -- 辦公室及學校用品</label>
+                    <label><input type="checkbox" value="">Packaging, Printing &amp; Advertising -- 包裝、印刷及廣告</label>
+                    <label><input type="checkbox" value="">Security &amp; Protection -- 安全</label>
+                    <label><input type="checkbox" value="">Services -- 服務業</label>
+                    <label><input type="checkbox" value="">Ships &amp; Boats -- 船舶</label>
+                    <label><input type="checkbox" value="">Sports -- 運動用品</label>
+                    <label><input type="checkbox" value="">Telecom Products -- 電信</label>
+                    <label><input type="checkbox" value="">Textile &amp; Leather -- 紡織及皮革</label>
+                    <label><input type="checkbox" value="">Timepiece, Jewelry &amp; Eyewear -- 鐘錶、珠寶及眼鏡</label>
+                    <label><input type="checkbox" value="">Tools999 -- 工具</label>
+                    <label><input type="checkbox" value="">Toys, Baby &amp; Pet Products -- 玩具、嬰幼兒及寵物用品</label>
+                  </div>
+                </div>
+                <div class="selectImitating">
+                  <div class="selectBtn" data-title="產業分類 第二階">
+                    <span class="placeholder">產業分類 第二階</span>
+                  </div>
+                  <div class="optionGroup">
+                    <div class="pdCateSearch">
+                      <input type="text" placeholder="輸入字詞以查詢">
+                      <input type="submit" value="查詢">
+                    </div>
+                    <label class="checkAll"><input type="checkbox" value="">全選</label>
+                    <label><input type="checkbox" value="">electronic components and boards</label>
+                    <label><input type="checkbox" value="">computers and peripheral equipment</label>
+                    <label><input type="checkbox" value="">communication equipment</label>
+                    <label><input type="checkbox" value="">consumer electronics</label>
+                    <label><input type="checkbox" value="">measuring, testing, navigating and control equipment; watches and clocks</label>
+                    <label><input type="checkbox" value="">measuring, testing, navigating and control equipment</label>
+                    <label><input type="checkbox" value="">watches and clocks</label>
+                    <label><input type="checkbox" value="">irradiation, electromedical and electrotherapeutic equipment</label>
+                  </div>
+                </div>
+                <div class="selectImitating">
+                  <div class="selectBtn" data-title="產業分類 第三階">
+                    <span class="placeholder">產業分類 第三階</span>
+                  </div>
+                  <div class="optionGroup">
+                    <div class="pdCateSearch">
+                      <input type="text" placeholder="輸入字詞以查詢">
+                      <input type="submit" value="查詢">
+                    </div>
+                    <label class="checkAll"><input type="checkbox" value="">全選</label>
+                    <label><input type="checkbox" value="">desktop computers</label>
+                    <label><input type="checkbox" value="">laptop computers</label>
+                    <label><input type="checkbox" value="">main frame computers</label>
+                    <label><input type="checkbox" value="">hand-held computers (e.g. PDA)</label>
+                    <label><input type="checkbox" value="">magnetic disk drives, flash drives and other storage devices</label>
+                    <label><input type="checkbox" value="">optical (e.g. CD-RW, CD-ROM, DVD-ROM, DVD-RW) disk drives</label>
+                    <label><input type="checkbox" value="">all types of mice, joysticks, and trackball accessories</label>
+                    <label><input type="checkbox" value="">dedicated computer terminals</label>
+                    <label><input type="checkbox" value="">computer servers</label>
+                    <label><input type="checkbox" value="">scanners, including bar code scanners</label>
+                    <label><input type="checkbox" value="">smart card readers</label>
+                    <label><input type="checkbox" value="">virtual reality helmets — manufacture of computer projectors (video beamers)</label>
+                  </div>
+                </div>
+                <button class="icon_search" type="button" aria-label="查詢"></button> 
+              -->
+
+            </div>
+
+
+            <div class="colx-11">
+
+              <!-- 訪客數 + 型錄瀏覽量 + 商機數 -->
+              <section class="lineChartStacks block">
+                <div class="stack">
+                  <table>
+                    <tr>
+                      <th>訪客數<span class="icon_i trigPop"></span></th>
+                      <td>81.7萬</td>
+                    </tr>
+                    <tr>
+                      <th>產業平均</th>
+                      <td>81.7萬</td>
+                    </tr>
+                  </table>
+                  <div class="chartHere">
+                    <!-- 這裡是曲線圖 -->
+                    <img class="fake-chart" src="../publicData/fakechart02-1-1.png" alt="">
+                  </div>
+                </div>
+                <div class="stack">
+                  <table>
+                    <tr>
+                      <th>型錄瀏覽量<span class="icon_i trigPop"></span></th>
+                      <td>342.1萬</td>
+                    </tr>
+                    <tr>
+                      <th>產業平均</th>
+                      <td>81.7萬</td>
+                    </tr>
+                  </table>
+                  <div class="chartHere">
+                    <!-- 這裡是曲線圖 -->
+                    <img class="fake-chart" src="../publicData/fakechart02-1-2.png" alt="">
+                  </div>
+                </div>
+                <div class="stack">
+                  <table>
+                    <tr>
+                      <th>商機數<span class="icon_i trigPop"></span></th>
+                      <td>839</td>
+                    </tr>
+                    <tr>
+                      <th>產業平均</th>
+                      <td>2567</td>
+                    </tr>
+                  </table>
+                  <div class="chartHere">
+                    <!-- 這裡是曲線圖 -->
+                    <img class="fake-chart" src="../publicData/fakechart02-1-3.png" alt="3">
+                  </div>
+                </div>
+              </section>
+  
+              <!-- 產品型錄流量較高國家 -->
+              <section class="block">
+                <div class="heading">
+                  <h3>產品型錄流量較高國家<span class="icon_i trigPop" id=""></span></h3>
+                </div>
+
+                <div class="colx-11">
+                  <div class="chartHere">
+                    <h4>您的型錄訪客國家</h4>
+                    <!-- 這裡放圓餅圖 -->
+                    <!-- <img class="fake-chart" src="../publicData/fakechart02-2-1.png" alt=""> -->
+                    <img src="../publicData/fake-pieChart.svg" alt="">
+                  </div>
+  
+                  <div class="chartHere">
+                    <h4>同產業型錄訪客國家</h4>
+                    <!-- 這裡放圓餅圖 -->
+                    <!-- <img class="fake-chart" src="../publicData/fakechart02-2-2.png" alt=""> -->
+                    <img src="../publicData/fake-pieChart3.svg" alt="">
+                  </div>
+  
+                </div>
+                
+              </section>
+  
+              <!-- 買主熱搜關鍵詞 + 產業熱搜關鍵詞 -->
+              <section class="hotkeywords block">
+                <div class="colx-11">
+                  <section class="column">
+                    <div class="heading">
+                      <h3>買主熱搜關鍵詞<span class="icon_i trigPop" id=""></span></h3>
+                      <span class="funcBtn download"><a download href="filename.xxx">下載</a></span>
+                    </div>
+                    <div class="listTable">
+                      <div class="scrollY">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th style="width: 60%;"><span class="sortingTh ellipsis">關鍵詞</span></th>
+                              <th><span class="sortingTh descending ellipsis">搜尋次數</span></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="rowOrder">1</td>
+                              <td><span class="nowrapTitle">activated carbon</span></td>
+                              <td class="digit"><span class="ellipsis">1,434</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">2</td>
+                              <td><span class="nowrapTitle">Taciti cursus eleifend consectetur blandit mauris</span></td>
+                              <td class="digit"><span class="ellipsis">323</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">3</td>
+                              <td><span class="nowrapTitle">5_axis_machining_center</span></td>
+                              <td class="digit"><span class="ellipsis">206</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">4</td>
+                              <td><span class="nowrapTitle">LCD Panel</span></td>
+                              <td class="digit"><span class="ellipsis">171</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">5</td>
+                              <td><span class="nowrapTitle">Crawlergo</span></td>
+                              <td class="digit"><span class="ellipsis">160</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">6</td>
+                              <td><span class="nowrapTitle">paper-bag-making-machine</span></td>
+                              <td class="digit"><span class="ellipsis">108</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">7</td>
+                              <td><span class="nowrapTitle">stainless steel pipe</span></td>
+                              <td class="digit"><span class="ellipsis">91</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">8</td>
+                              <td><span class="nowrapTitle">Garmin</span></td>
+                              <td class="digit"><span class="ellipsis">87</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">9</td>
+                              <td><span class="nowrapTitle">auto body parts</span></td>
+                              <td class="digit"><span class="ellipsis">76</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">10</td>
+                              <td><span class="nowrapTitle">drone</span></td>
+                              <td class="digit"><span class="ellipsis">73</span></td>
+                            </tr>
+                             
+                            <tr>
+                              <td class="rowOrder">11</td>
+                              <td><span class="nowrapTitle">led+tv</span></td>
+                              <td class="digit"><span class="ellipsis">73</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">12</td>
+                              <td><span class="nowrapTitle">TPU</span></td>
+                              <td class="digit"><span class="ellipsis">70</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">13</td>
+                              <td><span class="nowrapTitle">Autoclave Sterilizer</span></td>
+                              <td class="digit"><span class="ellipsis">68</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">14</td>
+                              <td><span class="nowrapTitle">online electronics shopping</span></td>
+                              <td class="digit"><span class="ellipsis">68</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">15</td>
+                              <td><span class="nowrapTitle">airsoft gun</span></td>
+                              <td class="digit"><span class="ellipsis">65</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">16</td>
+                              <td><span class="nowrapTitle">electronics</span></td>
+                              <td class="digit"><span class="ellipsis">65</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">17</td>
+                              <td><span class="nowrapTitle">cvt set</span></td>
+                              <td class="digit"><span class="ellipsis">63</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">18</td>
+                              <td><span class="nowrapTitle">Second Hand Clothing</span></td>
+                              <td class="digit"><span class="ellipsis">61</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">19</td>
+                              <td><span class="nowrapTitle">power bank</span></td>
+                              <td class="digit"><span class="ellipsis">60</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">20</td>
+                              <td><span class="nowrapTitle">electric scooter</span></td>
+                              <td class="digit"><span class="ellipsis">56</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">21</td>
+                              <td><span class="nowrapTitle">motherboard</span></td>
+                              <td class="digit"><span class="ellipsis">55</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">22</td>
+                              <td><span class="nowrapTitle">smart+watches</span></td>
+                              <td class="digit"><span class="ellipsis">55</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">23</td>
+                              <td><span class="nowrapTitle">泵浦</span></td>
+                              <td class="digit"><span class="ellipsis">55</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">24</td>
+                              <td><span class="nowrapTitle">ssd drives</span></td>
+                              <td class="digit"><span class="ellipsis">54</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">25</td>
+                              <td><span class="nowrapTitle">股份有限公司</span></td>
+                              <td class="digit"><span class="ellipsis">54</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">26</td>
+                              <td><span class="nowrapTitle">golf balls</span></td>
+                              <td class="digit"><span class="ellipsis">53</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">27</td>
+                              <td><span class="nowrapTitle">atv</span></td>
+                              <td class="digit"><span class="ellipsis">52</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">28</td>
+                              <td><span class="nowrapTitle">saxophone</span></td>
+                              <td class="digit"><span class="ellipsis">50</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">29</td>
+                              <td><span class="nowrapTitle">wholesale clothing suppliers</span></td>
+                              <td class="digit"><span class="ellipsis">50</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">30</td>
+                              <td><span class="nowrapTitle">carbon fiber</span></td>
+                              <td class="digit"><span class="ellipsis">49</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">169</td>
+                              <td><span class="nowrapTitle">towel</span></td>
+                              <td class="digit"><span class="ellipsis">17</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">170</td>
+                              <td><span class="nowrapTitle">IP PBX</span></td>
+                              <td class="digit"><span class="ellipsis">17</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">171</td>
+                              <td><span class="nowrapTitle">Automotive tool</span></td>
+                              <td class="digit"><span class="ellipsis">16</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">172</td>
+                              <td><span class="nowrapTitle">Belt Buckles, Lorem ipsum dolor sit amet, consectetur adipiscing elit</span></td>
+                              <td class="digit"><span class="ellipsis">16</span></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="column">
+                    <div class="heading">
+                      <h3>產業熱搜關鍵詞<span class="icon_i trigPop" id=""></span></h3>
+                      <span class="funcBtn download"><a download href="filename.xxx">下載</a></span>
+                    </div>
+    
+                    <div class="listTable">
+                      <div class="scrollY">
+                        <table>
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th style="width: 60%;"><span class="sortingTh ellipsis">關鍵詞</span></th>
+                              <th><span class="sortingTh descending ellipsis">搜尋次數</span></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="rowOrder">1</td>
+                              <td><span class="nowrapTitle">activated carbon</span></td>
+                              <td class="digit"><span class="ellipsis">100,434</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">2</td>
+                              <td><span class="nowrapTitle">Lorem ipsum consectetuer adipiscing elit.</span></td>
+                              <td class="digit"><span class="ellipsis">323</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">3</td>
+                              <td><span class="nowrapTitle">5+axis+machining+center</span></td>
+                              <td class="digit"><span class="ellipsis">206</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">4</td>
+                              <td><span class="nowrapTitle">LCD Panel</span></td>
+                              <td class="digit"><span class="ellipsis">171</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">5</td>
+                              <td><span class="nowrapTitle">Crawlergo</span></td>
+                              <td class="digit"><span class="ellipsis">160</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">6</td>
+                              <td><span class="nowrapTitle">paper bag making machine</span></td>
+                              <td class="digit"><span class="ellipsis">108</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">7</td>
+                              <td><span class="nowrapTitle">stainless steel pipe</span></td>
+                              <td class="digit"><span class="ellipsis">91</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">8</td>
+                              <td><span class="nowrapTitle">Garmin</span></td>
+                              <td class="digit"><span class="ellipsis">87</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">9</td>
+                              <td><span class="nowrapTitle">auto body parts</span></td>
+                              <td class="digit"><span class="ellipsis">76</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">10</td>
+                              <td><span class="nowrapTitle">drone</span></td>
+                              <td class="digit"><span class="ellipsis">73</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">11</td>
+                              <td><span class="nowrapTitle">led+tv</span></td>
+                              <td class="digit"><span class="ellipsis">73</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">12</td>
+                              <td><span class="nowrapTitle">TPU</span></td>
+                              <td class="digit"><span class="ellipsis">70</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">13</td>
+                              <td><span class="nowrapTitle">Autoclave Sterilizer</span></td>
+                              <td class="digit"><span class="ellipsis">68</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">14</td>
+                              <td><span class="nowrapTitle">online electronics shopping</span></td>
+                              <td class="digit"><span class="ellipsis">68</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">15</td>
+                              <td><span class="nowrapTitle">airsoft gun</span></td>
+                              <td class="digit"><span class="ellipsis">65</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">16</td>
+                              <td><span class="nowrapTitle">electronics</span></td>
+                              <td class="digit"><span class="ellipsis">65</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">17</td>
+                              <td><span class="nowrapTitle">cvt set</span></td>
+                              <td class="digit"><span class="ellipsis">63</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">18</td>
+                              <td><span class="nowrapTitle">Second Hand Clothing</span></td>
+                              <td class="digit"><span class="ellipsis">61</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">19</td>
+                              <td><span class="nowrapTitle">power bank</span></td>
+                              <td class="digit"><span class="ellipsis">60</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">20</td>
+                              <td><span class="nowrapTitle">electric scooter</span></td>
+                              <td class="digit"><span class="ellipsis">56</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">37</td>
+                              <td><span class="nowrapTitle">power tools</span></td>
+                              <td class="digit"><span class="ellipsis">45</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">38</td>
+                              <td><span class="nowrapTitle">tea</span></td>
+                              <td class="digit"><span class="ellipsis">45</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">39</td>
+                              <td><span class="nowrapTitle">footwear</span></td>
+                              <td class="digit"><span class="ellipsis">44</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">40</td>
+                              <td><span class="nowrapTitle">OEM ODM</span></td>
+                              <td class="digit"><span class="ellipsis">42</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">41</td>
+                              <td><span class="nowrapTitle">medical equipment</span></td>
+                              <td class="digit"><span class="ellipsis">42</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">42</td>
+                              <td><span class="nowrapTitle">Skin Whitening Products</span></td>
+                              <td class="digit"><span class="ellipsis">41</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">43</td>
+                              <td><span class="nowrapTitle">headlights</span></td>
+                              <td class="digit"><span class="ellipsis">40</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">44</td>
+                              <td><span class="nowrapTitle">pcb+manufacturer</span></td>
+                              <td class="digit"><span class="ellipsis">40</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">45</td>
+                              <td><span class="nowrapTitle">pool cues</span></td>
+                              <td class="digit"><span class="ellipsis">40</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">46</td>
+                              <td><span class="nowrapTitle">electronic components</span></td>
+                              <td class="digit"><span class="ellipsis">38</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">47</td>
+                              <td><span class="nowrapTitle">scooter parts</span></td>
+                              <td class="digit"><span class="ellipsis">37</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">48</td>
+                              <td><span class="nowrapTitle">家電 家庭 用 電器</span></td>
+                              <td class="digit"><span class="ellipsis">37</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">49</td>
+                              <td><span class="nowrapTitle">body kit</span></td>
+                              <td class="digit"><span class="ellipsis">36</span></td>
+                            </tr>
+                            <tr>
+                              <td class="rowOrder">50</td>
+                              <td><span class="nowrapTitle">milling+machine</span></td>
+                              <td class="digit"><span class="ellipsis">36</span></td>
+                            </tr> 
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+    
+                  </section>
+                </div>
+              </section>
+  
+              <!-- 產業搜尋趨勢預測 -->
+              <section class="predict block">
+                <div class="heading">
+                  <h3>產業搜尋趨勢預測<span class="icon_i trigPop" id=""></span></h3>
+                  <div class="sumUp">
+                    <em>7月</em>
+                  </div>
+                  <span class="funcBtn download"><a download href="filename.xxx">下載</a></span>
+                </div>
+  
+                <div class="listTable">
+                  <div class="scrollY">
+                    <table>
+                      <thead>
+                        <th></th>
+                        <th style="width: 42%;"><span class="sortingTh ellipsis">國家</span></th>
+                        <th><span class="sortingTh descending ellipsis">預測搜尋量</span></th>
+                        <th><span class="sortingTh ellipsis">與上個月比</span></th>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="rowOrder">1</td>
+                          <td><span class="nowrapTitle">India</span></td>
+                          <td class="digit grade_01"><span class="ellipsis">856,292</span></td>
+                          <td class="digit"><span class="ellipsis">18.9%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">2</td>
+                          <td><span class="nowrapTitle">Taiwan</span></td>
+                          <td class="digit grade_02"><span class="ellipsis">646,511</span></td>
+                          <td class="digit"><span class="ellipsis">-12.4%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">3</td>
+                          <td><span class="nowrapTitle">Indonesia</span></td>
+                          <td class="digit grade_03"><span class="ellipsis">264,562</span></td>
+                          <td class="digit"><span class="ellipsis">62.8%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">4</td>
+                          <td><span class="nowrapTitle">United States</span></td>
+                          <td class="digit grade_04"><span class="ellipsis">225,571</span></td>
+                          <td class="digit"><span class="ellipsis">61.9%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">5</td>
+                          <td><span class="nowrapTitle">Japan</span></td>
+                          <td class="digit grade_05"><span class="ellipsis">153,500</span></td>
+                          <td class="digit"><span class="ellipsis">239.0%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">6</td>
+                          <td><span class="nowrapTitle">Philippines</span></td>
+                          <td class="digit grade_06"><span class="ellipsis">80,826</span></td>
+                          <td class="digit"><span class="ellipsis">7.2%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">7</td>
+                          <td><span class="nowrapTitle">Netherlands</span></td>
+                          <td class="digit grade_07"><span class="ellipsis">66,851</span></td>
+                          <td class="digit"><span class="ellipsis">162.8%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">8</td>
+                          <td><span class="nowrapTitle">Nigeria</span></td>
+                          <td class="digit grade_08"><span class="ellipsis">65,920</span></td>
+                          <td class="digit"><span class="ellipsis">178.4%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">9</td>
+                          <td><span class="nowrapTitle">Malaysia</span></td>
+                          <td class="digit grade_09"><span class="ellipsis">61,688</span></td>
+                          <td class="digit"><span class="ellipsis">44.6%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">10</td>
+                          <td><span class="nowrapTitle">Efficitur Cras per Metus Nascetur Duis Aute Irure dolor in Reprehenderit Voluptate </span></td>
+                          <td class="digit  grade_10"><span class="ellipsis">60,137</span></td>
+                          <td class="digit"><span class="ellipsis">6.6%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">11</td>
+                          <td><span class="nowrapTitle">Vietnam</span></td>
+                          <td class="digit"><span class="ellipsis">53,725</span></td>
+                          <td class="digit"><span class="ellipsis">2.8%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">12</td>
+                          <td><span class="nowrapTitle">Bangladesh</span></td>
+                          <td class="digit"><span class="ellipsis">51,280</span></td>
+                          <td class="digit"><span class="ellipsis">31.0%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">13</td>
+                          <td><span class="nowrapTitle">Pakistan</span></td>
+                          <td class="digit"><span class="ellipsis">47,946</span></td>
+                          <td class="digit"><span class="ellipsis">-12.0%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">14</td>
+                          <td><span class="nowrapTitle">Singapore</span></td>
+                          <td class="digit"><span class="ellipsis">47,598</span></td>
+                          <td class="digit"><span class="ellipsis">-17.7%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">15</td>
+                          <td><span class="nowrapTitle">Germany</span></td>
+                          <td class="digit"><span class="ellipsis">43,685</span></td>
+                          <td class="digit"><span class="ellipsis">85.4%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">16</td>
+                          <td><span class="nowrapTitle">United Kingdom</span></td>
+                          <td class="digit"><span class="ellipsis">41,306</span></td>
+                          <td class="digit"><span class="ellipsis">44.8%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">17</td>
+                          <td><span class="nowrapTitle">Brazil</span></td>
+                          <td class="digit"><span class="ellipsis">37,434</span></td>
+                          <td class="digit"><span class="ellipsis">65.2%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">18</td>
+                          <td><span class="nowrapTitle">Thailand</span></td>
+                          <td class="digit"><span class="ellipsis">35,967</span></td>
+                          <td class="digit"><span class="ellipsis">12.6%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">19</td>
+                          <td><span class="nowrapTitle">Hong Kong</span></td>
+                          <td class="digit"><span class="ellipsis">35,084</span></td>
+                          <td class="digit"><span class="ellipsis">-35.4%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">20</td>
+                          <td><span class="nowrapTitle">Australia</span></td>
+                          <td class="digit"><span class="ellipsis">29,147</span></td>
+                          <td class="digit"><span class="ellipsis">6.2%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">21</td>
+                          <td><span class="nowrapTitle">Egypt</span></td>
+                          <td class="digit"><span class="ellipsis">25,529</span></td>
+                          <td class="digit"><span class="ellipsis">55.4%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">22</td>
+                          <td><span class="nowrapTitle">Canada</span></td>
+                          <td class="digit"><span class="ellipsis">25,041</span></td>
+                          <td class="digit"><span class="ellipsis">-2.5%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">23</td>
+                          <td><span class="nowrapTitle">South Korea</span></td>
+                          <td class="digit"><span class="ellipsis">21,938</span></td>
+                          <td class="digit"><span class="ellipsis">15.7%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">24</td>
+                          <td><span class="nowrapTitle">Uzbekistan</span></td>
+                          <td class="digit"><span class="ellipsis">20,938</span></td>
+                          <td class="digit"><span class="ellipsis">1,791.4%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">25</td>
+                          <td><span class="nowrapTitle">Romania</span></td>
+                          <td class="digit"><span class="ellipsis">20,769</span></td>
+                          <td class="digit"><span class="ellipsis">347.4%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">26</td>
+                          <td><span class="nowrapTitle">France</span></td>
+                          <td class="digit"><span class="ellipsis">20,167</span></td>
+                          <td class="digit"><span class="ellipsis">17.9%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">27</td>
+                          <td><span class="nowrapTitle">Türkiye</span></td>
+                          <td class="digit"><span class="ellipsis">20,144</span></td>
+                          <td class="digit"><span class="ellipsis">-31.7%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">28</td>
+                          <td><span class="nowrapTitle">(not set)</span></td>
+                          <td class="digit"><span class="ellipsis">19,828</span></td>
+                          <td class="digit"><span class="ellipsis">267.7%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">29</td>
+                          <td><span class="nowrapTitle">Italy</span></td>
+                          <td class="digit"><span class="ellipsis">19,664</span></td>
+                          <td class="digit"><span class="ellipsis">83.5%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">30</td>
+                          <td><span class="nowrapTitle">Mexico</span></td>
+                          <td class="digit"><span class="ellipsis">18,992</span></td>
+                          <td class="digit"><span class="ellipsis">19.9%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">31</td>
+                          <td><span class="nowrapTitle">Saudi Arabia</span></td>
+                          <td class="digit"><span class="ellipsis">14,860</span></td>
+                          <td class="digit"><span class="ellipsis">-10.1%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">32</td>
+                          <td><span class="nowrapTitle">Poland</span></td>
+                          <td class="digit"><span class="ellipsis">14,597</span></td>
+                          <td class="digit"><span class="ellipsis">65.1%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">33</td>
+                          <td><span class="nowrapTitle">Colombia</span></td>
+                          <td class="digit"><span class="ellipsis">14,540</span></td>
+                          <td class="digit"><span class="ellipsis">36.3%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">34</td>
+                          <td><span class="nowrapTitle">Iraq</span></td>
+                          <td class="digit"><span class="ellipsis">14,339</span></td>
+                          <td class="digit"><span class="ellipsis">-26.8%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">35</td>
+                          <td><span class="nowrapTitle">South Africa</span></td>
+                          <td class="digit"><span class="ellipsis">11,883</span></td>
+                          <td class="digit"><span class="ellipsis">8.8%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">36</td>
+                          <td><span class="nowrapTitle">Russia</span></td>
+                          <td class="digit"><span class="ellipsis">11,345</span></td>
+                          <td class="digit"><span class="ellipsis">-6.1%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">37</td>
+                          <td><span class="nowrapTitle">United Arab Emirates</span></td>
+                          <td class="digit"><span class="ellipsis">10,857</span></td>
+                          <td class="digit"><span class="ellipsis">-5.4%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">38</td>
+                          <td><span class="nowrapTitle">Sri Lanka</span></td>
+                          <td class="digit"><span class="ellipsis">7,561</span></td>
+                          <td class="digit"><span class="ellipsis">9.2%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">39</td>
+                          <td><span class="nowrapTitle">Spain</span></td>
+                          <td class="digit"><span class="ellipsis">7,266</span></td>
+                          <td class="digit"><span class="ellipsis">3.7%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">40</td>
+                          <td><span class="nowrapTitle">Algeria</span></td>
+                          <td class="digit"><span class="ellipsis">7,012</span></td>
+                          <td class="digit"><span class="ellipsis">0.1%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">41</td>
+                          <td><span class="nowrapTitle">Peru</span></td>
+                          <td class="digit"><span class="ellipsis">6,734</span></td>
+                          <td class="digit"><span class="ellipsis">-21.5%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">42</td>
+                          <td><span class="nowrapTitle">Morocco</span></td>
+                          <td class="digit"><span class="ellipsis">6,531</span></td>
+                          <td class="digit"><span class="ellipsis">11.9%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">43</td>
+                          <td><span class="nowrapTitle">Iran</span></td>
+                          <td class="digit"><span class="ellipsis">6,526</span></td>
+                          <td class="digit"><span class="ellipsis">-7.5%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">44</td>
+                          <td><span class="nowrapTitle">Argentina</span></td>
+                          <td class="digit"><span class="ellipsis">6,156</span></td>
+                          <td class="digit"><span class="ellipsis">-20.2%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">45</td>
+                          <td><span class="nowrapTitle">Nepal</span></td>
+                          <td class="digit"><span class="ellipsis">5,324</span></td>
+                          <td class="digit"><span class="ellipsis">23.7%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">46</td>
+                          <td><span class="nowrapTitle">New Zealand</span></td>
+                          <td class="digit"><span class="ellipsis">5,043</span></td>
+                          <td class="digit"><span class="ellipsis">-15.4%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">47</td>
+                          <td><span class="nowrapTitle">Chile</span></td>
+                          <td class="digit"><span class="ellipsis">5,031</span></td>
+                          <td class="digit"><span class="ellipsis">-24.4%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">48</td>
+                          <td><span class="nowrapTitle">Ukraine</span></td>
+                          <td class="digit"><span class="ellipsis">4,665</span></td>
+                          <td class="digit"><span class="ellipsis">0.0%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">49</td>
+                          <td><span class="nowrapTitle">Ecuador</span></td>
+                          <td class="digit"><span class="ellipsis">3,844</span></td>
+                          <td class="digit"><span class="ellipsis">-25.4%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                        <tr>
+                          <td class="rowOrder">50</td>
+                          <td><span class="nowrapTitle">Cambodia</span></td>
+                          <td class="digit"><span class="ellipsis">3,820</span></td>
+                          <td class="digit"><span class="ellipsis">-2.4%</span><span class="indiArrow down" aria-label="減少"></span></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+
+        <!-- ***銷售分析*** -->
+        <div class="tabContainer">
+          <section class="salesAnalysis">
+
+            <div class="col-12">
+              <section class="block">
+                <div class="heading">
+                  <h3>訂單數</h3>
+                  <div class="sumUp">
+                    <em>254</em>
+                    <span class="trend down">-34.2%</span>
+                    <p>與10天前比</p>
+                  </div>
+                  <span class="funcBtn download"><a download href="filename.xxx">下載</a></span>
+                </div>
+
+                <!-- 表格 -->
+                <div class="listTable">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th style="width: 60%;"><span class="sortingTh ellipsis">國家／地區</span></th>
+                        <th><span class="sortingTh descending ellipsis">訂單數</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="rowOrder">1</td>
+                        <td><span class="nowrapTitle">United States</span></td>
+                        <td class="digit grade_01"><span class="ellipsis">1,234,567,890</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">2</td>
+                        <td><span class="nowrapTitle">Excepteur Sint Occaecat Cupidatat Proident</span></td>
+                        <td class="digit grade_02"><span class="ellipsis">41</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">3</td>
+                        <td><span class="nowrapTitle">India</span></td>
+                        <td class="digit grade_03"><span class="ellipsis">23</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">4</td>
+                        <td><span class="nowrapTitle">Saudi Arabia</span></td>
+                        <td class="digit grade_04"><span class="ellipsis">11</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">5</td>
+                        <td><span class="nowrapTitle">Australia</span></td>
+                        <td class="digit grade_05"><span class="ellipsis">8</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">6</td>
+                        <td><span class="nowrapTitle">Japan</span></td>
+                        <td class="digit grade_05"><span class="ellipsis">8</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">7</td>
+                        <td><span class="nowrapTitle">United Kingdom</span></td>
+                        <td class="digit grade_05"><span class="ellipsis">8</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">8</td>
+                        <td><span class="nowrapTitle">Philippines</span></td>
+                        <td class="digit grade_08"><span class="ellipsis">7</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">9</td>
+                        <td><span class="nowrapTitle">Singapore</span></td>
+                        <td class="digit grade_08"><span class="ellipsis">7</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">10</td>
+                        <td><span class="nowrapTitle">France</span></td>
+                        <td class="digit grade_10"><span class="ellipsis">5</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+              <section class="block">
+                <div class="heading">
+                  <h3>產品型錄銷售排名<span class="icon_i trigPop" id=""></span></h3>
+                  <span class="funcBtn file"><a href="#">查看訂貨管理</a></span>
+                </div>
+                <div class="listTable">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th style="width: 35%;"><span class="sortingTh ellipsis">產品名稱</span></th>
+                        <th style="width: 16%;"><span class="sortingTh ellipsis">最新銷售國家</span></th>
+                        <th style="width: 16%;"><span class="sortingTh ellipsis">最新銷售日期</span></th>
+                        <th style="width: 16%;"><span class="sortingTh ellipsis">總銷售數量</span></th>
+                        <th style="width: 16%;"><span class="sortingTh ellipsis descending">銷售總金額（USD）</span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="rowOrder">1</td>
+                        <td><span class="nowrapTitle">Lorem ipsum dolor sit amet consectetur</span></td>
+                        <td><span class="nowrapTitle">Democratic Republic of Congo</span></td>
+                        <td><time>2024年6月18日</time></td>
+                        <td class="digit grade_01"><span class="ellipsis">567,890,123</span></td>
+                        <td class="digit grade_01"><span class="ellipsis">$9,876,543,201</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">2</td>
+                        <td><span class="nowrapTitle">Ut enim ad minim veniam</span></td>
+                        <td><span class="nowrapTitle">France</span></td>
+                        <td><time>2024年6月12日</time></td>
+                        <td class="digit grade_02"><span class="ellipsis">10,456</span></td>
+                        <td class="digit grade_02"><span class="ellipsis">$1,888</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">3</td>
+                        <td><span class="nowrapTitle">Excepteur sint occaecat cupidatat non proident</span></td>
+                        <td><span class="nowrapTitle">Saudi Arabia</span></td>
+                        <td><time>2024年6月10日</time></td>
+                        <td class="digit grade_03"><span class="ellipsis">16</span></td>
+                        <td class="digit"><span class="ellipsis">$0</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">4</td>
+                        <td><span class="nowrapTitle">Duis aute irure dolor in reprehenderit in fugiat nulla pariatur</span></td>
+                        <td><span class="nowrapTitle">United States</span></td>
+                        <td><time>2024年6月11日</time></td>
+                        <td class="digit grade_04"><span class="ellipsis">6</span></td>
+                        <td class="digit"><span class="ellipsis">$0</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">5</td>
+                        <td>(not set)</td>
+                        <td><span class="nowrapTitle">South Korea</span></td>
+                        <td><time>2024年6月20日</time></td>
+                        <td class="digit grade_05"><span class="ellipsis">5</span></td>
+                        <td class="digit"><span class="ellipsis">$0</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">6</td>
+                        <td><span class="nowrapTitle">voluptate velit esse cillum dolore eu</span></td>
+                        <td><span class="nowrapTitle">United States</span></td>
+                        <td><time>2024年6月21日</time></td>
+                        <td class="digit grade_06"><span class="ellipsis">5</span></td>
+                        <td class="digit"><span class="ellipsis">$0</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">7</td>
+                        <td>(not set)</td>
+                        <td><span class="nowrapTitle">Netherlands</span></td>
+                        <td><time>2024年6月8日</time></td>
+                        <td class="digit grade_07"><span class="ellipsis">4</span></td>
+                        <td class="digit"><span class="ellipsis">$0</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">8</td>
+                        <td>(not set)</td>
+                        <td><span class="nowrapTitle">United States</span></td>
+                        <td><time>2024年6月27日</time></td>
+                        <td class="digit grade_08"><span class="ellipsis">3</span></td>
+                        <td class="digit"><span class="ellipsis">$0</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">9</td>
+                        <td>(not set)</td>
+                        <td><span class="nowrapTitle">United Kingdom</span></td>
+                        <td><time>2024年6月10日</time></td>
+                        <td class="digit grade_09"><span class="ellipsis">3</span></td>
+                        <td class="digit"><span class="ellipsis">$0</span></td>
+                      </tr>
+                      <tr>
+                        <td class="rowOrder">10</td>
+                        <td>(not set)</td>
+                        <td><span class="nowrapTitle">Netherlands</span></td>
+                        <td><time>2024年6月4日</time></td>
+                        <td class="digit grade_10"><span class="ellipsis">2</span></td>
+                        <td class="digit"><span class="ellipsis">$0</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                </div>
+              </section>
+            </div>
+
+            <section class="comparisons">
+
+              <div class="industryCategory">
+                <span class="label">比較產業：</span>
+
+                <div class="multiCategory">
+                  <div class="inputAndBtns">
+                    <input type="text" id="pdCategory" readonly>
+                    <button type="button" id="pdCateSel" data-alttext="取消">選擇分類</button>
+                    <button type="button" id="pdCateOk">確定</button>
+                  </div>
+                  <div class="cateSelect">
+                    <div class="cateSearch">
+                      <span class="label">查詢產業</span>
+                      <input type="text" placeholder="請輸入6碼代碼或中英關鍵字">
+                      <input type="submit" value="查詢">
+                    </div>
+                    <div class="cateList">
+                      <ul>
+                        <li>Agricultural &amp; Foods -- 農產及食品</li>
+                        <li>Apparel &amp; Accessories -- 服飾及配件</li>
+                        <li>Automobiles &amp;amp; Motorcycles -- 汽機車</li>
+                        <li>Beauty &amp; Personal Care -- 美容及個人用品</li>
+                        <li>Bicycles -- 自行車</li>
+                        <li>Chemicals -- 化學品</li>
+                        <li>Computer -- 電腦</li>
+                        <li>Construction -- 建材及衛浴設備</li>
+                        <li>Consumer Electronics -- 消費性電子</li>
+                        <li>Electrical &amp;amp; Electronics -- 電機及電子</li>
+                        <li>Furniture -- 家具</li>
+                        <li>Gifts &amp; Crafts -- 禮品及藝品</li>
+                        <li>Hardware -- 五金</li>
+                        <li>Home Appliances -- 家庭用電器</li>
+                        <li>Houseware -- 家庭用品</li>
+                        <li>Lights &amp;amp; Lighting -- 燈光及照明</li>
+                        <li>Luggage, Bags &amp;amp; Cases -- 箱包</li>
+                        <li>Machinery -- 機械</li>
+                        <li>Measurement &amp; Analysis Instrument -- 量測及分析儀器</li>
+                        <li>Mechanical Parts -- 機械零件</li>
+                        <li>Medical &amp; Health -- 醫療及保健</li>
+                        <li>Mineral &amp;amp; Metallurgy -- 礦產及金屬材料</li>
+                        <li>Musical Instruments -- 樂器</li>
+                        <li>Office &amp; School Supplies -- 辦公室及學校用品</li>
+                        <li>Packaging, Printing &amp; Advertising -- 包裝、印刷及廣告</li>
+                        <li>Security &amp; Protection -- 安全</li>
+                        <li>Services -- 服務業</li>
+                        <li>Ships &amp; Boats -- 船舶</li>
+                        <li>Sports -- 運動用品</li>
+                        <li>Telecom Products -- 電信</li>
+                        <li>Textile &amp; Leather -- 紡織及皮革</li>
+                        <li>Timepiece, Jewelry &amp; Eyewear -- 鐘錶、珠寶及眼鏡</li>
+                        <li>Tools -- 工具</li>
+                        <li>Toys, Baby &amp; Pet Products -- 玩具、嬰幼兒及寵物用品</li>
+                      </ul>
+                      <ul>
+                        <li>Analyzer -- 分析儀器</li>
+                        <li>Electrical &amp; Electronic Measuring Instruments -- 電機及電子測量儀器</li>
+                        <li>Flow &amp; Level Measuring Instruments -- 流量及液位測量儀器</li>
+                        <li>Instrument Parts &amp; Accessories -- 儀器零配件</li>
+                        <li>Lab Supplies -- 實驗室器材</li>
+                        <li>Measuring Tools &amp; Calibrators -- 量測工具及校正器</li>
+                        <li>Optical Instruments -- 光學儀器</li>
+                        <li>Physical Measurng Instruments -- 物理測量儀器</li>
+                        <li>Pressure &amp; Temperature Measuring Instruments -- 壓力及溫度測量儀器</li>
+                        <li>Testing Equipment -- 測試儀器</li>
+                        <li>Weighing Scales -- 重量測量儀器</li>
+                      </ul>                    
+                      <ul>
+                        <li>Other Pressure &amp; Temprature Measuring Instrument -- 其他壓力及溫度測量器</li>
+                        <li>Pressure Gauge -- 壓力表</li>
+                        <li>Pressure Transmitter -- 壓力傳送器</li>
+                        <li>Temperature Controller &amp; Transitter -- 溫度控制器及傳送器</li>
+                        <li>Thermometer -- 溫度計</li>
+                      </ul>                    
+                    </div>
+                    <div class="cateList bySearch" style="display: none">
+                      <ul>
+                        <li>Coffee &amp; Side Table -- 咖啡桌及茶几</li>
+                        <li>Coffee &amp; Tea Maker -- 咖啡及茶沖泡器</li>
+                        <li>Electric Airpot &amp; Kettle -- 電茶壺及電熱水瓶</li>
+                        <li>Herbal Tea -- 花草茶</li>
+                        <li>Slimming Tea -- 減肥茶</li>
+                        <li>Tea Drinks -- 茶葉飲料</li>
+                        <li>Tea Leaves -- 茶葉</li>
+                        <li>Tea Processing Machine -- 製茶機</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+    
+                <!--                 
+                <div class="selectImitating">
+                  <div class="selectBtn" data-title="產業分類 第一階">
+                    <span class="placeholder">產業分類 第一階</span>
+                  </div>
+                  <div class="optionGroup">
+                    <label class="checkAll"><input type="checkbox" value="">全選</label>
+                    <label><input type="checkbox" value="">Aerospace -- 航太</label>
+                    <label><input type="checkbox" value="">Agricultural &amp; Foods -- 農產及食品</label>
+                    <label><input type="checkbox" value="">Apparel &amp; Accessories -- 服飾及配件</label>
+                    <label><input type="checkbox" value="">Automobiles &amp; Motorcycles -- 汽機車</label>
+                    <label><input type="checkbox" value="">Beauty &amp; Personal Care -- 美容及個人用品</label>
+                    <label><input type="checkbox" value="">Bicycles -- 自行車</label>
+                    <label><input type="checkbox" value="">Chemicals -- 化學品</label>
+                    <label><input type="checkbox" value="">Computer -- 電腦</label>
+                    <label><input type="checkbox" value="">Construction -- 建材及衛浴設備</label>
+                    <label><input type="checkbox" value="">Consumer Electronics -- 消費性電子</label>
+                    <label><input type="checkbox" value="">Electrical &amp; Electronics -- 電機及電子</label>
+                    <label><input type="checkbox" value="">Furniture -- 家具</label>
+                    <label><input type="checkbox" value="">Gifts &amp; Crafts -- 禮品及藝品</label>
+                    <label><input type="checkbox" value="">Hardware -- 五金</label>
+                    <label><input type="checkbox" value="">Home Appliances -- 家庭用電器</label>
+                    <label><input type="checkbox" value="">Houseware -- 家庭用品</label>
+                    <label><input type="checkbox" value="">Lights &amp; Lighting -- 燈光及照明</label>
+                    <label><input type="checkbox" value="">Luggage, Bags &amp; Cases -- 箱包</label>
+                    <label><input type="checkbox" value="">Machinery -- 機械</label>
+                    <label><input type="checkbox" value="">Measurement &amp; Analysis Instrument -- 量測及分析儀器</label>
+                    <label><input type="checkbox" value="">Mechanical Parts -- 機械零件</label>
+                    <label><input type="checkbox" value="">Medical &amp; Health -- 醫療及保健</label>
+                    <label><input type="checkbox" value="">Mineral &amp; Metallurgy -- 礦產及金屬材料</label>
+                    <label><input type="checkbox" value="">Musical Instruments -- 樂器</label>
+                    <label><input type="checkbox" value="">Office &amp; School Supplies -- 辦公室及學校用品</label>
+                    <label><input type="checkbox" value="">Packaging, Printing &amp; Advertising -- 包裝、印刷及廣告</label>
+                    <label><input type="checkbox" value="">Security &amp; Protection -- 安全</label>
+                    <label><input type="checkbox" value="">Services -- 服務業</label>
+                    <label><input type="checkbox" value="">Ships &amp; Boats -- 船舶</label>
+                    <label><input type="checkbox" value="">Sports -- 運動用品</label>
+                    <label><input type="checkbox" value="">Telecom Products -- 電信</label>
+                    <label><input type="checkbox" value="">Textile &amp; Leather -- 紡織及皮革</label>
+                    <label><input type="checkbox" value="">Timepiece, Jewelry &amp; Eyewear -- 鐘錶、珠寶及眼鏡</label>
+                    <label><input type="checkbox" value="">Tools999 -- 工具</label>
+                    <label><input type="checkbox" value="">Toys, Baby &amp; Pet Products -- 玩具、嬰幼兒及寵物用品</label>
+                  </div>
+                </div>
+  
+                <div class="selectImitating">
+                  <div class="selectBtn" data-title="產業分類 第二階">
+                    <span class="placeholder">產業分類 第二階</span>
+                  </div>
+                  <div class="optionGroup">
+                    <div class="pdCateSearch">
+                      <input type="text" placeholder="輸入字詞以查詢">
+                      <input type="submit" value="查詢">
+                    </div>
+                    <label class="checkAll"><input type="checkbox" value="">全選</label>
+                    <label><input type="checkbox" value="">electronic components and boards</label>
+                    <label><input type="checkbox" value="">computers and peripheral equipment</label>
+                    <label><input type="checkbox" value="">communication equipment</label>
+                    <label><input type="checkbox" value="">consumer electronics</label>
+                    <label><input type="checkbox" value="">measuring, testing, navigating and control equipment; watches and clocks</label>
+                    <label><input type="checkbox" value="">measuring, testing, navigating and control equipment</label>
+                    <label><input type="checkbox" value="">watches and clocks</label>
+                    <label><input type="checkbox" value="">irradiation, electromedical and electrotherapeutic equipment</label>
+                  </div>
+                </div>
+  
+                <div class="selectImitating">
+                  <div class="selectBtn" data-title="產業分類 第三階">
+                    <span class="placeholder">產業分類 第三階</span>
+                  </div>
+                  <div class="optionGroup">
+                    <div class="pdCateSearch">
+                      <input type="text" placeholder="輸入字詞以查詢">
+                      <input type="submit" value="查詢">
+                    </div>
+                    <label class="checkAll"><input type="checkbox" value="">全選</label>
+                    <label><input type="checkbox" value="">desktop computers</label>
+                    <label><input type="checkbox" value="">laptop computers</label>
+                    <label><input type="checkbox" value="">main frame computers</label>
+                    <label><input type="checkbox" value="">hand-held computers (e.g. PDA)</label>
+                    <label><input type="checkbox" value="">magnetic disk drives, flash drives and other storage devices</label>
+                    <label><input type="checkbox" value="">optical (e.g. CD-RW, CD-ROM, DVD-ROM, DVD-RW) disk drives</label>
+                    <label><input type="checkbox" value="">all types of mice, joysticks, and trackball accessories</label>
+                    <label><input type="checkbox" value="">dedicated computer terminals</label>
+                    <label><input type="checkbox" value="">computer servers</label>
+                    <label><input type="checkbox" value="">scanners, including bar code scanners</label>
+                    <label><input type="checkbox" value="">smart card readers</label>
+                    <label><input type="checkbox" value="">virtual reality helmets — manufacture of computer projectors (video beamers)</label>
+                  </div>
+                </div> 
+                <button class="icon_search" type="button" aria-label="查詢"></button>
+              -->
+
+              </div>
+
+              <div class="colx-11">
+                <section class="block">
+                  <div class="heading">
+                    <h3>訂單銷售量較高國家<span class="icon_i trigPop" id=""></span></h3>
+                  </div>
+
+                  <div class="colx-11">
+                    <div class="chartHere">
+                      <h4>您的買主國家</h4>
+                      <img src="../publicData/fake-pieChart2.svg" alt="">
+                    </div>
+                    <div class="chartHere">
+                      <h4>同產業買主國家</h4>
+                      <img src="../publicData/fake-pieChart.svg" alt="">
+                    </div>
+                  </div>
+                </section>
+
+                <section class="top3Products block">
+                  <div class="heading">
+                    <h3>同產業熱銷產品前三名<span class="icon_i trigPop" id=""></span></h3>
+                  </div>
+                  <ul>
+                    <li><a href="#">
+                      <img src="../publicData/pd41s.jpg" alt="">
+                      <p>買得要其他人現在都</p>
+                    </a></li>
+                    <li><a href="#">
+                      <img src="../publicData/ph_photo1.jpg" alt="">
+                      <p>事個人我真不算你來當想我會捏當然都好</p>
+                    </a></li>
+                    <li><a href="#">
+                      <img src="../publicData/ph_photo3.jpg" alt="">
+                      <p>面對有時候完全沒</p>
+                    </a></li>
+                  </ul>
+                </section>
+
+              </div>
+  
+            </section>
+          </section>
+        </div>
+      </div>
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+
+
+  <!-- 訊息燈箱：訪客數-->
+  <section class="popMsg" id="msg001">
+    <h3>企業網瀏覽量</h3>
+    <div class="popBody">
+      <p>企業網瀏覽量企業網瀏覽量企業網瀏覽量企業網瀏覽量企業網瀏覽量企業網瀏覽量。印象知道該能一字，可惡閃分湯包機，但我覺這種我是不，突然哪一表小心的的日也沒的這，時有至少我了呢一跟我說想經。</p>
+      <p>後不會居然有其得就是可，點市場其實也被這是小工，以為是氣開心作者再來太好了得大：我一個來用卡情的。</p>
+    </div>
+    <div class="btnDv">
+      <button type="button" class="ok closePop">Ok</button>
+    </div>
+  </section>
+
+  <!-- 訊息燈箱：訪客數-->
+  <section class="popMsg" id="msg002">
+    <h3>訪客數</h3>
+    <div class="popBody">
+      <p>訪客數訪客數訪客數訪客數訪客數訪客數訪客數。</p>
+      <p>一個還是要的內咖哩的問，有畫我們這，正式一張種，藍個是不是表符應該，的整不想好好看點心他可比較多的時候不起笑死的演。</p>
+    </div>
+    <div class="btnDv">
+      <button type="button" class="ok closePop">Ok</button>
+    </div>
+  </section>
+</body>
+
+</html>

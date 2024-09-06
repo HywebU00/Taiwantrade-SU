@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>SU-買主訂單內容（銷貨管理）</title>
+  <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/design.css">
+  <!-- <link rel="stylesheet" media="print" href="../css/print.css"> -->
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script src="../js/rwdTable.js"></script>
+  <script src="../js/basic.js"></script>
+  
+</head>
+
+<body>
+  <div class="topZone">
+    <header class="webHeader">
+      <h1>Taiwan Trade</h1>
+    </header>
+    <div class="topMenu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Language</a>
+          <ul>
+            <li><a href="xLang">正體中文</a></li>
+            <li><a href="xLang">English</a></li>
+            <li><a href="xLang">日本語</a></li>
+            <li><a href="xLang">简体中文</a></li>
+            <li><a href="xLang">Русский</a></li>
+            <li><a href="xLang">Español</a></li>
+            <li><a href="xLang">Portugues</a></li>
+            <li><a href="xLang">العربية</a></li>
+            <li><a href="xLang">Bahasa Indonesia</a></li>
+            <li><a href="xLang">Deutsch</a></li>
+            <li><a href="xLang">Tiếng Việt</a></li>
+            <li><a href="xLang">ภาษาจีนแบบดั้งเดิม</a></li>
+            <li><a href="xLang">Türk</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Chat with Us</a></li>
+      </ul>
+      <ul class="hasSignIn">
+        <li class="hello">
+          <a href="javascript:;">Hello, <em>Nana</em><span class="msgCount">14</span></a>
+          <ul>
+            <li class="role">賣家中心</li>
+            <li><a href="#">前往企業網</a></li>
+            <li><a href="#">我的管理端</a></li>
+            <li><a href="#">商機管理</a></li>
+            <li><a href="#">商機資料庫管理</a></li>
+            <li><a href="#">會員重要公告</a></li>
+            <li class="role">Buy</li>
+            <li><a href="#">Messages <span class="count">3</span></a></li>
+            <li><a href="#">My Subscription <span class="count">10</span></a></li>
+            <li><a href="#">Order History <span class="count">1</span></a></li>
+            <li><a href="#">Customized Sourcing</a></li>
+            <li><a href="#">Account Setting</a></li>
+          </ul>
+        </li>
+        <li class="signInOut"><a href="#">Sign Out</a></li>
+        <li><a href="#">Favorites</a>
+          <ul>
+            <li><a href="#">Products <span class="count">3</span></a></li>
+            <li><a href="#">Suppliers <span class="count">0</span></a></li>
+          </ul>
+        </li>
+        <li class="cart"><a href="#">0 Items</a></li>
+      </ul>
+    </div>
+    <button class="sideBarCtrl" type="button"></button>
+    <button class="topMenuCtrl" type="button"></button>
+  </div>
+
+  <div class="wrapAll">
+    <aside class="sideBar">
+      <nav class="menu">
+        <ul>
+          <li><a href="javascript:;"><span class="menuIcon myep"></span>企業網管理</a>
+            <ul>
+              <!-- <li><a href="javascript:;">版型設定</a></li>
+              <li><a href="javascript:;">導覽列設定</a></li>
+              <li><a href="javascript:;">首頁設定</a></li>
+              <li><a href="javascript:;">首頁大圖設定</a></li> -->
+              <li><a href="javascript:;">網址設定</a></li>
+              <li><a href="javascript:;">公司資料設定</a></li>
+              <li><a href="javascript:;">公司介紹設定</a></li>
+              <li><a href="javascript:;">海外據點設定</a></li>
+              <li><a href="javascript:;">台灣經貿網Logo申請</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon content"></span>內容管理</a>
+            <ul>
+              <li><a href="javascript:;">公司新聞設定</a></li>
+              <li><a href="javascript:;">影音設定</a></li>
+              <li><a href="javascript:;">行銷專案活動查詢</a></li>
+              <li><a href="javascript:;">品牌故事分享</a></li>
+              <li><a href="javascript:;">型錄專輯設定</a></li>
+              <li><a href="javascript:;">新聞匯入匯出</a></li>
+              <li><a href="javascript:;">匯出型錄至eBay</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon merchandise"></span>銷貨管理</a>
+            <ul>
+              <li><a href="javascript:;">買主訂單</a></li>
+              <li><a href="javascript:;">訂貨管理</a></li>
+              <li><a href="javascript:;">收款及幣別設定</a></li>
+              <li><a href="javascript:;">退換貨辦法設定</a></li>
+              <li><a href="javascript:;">報價單樣板</a></li>
+              <li><a href="javascript:;">線上報價</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon inquiry"></span>商機管理 <span class="count">99+</span></a>
+            <ul>
+              <li><a href="javascript:;">商機訊息通 <span class="count">5</span></a></li>
+              <li><a href="javascript:;">買主清單</a></li>
+              <li><a href="javascript:;">線上商機</a></li>
+              <li><a href="javascript:;">推薦商機 <span class="count">99+</span></a></li>
+              <li><a href="javascript:;">回覆範本</a></li>
+              <li><a href="javascript:;">偏好設定</a></li>
+              <li><a href="javascript:;">商機看板紀錄</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon myaccount"></span>會員管理</a>
+            <ul>
+              <li><a href="javascript:;">公司成員設定</a></li>
+              <li><a href="javascript:;">帳號設定</a></li>
+              <li><a href="javascript:;">業務聯絡人設定</a></li>
+              <li><a href="javascript:;">追蹤供應商</a></li>
+              <li><a href="javascript:;">追蹤產品</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon cart"></span>購物車</a>
+            <ul>
+              <li><a href="javascript:;">購物車</a></li>
+              <li><a href="javascript:;">訂單查詢</a></li>
+              <li><a href="javascript:;">點數查詢</a></li>
+              <li><a href="javascript:;">台灣產品雜誌稿件</a></li>
+              <li><a href="javascript:;">紅利商城(商品兌換)</a></li>
+            </ul>
+          </li>
+          <li><a href="javascript:;"><span class="menuIcon weblink"></span>連結</a>
+            <ul>
+              <li><a href="javascript:;">教育中心</a></li>
+              <li><a href="javascript:;">採洽易</a></li>
+              <li><a href="javascript:;">進出口資料查詢</a></li>
+              <li><a href="javascript:;">物流查詢</a></li>
+              <li><a href="javascript:;">報告中心</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="main">
+      <header class="pageHeading">
+        <h2>買主訂單</h2>
+        <ul class="path">
+          <li><a href="#">銷貨管理</a></li>
+          <li>買主訂單</li>
+        </ul>
+      </header>
+      <div class="navBtnsDv">
+        <span class="btnLook back"><a href="sale_orderListFromBuyer.html">返回</a></span>
+      </div>
+
+
+      <section class="dataTable">
+        <span class="icon_i"><a href="x" target="_blank"></a></span>
+        <table>
+          <tr>
+            <th>訂單編號</th>
+            <td>S20201207173444367
+              <!-- <div class="asAnInput">S20201207173444367</div> -->
+            </td>
+          </tr>
+          <tr>
+            <th>訂單日期</th>
+            <td>2020-12-07 17:34:44
+              <!-- <div class="asAnInput"></div> -->
+            </td>
+          </tr>
+          <tr>
+            <th>買主公司名稱</th>
+            <td>TAIWAN EXTERNAL TRADE DEVELOPMENT COUNCIL
+              <!-- <div class="asAnInput"></div> -->
+            </td>
+          </tr>
+          <tr>
+            <th>買主姓名</th>
+            <td>劉***
+              <!-- <div class="asAnInput"></div> -->
+            </td>
+          </tr>
+          <tr>
+            <th>買主Email</th>
+            <td>judyliou@taitra.org.tw
+              <!-- <div class="asAnInput"></div> -->
+            </td>
+          </tr>
+          <tr>
+            <th>付款方式</th>
+            <td>Paypal
+              <!-- <div class="asAnInput"></div> -->
+            </td>
+          </tr>
+          <tr>
+            <th>交易幣別</th>
+            <td>新台幣
+              <!-- <div class="asAnInput"></div> -->
+            </td>
+          </tr>
+          <tr>
+            <th>付款日訂單匯率</th>
+            <td>1 美金兌換 27.855 新台幣
+              <!-- <div class="asAnInput"></div> -->
+            </td>
+          </tr>
+          <tr>
+            <th>付款總金額</th>
+            <td>新台幣 279.00
+              <!-- <div class="asAnInput"></div> -->
+            </td>
+          </tr>
+          <tr>
+            <th>處理進度</th>
+            <td>
+              <div class="optionPool">
+                <label><input type="radio" checked>待處理</label>
+                <label><input type="radio">處理中</label>
+                <label><input type="radio">已出貨</label>
+                <label><input type="radio">商家取消訂單</label>
+                <label><input type="radio">買家取消訂單</label>
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <th>付款狀態</th>
+            <td>付款完成
+              <!-- <div class="asAnInput"></div> -->
+            </td>
+          </tr>
+          <tr>
+            <th>付款狀態最後更新日期</th>
+            <td><time>2020-12-07 17:38:20</time>
+              <!-- <div class="asAnInput"></div> -->
+            </td>
+          </tr>
+          <tr>
+            <th>帳單資訊</th>
+            <td>
+              <ul>
+                <li>帳單國家：Taiwan </li>
+                <li>公司名稱：中華民國對外貿易發展協會 </li>
+                <li>聯絡人姓名：呂小美 </li>
+                <li>聯絡電話：886-2-27255200#112 </li>
+                <li>傳真號碼：886-2-27255200 </li>
+                <li>州別/城市：Taipei City </li>
+                <li>郵遞區號：110 </li>
+                <li>帳單地址：信義路5段5號2樓</li>
+              </ul>
+              <!-- <div class="asAnInput">
+              </div> -->
+            </td>
+          </tr>
+          <tr>
+            <th>商品寄送資訊</th>
+            <td>
+              <ul>
+                <li>運送國家：Taiwan</li>
+                <li>公司名稱：TAIWAN EXTERNAL TRADE DEVELOPMENT COUNCIL</li>
+                <li>聯絡人姓名：呂小美</li>
+                <li>聯絡電話：886-2-27255200#112</li>
+                <li>傳真號碼：886-2-27255200</li>
+                <li>州別/城市：Taipei City</li>
+                <li>郵遞區號：110</li>
+                <li>運送地址：信義路5段5號2</li>
+              </ul>
+              <!-- <div class="asAnInput">
+              </div> -->
+            </td>
+          </tr>
+          <tr>
+            <th>買主訂單備註</th>
+            <td><textarea name="" id="" readonly></textarea></td>
+          </tr>
+          <tr>
+            <th>訂單歷程</th>
+            <td>
+              <div class="listTable">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>時間</th>
+                      <th>操作人員</th>
+                      <th>異動項目</th>
+                      <th>處理進度</th>
+                      <th>備註</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><time>2020/06/09 16:20:12</time></td>
+                      <td>台灣經貿網管理者</td>
+                      <td>交易相關資料-供應商</td>
+                      <td class="aCenter">待處理</td>
+                      <td>Nalu_test</td>
+                    </tr>
+                    <tr>
+                      <td><time>2020/06/09 16:20:38</time></td>
+                      <td>台灣經貿網管理者</td>
+                      <td>交易相關資料-買主</td>
+                      <td class="aCenter">待處理</td>
+                      <td>Nalu_test_訂單管理測試</td>
+                    </tr>
+                    <tr>
+                      <td><time>2020/06/09 16:33:30</time></td>
+                      <td>台灣經貿網管理者</td>
+                      <td>交易相關資料-供應商</td>
+                      <td class="aCenter">待處理</td>
+                      <td>456</td>
+                    </tr>
+                    <tr>
+                      <td><time>2020/06/09 16:44:01</time></td>
+                      <td>台灣經貿網管理者</td>
+                      <td>交易相關資料-供應商</td>
+                      <td class="aCenter">待處理</td>
+                      <td>789</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>供應商備註</th>
+            <td><textarea name="" id=""></textarea>
+              <p class="hint">本備註的內容僅供供應商內部使用，買主不會看到</p>
+            </td>
+          </tr>
+          <tr>
+            <th>交易相關資料</th>
+            <td><textarea name="" id=""></textarea>
+              <p class="hint">本備註的內容為買賣雙方溝通用，雙方都可看到。</p>
+            </td>
+          </tr>
+        </table>
+      </section>
+
+      <section class="listTable">
+        <table>
+          <thead>
+            <tr>
+              <th>商品名稱</th>
+              <th>規格/購買選項</th>
+              <th>商品型號</th>
+              <th>數量</th>
+              <th>單價(USD)</th>
+              <th>總價(USD)</th>
+              <th>運送方式</th>
+              <th>運費(USD)</th>
+              <th>總金額(USD)</th>
+              <th>物流單號</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>NaluTest_7662</td>
+              <td>size:S</td>
+              <td></td>
+              <td><span class="digit">1</span></td>
+              <td><span class="digit">10.00</span></td>
+              <td><span class="digit">10.00</span></td>
+              <td class="aCenter">EMS</td>
+              <td><span class="digit">0.00</span></td>
+              <td><span class="digit">10.00</span></td>
+              <td>
+                <div class="shippingNumberSet">
+                  <input type="text">
+                  <button class="funcBtn copy" type="button" data-title="複製單號"></button>
+                  <span class="btnLook"><a href="x" target="_blank">檢視物流狀態</a></span>
+                </div>
+              </td>
+              <td class="aCenter">
+                <span class="smallBtn"><a class="showLightbox" id="lbx01">商品快照</a></span>
+              </td>
+            </tr>
+            <tr>
+              <td>NaluTest_7662</td>
+              <td>size:S</td>
+              <td></td>
+              <td><span class="digit">1</span></td>
+              <td><span class="digit">10.00</span></td>
+              <td><span class="digit">10.00</span></td>
+              <td class="aCenter">EMS</td>
+              <td><span class="digit">0.00</span></td>
+              <td><span class="digit">10.00</span></td>
+              <td>
+                <div class="shippingNumberSet">
+                  <input type="text">
+                  <button class="funcBtn copy" type="button" data-title="複製單號"></button>
+                  <span class="btnLook"><a href="x" target="_blank">檢視物流狀態</a></span>
+                </div>
+              </td>
+              <td class="aCenter">
+                <span class="smallBtn"><a class="showLightbox" id="lbx01">商品快照</a></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="btnDv">
+        <input type="submit" value="儲存" class="confirm">
+      </div>
+
+
+
+
+
+      
+
+
+      <footer class="webFooter">
+        <ul class="footLinks">
+          <li><a href="#">Liability Disclaimer</a></li>
+          <li><a href="#">Terms Of Use</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Intellectual Property Right Infringement Policy</a></li>
+          <li><a href="#">Product and Service Listing Policy</a></li>
+          <li><a href="#">Useful links</a></li>
+        </ul>
+        <p>Help Customer Service:+886-800506088  © 2002-2019 TAITRA. All rights reserved.</p>
+      </footer>
+        
+
+    </div><!-- /.main -->
+  </div><!-- ./wrapAll -->
+
+
+  <div class="goTopBottom">
+    <span class="goTop" title="go top"></span>
+    <span class="goBottom" title="go bottom"></span>
+  </div>
+
+
+
+  <section class="lightbox lbx01">
+    <button type="button" title="close" class="closeThis hideLightbox"></button>
+    <div class="head">
+      <h3>商品快照</h3>
+    </div>
+
+    <div class="productSnapshot">
+      <img src="../publicData/productSnapshot.jpg" alt="商品快照">
+    </div>
+
+  </section>
+
+  <script>
+    //升降冪箭頭 GUI demo, 2021 修改
+    var _sortingTr = $('.listTable').find('tr').has('.sortingTh');
+    _sortingTr.each(function(){
+      let _sortingTh = $(this).find('.sortingTh');
+      _sortingTh.click(function() {
+        _this = $(this);
+        _sortingTh.not(_this).removeClass('descending').removeClass('ascending');
+        if (_this.hasClass('descending')) {
+          _this.removeClass('descending').addClass('ascending');
+        } else if (_this.hasClass('ascending')) {
+          _this.removeClass('ascending').addClass('descending');
+        } else {
+          _this.addClass('ascending');
+        }
+      })
+    })
+  </script>
+
+
+</body>
+
+</html>

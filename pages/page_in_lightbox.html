@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard records for lightbox</title>
+    <link href="https://fonts.googleapis.com/css?family=Red+Hat+Display:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/design.css">
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/basic.js"></script>
+  </head>
+  
+<body>
+  <section class="forLightbox">
+
+    <div class="head"><h3>型錄瀏覽量</h3>
+        <button class="openNewWin" onclick="window.open('page_in_lightbox.html');" type="button">在新視窗開啟</button>
+    </div>
+    <!-- <button class="openNewWin" onclick="window.open('suEnWidgetFlow?range=');" type="button">在新視窗開啟</button> -->
+
+
+    <div class="chartSet">
+      <section class="noteDv">
+        <ul>
+          <li>本報表統計訪客於企業網中，瀏覽型錄的數據統計，包含瀏覽量、訪客數及平均停留時間。</li>
+          <li>企業網的每一則型錄均可各別顯示數據．並且可從報表中看出熱門型錄排序。</li>
+          <li>您可透過最近30、60及90天的維度，查看型錄數據。如果您想比較最近30天與前一期的型錄瀏覽數，請勾選「查看成長率」。</li>
+        </ul>
+      </section>
+      <table class="formLayout">
+        <tr>
+          <td>統計區間</td>
+          <td>
+            <div class="optionPool singleSelection">
+              <label><input type="radio" checked="checked">最近30天</label>
+              <label><input type="radio">最近60天</label>
+              <label><input type="radio"> 最近90天</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>型錄是否販售</td>
+          <td>
+            <div class="optionPool singleSelection">
+              <label><input type="radio" name="sell" value="All" checked="checked">全部</label>
+              <label><input type="radio" name="sell" value="Y">販售</label>
+              <label><input type="radio" name="sell" value="N"> 不販售</label>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>產業</td>
+          <td>
+            <select name="" id="">
+              <option value="">Hardware -- 五金</option>
+              <option value="">...</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+
+      <section class="chartArea">
+        <!-- 瀏覽量 -->
+        <div class="switch">
+          <ul>
+            <!-- <li class="active"><a href="suEnAnalysisEpProduect">瀏覽量</a></li>
+            <li><a href="suEnAnalysisEpProduectCompare">查看成長率</a></li> -->
+            <li class="active"><a>瀏覽量</a></li>
+            <li><a href="page_in_lightbox2.html">查看成長率</a></li>
+          </ul>
+        </div>
+        <div id="chart-1-container"><img class="fakeChart" src="../publicData/fakeChart.png" style="width: 800px;"><!-- 模擬圖表 --></div>
+        <div class="Chartjs-legend" style="width: 800px;">
+          <ul id="legend-1-container">
+            <li><i style="background:rgba(151,187,205,0.5)"></i>瀏覽量</li>
+          </ul>
+        </div>
+
+        <!-- 成長率 -->
+        <!-- <div class="switch">
+          <ul>
+            <li><a href="suEnAnalysisEpProduect">回瀏覽量</a></li>
+            <li class="active"><a href="suEnAnalysisEpProduectCompare">成長率</a></li>
+          </ul>
+        </div>
+        <div id="chart-2-container"><img class="fakeChart" src="../publicData/fakeBarChart.png"></div>
+        <div class="Chartjs-legend">
+          <ul id="legend-2-container">
+            <li><i style="background:rgba(151,187,205,0.5)"></i>2020/11/22 - 2020/12/21</li>
+            <li><i style="background:rgba(255, 204, 128,0.5)"></i>2020/10/23 - 2020/11/21</li>
+          </ul>
+          <div id="rate_div" class="rate">+65.38% UP</div>
+        </div>
+        <div id="chart-1-container"><img class="fakeChart" src="../publicData/fakeWaveChart.png"></div> -->
+      </section>
+
+      <div id="chart-2-container" class="listTbNew">
+        <table>
+          <thead class="chartColumn">
+            <tr>
+              <th><span></span></th>
+              <th><span>網頁</span></th>
+              <th><span id="1" class="sortingTh ascending">瀏覽量</span></th>
+              <th><span id="2" class="sortingTh">訪客數</span></th>
+              <th><span id="3" class="sortingTh">平均停留時間(秒)</span></th>
+            </tr>
+          </thead>
+          <tbody id="chartRow" class="chartRow">
+            <tr>
+              <td class="aRight">1</td>
+              <td class="aLeft">tt.en.taiwantrade.com/</td>
+              <td>447</td>
+              <td>135</td>
+              <td>118</td>
+            </tr>
+            <tr>
+              <td class="aRight">2</td>
+              <td class="aLeft">tt.en.taiwantrade.com/product/taiwantrade-sports-cap-1043236.html</td>
+              <td>135</td>
+              <td>106</td>
+              <td>217</td>
+            </tr>
+            <tr>
+              <td class="aRight">3</td>
+              <td class="aLeft">tt.en.taiwantrade.com/about-us</td>
+              <td>88</td>
+              <td>41</td>
+              <td>211</td>
+            </tr>
+            <tr>
+              <td class="aRight">4</td>
+              <td class="aLeft">tt.en.taiwantrade.com/product/taiwantrade-fur-ball-box-1562289.html</td>
+              <td>88</td>
+              <td>29</td>
+              <td>190</td>
+            </tr>
+            <tr>
+              <td class="aRight">5</td>
+              <td class="aLeft">tt.en.taiwantrade.com/product-catalog/all-products.html</td>
+              <td>53</td>
+              <td>41</td>
+              <td>77</td>
+            </tr>
+            <tr>
+              <td class="aRight">6</td>
+              <td class="aLeft">tt.en.taiwantrade.com/online-shop</td>
+              <td>47</td>
+              <td>18</td>
+              <td>232</td>
+            </tr>
+            <tr>
+              <td class="aRight">7</td>
+              <td class="aLeft">tt.en.taiwantrade.com/product-catalog/all-products.html?page=1&amp;rows=20&amp;productType=&amp;sidx=&amp;sord=&amp;listDisplayMode=detail</td>
+              <td>47</td>
+              <td>24</td>
+              <td>96</td>
+            </tr>
+            <tr>
+              <td class="aRight">8</td>
+              <td class="aLeft">tt.en.taiwantrade.com/vp/ep/contactproduct/1/click</td>
+              <td>41</td>
+              <td>6</td>
+              <td>96</td>
+            </tr>
+            <tr>
+              <td class="aRight">9</td>
+              <td class="aLeft">tt.en.taiwantrade.com/overseas-branches</td>
+              <td>29</td>
+              <td>6</td>
+              <td>14</td>
+            </tr>
+            <tr>
+              <td class="aRight">10</td>
+              <td class="aLeft">tt.en.taiwantrade.com/sitemap</td>
+              <td>24</td>
+              <td>12</td>
+              <td>33</td>
+            </tr>
+            <tr>
+              <td class="aRight">11</td>
+              <td class="aLeft">tt.en.taiwantrade.com/product-list/privateShowroom</td>
+              <td>18</td>
+              <td>12</td>
+              <td>372</td>
+            </tr>
+            <tr>
+              <td class="aRight">12</td>
+              <td class="aLeft">tt.en.taiwantrade.com/product/1562289</td>
+              <td>18</td>
+              <td>6</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td class="aRight">13</td>
+              <td class="aLeft">tt.en.taiwantrade.com/about-us/1006325?enabledAnchors=basicInformation-products-certification-awards-officialRecords-contactInfo</td>
+              <td>12</td>
+              <td>6</td>
+              <td>549</td>
+            </tr>
+            <tr>
+              <td class="aRight">14</td>
+              <td class="aLeft">tt.en.taiwantrade.com/about-us/1015385?enabledAnchors=basicInformation-products-certification-awards-officialRecords-contactInfo</td>
+              <td>12</td>
+              <td>6</td>
+              <td>118</td>
+            </tr>
+            <tr>
+              <td class="aRight">15</td>
+              <td class="aLeft">tt.en.taiwantrade.com/news/1065658</td>
+              <td>12</td>
+              <td>6</td>
+              <td>16</td>
+            </tr>
+
+            <tr>
+              <td></td>
+              <td></td>
+              <td>總計:936</td>
+              <td>總計:100</td>
+              <td>平均值:35</td>
+            </tr>
+          </tbody>
+        </table>
+     </div>
+    </div>
+
+  </section>
+
+</body>
+</html>
