@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <title>2020 SU GUI List</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      background: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      background: rgb(187, 77, 162);
+      color: #fff;
+      margin: 0 0 10px;
+      padding: 10px;
+      font-size: 22px;
+      font-family: Georgia, 'Times New Roman', Times, serif
+    }
+
+    table {
+      counter-reset: item;
+      border-collapse: collapse;
+      margin: 20px auto;
+      max-width: 1100px;
+      width: 96%;
+      line-height: 1.5;
+      border-bottom: 2px solid #bbb;
+      color: #456;
+    }
+
+    table+table {
+      margin-top: 60px;
+    }
+
+    td,
+    th {
+      position: relative;
+      padding: .5em .9em;
+      border-bottom: 1px solid #d6d6d6;
+    }
+
+    th {
+      border-bottom: 3px solid #bbb;
+      white-space: nowrap;
+    }
+
+    tr:nth-child(5n+1) td {
+      border-bottom-color: #999
+    }
+
+    th:after,
+    td:after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      bottom: 4px;
+      right: 0;
+      width: 1px;
+      background: #ddd;
+    }
+
+    th:last-child:after,
+    td:last-child:after {
+      display: none
+    }
+
+    td:first-child {
+      text-align: center;
+      font-size: .6em;
+    }
+
+    td:last-child {
+      font-size: .85em;
+    }
+
+    td:nth-child(2) {
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    td:first-child:before {
+      content: counter(item);
+      counter-increment: item;
+    }
+
+    .seperator {
+      font-size: 11px;
+      background: #aaa;
+      color: #fff
+    }
+
+    .seperator td {
+      padding: 0;
+    }
+
+    .seperator td:first-child {
+      font-size: 0;
+    }
+
+    td ul,
+    td ol {
+      margin: 0;
+      padding-left: 1.25em;
+      line-height: 1.4;
+    }
+
+    td ul,
+    td ol {
+      display: none
+    }
+
+    td li+li {
+      margin-top: .6em;
+    }
+
+    a {
+      text-decoration: none;
+      color: #084099;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #0199eb;
+    }
+
+    /* td:nth-child(3) {
+      color: #ccc;
+    } */
+
+    /* tr.hidden {
+      background: #888;
+      color: #fff;
+    } */
+
+    /* tr.hidden, tr.hidden ~ tr{display: none} */
+    @media screen and (max-width: 700px) {
+
+      tr,
+      td,
+      th {
+        display: block;
+      }
+
+      td:after {
+        display: none;
+      }
+
+      td {
+        min-height: 1em;
+      }
+
+      tr:first-child {
+        display: none
+      }
+
+      tr {
+        border: 1px solid #999;
+        margin: 0 0 10px;
+      }
+
+      tr:nth-child(5n+1) td {
+        border-bottom-color: #d6d6d6
+      }
+
+      td:first-child,
+      td:nth-child(2) {
+        float: left;
+        padding: 8px;
+        height: 16px;
+        background: #eee;
+        border: none;
+      }
+
+      td:nth-child(2) {
+        float: right;
+      }
+
+      td:nth-child(3) {
+        clear: both;
+      }
+
+      td:last-child {
+        border: none;
+      }
+
+      .seperator td:nth-child(2) {
+        float: none;
+        background: transparent;
+        padding: 0;
+      }
+
+      .seperator td:first-child {
+        display: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Taiwantrade 2020 SU GUI List</h1>
+  <table>
+    <tr>
+      <th style="width: 2em;">序號</th>
+      <th style="width: 6em;">單元名稱</th>
+      <th>功能名稱</th>
+      <th>檔名／連結</th>
+      <th>備註</th>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>銷售頁面設定</td>
+      <td><a href="pages_liucc/sale_onlineShop_update.html" target="_Blank">sale_onlineShop_update.html</a></td>
+      <td>10/29 調整上傳大圖選擇圖檔樣式<br>
+        現行功能：<a href="https://su.ttstaging.com.tw/onlineShop" target="_blank">銷售頁面設定</a>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>收款與幣別設定</td>
+      <td><a href="pages_liucc/sale_paymentSetPayPalSet.html" target="_Blank">sale_paymentSetPayPalSet.html</a></td>
+      <td>PayPal 未曾設定前之輸入帳號畫面<br>
+        現行功能：<a href="https://su.ttstaging.com.tw/paymentSetPayPalList" target="_blank">收款及幣別設定</a>(登入帳密：liucchofo@hyweb.com.tw/1qaz2wsx)</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>銷貨管理</td>
+        <td>收款與幣別設定</td>
+        <td><a href="pages_liucc/sale_paymentSetHistoryList.html" target="_Blank">sale_paymentSetHistoryList.html</a></td>
+        <td>販售交易幣別異動記錄<br>
+            現行功能：<a href="https://su.ttstaging.com.tw/paymentSetPayPalLog" target="_blank">查看販售交易幣別異動記錄</a></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>銷貨管理</td>
+        <td>退換貨辦法設定</td>
+        <td><a href="pages_liucc/sale_returnPolicy.html" target="_Blank">sale_returnPolicy.html</a></td>
+        <td>現行功能：<a href="https://su.ttstaging.com.tw/ezProductReturnPolicyEditShow" target="_blank">退換貨辦法設定</a></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>公司資料管理</td>
+        <td>首頁多媒體輪播設定功能：多媒體／大圖</td>
+        <td><a href="pages_liucc/comp_homeMultimedia.html" target="_Blank">comp_homeMultimedia.html</a><br>
+            <a href="pages_liucc/comp_homeMultimedia_Pic.html" target="_Blank">comp_homeMultimedia_Pic.html</a>
+        </td>
+        <td>EC權限應無大圖功能，請確認是否要直接移除大圖的部分(EP已併入建站首頁資料管理)<br>
+            圈選「多媒體／自訂圖片」儲存後、顯示不同條列資訊與新增資料Lightbox功能
+            現行功能：<a href="https://su.ttstaging.com.tw/multimediaBrandPaneleditShow" target="_blank">多媒體輪播設定功能</a></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>購物車</td>
+        <td>點數查詢</td>
+        <td><a href="pages_liucc/shoppingCart_bonusList.html" target="_Blank">shoppingCart_bonusList.html</a></td>
+        <td>注意：紅利商品兌換有開啟Lightbox顯示兌換資訊<br>
+            這頁有特殊區塊：(現有點數)設計、Lightbox展開兌換商品。<b>特殊設計需請雅瓊處理</b><br>
+            現行功能：<a href="https://su.ttstaging.com.tw/financeShoppingPoint" target="_blank">點數查詢</a></td>
+    </tr>
+    
+    <tr>
+        <td></td>
+        <td>內容管理</td>
+        <td>公司新聞設定</td>
+        <td><a href="pages_liucc/cont_newsList.html" target="_Blank">cont_newsList.html</a><br>
+          <a href="pages_liucc/cont_newsEdit.html" target="_Blank">cont_newsEdit.html</a>
+        </td>
+        <td>包括：新聞條列頁／新增編修頁<br>
+          註：新增／編輯這頁，從很多不同的地方搬運區塊，<b>需請雅瓊檢查確認</b><br>
+          現行功能：<a href="https://su.ttstaging.com.tw/companyNewslist" target="_blank">公司新聞設定</a></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>內容管理</td>
+        <td>行銷專案活動查詢</td>
+        <td><a href="pages_liucc/cont_marketingList.html" target="_Blank">cont_marketingList.html</a><br>
+          <a href="pages_liucc/cont_marketingView.html" target="_Blank">cont_marketingView.html</a>
+        </td>
+        <td>包括：活動清單頁／活動產品檢視頁<br>
+          現行功能：<a href="https://su.ttstaging.com.tw/productSpecialAreaList" target="_blank">行銷專案活動查詢</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>型錄專輯設定</td>
+      <td><a href="pages_liucc/cont_albumList.html" target="_Blank">cont_albumList.html</a><br>
+        <a href="pages_liucc/cont_albumEdit.html" target="_Blank">cont_albumEdit.html</a><br>
+        <a href="pages_liucc/cont_albumList_newsSelect.html" target="_Blank">cont_albumList_newsSelect.html</a><br>
+        <a href="pages_liucc/cont_albumList_productSelect.html" target="_Blank">cont_albumList_productSelect.html</a>
+      </td>
+      <td>包括：條列頁／新增編輯頁／設定新聞／設定型錄（檢視：產生HTML後會顯示於EP路徑下）<br>
+        註：設定新聞、設定型錄功能是儲存成功後、放在條列頁位置，現行功能：<a href="https://su.ttstaging.com.tw/productAlbumlist" target="_blank">型錄專輯設定</a><br>
+        <br>
+        如果可以修改現行功能，建議編輯資訊都放入編輯內頁：<br>
+        <a href="pages_liucc/cont_albumList_new.html" target="_Blank">cont_albumList_new.html</a>｜<a href="pages_liucc/cont_albumEdit_new.html" target="_Blank">cont_albumEdit_new.html</a>
+      </td>
+  </tr>
+  <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>型錄加密設定</td>
+      <td><a href="pages_liucc/cont_privateShowroom.html" target="_Blank">cont_privateShowroom.html</a>
+      </td>
+      <td>編輯為開啟Lightbox(有Textarea)<br>
+        現行功能：<a href="https://su.ttstaging.com.tw/privateShowroom" target="_blank">型錄加密設定</a></td>
+  </tr>
+
+</table>
+</body>
+
+</html>

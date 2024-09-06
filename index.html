@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <title>SU GUI List</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      background: #fff;
+    }
+
+    h1 {
+      text-align: center;
+      background: rgb(187, 77, 162);
+      color: #fff;
+      margin: 0 0 10px;
+      padding: 10px;
+      font-size: 22px;
+      font-family: Georgia, 'Times New Roman', Times, serif
+    }
+
+    table {
+      counter-reset: item;
+      border-collapse: collapse;
+      margin: 20px auto;
+      max-width: 1400px;
+      width: 96%;
+      line-height: 1.5;
+      border-bottom: 2px solid #bbb;
+      color: #456;
+    }
+
+    table+table {
+      margin-top: 60px;
+    }
+
+    td,
+    th {
+      position: relative;
+      padding: .5em .9em;
+      border-bottom: 1px solid #d6d6d6;
+    }
+
+    th {
+      border-bottom: 3px solid #bbb;
+      white-space: nowrap;
+    }
+
+    tr:nth-child(5n+1) td {
+      border-bottom-color: #999
+    }
+    tr.new{background: #f1fad0;}
+
+    th:after,
+    td:after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      bottom: 4px;
+      right: 0;
+      width: 1px;
+      background: #ddd;
+    }
+
+    th:last-child:after,
+    td:last-child:after {
+      display: none
+    }
+
+    td:first-child {
+      text-align: center;
+      font-size: .6em;
+    }
+
+    td:last-child, td:nth-last-child(2) {
+      font-size: .85em;
+    }
+
+    td:nth-child(2) {
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    td:first-child:before {
+      content: counter(item);
+      counter-increment: item;
+    }
+
+    .seperator {
+      font-size: 11px;
+      background: #aaa;
+      color: #fff
+    }
+
+    .seperator td {
+      padding: 0;
+    }
+
+    .seperator td:first-child {
+      font-size: 0;
+    }
+
+    td ul,
+    td ol {
+      margin: 0;
+      padding-left: 1.25em;
+      line-height: 1.4;
+    }
+
+    td ul,
+    td ol {
+      display: none
+    }
+
+    td li+li {
+      margin-top: .6em;
+    }
+
+    a {
+      text-decoration: none;
+      color: #084099;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #0199eb;
+    }
+
+    /* td:nth-child(3) {
+      color: #ccc;
+    } */
+
+    /* tr.hidden {
+      background: #888;
+      color: #fff;
+    } */
+
+    /* tr.hidden, tr.hidden ~ tr{display: none} */
+    @media screen and (max-width: 700px) {
+
+      tr,
+      td,
+      th {
+        display: block;
+      }
+
+      td:after {
+        display: none;
+      }
+
+      td {
+        min-height: 1em;
+      }
+
+      tr:first-child {
+        display: none
+      }
+
+      tr {
+        border: 1px solid #999;
+        margin: 0 0 10px;
+      }
+
+      tr:nth-child(5n+1) td {
+        border-bottom-color: #d6d6d6
+      }
+
+      td:first-child,
+      td:nth-child(2) {
+        float: left;
+        padding: 8px;
+        height: 16px;
+        background: #eee;
+        border: none;
+      }
+
+      td:nth-child(2) {
+        float: right;
+      }
+
+      td:nth-child(3) {
+        clear: both;
+      }
+
+      td:last-child {
+        border: none;
+      }
+
+      .seperator td:nth-child(2) {
+        float: none;
+        background: transparent;
+        padding: 0;
+      }
+
+      .seperator td:first-child {
+        display: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Taiwantrade SU GUI List</h1>
+  <table>
+    <tr>
+      <th style="width: 2em;">序號</th>
+      <th style="width: 6em;">模組名稱</th>
+      <th>功能名稱</th>
+      <th>檔名／連結</th>
+      <th>備註</th>
+      <th></th>
+    </tr>
+    <!-- 
+    <tr><td></td>
+      <td>-</td>
+      <td><a href="pages/message_inbox.html" target="_Blank">message_inbox.html</a></td>
+      <td>收件匣，查詢＋列表</td>
+      <td>✔︎完成
+        <ul>
+          <li><del>可收合的橫列在中間寬度的螢幕（平板）時顯示有問題，待修改（7/10註記）</del>7/26:已修正</li>
+        </ul>
+      </td>
+    </tr>
+   -->
+
+   <tr>
+    <td></td>
+    <td>首頁</td>
+    <td>EP 會員的 SU 首頁</td>
+    <td><a href="pages/home_ep.html" target="_Blank">home_ep.html</a></td>
+    <td>2021/2/5 完成</td>
+    <td>改寬版 0.3</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>首頁</td>
+    <td>EC 會員的 SU 首頁</td>
+    <td><a href="pages/home_ec.html" target="_Blank">home_ec.html</a></td>
+    <td>2021/2/5 完成</td>
+    <td>改寬版 0.3</td>
+  </tr>
+
+
+    <tr>
+      <td></td>
+      <td>My Taiwantrade</td>
+      <td>我的提醒</td>
+      <td><a href="pages/myTT_dashboard.html" target="_Blank">myTT_dashboard.html</a></td>
+      <td class="new">完成。<br> 2021/5/6 補「VR分析」頁籤及其內容（TCAP-10278）</td>
+      <td>改寬版</td>
+    </tr>
+    
+    <tr class="new">
+      <td></td>
+      <td>My Taiwantrade（VR分析）</td>
+      <td>VR展間使用者瀏覽量</td>
+      <td><a href="pages/myTT_newWin_showroomClick.html" target="_Blank">myTT_newWin_showroomClick.html</a></td>
+      <td>2021/5/6 完成（TCAP-10278）。</td>
+      <td>擴充功能</td>
+    </tr>
+    <tr class="new">
+      <td></td>
+      <td>My Taiwantrade（VR分析）</td>
+      <td>VR展間TT型錄點擊導流量</td>
+      <td><a href="pages/myTT_newWin_catalogueClick.html" target="_Blank">myTT_newWin_catalogueClick.html</a></td>
+      <td>2021/5/6 完成（TCAP-10278）。</td>
+      <td>擴充功能</td>
+    </tr>
+    <tr class="new">
+      <td></td>
+      <td>My Taiwantrade（VR分析）</td>
+      <td>VR場景多媒體事件點擊一覽</td>
+      <td><a href="pages/myTT_newWin_mediaClick.html" target="_Blank">myTT_newWin_mediaClick.html</a></td>
+      <td>2021/5/6 完成（TCAP-10278）。</td>
+      <td>擴充功能</td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>My Taiwantrade EC</td>
+      <td>我的提醒（EC會員）</td>
+      <td><a href="pages/myTT_EC_dashboard.html" target="_Blank">myTT_EC_dashboard.html</a></td>
+      <td>完成。12/25 補 EC 用 Dashboard</td>
+      <td>改寬版</td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>My Taiwantrade</td>
+      <td>成功案例分享</td>
+      <td><a href="pages/myTT_successCase.html" target="_Blank">myTT_successCase.html</a></td>
+      <td>7/2 完成</td>
+      <td>改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>My Taiwantrade</td>
+      <td>新增、編輯成功案例</td>
+      <td><a href="pages/myTT_successCase_edit.html" target="_Blank">myTT_successCase_edit.html</a></td>
+      <td>7/2 完成</td>
+      <td>改寬版</td>
+    </tr>
+
+    
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>網址設定</td>
+      <td><a href="pages/site_urlSetting.html" target="_Blank">site_urlSetting.html</a></td>
+      <td>完成</td>
+      <td>改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>公司資料設定</td>
+      <td><a href="pages/site_compData.html" target="_Blank">site_compData.html</a></td>
+      <td>完成</td>
+      <td>改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>公司介紹設定-公司介紹標題</td>
+      <td><a href="pages/site_aboutUs_edit.html" target="_Blank">site_aboutUs_edit.html</a></td>
+      <td>完成</td>
+      <td>改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>公司介紹設定-公司介紹次標題</td>
+      <td><a href="pages/site_aboutUs_subTitle.html" target="_Blank">site_aboutUs_subTitle.html</a></td>
+      <td>完成</td>
+      <td>改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>海外據點設定</td>
+      <td><a href="pages/site_overseasOffice.html" target="_Blank">site_overseasOffice.html</a></td>
+      <td>完成</td>
+      <td>改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>海外據點設定-新增修改</td>
+      <td><a href="pages/site_overseasOffice_add.html" target="_Blank">site_overseasOffice_add.html</a></td>
+      <td>完成</td>
+      <td>改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>台灣經貿網Logo申請</td>
+      <td><a href="pages/site_applyLogo.html" target="_Blank">site_applyLogo.html</a></td>
+      <td>完成</td>
+      <td>改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>建站引導</td>
+      <td><a href="pages/site_build_guide.html" target="_Blank">site_build_guide.html</a></td>
+      <td>完成</td>
+      <td>重新設計</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>建站引導／版型設定 step1</td>
+      <td><a href="pages/site_build_step1.html" target="_Blank">site_build_step1.html</a></td>
+      <td>完成</td>
+      <td>重新設計</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>建站引導／版型設定 step2</td>
+      <td><a href="pages/site_build_step2.html" target="_Blank">site_build_step2.html</a></td>
+      <td>完成<!-- 8/27:可套版，細節待修 --></td>
+      <td>重新設計</td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>建站引導／版型設定 step2 OnePage</td>
+      <td><a href="pages/site_build_step2_onePage.html" target="_Blank">site_build_step2_onePage.html</a></td>
+      <td>9/24 完成</td>
+      <td>重新設計</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>建站引導／首頁資料設定</td>
+      <td><a href="pages/site_homeData.html" target="_Blank">site_homeData.html</a></td>
+      <td>完成<!-- 8/26:可套版，細節待修 --></td>
+      <td>重新設計</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>建站引導／一頁式資料設定</td>
+      <td><a href="pages/site_homeData_onePage.html" target="_Blank">site_homeData_onePage.html</a></td>
+      <td>完成</td>
+      <td>重新設計</td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>導覽列設定</td>
+      <td><a href="pages/site_navSetting.html" target="_Blank">site_navSetting.html</a></td>
+      <td>9/23 完成</td>
+      <td>重新設計</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>導覽列設定／導覽列_About us</td>
+      <td><a href="pages/site_aboutUs_setting.html" target="_Blank">site_aboutUs_setting.html</a></td>
+      <td>9/23 完成</td>
+      <td>重新設計</td>
+    </tr>
+
+
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>導覽列設定／導覽列_About us 自訂子選單</td>
+      <td><a href="pages/site_nav_aboutUs_sub.html" target="_Blank">site_nav_aboutUs_sub.html</a></td>
+      <td>9/29 完成</td>
+      <td>重新設計</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>導覽列設定／導覽列_Product</td>
+      <td><a href="pages/site_nav_product.html" target="_Blank">site_nav_product.html</a></td>
+      <td>9/29 完成</td>
+      <td>重新設計</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>導覽列設定／導覽列_News/More</td>
+      <td><a href="pages/site_news(More).html" target="_Blank">site_news(More).html</a></td>
+      <td>9/29 完成</td>
+      <td>重新設計</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>企業網管理</td>
+      <td>導覽列設定／導覽列_More自訂子選單</td>
+      <td><a href="pages/site_nav_more.html" target="_Blank">site_nav_more.html</a></td>
+      <td>9/29 完成</td>
+      <td>重新設計</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>公司資料管理</td>
+      <td>多媒體輪播設定功能：圖片列表</td>
+      <td><a href="pages/comp_homeMultimedia_Pic.html" target="_Blank">comp_homeMultimedia_Pic.html</a></td>
+      <td>2021/1/12 完成</td>
+      <td>＊改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>公司資料管理 </td>
+      <td>多媒體輪播設定功能：多媒體列表</td>
+      <td><a href="pages/comp_homeMultimedia.html" target="_Blank">comp_homeMultimedia.html</a></td>
+      <td>2021/1/12 完成</td>
+      <td>＊改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>圖庫設定</td>
+      <td><a href="pages/cont_imageList.html" target="_Blank">cont_imageList.html</a></td>
+      <td>11/5 完成</td>
+      <td>重新設計 3-3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>影音設定</td>
+      <td><a href="pages/cont_videoList.html" target="_Blank">cont_videoList.html</a></td>
+      <td>11/5 修改完成</td>
+      <td>重新設計 3-3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>影音設定-編輯</td>
+      <td><a href="pages/cont_videoEdit.html" target="_Blank">cont_videoEdit.html</a></td>
+      <td>完成</td>
+      <td>改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>型錄匯入匯出</td>
+      <td><a href="pages/cont_PdCateExp.html" target="_Blank">cont_PdCateExp.html</a></td>
+      <td>2021/3/3 完成，待確認</td>
+      <td>重新設計 3-4</td>
+    </tr>
+
+
+
+    <!-- eBay 相關 -->
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>eBay：匯出型錄至 eBay</td>
+      <td><a href="pages/cont_eBay_searchList.html" target="_Blank">cont_eBay_searchList.html</a></td>
+      <td>完成。<!-- 型錄查詢：「產業別」和「自訂分類」改為有階層樣式--></td>
+      <td>改寬版 2.7</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>eBay：上傳 eBay - 設定上架資料</td>
+      <td><a href="pages/cont_eBay_edit.html" target="_Blank">cont_eBay_edit.html</a></td>
+      <td>2021/3/12 完成，待確認</td>
+      <td>改寬版 2.7</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>eBay：設定 eBay 帳號</td>
+      <td><a href="pages/cont_eBay_account.html" target="_Blank">cont_eBay_account.html</a></td>
+      <td>2021/2/17 完成</td>
+      <td>改寬版 2.7</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>eBay：我的 eBay 訊息</td>
+      <td><a href="pages/cont_eBay_message.html" target="_Blank">cont_eBay_message.html</a></td>
+      <td>2021/2/17 完成</td>
+      <td>改寬版 2.7</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>eBay：查看產品上架紀錄</td>
+      <td><a href="pages/cont_eBay_searchList2.html" target="_Blank">cont_eBay_searchList2.html</a></td>
+      <td>2021/2/17 完成</td>
+      <td>改寬版 2.7</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>eBay：上架產品明細</td>
+      <td><a href="pages/cont_eBay_detail.html" target="_Blank">cont_eBay_detail.html</a></td>
+      <td>2021/2/17 完成</td>
+      <td>改寬版 2.7</td>
+    </tr>
+
+
+
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>產品分類設定－自定義</td>
+      <td><a href="pages/cont_PdCateSetting.html" target="_Blank">cont_PdCateSetting.html</a></td>
+      <td>11/6 完成</td>
+      <td>重新設計 3-2-1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>產品分類設定－系統預設</td>
+      <td><a href="pages/cont_PdCate2Setting.html" target="_Blank">cont_PdCate2Setting.html</a></td>
+      <td>11/10 完成</td>
+      <td>重新設計 3-2-2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>自訂分類下商品排序</td>
+      <td><a href="pages/cont_PdCateOrder.html" target="_Blank">cont_PdCateOrder.html</a></td>
+      <td>11/9 完成</td>
+      <td>重新設計 3-2-4</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>新增／編修自訂產品分類</td>
+      <td><a href="pages/cont_PdCateEdit.html" target="_Blank">cont_PdCateEdit.html</a></td>
+      <td>11/10 完成</td>
+      <td>重新設計 3-2-3</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>型錄專輯設定：已選取的新聞清單</td>
+      <td><a href="pages/cont_albumList_newsSelect.html" target="_Blank">cont_albumList_newsSelect.html</a></td>
+      <td>2021/1/12 完成</td>
+      <td>＊改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>型錄專輯設定：已選取的型錄清單</td>
+      <td><a href="pages/cont_albumList_productSelect.html" target="_Blank">cont_albumList_productSelect.html</a></td>
+      <td>2021/1/12 完成</td>
+      <td>＊改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>型錄專輯設定：查詢＋列表</td>
+      <td><a href="pages/cont_albumList.html" target="_Blank">cont_albumList.html</a></td>
+      <td>2021/1/12 完成</td>
+      <td>＊改寬版</td>
+    </tr>
+    <tr>
+     <td></td>
+     <td>內容管理</td>
+     <td>型錄專輯設定：編輯</td>
+     <td><a href="pages/cont_albumEdit.html" target="_Blank">cont_albumEdit.html</a></td>
+     <td>2021/1/12 完成</td>
+     <td>＊改寬版</td>
+   </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>行銷專案活動：查詢＋清單</td>
+      <td><a href="pages/cont_marketingList.html" target="_Blank">cont_marketingList.html</a></td>
+      <td>2021/1/12 完成</td>
+      <td>＊改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>行銷專案活動：行銷專區資訊＋活動產品型錄清單</td>
+      <td><a href="pages/cont_marketingView.html" target="_Blank">cont_marketingView.html</a></td>
+      <td>2021/1/12 完成</td>
+      <td>＊改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>公司新聞：查詢＋列表</td>
+      <td><a href="pages/cont_newsList.html" target="_Blank">cont_newsList.html</a></td>
+      <td>2021/1/12 完成</td>
+      <td>＊改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>公司新聞：編輯</td>
+      <td><a href="pages/cont_newsEdit.html" target="_Blank">cont_newsEdit.html</a></td>
+      <td>2021/1/12 完成。<br>3/8: 補上傳圖片燈箱，並修改燈箱中的浮水印介面<!-- 補看 360x360 圖燈箱 --></td>
+      <td>＊改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>型錄加密：查詢＋列表</td>
+      <td><a href="pages/cont_privateShowroom.html" target="_Blank">cont_privateShowroom.html</a></td>
+      <td>2021/1/12 完成</td>
+      <td>＊改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>產品型錄設定：列表</td>
+      <td><a href="pages/cont_catalog_list.html" target="_Blank">cont_catalog_list.html</a></td>
+      <td>2021/1/20 完成</td>
+      <td>重新設計:3-1-1-1, 3-1-1-2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>產品型錄設定：Step1 設定系統資訊</td>
+      <td><a href="pages/cont_catalog_edit_step1.html" target="_Blank">cont_catalog_edit_step1.html</a></td>
+      <td>2021/1/20 完成</td>
+      <td>重新設計:3-1-2-1, 3-1-3-1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>產品型錄設定：Step2 多語型錄內容設定（新增＋編修）</td>
+      <td><a href="pages/cont_catalog_edit_step2.html" target="_Blank">cont_catalog_edit_step2.html</a></td>
+      <td>2021/1/20 完成 <br><!-- 1/20補「審核結果／異動紀錄」；其他修改。  -->
+        2021/2/5 補 線上販售：包裝運送方式UPS的選項和燈箱
+      </td>
+      <td>重新設計: 3-1-2-2, 3-1-3-2</td>
+    </tr>
+    <!-- <tr>
+      <td></td>
+      <td>內容管理</td>
+      <td>產品型錄設定：Step2 多語型錄內容設定（編修）</td>
+      <td><a href="pages/cont_catalog_edit_step2.html" target="_Blank"></a>cont_catalog_edit_step2.html</td>
+      <td></td>
+      <td>重新設計:3-1-3-2</td>
+    </tr> -->
+
+
+
+<!-- 銷貨管理 銷貨管理 銷貨管理 銷貨管理 銷貨管理 銷貨管理 銷貨管理 銷貨管理 -->
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>收款及幣別設定-PayPal</td>
+      <td><a href="pages/sale_paymentSetPayPalList.html" target="_Blank">sale_paymentSetPayPalList.html</a></td>
+      <td>完成</td>
+      <td>改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>收款及幣別設定-信用卡</td>
+      <td><a href="pages/sale_paymentSetHiTrustList.html" target="_Blank">sale_paymentSetHiTrustList.html</a></td>
+      <td>完成</td>
+      <td>改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>收款及幣別設定-支付寶</td>
+      <td><a href="pages/sale_paymentSetEsunPayList.html" target="_Blank">sale_paymentSetEsunPayList.html</a></td>
+      <td>完成</td>
+      <td>改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>收款及幣別設定：PayPal 收款服務</td>
+      <td><a href="pages/sale_paymentSetPayPalSet.html" target="_Blank">sale_paymentSetPayPalSet.html</a></td>
+      <td>2021/1/12 完成</td>
+      <td>＊改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>收款及幣別設定：販售交易幣別異動記錄</td>
+      <td><a href="pages/sale_paymentSetHistoryList.html" target="_Blank">sale_paymentSetHistoryList.html</a></td>
+      <td>2021/1/12 完成</td>
+      <td>＊改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>買主訂單：查詢＋列表</td>
+      <td><a href="pages/sale_orderListFromBuyer.html" target="_Blank">sale_orderListFromBuyer.html</a></td>
+      <td>11/3 完成</td>
+      <td>改寬版 3.1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>買主訂單：訂單詳細內容</td>
+      <td><a href="pages/sale_orderDetailFromBuyer.html" target="_Blank">sale_orderDetailFromBuyer.html</a></td>
+      <td>2021/1/26 完成</td>
+      <td>改寬版 3.1</td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>訂貨管理：查詢＋列表</td>
+      <td><a href="pages/sale_orderListToSupplier.html" target="_Blank">sale_orderListToSupplier.html</a></td>
+      <td>11/3 完成</td>
+      <td>改寬版 3.2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>訂貨管理：訂單詳細內容</td>
+      <td><a href="pages/sale_orderDetailToSupplier.html" target="_Blank">sale_orderDetailToSupplier.html</a></td>
+      <td>2021/1/26 完成</td>
+      <td>改寬版 3.2</td>
+    </tr>
+
+
+    <tr>
+      <td></td>
+      <td><del>企業網管理</del> 銷貨管理</td>
+      <td>退換貨辦法設定</td>
+      <td><a href="pages/sale_returnPolicy.html" target="_Blank">sale_returnPolicy.html</a></td>
+      <td>2021/1/12 完成</td>
+      <td>＊改寬版 3.4</td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>報價單樣板：查詢＋列表</td>
+      <td><a href="pages/sale_quotationTemplateList.html" target="_Blank">sale_quotationTemplateList.html</a></td>
+      <td>11/3 完成</td>
+      <td>改寬版 3.5</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>報價單樣板：新增、編輯</td>
+      <td><a href="pages/sale_qtTempalte_edit.html" target="_Blank">sale_qtTempalte_edit.html</a></td>
+      <td>2021/2/3 完成</td>
+      <td>改寬版 3.5</td>
+    </tr>
+
+<!--  檔名改為 sale_quotation_list.html
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>線上報價：查詢＋列表</td>
+      <td><a href="pages/sale_quotation.html" target="_Blank">sale_quotation.html</a></td>
+      <td>完成</td>
+      <td>改寬版 3.6</td>
+    </tr> -->
+
+
+
+
+    <!-- 20210202 -->
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>線上報價：查詢＋列表頁（預覽頁）</td>
+      <td><a href="pages/sale_quotation_list.html" target="_Blank">sale_quotation_list.html</a></td>
+      <td>2021/2/2 完成 <br>★回饋意見：3/8調整完成</td>
+      <td>改寬版 3.6</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>線上報價：新增從空白，未按「確定」</td>
+      <td><a href="pages/sale_quotation_init.html" target="_Blank">sale_quotation_init.html</a></td>
+      <td>2021/2/2 完成</td>
+      <td>改寬版 3.6</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>線上報價：查詢＋列表頁，新增從過去報價單</td>
+      <td><a href="pages/sale_quotation_list2.html" target="_Blank">sale_quotation_list2.html</a></td>
+      <td>2021/2/2 完成 <br>★回饋意見：3/8調整完成</td>
+      <td>改寬版 3.6</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>線上報價：編輯頁 & 新增報價型錄燈箱</td>
+      <td><a href="pages/sale_quotation_edit.html" target="_Blank">sale_quotation_edit.html</a></td>
+      <td>2021/2/2 完成 <br>★回饋意見：3/8調整完成</td>
+      <td>改寬版 3.6</td>
+    </tr>
+    <!-- 即條列頁 sale_quotation_list.html
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>線上報價：預覽頁</td>
+      <td><a href="pages/xxx.html" target="_Blank">xxx.html</a></td>
+      <td>2021/2/2 </td>
+      <td>改寬版 3.6</td>
+    </tr> -->
+    <tr>
+      <td></td>
+      <td>銷貨管理</td>
+      <td>線上報價：寄送信件頁</td>
+      <td><a href="pages/sale_quotation_sent.html" target="_Blank">sale_quotation_sent.html</a></td>
+      <td>2021/2/3 完成 <br>★回饋意見：3/8調整完成</td>
+      <td>改寬版 3.6</td>
+    </tr>
+
+
+
+
+
+
+    <tr>
+     <td></td>
+     <td>銷貨管理</td>
+     <td>銷售頁面設定</td>
+     <td><a href="pages/sale_onlineShop.html" target="_Blank">sale_onlineShop.html</a></td>
+     <td>2021/1/12 完成<!-- 11/4 佳淇修改 --></td>
+     <td>＊改寬版</td>
+   </tr>
+
+
+
+    <!-- 會員管理 會員管理 會員管理 會員管理 會員管理 會員管理 會員管理  -->
+    <tr>
+      <td></td>
+      <td>會員管理</td>
+      <td>追蹤產品</td>
+      <td><a href="pages/memb_favProductsList.html" target="_Blank">memb_favProductsList.html</a></td>
+      <td>完成。廢棄不用</td>
+      <td>改寬版</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>會員管理</td>
+      <td>公司成員設定：查詢＋列表</td>
+      <td><a href="pages/memb_staffList.html" target="_Blank">memb_staffList.html</a></td>
+      <td>2021/1/21 完成 <br>★回饋意見：3/8調整完成</td>
+      <td>改寬版 4.1</td> 
+    </tr>
+    <tr>
+      <td></td>
+      <td>會員管理</td>
+      <td>公司成員設定：新增、編輯</td>
+      <td><a href="pages/memb_staffEdit.html" target="_Blank">memb_staffEdit.html</a></td>
+      <td>2021/1/21 完成</td>
+      <td>改寬版 4.1</td> 
+    </tr>
+    <tr>
+      <td></td>
+      <td>會員管理</td>
+      <td>帳號設定</td>
+      <td><a href="pages/memb_accountEdit.html" target="_Blank">memb_accountEdit.html</a></td>
+      <td>2021/1/21＊＊權限的內容燈箱待捕<br>2021/1/26 權限燈箱完成<!--   --></td>
+      <td>改寬版 4.2</td> 
+    </tr>
+    <tr>
+      <td></td>
+      <td>會員管理</td>
+      <td>業務聯絡人設定：列表</td>
+      <td><a href="pages/memb_contactList.html" target="_Blank">memb_contactList.html</a></td>
+      <td>2021/1/21 完成</td>
+      <td>改寬版 4.3</td> 
+    </tr>
+    <tr>
+      <td></td>
+      <td>會員管理</td>
+      <td>業務聯絡人設定：編輯</td>
+      <td><a href="pages/memb_contactEdit.html" target="_Blank">memb_contactEdit.html</a></td>
+      <td>2021/1/21 完成</td>
+      <td>改寬版 4.3</td> 
+    </tr>
+
+
+
+
+
+    <!-- 購物車 購物車 購物車 購物車 購物車 購物車 購物車  -->
+    <tr>
+      <td></td>
+      <td>購物車</td>
+      <td>★購物車首頁（方案列表頁）</td>
+      <td><a href="pages/shoppingCart.html" target="_Blank">shoppingCart.html</a></td>
+      <td>2021/1/29 完成。<br>2024/6/21 功能修改</td>
+      <td>改寬版 5.1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>購物車</td>
+      <td>方案明細頁</td>
+      <td><a href="pages/shoppingCart_pgDetail.html" target="_Blank">shoppingCart_pgDetail.html</a></td>
+      <td>2021/1/29 完成</td>
+      <td>改寬版 5.1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>購物車</td>
+      <td>選購方案編輯＋寄送資料編輯</td>
+      <td><a href="pages/shoppingCart_pgEdit.html" target="_Blank">shoppingCart_pgEdit.html</a></td>
+      <td>2021/1/29 完成</td>
+      <td>改寬版 5.1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>購物車</td>
+      <td>無選購方案，寄送資料編輯</td>
+      <td><a href="pages/shoppingCart_pgEdit_none.html" target="_Blank">shoppingCart_pgEdit_none.html</a></td>
+      <td>2021/1/29 完成</td>
+      <td>改寬版 5.1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>購物車</td>
+      <td>確認購物車明細頁</td>
+      <td><a href="pages/shoppingCart_confirm.html" target="_Blank">shoppingCart_confirm.html</a></td>
+      <td>2021/1/29 完成</td>
+      <td>改寬版 5.1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>購物車</td>
+      <td>訂購完成</td>
+      <td><a href="pages/shoppingCart_done.html" target="_Blank">shoppingCart_done.html</a></td>
+      <td>2021/1/29 完成</td>
+      <td>改寬版 5.1</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>購物車</td>
+      <td>訂購完成2（只有訊息文字）</td>
+      <td><a href="pages/shoppingCart_final.html" target="_Blank">shoppingCart_final.html</a></td>
+      <td>2021/2/3 完成<!-- 2/3 補 「訂購完成」訊息--></td>
+      <td>改寬版 5.1</td>
+    </tr>
+
+
+
+
+
+    <tr>
+      <td></td>
+      <td>購物車</td>
+      <td>訂單查詢：查詢＋列表</td>
+      <td><a href="pages/shoppingCart_orderList.html" target="_Blank">shoppingCart_orderList.html</a></td>
+      <td>完成 <br>★回饋意見：3/8調整完成</td>
+      <td>改寬版 5.2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>購物車</td>
+      <td>訂單查詢：詳細內容</td>
+      <td><a href="pages/shoppingCart_orderDetail.html" target="_Blank">shoppingCart_orderDetail.html</a></td>
+      <td>2021/1/26 完成 <br>★回饋意見：3/8調整完成</td>
+      <td>改寬版 5.2</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>購物車</td>
+      <td>點數查詢</td>
+      <td><a href="pages/shoppingCart_bonusList.html" target="_Blank">shoppingCart_bonusList.html</a></td>
+      <td>2021/1/12 完成 <br>★回饋意見：3/8調整完成</td>
+      <td>改寬版 5.3＊</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>購物車</td>
+      <td>台灣產品雜誌稿件</td>
+      <td><a href="pages/shoppingCart_tpMag.html" target="_Blank">shoppingCart_tpMag.html</a></td>
+      <td>完成</td>
+      <td>改寬版 5.4</td>
+    </tr>
+
+    <tr>
+      <td></td>
+      <td>購物車</td>
+      <td>紅利商品兌換：選紅利商品</td>
+      <td><a href="pages/shoppingCart_bonusProduct.html" target="_Blank">shoppingCart_bonusProduct.html</a></td>
+      <td>2021/1/22 完成 <br>★回饋意見：3/8調整完成</td>
+      <td>改寬版 5.5</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>購物車</td>
+      <td>紅利商品兌換：填寫寄送資料</td>
+      <td><a href="pages/shoppingCart_bonusSent.html" target="_Blank">shoppingCart_bonusSent.html</a></td>
+      <td>2021/1/22 完成</td>
+      <td>改寬版 5.5</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>連結</td>
+      <td>教育中心</td>
+      <td><a href="pages/links_eduCenter.html" target="_Blank">links_eduCenter.html</a></td>
+      <td>完成</td>
+      <td>改寬版</td>
+    </tr>
+
+
+    <tr>
+      <td></td>
+      <td>進度條展示</td>
+      <td></td>
+      <td><a href="pages/_processingBar.html" target="_Blank">_processingBar.html</a></td>
+      <td>11/19 完成</td><td></td>
+    </tr>
+ </table>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <table style="margin-top: 60em;">
+   <caption>＊此表格內容已整合到上方主表中，暫時保留此表以方便查找</caption>
+  <tr>
+    <th style="width: 2em;">序號</th>
+    <th style="width: 6em;">模組名稱</th>
+    <th>功能名稱</th>
+    <th>檔名／連結</th>
+    <th>備註</th>
+    <th></th>
+  </tr>
+   <tr>
+     <td></td>
+     <td>公司資料管理</td>
+     <td>多媒體輪播設定功能：圖片列表</td>
+     <td><a href="pages/comp_homeMultimedia_Pic.html" target="_Blank">comp_homeMultimedia_Pic.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>公司資料管理 </td>
+     <td>多媒體輪播設定功能：多媒體列表</td>
+     <td><a href="pages/comp_homeMultimedia.html" target="_Blank">comp_homeMultimedia.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+   <!-- <tr>
+     <td></td>
+     <td>內容管理 </td>
+     <td>型錄專輯設定：新增</td>
+     <td><a href="pages/cont_albumEdit_new.html" target="_Blank">cont_albumEdit_new.html</a></td>
+     <td>2021/1/12</td>
+     <td>改寬版</td>
+   </tr> -->
+   <!-- <tr>
+     <td></td>
+     <td>內容管理</td>
+     <td>型錄專輯設定：查詢＋列表</td>
+     <td><a href="pages/cont_albumList_new.html" target="_Blank">cont_albumList_new.html</a></td>
+     <td>2021/1/12</td>
+     <td>改寬版</td>
+   </tr> -->
+   <tr>
+     <td></td>
+     <td>內容管理</td>
+     <td>型錄專輯設定：已選取的新聞清單</td>
+     <td><a href="pages/cont_albumList_newsSelect.html" target="_Blank">cont_albumList_newsSelect.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>內容管理</td>
+     <td>型錄專輯設定：已選取的型錄清單</td>
+     <td><a href="pages/cont_albumList_productSelect.html" target="_Blank">cont_albumList_productSelect.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>內容管理</td>
+     <td>型錄專輯設定：查詢＋列表</td>
+     <td><a href="pages/cont_albumList.html" target="_Blank">cont_albumList.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+   <tr>
+    <td></td>
+    <td>內容管理</td>
+    <td>型錄專輯設定：編輯</td>
+    <td><a href="pages/cont_albumEdit.html" target="_Blank">cont_albumEdit.html</a></td>
+    <td>2021/1/12</td>
+    <td>＊改寬版</td>
+  </tr>
+   <tr>
+     <td></td>
+     <td>內容管理</td>
+     <td>行銷專案活動：查詢＋清單</td>
+     <td><a href="pages/cont_marketingList.html" target="_Blank">cont_marketingList.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>內容管理</td>
+     <td>行銷專案活動：行銷專區資訊＋活動產品型錄清單</td>
+     <td><a href="pages/cont_marketingView.html" target="_Blank">cont_marketingView.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>內容管理</td>
+     <td>公司新聞：查詢＋列表</td>
+     <td><a href="pages/cont_newsList.html" target="_Blank">cont_newsList.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>內容管理</td>
+     <td>公司新聞：編輯</td>
+     <td><a href="pages/cont_newsEdit.html" target="_Blank">cont_newsEdit.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>內容管理</td>
+     <td>型錄加密：查詢＋列表</td>
+     <td><a href="pages/cont_privateShowroom.html" target="_Blank">cont_privateShowroom.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>銷貨管理</td>
+     <td>銷售頁面設定</td>
+     <td><a href="pages/sale_onlineShop.html" target="_Blank">sale_onlineShop.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+
+   <!-- last four -->
+   <tr>
+     <td></td>
+     <td>銷貨管理</td>
+     <td>收款及幣別設定：販售交易幣別異動記錄</td>
+     <td><a href="pages/sale_paymentSetHistoryList.html" target="_Blank">sale_paymentSetHistoryList.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>銷貨管理</td>
+     <td>收款及幣別設定：PayPal 收款服務</td>
+     <td><a href="pages/sale_paymentSetPayPalSet.html" target="_Blank">sale_paymentSetPayPalSet.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>企業網管理</td>
+     <td>退換貨辦法設定</td>
+     <td><a href="pages/sale_returnPolicy.html" target="_Blank">sale_returnPolicy.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版 3.4</td>
+   </tr>
+   <tr>
+     <td></td>
+     <td>購物車</td>
+     <td>點數查詢</td>
+     <td><a href="pages/shoppingCart_bonusList.html" target="_Blank">shoppingCart_bonusList.html</a></td>
+     <td>2021/1/12</td>
+     <td>＊改寬版</td>
+   </tr>
+ </table>
+</body>
+
+</html>

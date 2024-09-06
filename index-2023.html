@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+  <title>2023 SU GUI List （廣告管理）</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
+      font-size: 15px;
+      background: #fff;
+    }
+
+    h1 {
+      margin: 0 0 10px;padding: 10px;
+      background: rgb(8, 148, 164);color: #fff;font-size: 22px;text-align: center;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    table {
+      counter-reset: item;
+      border-collapse: collapse;
+      margin: 20px auto;
+      max-width: 1100px;
+      width: 96%;
+      line-height: 1.5;
+      border-bottom: 2px solid #bbb;
+      color: #456;
+    }
+
+    table+table {
+      margin-top: 60px;
+    }
+
+    td,
+    th {
+      position: relative;
+      padding: .5em .9em;
+      border-bottom: 1px solid #d0d0d0;
+    }
+
+    th {
+      border-bottom: 3px solid #bbb;
+      white-space: nowrap;
+    }
+
+    tr:nth-child(5n) td {
+      border-bottom-color: #999
+    }
+
+    th:after,
+    td:after {
+      content: '';
+      position: absolute;top: 4px;bottom: 4px;right: 0;
+      width: 1px;
+      background: #ddd;
+    }
+
+    th:last-child:after,
+    td:last-child:after {
+      display: none
+    }
+
+    td:first-child {
+      text-align: center;
+      font-size: .6em;
+    }
+
+    td:last-child {font-size: .85em;}
+
+    /* td:nth-child(2) {
+      width: 30%;
+    } */
+
+    td:first-child:before {
+      content: counter(item);
+      counter-increment: item;
+    }
+
+    .seperator {
+      font-size: 11px;background: #aaa;color: #fff
+    }
+
+    .seperator td {padding: 0;}
+
+    .seperator td:first-child {font-size: 0;}
+
+    td ul,
+    td ol {
+      margin: 0;
+      padding-left: 1.25em;
+      line-height: 1.4;
+    }
+
+    td ul,
+    td ol {
+      display: none
+    }
+
+    td li+li {
+      margin-top: .6em;
+    }
+
+    a {
+      text-decoration: none;
+      color: #084099;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #0199eb;
+    }
+
+
+    @media screen and (max-width: 700px) {
+
+      tr,
+      td,
+      th {
+        display: block;
+      }
+
+      td:after {
+        display: none;
+      }
+
+      td {
+        min-height: 1em;
+      }
+
+      tr:first-child {
+        display: none
+      }
+
+      tr {
+        border: 1px solid #999;
+        margin: 0 0 10px;
+      }
+
+      tr:nth-child(5n+1) td {
+        border-bottom-color: #d6d6d6
+      }
+
+      td:first-child,
+      td:nth-child(2) {
+        float: left;
+        padding: 8px;
+        height: 16px;
+        background: #eee;
+        border: none;
+      }
+
+      td:nth-child(2) {
+        float: right;
+      }
+
+      td:nth-child(3) {
+        clear: both;
+      }
+
+      td:last-child {
+        border: none;
+      }
+
+      .seperator td:nth-child(2) {
+        float: none;
+        background: transparent;
+        padding: 0;
+      }
+
+      .seperator td:first-child {
+        display: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Taiwantrade 2023 SU GUI List （廣告管理）</h1>
+  <table>
+    <thead>
+      <tr>
+        <th style="width: 2em;">序號</th>
+        <th>功能描述</th>
+        <th>檔名／連結</th>
+        <th>備註</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td>新增廣告活動 / 廣告報表</td>
+        <td><a href="pages/ad_home.html" target="_Blank">ad_home.html</a></td>
+        <td>完成。10/17 修改。<br>2024/1/16：1月修改、新增。</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>廣告目標設定</td>
+        <td><a href="pages/ad_step1.html" target="_Blank">ad_step1.html</a></td>
+        <td>8/7 完成。10/12 修改</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>廣告內容設定（類型：搜尋）</td>
+        <td><a href="pages/ad_step2.html" target="_Blank">ad_step2.html</a></td>
+        <td>
+          8/7 完成。10/13 修改。
+          <br><del>有[出價]、[廣告活動設定]、[關鍵字和廣告]、[預算] 四個頁籤</del>。
+          <br>12/8：12月修改、新增。<br>2024/1/16：1月修改、新增。
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>廣告內容設定（類型：最高成效）</td>
+        <td><a href="pages/ad_step2_最高成效.html" target="_Blank">ad_step2_最高成效.html</a></td>
+        <td>
+          8/7 完成。10/13 修改。
+          <br><del>有[出價]、[廣告活動設定]、[素材資源]、[預算] 四個頁籤</del>。
+          <br>12/8：12月修改、新增。<br>2024/1/16：1月修改、新增。
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>廣告內容設定（類型：探索）</td>
+        <td><a href="pages/ad_step2_探索.html" target="_Blank">ad_step2_探索.html</a></td>
+        <td>8/7 完成。10/13 修改。
+          <br>有[廣告活動設定]、[廣告] 兩個頁籤。
+          <br>12/8：12月修改、新增。<br>2024/1/16：1月修改、新增。
+        </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>檢查啟用（類型：搜尋）</td>
+        <td><a href="pages/ad_step3.html" target="_Blank">ad_step3.html</a></td>
+        <td>8/8 完成。10/17 修改。</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>檢查啟用（類型：最高成效）</td>
+        <td><a href="pages/ad_step3_最高成效.html" target="_Blank">ad_step3_最高成效.html</a></td>
+        <td>8/8 完成。10/17 修改。</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>檢查啟用（類型：探索）</td>
+        <td><a href="pages/ad_step3_探索.html" target="_Blank">ad_step3_探索.html</a></td>
+        <td>8/8 完成。10/17 修改。</td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td>新增廣告群組</td>
+        <td><a href="pages/ad_group.html" target="_Blank">ad_group.html</a></td>
+        <td>新增頁面。10/17 完成 <br>12/8：12月修改、新增。<br>2024/1/16：1月修改、新增。</td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td>新增廣告最大化</td>
+        <td><a href="pages/ad_廣告最大化.html" target="_Blank">ad_廣告最大化.html</a></td>
+        <td>新增頁面。<br>2024/01/16 完成</td>
+      </tr>
+
+
+      <!--
+      <tr>
+        <td></td>
+        <td>xxx</td>
+        <td><a href="pages/fff.html" target="_Blank">XXXXX</a></td>
+        <td></td>
+      </tr>
+ -->
+    </tbody>
+
+
+ </table>
+</body>
+
+</html>
