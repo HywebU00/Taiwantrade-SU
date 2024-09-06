@@ -1,0 +1,37 @@
+@import "_slideDownChecking";  // 模組：有 checkbox 的多選下拉選單
+@import "_adSettingAll";  // 廣告報表設定
+@import "_formA";         // 2023 表單樣式
+@import "_adSummary";     // 「廣告報表」廣告活動統計（圖）表
+@import "_adBill";        // 「廣告報表」最下方「帳單」區塊
+@import "_adSetting";     // 「廣告內容設定」，以頁籤切換各種設定
+@import "_optionBox";     // 「廣告目標設定」：選擇廣告目標 ＋ 選擇廣告類型
+@import "_buyerNationalities";    // 買主國別參考，燈箱＋新視窗頁
+@import "_bidSetting";    // 廣告內容設定：出價設定
+@import "_adTitleGroup";    // 廣告報表：[廣告活動][廣告群組]編輯、設定工具組
+@import "_adComplex";    // 廣告設定：關鍵字和廣告：廣告
+@import "adReport";    // 廣告管理：檢查啟用
+
+/////////////////////////////////////////////////////////////////////////
+// 2023 新增的共用模組 //////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+
+// primeSection, 右側主要區塊
+// <div class="main"> 的子元件，<header class="pageHeading">之下
+.primeSection{
+  // @extend %marginSet1;padding:9px;
+  background: #fff;border-radius:6px;
+  @extend %marginSet1; @extend %paddingEven;
+}
+.secHeader{
+  min-height: 50px;
+  h3{ 
+    margin: 0;line-height: 1.1; 
+    &:only-child{ padding-top: 12px;}
+  }
+  .funcBtnGp{margin: 0;}
+
+  &.flexBox{
+    display: flex;justify-content: space-between;
+    align-items: center;
+  }
+}
