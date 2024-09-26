@@ -1,0 +1,344 @@
+////////////////////////////////////////////////////////////
+////////////////////// 模擬各種長條圖、折線圖 ////////////////////////
+////////////////////////////////////////////////////////////
+
+// 折線圖，流量來源管道
+.chart{
+  --h: 300px;
+  --xP: 20%;
+  --yP: 20%;
+  --barHeight: 15%;
+  --bdcH: #c9d1d3;
+  --bdcV: #c9d1d3;
+  --bdcB: #7d979e;
+  --barColor: hsl(183, 55%, 68%);
+  --LineColor: #999;
+
+  position: relative; margin: 0 0 12px;
+  .x, .y{
+    list-style: none; margin:0;padding: 0;
+    font-size: .85em; line-height: 1;
+    li{margin: 0;padding:0;}
+  }
+  .x{
+    display: flex;
+    margin-top: 8px;
+    translate: -.5em 0;
+    &>li{flex: 0 0 var(--xP);}
+  }
+  .y{
+    position: absolute; top: -.9em; left: 0;
+    height: var(--h); width: min-content;
+    text-align: right; line-height: 1.2;
+    display: flex; flex-direction: column;
+    &>li{
+      flex: 0 0 var(--yP);
+      display: flex; flex-flow: column nowrap;
+    }
+  }
+
+  &.bar{
+    .y{
+      top:0;
+      &>li{ justify-content: center;}
+    }
+  }
+  &:not(.bar){
+    .y{
+      &>li{
+        &:last-child{ flex-basis: 1.1em;}
+      }
+    }
+  }
+
+  .body{
+    position: relative;
+    height: var(--h);
+    border-left: 2px solid var(--bdcB);
+    border-bottom: 2px solid var(--bdcB);
+    background-image: repeating-linear-gradient( 90deg, 
+      transparent 0 calc(var(--xP) - 1px),
+      var(--bdcV) calc(var(--xP) - 1px) var(--xP)),
+
+      repeating-linear-gradient( 0deg,
+      transparent 0 calc(var(--yP) - 1px),
+      var(--bdcH) calc(var(--yP) - 1px) var(--yP)
+    );
+
+    .bars{
+      position: absolute; left: 0;top: 0; right: 0;bottom: 0;
+      list-style: none; margin: 0; padding: 0; 
+      display: flex; flex-direction: column;
+      justify-content: space-around;
+      &>li{
+        position: relative;
+        height: var(--barHeight); 
+        text-align: right; 
+        font-size: .85em; line-height: 1;
+        border-radius: 0 3px 3px 0;
+        background-color: var(--barColor);
+        .barNumber {
+          position: relative;
+          display: inline-block;white-space: nowrap;
+          margin-right: 5px; top: calc(50% - .5em);
+          color: #000;
+        }
+      }
+    }
+
+    svg{
+      position: absolute; width: 100%; height: 100%;
+      line{stroke:var(--LineColor) ; stroke-width:2px;}
+    }
+  }
+
+
+  // 折線圖例
+  .legend{
+    ul{
+      list-style: none; margin: 0;padding: 0;
+      line-height: 1.3;
+      li{ 
+        position: relative;
+        margin:0 0 .4em; padding: 0 0 0 30px;
+        &:only-child{margin-bottom: 5px;}
+        &::before{ 
+          content: ''; position: absolute; left: 0; top: .7em;
+          width: 26px; height: 2px; 
+          background-color: var(--LineColor);
+        }
+      }
+      &.line{
+        li{  
+          &.lc1{ --LineColor: #e73e4c; }
+          &.lc2{ --LineColor: #fa881e; }
+          &.lc3{ --LineColor: #1e9567; }
+          &.lc4{ --LineColor: #2293bc; }
+          &.lc5{ --LineColor: #ba57ae; }
+        }
+      }
+    }
+  
+  }
+  
+  // 長條圖例
+  .barLegent{
+    font-size: .8em; line-height: 1; padding-bottom: 5px;
+    position: absolute; translate:0 -100%;
+    &::before{
+      content: ''; display: inline-block; vertical-align: middle;
+      width: 2.2em; height: 1.1em; margin-right: 5px;
+      background-color: var(--barColor);
+    }
+  }
+}
+
+
+
+////////////////////////////////////////////////////////////////////////
+/////////////////////////// 不同資料統計圖 /////////////////////////////
+////////////////////////////////////////////////////////////////////////
+
+
+.chart{
+
+  // 長條圖｜長條圖｜長條圖｜長條圖｜長條圖｜長條圖｜長條圖｜長條圖｜長條圖
+
+  // ***** 使用者資訊：新訪客／回訪客  *****
+  &.new-returning{
+    --h: 16vw;
+    --xP: 12.5%;
+    --yP: 50%;
+    --bdcH: transparent;
+
+    padding-left: 4em;
+    margin-right: 20px;
+    .body{ 
+      border-bottom: none;
+      .bars{
+        &>li{
+          height: 40%;
+          &:last-child {
+            .barNumber{ margin-left: calc(100% + 5px);}
+          }
+        }  
+      }
+    }
+
+  }
+  
+  // ***** 使用者資訊：使用語言 *****
+  &.lang{
+    --h: 16vw;
+    --xP: 16.66%;
+    --yP: 20%;
+    --bdcH: transparent;
+
+    padding-left: 4.6em;
+    margin-right: 24px;
+    .body{ 
+      border-bottom: none;
+      .bars{
+        &>li{ height: 14%;
+          &:nth-last-child(1), &:nth-last-child(2), &:nth-last-child(3){
+            .barNumber{  margin-left: calc(100% + 5px);}
+          }
+        }
+      }
+    }
+  }
+
+
+
+  // ***** 營運分析：流量進站來源  *****
+  &.visitersFrom{
+    --h: 220px;
+    --xP: 20%;
+    --yP: 20%;
+    --bdcH: transparent;
+
+    padding-left: 4.7em;
+    margin-right: 24px;
+    .body{
+      border-bottom: none;
+      .bars{
+        &>li{
+          &:nth-last-child(1), &:nth-last-child(2){
+            .barNumber{  margin-left: calc(100% + 5px);}
+          }
+        }
+      }
+    }
+    .x{
+      translate: -.7em 0;
+      &>li:first-child{padding-left: .5em;}
+    }
+  }
+
+  // ------------------------------------------------------------
+  // 折線圖｜折線圖｜折線圖｜折線圖｜折線圖｜折線圖｜折線圖｜折線圖
+  // ------------------------------------------------------------
+
+  &.ana {
+    --h: 120px;
+    --xP: 20%;
+    --yP: 25%;
+    --LineColor: #b3b4b5;
+
+    margin-bottom: 0;
+
+    .legend{
+      position: absolute; top:0; left: 0; translate: 0 -100%;
+      ul.line{
+        li{ display: inline-block;
+          &+li{ margin-left: 2em;}
+          &.my{
+            &::before{background-color: #2293bc;}
+          }
+        }
+      }
+    }
+
+    .body{
+      svg{
+        &:nth-child(2) {
+          --LineColor: #2293bc;
+        }
+      }
+    }
+
+  }
+
+  // 來源管道報表 --------------------
+  // ***** 流量來源管道 
+  &.ofSources{
+    --h: 280px;
+    --xP: 6.897%;
+    --yP: 10%;
+
+    position: relative;
+
+    padding-left: 4em;
+    padding-right: 24%;
+    margin-top: 35px;
+
+    .body{
+      position: relative;
+      img{
+        position: absolute;left: 0; bottom: 0;
+        width: 100%; height: 100%;
+      }
+    }
+    .x{ 
+      &>li{ text-indent: -.9em;}
+    }
+    .y{
+      top: -15px; left: 1.5em;
+    }
+    .legend{
+      position: absolute; right: 0; top: 0;
+      width: 23%;
+    }
+  
+  }
+
+  // 網頁瀏覽報表 --------------------
+  // ***** 企業網瀏覽量
+  &.views{
+    --h: 360px;
+    --xP: 10.34%;
+    --yP: 12.5%;
+    --LineColor: #12a4b7;
+
+    padding-left: 3em;
+    margin: 55px 10px 0 0;
+
+    .x{ 
+      &>li{ text-indent: -.9em;}
+    }
+    .y{width: 3em;}
+
+    .legend{position: absolute; top:0; right: 0; translate: 0 -100%;}
+
+  }
+
+
+  
+  // 重要行為報表 -----------------------------
+  &.newsView, &.myfavorite, &.videoplay, &.addtocart{
+    --h: 160px;
+    --xP: 10.34%;
+    --LineColor: #ba57ae;
+    
+    padding-left: 2.7em;
+    margin-right: 10px; margin-top: 25px;
+
+    .x{ 
+      &>li{ text-indent: -.5em;}
+    }
+
+    .legend{
+      position: absolute; top:0; right: 0; translate: 0 -100%;
+    }
+  }
+  // 新聞瀏覽量 *****
+  &.newsView{
+    --yP:33.3333%;
+  }
+
+  // 加到最愛 *****
+  &.myfavorite{
+    --yP:33.3333%;
+  }
+
+  // 影片播放 *****
+  &.videoplay{
+    --yP: 25%;
+  }
+
+  // 加入購物車 *****
+  &.addtocart{
+    --yP: 25%;
+  }
+}
+

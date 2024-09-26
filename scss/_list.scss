@@ -75,13 +75,14 @@
     th .listCheck.checkAll{display: none;}
   }
 
-  // 2024
+  // 2024 新增
   // 向上、向下箭頭
   td{
     &:has( > .indiArrow) {
       // padding-right: 4px !important;
       position: relative;
       padding-right: 1.25em !important;
+      // padding-right: .6em !important;
     }
     .indiArrow{
       // display: inline-block;
@@ -317,21 +318,24 @@ td .quotaNo{display: block; word-break: break-all; text-align: left;
 
 
     // 2024 依數字變化的背景色
-    --baseC0lor: hsl(193, 50%, 70%);
-    &[class*="grade_"]{ color: #000;
-      &.style2{ --baseC0lor: hsl(160, 50%, 65%); }
+    --baseC0lor: hsl(184, 55%, 53%);
+    &[class*="grade_"]{ 
+      color: #000;
+      &.style2{ --baseC0lor: hsl(162, 58%, 52%); }
+      &.style3{ --baseC0lor: hsl(40, 91%, 54%); }
+      &.style4{ --baseC0lor: hsl(20, 98%, 63%); }
     }
     &.grade_01{background-color: var(--baseC0lor);}
-    &.grade_02{background-color: hsl(from var(--baseC0lor) h s calc(l + 3) );}
-    &.grade_03{background-color: hsl(from var(--baseC0lor) h s calc(l + 6) );}
-    &.grade_04{background-color: hsl(from var(--baseC0lor) h s calc(l + 9) );}
-    &.grade_05{background-color: hsl(from var(--baseC0lor) h s calc(l + 12) );}
-    &.grade_06{background-color: hsl(from var(--baseC0lor) h s calc(l + 15) );}
-    &.grade_07{background-color: hsl(from var(--baseC0lor) h s calc(l + 18) );}
-    &.grade_08{background-color: hsl(from var(--baseC0lor) h s calc(l + 21) );}
-    &.grade_09{background-color: hsl(from var(--baseC0lor) h s calc(l + 24) );}
-    &.grade_10{background-color: hsl(from var(--baseC0lor) h s calc(l + 27) );}
-    &.grade_11{background-color: hsl(from var(--baseC0lor) h s calc(l + 30) );}
+    &.grade_02{background-color: hsl(from var(--baseC0lor) h s calc(l + 4) );}
+    &.grade_03{background-color: hsl(from var(--baseC0lor) h s calc(l + 8) );}
+    &.grade_04{background-color: hsl(from var(--baseC0lor) h s calc(l + 12) );}
+    &.grade_05{background-color: hsl(from var(--baseC0lor) h s calc(l + 16) );}
+    &.grade_06{background-color: hsl(from var(--baseC0lor) h s calc(l + 20) );}
+    &.grade_07{background-color: hsl(from var(--baseC0lor) h s calc(l + 24) );}
+    &.grade_08{background-color: hsl(from var(--baseC0lor) h s calc(l + 28) );}
+    &.grade_09{background-color: hsl(from var(--baseC0lor) h s calc(l + 32) );}
+    &.grade_10{background-color: hsl(from var(--baseC0lor) h s calc(l + 36) );}
+    &.grade_11{background-color: hsl(from var(--baseC0lor) h s calc(l + 40) );}
     //2024 end ***
     
     .digit{display: block;word-break: keep-all;text-align: right;}
@@ -345,7 +349,7 @@ td .quotaNo{display: block; word-break: break-all; text-align: left;
     ul, ol, p{margin-top: 0;margin-bottom: 0; padding: 0; list-style: none;line-height: 1.3;}    
     li + li{margin-top: .6em;}
 
-    .ellipsis{display: block ;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;width: 20em;}
+    // .ellipsis{display: block ;white-space: nowrap; overflow: hidden; text-overflow: ellipsis;width: 20em;}
     .thumbImg{display: block;margin: 0 auto;width: 100px; height: 100px; object-fit: contain;
       &.landscape{width: 300px;}
       &.magCover{width: 140px;height: auto; max-height: 200px;}
