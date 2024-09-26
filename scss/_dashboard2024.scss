@@ -17,17 +17,33 @@
 ////////////////////////////////////////////////////////////
 .board1.type2{
   li{
-    display: flex; justify-content: space-between;
-    flex-flow: row wrap;cursor: default;
+    display: flex; 
+    // justify-content: flex-start;
+    flex-flow: row nowrap;cursor: default;
     &:hover{
       box-shadow: rgba(0,0,0,.35) 0 1px 5px;
     }
+
+    // &>*{
+    //   outline: 1px dashed #f008;
+    //   outline-offset: -1px;
+    // }
     .term{ 
-      flex: 0 1 48%;margin-top: 5px; margin-bottom: 8px;
-      font-size: 1.25em;
+      // flex: 0 1 100%;
+      // flex: 0 1 calc(48% - 15px);
+      flex: 0 1 auto;
+
+      // margin-top: 5px; margin-bottom: 12px;margin-right: 15px;
+      margin: 7px 16px 0 0;
+      font-size: 1.45em;
+      text-align: left;
+      white-space: nowrap;
+      color: $font-color-darker;
+      // border-bottom: 1px solid $border-color-light;
+      // padding-bottom: 0.5em;
     }
     .sumUp{
-      flex: 0 1 auto; margin: 0 0 4px;
+      flex: 1 0 50%; margin: 0 0 12px;
       em{font-size: 2.5em; margin: 0 0 16px; }
       .trend{margin-right: .3em; font-size: 1.25em;}
       p{font-size: 1.1em;}
