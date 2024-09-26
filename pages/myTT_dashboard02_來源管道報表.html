@@ -188,27 +188,27 @@
                 <input type="submit" value="查詢">
               </div>
               <label class="checkAll"><input type="checkbox" value="">國家（全選）瀏覽</label>
-              <label><input type="checkbox" value="">India<span>86.1萬</span></label>
-              <label><input type="checkbox" value="">Taiwan<span>64.7萬</span></label>
-              <label><input type="checkbox" value="">Indonesia<span>26.5萬</span></label>
-              <label><input type="checkbox" value="">United States<span>22.6萬</span></label>
-              <label><input type="checkbox" value="">Japan<span>15.4萬</span></label>
-              <label><input type="checkbox" value="">Philippines<span>8.1萬</span></label>
-              <label><input type="checkbox" value="">Netherlands<span>6.7萬</span></label>
-              <label><input type="checkbox" value="">Nigeria<span>6.6萬</span></label>
-              <label><input type="checkbox" value="">Malaysia<span>6.2萬</span></label>
-              <label><input type="checkbox" value="">China<span>6萬</span></label>
-              <label><input type="checkbox" value="">Vietnam<span>5.4萬</span></label>
-              <label><input type="checkbox" value="">Bangladesh<span>5.1萬</span></label>
-              <label><input type="checkbox" value="">Pakistan<span>4.8萬</span></label>
-              <label><input type="checkbox" value="">Singapore<span>4.8萬</span></label>
-              <label><input type="checkbox" value="">Germany<span>4.4萬</span></label>
-              <label><input type="checkbox" value="">United Kingdom<span>4.1萬</span></label>
-              <label><input type="checkbox" value="">Brazil<span>3.7萬</span></label>
-              <label><input type="checkbox" value="">Thailand<span>3.6萬</span></label>
-              <label><input type="checkbox" value="">Hong Kong<span>3.5萬</span></label>
-              <label><input type="checkbox" value="">Australia<span>2.9萬</span></label>
-              <label><input type="checkbox" value="">＊最後一項＊<span>測試</span></label>
+              <label><input type="checkbox" value="">India</label>
+              <label><input type="checkbox" value="">Taiwan</label>
+              <label><input type="checkbox" value="">Indonesia</label>
+              <label><input type="checkbox" value="">United States</label>
+              <label><input type="checkbox" value="">Japan</label>
+              <label><input type="checkbox" value="">Philippines</label>
+              <label><input type="checkbox" value="">Netherlands</label>
+              <label><input type="checkbox" value="">Nigeria</label>
+              <label><input type="checkbox" value="">Malaysia</label>
+              <label><input type="checkbox" value="">China</label>
+              <label><input type="checkbox" value="">Vietnam</label>
+              <label><input type="checkbox" value="">Bangladesh</label>
+              <label><input type="checkbox" value="">Pakistan</label>
+              <label><input type="checkbox" value="">Singapore</label>
+              <label><input type="checkbox" value="">Germany</label>
+              <label><input type="checkbox" value="">United Kingdom</label>
+              <label><input type="checkbox" value="">Brazil</label>
+              <label><input type="checkbox" value="">Thailand</label>
+              <label><input type="checkbox" value="">Hong Kong</label>
+              <label><input type="checkbox" value="">Australia</label>
+              <label><input type="checkbox" value="">＊最後一項測試＊</label>
             </div>
           </div>
           <button class="icon_search" type="button" aria-label="查詢"></button>
@@ -401,8 +401,55 @@
         <div class="heading">
           <h3>流量來源管道<span class="icon_i trigPop" id=""></span></h3>
         </div>
-        <div class="chartHere">
-          <img class="fake-chart" src="../publicData/fakechart01-2-1.png" alt="佔位假統計圖">
+        <div class="chartHere ">
+          <!-- <img class="fake-chart" src="../publicData/fakechart01-2-1.png" alt="佔位假統計圖"> -->
+          <!-- 折線圖 -->
+          <div class="chart ofSources">
+            <div class="body">
+              <img src="../publicData/polyline1.png" alt="">
+            </div>
+            <ul class="x">  
+              <li>06/01</li>
+              <li>06/03</li>
+              <li>06/05</li>
+              <li>06/07</li>
+              <li>06/09</li>
+              <li>06/11</li>
+              <li>06/13</li>
+              <li>06/15</li>
+              <li>06/17</li>
+              <li>06/19</li>
+              <li>06/21</li>
+              <li>06/23</li>
+              <li>06/25</li>
+              <li>06/27</li>
+              <li>06/29</li>
+            </ul>
+            <ul class="y">
+              <li>2.5萬</li>
+              <li></li>
+              <li>2萬</li>
+              <li></li>
+              <li>1.5萬</li>
+              <li></li>
+              <li>1萬</li>
+              <li></li>
+              <li>5,000</li>
+              <li></li>
+              <li>0</li>
+            </ul>
+
+            <!-- 圖例 -->
+            <div class="legend">
+              <ul class="line">
+                <li class="lc1">Direct</li>
+                <li class="lc2">Organic Search</li>
+                <li class="lc3">Referral Lorem ipsum dolor amet consectetur</li>
+                <li class="lc4">Unassigned</li>
+                <li class="lc5">Organic Video</li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div class="listTable">
@@ -411,11 +458,14 @@
             <thead>
               <tr>
                 <th></th>
-                <th>流量管道（前10項）</th> 
-                <th style="width:15%;"><span class="sortingTh descending">訪客數</span></th>
-                <th style="width:15%;"><span class="sortingTh">新訪客數</span></th>
-                <th style="width:15%;"><span class="sortingTh">平均瀏覽頁數</span></th>
-                <th style="width:15%;"><span class="sortingTh">平均停留時間</span></th>
+                <th><span class="ellipsis">流量管道（前10項）</span></th> 
+                <th style="width: 12%;"><span class="sortingTh ellipsis descending">訪客數</span></th>
+                <th style="width: 12%;"><span class="sortingTh ellipsis">訪客數變化</span></th>
+                <th style="width: 12%;"><span class="sortingTh ellipsis">新訪客數</span></th>
+                <th style="width: 12%;"><span class="sortingTh ellipsis">新訪客數變化</span></th>
+                <th style="width: 12%;"><span class="sortingTh ellipsis">平均瀏覽頁數</span></th>
+                <th style="width: 9%;"><span class="sortingTh ellipsis">平均停留時間</span></th>
+                
               </tr>
             </thead>
             <tbody>
@@ -423,81 +473,101 @@
                 <td class="rowOrder">1</td>
                 <td>直接流量/Direct</td>
                 <td class="digit grade_01"><span class="ellipsis">368,625</span></td>
-                <td class="digit grade_01"><span class="ellipsis">367,954</span></td>
-                <td class="digit grade_04"><span class="ellipsis">2.98</span></td>
-                <td class="digit grade_08"><time>01:40</time></td>
+                <td class="digit"><span class="ellipsis">43.5%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_01 style2"><span class="ellipsis">367,954</span></td>
+                <td class="digit"><span class="ellipsis">45.7%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_04 style3"><span class="ellipsis">2.98</span></td>
+                <td class="digit grade_08 style4"><time>01:40</time></td>
               </tr>
               <tr>
                 <td class="rowOrder">2</td>
                 <td>自然搜尋/Organic Search</td>
                 <td class="digit grade_02"><span class="ellipsis">286,721</span></td>
-                <td class="digit grade_02"><span class="ellipsis">266,497</span></td>
-                <td class="digit grade_02"><span class="ellipsis">3.97</span></td>
-                <td class="digit grade_01"><time>03:02</time></td>
+                <td class="digit"><span class="ellipsis">0.9%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_02 style2"><span class="ellipsis">266,497</span></td>
+                <td class="digit"><span class="ellipsis">0.8%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_02 style3"><span class="ellipsis">3.97</span></td>
+                <td class="digit grade_01 style4"><time>03:02</time></td>
               </tr>
               <tr>
                 <td class="rowOrder">3</td>
                 <td>推薦流量/Referral</td>
                 <td class="digit grade_03"><span class="ellipsis">119,719</span></td>
-                <td class="digit grade_03"><span class="ellipsis">115,804</span></td>
-                <td class="digit grade_01"><span class="ellipsis">4.37</span></td>
-                <td class="digit grade_06"><time>02:28</time></td>
+                <td class="digit"><span class="ellipsis">13.9%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_03 style2"><span class="ellipsis">115,804</span></td>
+                <td class="digit"><span class="ellipsis">13.1%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_01 style3"><span class="ellipsis">4.37</span></td>
+                <td class="digit grade_06 style4"><time>02:28</time></td
               </tr>
               <tr>
                 <td class="rowOrder">4</td>
                 <td>未歸類/Unassigned</td>
                 <td class="digit grade_04"><span class="ellipsis">16,053</span></td>
-                <td class="digit grade_05"><span class="ellipsis">8,650</span></td>
-                <td class="digit grade_05"><span class="ellipsis">2.91</span></td>
-                <td class="digit grade_03"><time>02:46</time></td>
+                <td class="digit"><span class="ellipsis">86.3%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_05 style2"><span class="ellipsis">8,650</span></td>
+                <td class="digit"><span class="ellipsis">165.9%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_05 style3"><span class="ellipsis">2.91</span></td>
+                <td class="digit grade_03 style4"><time>02:46</time></td>
               </tr>
               <tr>
                 <td class="rowOrder">5</td>
                 <td>影片平台/Organic Video</td>
                 <td class="digit grade_05"><span class="ellipsis">11,935</span></td>
-                <td class="digit grade_04"><span class="ellipsis">11,723</span></td>
-                <td class="digit grade_07"><span class="ellipsis">2.53</span></td>
-                <td class="digit grade_09"><time>01:31</time></td>
+                <td class="digit"><span class="ellipsis">205.5%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_04 style2"><span class="ellipsis">11,723</span></td>
+                <td class="digit"><span class="ellipsis">208.7%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_07 style3"><span class="ellipsis">2.53</span></td>
+                <td class="digit grade_09 style4"><time>01:31</time></td>
               </tr>
               <tr>
                 <td class="rowOrder">6</td>
                 <td>付費搜尋/Paid Search</td>
                 <td class="digit grade_06"><span class="ellipsis">8,201</span></td>
-                <td class="digit grade_07"><span class="ellipsis">4,995</span></td>
-                <td class="digit grade_09"><span class="ellipsis">2.09</span></td>
-                <td class="digit grade_04"><time>02:29</time></td>
+                <td class="digit"><span class="ellipsis">412.9%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_07 style2"><span class="ellipsis">4,995</span></td>
+                <td class="digit"><span class="ellipsis">315.6%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_09 style3"><span class="ellipsis">2.09</span></td>
+                <td class="digit grade_04 style4"><time>02:29</time></td>
               </tr>
               <tr>
                 <td class="rowOrder">7</td>
                 <td>Cross-network</td>
                 <td class="digit grade_07"><span class="ellipsis">7,022</span></td>
-                <td class="digit grade_06"><span class="ellipsis">6,942</span></td>
-                <td class="digit grade_06"><span class="ellipsis">2.84</span></td>
-                <td class="digit grade_07"><time>01:47</time></td>
+                <td class="digit">-</td>
+                <td class="digit grade_06 style2"><span class="ellipsis">6,942</span></td>
+                <td class="digit">-</td>
+                <td class="digit grade_06 style3"><span class="ellipsis">2.84</span></td>
+                <td class="digit grade_07 style4"><time>01:47</time></td>
               </tr>
               <tr>
                 <td class="rowOrder">8</td>
                 <td>Paid Other</td>
                 <td class="digit grade_08"><span class="ellipsis">3,134</span></td>
-                <td class="digit grade_10"><span class="ellipsis">2,130</span></td>
-                <td class="digit grade_08"><span class="ellipsis">2.40</span></td>
-                <td class="digit grade_05"><time>02:27</time></td>
+                <td class="digit"><span class="ellipsis">104.8%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_10 style2"><span class="ellipsis">2,130</span></td>
+                <td class="digit"><span class="ellipsis">193.4%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_08 style3"><span class="ellipsis">2.40</span></td>
+                <td class="digit grade_05 style4"><time>02:27</time></td>
               </tr>
               <tr>
                 <td class="rowOrder">9</td>
                 <td>Paid Social</td>
                 <td class="digit grade_09"><span class="ellipsis">2,761</span></td>
-                <td class="digit grade_08"><span class="ellipsis">2,737</span></td>
-                <td class="digit grade_10"><span class="ellipsis">1.08</span></td>
-                <td class="digit grade_10"><time>00:48</time></td>
+                <td class="digit">-</td>
+                <td class="digit grade_08 style2"><span class="ellipsis">2,737</span></td>
+                <td class="digit">-</td>
+                <td class="digit grade_10 style3"><span class="ellipsis">1.08</span></td>
+                <td class="digit grade_10 style4"><time>00:48</time></td>
               </tr>
               <tr>
                 <td class="rowOrder">10</td>
                 <td>社群流量/Organic Social</td>
                 <td class="digit grade_10"><span class="ellipsis">2,595</span></td>
-                <td class="digit grade_09"><span class="ellipsis">2,418</span></td>
-                <td class="digit grade_03"><span class="ellipsis">3.75</span></td>
-                <td class="digit grade_02"><time>02:47</time></td>
+                <td class="digit"><span class="ellipsis">80.2%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_09 style2"><span class="ellipsis">2,418</span></td>
+                <td class="digit"><span class="ellipsis">95.0%</span><span class="indiArrow up" aria-label="增加"></span></td>
+                <td class="digit grade_03 style3"><span class="ellipsis">3.75</span></td>
+                <td class="digit grade_02 style4"><time>02:47</time></td>
               </tr>
             </tbody>
           </table>
