@@ -448,9 +448,9 @@ button.icon_search, input.icon_search {
 ////////////////////////////////////////////////////////////
 .listTable .scrollY{
   position: relative; clear: both;
-  max-height: 27.2em;overflow-y: auto;
+  max-height: 27.2em;
+  overflow-y: hidden; // 由程式處理 scroll bar 出現時機和樣式
   border-bottom: 2px solid $border-color-dark;
-
   &:has( tfoot ) { 
     max-height: 30.2em;
     border-bottom: 1px solid $border-color-dark;
@@ -761,7 +761,7 @@ button.icon_search, input.icon_search {
     &::after{
       content: ''; position: absolute;left: 0;top: 0;right: 0;bottom: 0;
       background-color: rgb(255 255 255 / .5);
-      cursor: not-allowed;
+      cursor:pointer;
     }
   }
 }
