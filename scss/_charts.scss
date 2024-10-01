@@ -2,6 +2,13 @@
 ////////////////////// 模擬各種長條圖、折線圖 ////////////////////////
 ////////////////////////////////////////////////////////////
 
+$lineChartColor1:#e73e4c;
+$lineChartColor2:#fa881e;
+$lineChartColor3:#1e9567;
+$lineChartColor4:#2293bc;
+$lineChartColor5:#ba57ae;
+
+
 // 折線圖，流量來源管道
 .chart{
   --h: 300px;
@@ -110,11 +117,11 @@
       }
       &.line{
         li{  
-          &.lc1{ --LineColor: #e73e4c; }
-          &.lc2{ --LineColor: #fa881e; }
-          &.lc3{ --LineColor: #1e9567; }
-          &.lc4{ --LineColor: #2293bc; }
-          &.lc5{ --LineColor: #ba57ae; }
+          &.lc1{ --LineColor: #{$lineChartColor1};}
+          &.lc2{ --LineColor: #{$lineChartColor2};}
+          &.lc3{ --LineColor: #{$lineChartColor3};}
+          &.lc4{ --LineColor: #{$lineChartColor4};}
+          &.lc5{ --LineColor: #{$lineChartColor5};}
         }
       }
     }
@@ -288,7 +295,7 @@
     --h: 360px;
     --xP: 10.34%;
     --yP: 12.5%;
-    --LineColor: #12a4b7;
+    --LineColor: #{$lineChartColor4};
 
     padding-left: 3em;
     margin: 55px 10px 0 0;
@@ -308,7 +315,7 @@
   &.newsView, &.myfavorite, &.videoplay, &.addtocart{
     --h: 160px;
     --xP: 10.34%;
-    --LineColor: #ba57ae;
+    --LineColor: #{$lineChartColor4};
     
     padding-left: 2.7em;
     margin-right: 10px; margin-top: 25px;
@@ -319,6 +326,7 @@
 
     .legend{
       position: absolute; top:0; right: 0; translate: 0 -100%;
+      &::before{ background-color: #{$lineChartColor4};}
     }
   }
   // 新聞瀏覽量 *****
