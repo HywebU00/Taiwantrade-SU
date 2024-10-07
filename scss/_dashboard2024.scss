@@ -1190,15 +1190,24 @@ button.icon_search, input.icon_search {
 .whereUsers{
   @extend .primeSection;
 
-  .heading{min-height: 50px;
-  }
+  .heading{min-height: 50px;}
   .mapBlock, .block{ padding-top: 10px;}
   .mapBlock h3{ margin-top: 10px;}
   .barchart{  position: relative; 
     .heading{ margin-bottom: 1.5vw;}
-    .chartHere .noData{ box-shadow: none;}
   }
-
+  
+  .mapBlock:has(.noData) {
+    padding:20px 12px;
+    padding-top: 10px;
+    box-shadow: $border-color-light 0 0 4px;
+    border-radius: 6px; background: #fff;
+    h3{ margin-top: 0;}
+  }
+  .barchart:has(.noData) {
+    .heading{margin-bottom: 8px;}
+  }
+  .chartHere .noData{ box-shadow: none; margin: 0; padding: 0;}
 
   .listTable{
     padding: 0; margin:20px auto 0;
