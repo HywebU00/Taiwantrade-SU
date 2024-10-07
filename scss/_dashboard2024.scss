@@ -283,22 +283,20 @@ button.icon_search, input.icon_search {
   
     }
 
-    .daterangepicker{
+    .daterangepicker222{
       flex: 1 1 75%;
-      // outline: 1px dashed #f008;
-      // outline-offset: -1px;
     }
   }
   
   .calendars {
-    // flex: 1 1 78%;
     flex: 0 0  470px;
     padding: 10px;
     img.fake{ display: block; width: 470px;}
   }
 
 }
-.pageHeading + .dateRangePicker{
+.pageHeading + .dateRangePicker,
+.pageHeading + .dateRanges {
   z-index: 299;
   position: absolute; right: 2vw; top: auto; margin-top: -2px;
   @media screen and (min-width:$wwMaximum){
@@ -309,7 +307,7 @@ button.icon_search, input.icon_search {
 
 // 選日期區間的套件（不是假圖）
 ////////////////////////////////////////////////////////////
-.daterangepicker{
+.daterangepicker222{
   display: flex; flex-flow: row wrap; justify-content: space-between;
   box-sizing: border-box;
   *, *::before, *::after{box-sizing: border-box;}
@@ -392,6 +390,163 @@ button.icon_search, input.icon_search {
 }
 
 
+// ＊＊＊ 選日期區間的套件（依據套件修改）20241007 
+////////////////////////////////////////////////////////////
+.dateRanges{
+  position: relative; z-index: 299;
+  padding: 0 0 0 40px; height:2.65em;
+  border-radius:4px;border:1px solid $border-color-light;
+  background:#fff url(../images/icon_calendar.png) no-repeat 8px 7px;
+  background-size: 24px;
+  &:hover::before,  &:focus::before{ 
+    opacity: 1; translate: calc(-100% - 6px) 0;
+    transition:opacity .2s, translate 0s;
+  }
+  &::before{
+    content: attr(data-label);
+    position: absolute; left: 0; top: .65em;
+    opacity: 0; translate: 0 0;
+    transition:opacity .3s, translate 0s .3s;
+  }
+  &::after{
+    content: ""; position: absolute; right: 8px; top: calc(50% - 3px);
+    width: 0;height: 0;
+    border-style: solid;
+    border-width: 6px 5px 0 5px;
+    border-color: $btn-bg1 transparent transparent transparent;
+    z-index: 0;
+  }
+
+
+  // 顯示已選的日期區間
+  #reportrange{
+    position: relative; z-index: 3;
+    width: calc(100% - 40px); min-width: 16em;
+    padding:0 27px 0 .8em; margin:0; 
+    background-color: transparent;
+    border: none; box-shadow: none;
+    cursor: pointer;
+
+    &>span{ 
+      display: block;
+      height: 2.65em; line-height: 2.65;
+    }
+    i.fa{ display: none;}
+  }
+
+
+  // 選日期區間
+  .daterangepicker{
+    display: flex; flex-flow: row wrap; justify-content: space-between;
+    display: none;
+    
+    box-sizing: border-box;
+    position: absolute; top: auto; right: -1px; margin-top: 3px;
+    width: 44em; border-radius: 6px; overflow: hidden;
+    background: #fff; @extend %shadowWide;
+
+
+    *, *::before, *::after{box-sizing: border-box;}
+  
+    // 預設區間
+    .ranges{
+      flex: 0 0 20%;
+      border-right: 1px solid $border-color-light;
+      ul {
+        list-style: none; margin: 0; padding:10px 0;
+        li{
+          margin: 0; padding: 0 .8em;
+          height: 2.4em; line-height: 2.4;
+          cursor: pointer;
+          &:hover{background-color: $bg-color-pale;}
+          &.active{
+            background-color: $btn-bg2; color: #fff;
+          }
+        }
+      }
+    }
+
+    // 兩個小月曆
+    .drp-calendar{
+      flex: 0 0 40%;
+      .calendar-table{
+        padding:8px 12px;
+        table{
+          width: 100%; border-collapse: collapse;
+          font-size: .92em; line-height: 1.3; text-align: center;
+          color: $font-color;
+        }
+        th, td { padding: 6px 4px; }
+        thead{
+          border-bottom: 1px solid $border-color-pale;
+          th{
+            &[colspan]{ font-size: 1rem; height: 2em; line-height: 2;}
+            &.prev, &.next{
+              &>span{
+                position: relative;display: block; 
+                width: 1.9em; height: 1.9em; border-radius: 50%;
+                transition: all .2s, scale 0s;
+                cursor: pointer;
+                &::before{
+                  content: ''; width: 8px; height: 8px;
+                  position: absolute; top: calc(50% - 4px); left: calc(50% - 5px);
+                  border-style: solid; border-width: 2px 2px 0 0; border-color: $font-color;
+                  rotate: 45deg;
+                }
+                &:hover{ background-color: $bg-color; box-shadow: $bg-color 0 0 0 3px; }
+              }
+            }
+            &.prev>span{ scale: -100% 1;}
+          }
+        }
+        tbody{
+          td{
+            width: calc(100% / 7); border-radius: 4px; 
+            &:hover{ background-color: $bg-color-pale; cursor: pointer;}
+            &.in-range { 
+              background-color: $bg-color; border-radius: 0;
+              &.off{ color: $font-color-lighter; background-color: transparent;}
+            }
+            &.start-date, &.end-date{ 
+              background: $btn-bg2; color: #fff;
+              &.today:not(.off)::after{background-color: $hiLight1;}
+            }
+            &.start-date{ border-radius: 4px 0 0 4px;}
+            &.end-date{ border-radius: 0 4px 4px 0;}
+            &.off{ color: $font-color-lighter; background-color: transparent;}
+            &.today:not(.off){
+              position: relative;
+              &::after{
+                content: ''; width: 8px; height: 4px; border-radius: 2px;
+                position: absolute; bottom: 4px; left: calc(50% - 4px);
+                background-color: $indicate;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    // 下方 button
+    .drp-buttons{
+      flex: 0 0 100%; text-align: right;
+      padding: 8px; 
+      border-top: 1px solid $border-color-light;
+      // border-left: 1px solid $border-color-light;
+      .drp-selected{
+        display: inline-block; margin-right: 12px;
+      }
+      button{
+        height: 2.2em; line-height: 2.2;
+        &.btn-primary{ background-color: $indicate;
+          &:hover{ box-shadow: $indicate 0 0 0 2px}
+        }
+      }
+    }
+  }
+
+}
+
 // 左邊選國家、右邊選日期區間
 ////////////////////////////////////////////////////////////
 .areaAndTime{
@@ -401,7 +556,7 @@ button.icon_search, input.icon_search {
     flex: 0 1 auto; margin: 0;
     .multiSelection{max-width: calc(100% - 17em);}
   }
-  .dateRangePicker{ flex: 0 1 min-content;}
+  .dateRangePicker, .dateRanges { flex: 0 1 min-content;}
 }
 ////////////////////////////////////////////////////////////
 
