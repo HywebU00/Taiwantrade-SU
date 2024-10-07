@@ -850,10 +850,11 @@ button.icon_search, input.icon_search {
   .noData {
     text-align: center;
     font-size: 1.25em; line-height: 1.5;
-    padding: 30px; margin: 20px auto;
+    padding: 30px; margin: 10px auto;
     box-shadow: $border-color-pale 0 0 0 1px inset, $border-color-light 0 5px 7px -4px ;
     border-radius: 6px;
-    color: $font-color-darker;
+    color: $btn-bg2;
+    p{margin: 0;}
   }
 }
 
@@ -1144,6 +1145,11 @@ button.icon_search, input.icon_search {
       }
   
     }
+
+    .left:has(.noData) + .listTable{
+      margin-top: 4.65em;
+    }
+
   }
 }
 ////////////////////////////////////////////////////////////
