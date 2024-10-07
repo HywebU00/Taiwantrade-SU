@@ -1190,7 +1190,9 @@ button.icon_search, input.icon_search {
   .mapBlock h3{ margin-top: 10px;}
   .barchart{  position: relative; 
     .heading{ margin-bottom: 1.5vw;}
+    .chartHere .noData{ box-shadow: none;}
   }
+
 
   .listTable{
     padding: 0; margin:20px auto 0;
