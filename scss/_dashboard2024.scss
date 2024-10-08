@@ -394,10 +394,14 @@ button.icon_search, input.icon_search {
 ////////////////////////////////////////////////////////////
 .dateRanges{
   position: relative; z-index: 299;
-  padding: 0 0 0 40px; height:2.65em;
+  padding: 0 0 0 0; height:2.65em;
   border-radius:4px;border:1px solid $border-color-light;
   background:#fff url(../images/icon_calendar.png) no-repeat 8px 7px;
   background-size: 24px;
+  &:hover{
+    box-shadow: $border-color-dark 0 0 0 1px;
+    border-color: $border-color-dark;
+  }
   &:hover::before,  &:focus::before{ 
     opacity: 1; translate: calc(-100% - 6px) 0;
     transition:opacity .2s, translate 0s;
@@ -421,12 +425,11 @@ button.icon_search, input.icon_search {
   // 顯示已選的日期區間
   #reportrange{
     position: relative; z-index: 3;
-    width: calc(100% - 40px); min-width: 16em;
-    padding:0 27px 0 .8em; margin:0; 
+    width: auto; min-width: 12em;
+    padding:0 28px 0 42px; margin:0; 
     background-color: transparent;
     border: none; box-shadow: none;
     cursor: pointer;
-
     &>span{ 
       display: block;
       height: 2.65em; line-height: 2.65;
@@ -444,7 +447,6 @@ button.icon_search, input.icon_search {
     position: absolute; top: auto; right: -1px; margin-top: 3px;
     width: 44em; border-radius: 6px; overflow: hidden;
     background: #fff; @extend %shadowWide;
-
 
     *, *::before, *::after{box-sizing: border-box;}
   
@@ -553,7 +555,7 @@ button.icon_search, input.icon_search {
   @extend %marginSet1;margin-bottom: 8px; margin-top: 12px;
   display: flex; justify-content: space-between;
   .selectSet{
-    flex: 0 1 auto; margin: 0;
+    flex: 0 1 auto; margin: 0 30px 0 0;
     .multiSelection{max-width: calc(100% - 17em);}
   }
   .dateRangePicker, .dateRanges { flex: 0 1 min-content;}
