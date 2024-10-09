@@ -214,186 +214,204 @@
           <p>選擇國家，查看各國訪客來源</p>
         </div>
 
-        <div class="dateRangePicker" data-label="最後可查詢日為4天前">
-          <input class="dateRange" type="text" name="dates" value="2024年7月26日 ~ 2024年8月11日">
-          <div class="pickRange">
-            <div class="rangeList">
+        <!-- 20241007 改為套件產出的 html -->
+        <div class="dateRanges"  data-label="最後可查詢日為4天前">
+          <div id="reportrange">
+            <i class="fa fa-calendar"></i>
+            <span>2024/09/08 ~ 2024/10/03</span>
+            <i class="fa fa-caret-down"></i>
+          </div>
+
+          <!-- <div class="daterangepicker ltr show-ranges opensright show-calendar" 
+          style="display: block; top: 42px; left: -400px; right: auto;"> -->
+          <div class="daterangepicker ltr show-ranges opensright show-calendar">
+            <div class="ranges">
               <ul>
-                <li><button type="button">7天</button></li>
-                <li><button type="button">30天</button></li>
-                <li><button type="button">60天</button></li>
-                <li><button type="button">90天</button></li>
-                <li class="active"><button type="button">自選日期</button></li>
+                <li data-range-key="Last 7 Days">7天</li>
+                <li data-range-key="Last 30 Days">30天</li>
+                <li data-range-key="Last 60 Days">60天</li>
+                <li data-range-key="Last 90 Days">90天</li>
+                <li data-range-key="Custom Range" class="active">自選區間</li>
               </ul>
             </div>
-
-            <!-- 選日期範圍套件  -->
-            <div class="daterangepicker222 ltr show-calendar opensleft">
-              <div class="drp-calendar left">
-                <div class="calendar-table">
-                  <table class="table-condensed">
-                    <thead>
-                      <tr>
-                        <th class="prev available"><span></span></th>
-                        <th colspan="5" class="month">2024 七月</th>
-                        <th></th>
-                      </tr>
-                      <tr>
-                        <th>日</th>
-                        <th>一</th>
-                        <th>二</th>
-                        <th>三</th>
-                        <th>四</th>
-                        <th>五</th>
-                        <th>六</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="weekend off ends available" data-title="r0c0">30</td>
-                        <td class="available" data-title="r0c1">1</td>
-                        <td class="available" data-title="r0c2">2</td>
-                        <td class="available" data-title="r0c3">3</td>
-                        <td class="available" data-title="r0c4">4</td>
-                        <td class="available" data-title="r0c5">5</td>
-                        <td class="weekend available" data-title="r0c6">6</td>
-                      </tr>
-                      <tr>
-                        <td class="weekend available" data-title="r1c0">7</td>
-                        <td class="available" data-title="r1c1">8</td>
-                        <td class="available" data-title="r1c2">9</td>
-                        <td class="available" data-title="r1c3">10</td>
-                        <td class="available" data-title="r1c4">11</td>
-                        <td class="available" data-title="r1c5">12</td>
-                        <td class="weekend available" data-title="r1c6">13</td>
-                      </tr>
-                      <tr>
-                        <td class="weekend available" data-title="r2c0">14</td>
-                        <td class="available" data-title="r2c1">15</td>
-                        <td class="available" data-title="r2c2">16</td>
-                        <td class="available" data-title="r2c3">17</td>
-                        <td class="available" data-title="r2c4">18</td>
-                        <td class="available" data-title="r2c5">19</td>
-                        <td class="weekend available" data-title="r2c6">20</td>
-                      </tr>
-                      <tr>
-                        <td class="weekend available" data-title="r3c0">21</td>
-                        <td class="available" data-title="r3c1">22</td>
-                        <td class="available" data-title="r3c2">23</td>
-                        <td class="available" data-title="r3c3">24</td>
-                        <td class="available" data-title="r3c4">25</td>
-                        <td class="active start-date available" data-title="r3c5">26</td>
-                        <td class="in-range weekend available" data-title="r3c6">27</td>
-                      </tr>
-                      <tr>
-                        <td class="in-range weekend available" data-title="r4c0">28</td>
-                        <td class="in-range today available in-range" data-title="r4c1">29</td>
-                        <td class="in-range available" data-title="r4c2">30</td>
-                        <td class="in-range available" data-title="r4c3">31</td>
-                        <td class="in-range off ends available" data-title="r4c4">1</td>
-                        <td class="in-range off ends available" data-title="r4c5">2</td>
-                        <td class="weekend off ends available in-range" data-title="r4c6">3</td>
-                      </tr>
-                      <tr>
-                        <td class="weekend off ends available in-range" data-title="r5c0">4</td>
-                        <td class="off ends available in-range" data-title="r5c1">5</td>
-                        <td class="off ends available in-range" data-title="r5c2">6</td>
-                        <td class="off ends available in-range" data-title="r5c3">7</td>
-                        <td class="off ends available in-range" data-title="r5c4">8</td>
-                        <td class="off ends available in-range" data-title="r5c5">9</td>
-                        <td class="weekend off ends available in-range" data-title="r5c6">10</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
+            <div class="drp-calendar left">
+              <div class="calendar-table">
+                <table class="table-condensed">
+                  <thead>
+                    <tr>
+                      <th class="prev available"><span></span></th>
+                      <th colspan="5" class="month">2024年 9月</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <th>日</th>
+                      <th>一</th>
+                      <th>二</th>
+                      <th>三</th>
+                      <th>四</th>
+                      <th>五</th>
+                      <th>六</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="weekend off ends available" data-title="r0c0">25</td>
+                      <td class="off ends available" data-title="r0c1">26</td>
+                      <td class="off ends available" data-title="r0c2">27</td>
+                      <td class="off ends available" data-title="r0c3">28</td>
+                      <td class="off ends available" data-title="r0c4">29</td>
+                      <td class="off ends available" data-title="r0c5">30</td>
+                      <td class="weekend off ends available" data-title="r0c6">31</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend available" data-title="r1c0">1</td>
+                      <td class="available" data-title="r1c1">2</td>
+                      <td class="available" data-title="r1c2">3</td>
+                      <td class="available" data-title="r1c3">4</td>
+                      <td class="available" data-title="r1c4">5</td>
+                      <td class="available" data-title="r1c5">6</td>
+                      <td class="weekend available" data-title="r1c6">7</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend active start-date available" data-title="r2c0">8</td>
+                      <td class="in-range available" data-title="r2c1">9</td>
+                      <td class="in-range available" data-title="r2c2">10</td>
+                      <td class="in-range available" data-title="r2c3">11</td>
+                      <td class="in-range available" data-title="r2c4">12</td>
+                      <td class="in-range available" data-title="r2c5">13</td>
+                      <td class="weekend in-range available" data-title="r2c6">14</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend in-range available" data-title="r3c0">15</td>
+                      <td class="in-range available" data-title="r3c1">16</td>
+                      <td class="in-range available" data-title="r3c2">17</td>
+                      <td class="in-range available" data-title="r3c3">18</td>
+                      <td class="in-range available" data-title="r3c4">19</td>
+                      <td class="in-range available" data-title="r3c5">20</td>
+                      <td class="weekend in-range available" data-title="r3c6">21</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend in-range available" data-title="r4c0">22</td>
+                      <td class="in-range available" data-title="r4c1">23</td>
+                      <td class="in-range available" data-title="r4c2">24</td>
+                      <td class="in-range available" data-title="r4c3">25</td>
+                      <td class="in-range available" data-title="r4c4">26</td>
+                      <td class="in-range available" data-title="r4c5">27</td>
+                      <td class="weekend in-range available" data-title="r4c6">28</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend in-range available" data-title="r5c0">29</td>
+                      <td class="in-range available" data-title="r5c1">30</td>
+                      <td class="off ends in-range available" data-title="r5c2">1</td>
+                      <td class="off ends in-range available" data-title="r5c3">2</td>
+                      <td class="off ends in-range available" data-title="r5c4">3</td>
+                      <td class="off ends in-range available" data-title="r5c5">4</td>
+                      <td class="weekend off ends in-range available" data-title="r5c6">5</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div class="drp-calendar right">
-                <div class="calendar-table">
-                  <table class="table-condensed">
-                    <thead>
-                      <tr>
-                        <th></th>
-                        <th colspan="5" class="month">2024 八月</th>
-                        <th class="next available"><span></span></th>
-                      </tr>
-                      <tr>
-                        <th>日</th>
-                        <th>一</th>
-                        <th>二</th>
-                        <th>三</th>
-                        <th>四</th>
-                        <th>五</th>
-                        <th>六</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="weekend off ends available" data-title="r0c0">28</td>
-                        <td class="today off ends active start-date available in-range" data-title="r0c1">29</td>
-                        <td class="off ends available" data-title="r0c2">30</td>
-                        <td class="off ends available" data-title="r0c3">31</td>
-                        <td class="in-range available" data-title="r0c4">1</td>
-                        <td class="in-range available" data-title="r0c5">2</td>
-                        <td class="in-range weekend available" data-title="r0c6">3</td>
-                      </tr>
-                      <tr>
-                        <td class="in-range weekend available" data-title="r1c0">4</td>
-                        <td class="in-range available" data-title="r1c1">5</td>
-                        <td class="in-range available" data-title="r1c2">6</td>
-                        <td class="in-range available" data-title="r1c3">7</td>
-                        <td class="active in-range available" data-title="r1c4">8</td>
-                        <td class="in-range available" data-title="r1c5">9</td>
-                        <td class="in-range weekend available" data-title="r1c6">10</td>
-                      </tr>
-                      <tr>
-                        <td class="end-date in-range weekend available" data-title="r2c0">11</td>
-                        <td class="available" data-title="r2c1">12</td>
-                        <td class="available" data-title="r2c2">13</td>
-                        <td class="available" data-title="r2c3">14</td>
-                        <td class="available" data-title="r2c4">15</td>
-                        <td class="available" data-title="r2c5">16</td>
-                        <td class="weekend available" data-title="r2c6">17</td>
-                      </tr>
-                      <tr>
-                        <td class="weekend available" data-title="r3c0">18</td>
-                        <td class="available" data-title="r3c1">19</td>
-                        <td class="available" data-title="r3c2">20</td>
-                        <td class="available" data-title="r3c3">21</td>
-                        <td class="available" data-title="r3c4">22</td>
-                        <td class="available" data-title="r3c5">23</td>
-                        <td class="weekend available" data-title="r3c6">24</td>
-                      </tr>
-                      <tr>
-                        <td class="weekend available" data-title="r4c0">25</td>
-                        <td class="available" data-title="r4c1">26</td>
-                        <td class="available" data-title="r4c2">27</td>
-                        <td class="available" data-title="r4c3">28</td>
-                        <td class="available" data-title="r4c4">29</td>
-                        <td class="available" data-title="r4c5">30</td>
-                        <td class="weekend available" data-title="r4c6">31</td>
-                      </tr>
-                      <tr>
-                        <td class="weekend off ends available" data-title="r5c0">1</td>
-                        <td class="off ends available" data-title="r5c1">2</td>
-                        <td class="off ends available" data-title="r5c2">3</td>
-                        <td class="off ends available" data-title="r5c3">4</td>
-                        <td class="off ends available" data-title="r5c4">5</td>
-                        <td class="off ends available" data-title="r5c5">6</td>
-                        <td class="weekend off ends available" data-title="r5c6">7</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="calendar-time" style="display: none;"></div>
+              <div class="calendar-time" style="display: none;"></div>
+            </div>
+            <div class="drp-calendar right">
+              <div class="calendar-table">
+                <table class="table-condensed">
+                  <thead>
+                    <tr>
+                      <th></th>
+                      <th colspan="5" class="month">2024年 10月</th>
+                      <th class="next available"><span></span></th>
+                    </tr>
+                    <tr>
+                      <th>日</th>
+                      <th>一</th>
+                      <th>二</th>
+                      <th>三</th>
+                      <th>四</th>
+                      <th>五</th>
+                      <th>六</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="weekend off ends in-range available" data-title="r0c0">29</td>
+                      <td class="off ends in-range available" data-title="r0c1">30</td>
+                      <td class="in-range available" data-title="r0c2">1</td>
+                      <td class="in-range available" data-title="r0c3">2</td>
+                      <td class="in-range available end-date" data-title="r0c4">3</td>
+                      <td class="available" data-title="r0c5">4</td>
+                      <td class="weekend available" data-title="r0c6">5</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend available" data-title="r1c0">6</td>
+                      <td class="today available" data-title="r1c1">7</td>
+                      <td class="available" data-title="r1c2">8</td>
+                      <td class="available" data-title="r1c3">9</td>
+                      <td class="available" data-title="r1c4">10</td>
+                      <td class="available" data-title="r1c5">11</td>
+                      <td class="weekend available" data-title="r1c6">12</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend available" data-title="r2c0">13</td>
+                      <td class="available" data-title="r2c1">14</td>
+                      <td class="available" data-title="r2c2">15</td>
+                      <td class="available" data-title="r2c3">16</td>
+                      <td class="available" data-title="r2c4">17</td>
+                      <td class="available" data-title="r2c5">18</td>
+                      <td class="weekend available" data-title="r2c6">19</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend available" data-title="r3c0">20</td>
+                      <td class="available" data-title="r3c1">21</td>
+                      <td class="available" data-title="r3c2">22</td>
+                      <td class="available" data-title="r3c3">23</td>
+                      <td class="available" data-title="r3c4">24</td>
+                      <td class="available" data-title="r3c5">25</td>
+                      <td class="weekend available" data-title="r3c6">26</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend available" data-title="r4c0">27</td>
+                      <td class="available" data-title="r4c1">28</td>
+                      <td class="available" data-title="r4c2">29</td>
+                      <td class="available" data-title="r4c3">30</td>
+                      <td class="available" data-title="r4c4">31</td>
+                      <td class="off ends available" data-title="r4c5">1</td>
+                      <td class="weekend off ends available" data-title="r4c6">2</td>
+                    </tr>
+                    <tr>
+                      <td class="weekend off ends available" data-title="r5c0">3</td>
+                      <td class="off ends available" data-title="r5c1">4</td>
+                      <td class="off ends available" data-title="r5c2">5</td>
+                      <td class="off ends available" data-title="r5c3">6</td>
+                      <td class="off ends available" data-title="r5c4">7</td>
+                      <td class="off ends available" data-title="r5c5">8</td>
+                      <td class="weekend off ends available" data-title="r5c6">9</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div class="drp-buttons">
-                <span class="drp-selected">2024/7/26 - 2024/8/11</span>
-                <button class="cancelBtn btn btn-sm btn-default" type="button">取消</button>
-                <button class="applyBtn btn btn-sm btn-primary" type="button">確定</button>
-              </div>
+              <div class="calendar-time" style="display: none;"></div>
+            </div>
+            <div class="drp-buttons">
+              <span class="drp-selected">2024/09/08 ~ 2024/10/03</span>
+              <button class="cancelBtn btn btn-sm btn-default" type="button">取消</button>
+              <button class="applyBtn btn btn-sm btn-primary" type="button">確定</button>
             </div>
           </div>
         </div>
+
+        <script>
+          $(function(){
+            const _rangePicker = $('.daterangepicker');
+            $('#reportrange').on('click', function(){
+              if (_rangePicker.is(':visible')) {
+                _rangePicker.hide();
+              } else {
+                _rangePicker.show().css('display', 'flex');
+              }
+            })
+          })
+        </script>
       </div>
       
       <section class="sources">

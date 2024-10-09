@@ -868,7 +868,9 @@ button.icon_search, input.icon_search {
   .block{
     position: relative; 
 
-    .heading{ min-height: 4.4em;}
+    .heading{ min-height: 4.4em;
+      &:has(+.noData){min-height: 2em;}
+    }
 
     .sumUp{
       display: block; line-height: 1;
