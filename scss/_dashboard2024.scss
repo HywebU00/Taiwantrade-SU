@@ -852,11 +852,15 @@ button.icon_search, input.icon_search {
   .noData {
     text-align: center;
     font-size: 1.25em; line-height: 1.5;
-    padding: 30px; margin: 10px auto;
-    box-shadow: $border-color-pale 0 0 0 1px inset, $border-color-light 0 5px 7px -4px ;
-    border-radius: 6px;
+    margin: 15px auto;
     color: $btn-bg2;
     p{margin: 0;}
+  }
+  
+  .chartHere .noData{
+    padding:25px 20px;
+    box-shadow: $border-color-pale 0 0 0 1px inset, $border-color-light 0 5px 7px -4px ;
+    border-radius: 6px;
   }
 }
 
@@ -867,7 +871,6 @@ button.icon_search, input.icon_search {
 .operationalAnalysis{
   .block{
     position: relative; 
-
     .heading{ min-height: 4.4em;
       &:has(+.noData){min-height: 2em;}
     }
@@ -913,17 +916,9 @@ button.icon_search, input.icon_search {
       }
     }
 
-    // &:has( .btnLook) {padding-bottom: calc(32px + 2.4em);}
-    // .btnLook{position: absolute; right: 12px; bottom: 16px; top: auto;
-    //   box-sizing: content-box;
-    //   a::before{box-sizing: content-box;}
-    // }
-
-
-    .chartHere{
-      width: 100%; 
+    .chartHere{ width: 100%; 
+      .noData { margin-top: 20px;}
     }
-
   }
 
   &.disabled{
@@ -1037,10 +1032,9 @@ button.icon_search, input.icon_search {
 
   .heading{
     min-height: 4.4em; 
-    .sumUp{
-      flex: 1 1 auto; margin-right: 12px;
-    }
+    .sumUp{flex: 1 1 auto; margin-right: 12px;}
     .funcBtn{ align-self: flex-end; margin-bottom: 0;}
+    &:has(+.noData){min-height: 2em;}
   }
 
   .block:nth-child(2){
@@ -1202,8 +1196,7 @@ button.icon_search, input.icon_search {
   }
   
   .mapBlock:has(.noData) {
-    padding:20px 12px;
-    padding-top: 10px;
+    padding:10px 12px 20px;
     box-shadow: $border-color-light 0 0 4px;
     border-radius: 6px; background: #fff;
     h3{ margin-top: 0;}
