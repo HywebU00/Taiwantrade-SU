@@ -1,19 +1,57 @@
-.steps {@extend %marginSet1;margin-top: 12px;margin-bottom: 12px;position: relative;background:$border-color-light;color: $font-color;border-radius:4em;
-  &>span{position: relative;line-height: 1.2;width:calc(49% - 1.2em);padding:10px .6em;text-align: center; border-radius:4em;color:#fff;
-    &:first-child{float: left;}
-    &:last-child{float: right;}
-    em{display: block;font-weight: bold;text-align: center;border-bottom: 1px solid $border-color-pale;padding: 0 0 .2em;margin: 0 .5em .2em;font-size: .9em;}
-    &.active{box-shadow:$hiLight2 0 0 0 3px, rgba(0,0,0,.4) 0 2px 6px;background:#fff;color: #000;
-      em{border-bottom-color:$border-color-light;}
-    }
-  }
-  &:after{content:'';display: block;clear: both;}
-}
-@media screen and (min-width: $wwMedium){
-  .steps{
-    &>span{padding-top: .6em;padding-bottom: .5em;
-      em{display: inline-block;margin:0 .8em 0 0;border: none;font-size: inherit}
-    }
+.steps {
+  margin-bottom: 24px;
+  padding: 8px 20px 8px 40px;
+  background: var(--Grey-White);
+  border-bottom: 1px solid var(--Grey-Grey-500);
 
+  ol{ 
+    list-style: none; margin: 0; padding: 0;
+    line-height: 1; font-size: 16px;
+    display: flex;
+    &>li{
+      --bgc: var(--Grey-Grey-500);
+      --color: var(--Grey-Grey-700);
+
+      color: var(--Grey-Grey-800);
+      margin-right: 10px;
+      &::before{
+        display: inline-block; margin-right: 10px; vertical-align: middle;
+        text-align: center;font-size: 1.25em; font-weight: 500;
+        width: 1.6em; height: 1.6em; line-height: 1.6;
+        border-radius: 50%;
+        color: var(--color);
+        box-shadow: var(--bgc) 0 0 0 2px inset;
+      }
+      &::after{
+        content: '';display: inline-block; margin-left: 10px; vertical-align: middle;
+        width: 6vw; height: 2px;
+        background-color: var(--Grey-Grey-500);
+      }
+      &:nth-child(1)::before{ content: '1';}
+      &:nth-child(2)::before{ content: '2';}
+      &:nth-child(3)::before{ content: '3';}
+      &:nth-child(4)::before{ content: '4';}
+      &:nth-child(5)::before{ content: '5';}
+      
+      &.now{
+        --bgc: var(--Orange);
+        --color: var(--Grey-White);
+
+        color: var(--Grey-Grey-900);
+        &::before{
+          box-shadow: none;
+          background-color: var(--bgc); 
+        }
+      }
+      &:last-child {
+        &::after { display: none;}
+      }
+    }
+  }
+
+  @media screen and (min-width: $wwMedium){
+  
   }
 }
+
+.pageHeading:has(+.steps) { margin-bottom: 0;}

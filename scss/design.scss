@@ -13,7 +13,7 @@
 @import '_msgTemplate';//回覆函範本
 @import '_form';//用table排版的表單
 @import '_formX'; //不用table排版的表單
-@import '_steps';
+// @import '_steps'; 20241028 removed
 @import '_page';
 @import '_search';
 @import '_dataTable';
@@ -92,5 +92,9 @@
 @import '_2023'; // 廣告目標設定
 
 // 202407
-// @import '_2024'; // 營運分析＋市場分析＋銷售分析
-@import '_dashboard2024'; // 2024年版「我的提醒」（myTT_dashboard2024）  營運分析＋市場分析＋銷售分析
+// @import '_2024'; // 2024年版「我的提醒」（myTT_dashboard2024）  營運分析＋市場分析＋銷售分析
+@import '_dashboard2024';
+
+// 20241028 
+// 依據「悠識」提供之 Figma 檔案設定的樣式
+@import '_2024style';

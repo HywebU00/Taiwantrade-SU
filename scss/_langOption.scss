@@ -1,0 +1,40 @@
+.optionPool.langOption {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 1px;
+  gap: 16px;
+  &>label{
+
+    flex: 0 0 7.2em;
+    margin: 0; padding: 0;
+    height: 6em; line-height: 6;
+    font-size: 1.125em; text-align: center;
+    border-radius: 8px;
+    box-shadow: var(--Grey-Grey-700) 0 0 0 1px inset;
+    float: none; 
+
+    input[type="radio"], input[type="checkbox"]{
+      position: absolute; left: 10px; top: 10px;
+      margin: 0 !important;
+    }
+    &::before, &::after { position: absolute; margin: 0;}
+    &::before {
+      left: 8px;top: 8px; border-radius: 4px;
+      width: 20px; height: 20px;
+      
+    }
+    &::after { left: 13px; top: 13px;}
+
+    &:hover {box-shadow: transparent 0 0 0 1px inset, var(--Grey-Grey-800) 0 0 0 1px;}
+
+    &.isSelected{
+      &::before{ 
+        background-color: var(--Purple); 
+        box-shadow: var(--Purple) 0 0 0 1px;
+        border-color: transparent;
+      }
+      box-shadow: var(--Purple) 0 0 0 1px inset;
+    }
+  }
+
+}

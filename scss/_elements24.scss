@@ -1,0 +1,72 @@
+// 圓角button
+.roundBtn{
+  padding: 0 1em; margin: 6px;
+  border-radius: 1.5em;
+  font-size: 1em;height: 2.4em; line-height: 2.5;
+  
+  &:is(a){ 
+    display: inline-block;
+    text-decoration: none; border: none;
+    transition: .2s;
+  }
+
+  // 白底灰匡線
+  &.white{
+    color: var(--Ocean);
+    background-color: var(--Grey-White);
+    box-shadow: var(--Grey-Grey-500) 0 0 0 1px inset;
+    &:hover, &:focus{box-shadow: transparent 0 0 0 1px inset, var(--Ocean) 0 0 0 2px;}
+  }
+
+  // 淺灰色底
+  &.gray{
+    color: var(--Ocean);
+    background-color: $bg-color-pale;
+    &:hover, &:focus{box-shadow: var(--Ocean) 0 0 0 2px;}
+  }
+  // 橘色底白字
+  &.hilight{
+    color: var(--Grey-White);
+    background-color: var(--Orange);
+    &:hover, &:focus{box-shadow: var(--Grey-White) 0 0 0 1px inset, var(--Orange) 0 0 0 2px;}
+  }
+
+  // 填寫小幫手
+  &.showHelper{
+    &::before{
+      content: ''; display: inline-block; width: 24px;height: 24px;
+      vertical-align: middle; margin-right: 4px; margin-top: -2px;
+      background: url(../images/icon_quick_reference.svg);
+    }
+  }
+
+}
+
+
+.bottomControler{
+  display: flex; justify-content: space-between;
+  background-color: #fff;
+  border-top: 1px solid var(--Grey-Grey-500);
+  padding: 20px 24px;
+  // &>*{ outline: 1px dashed #f008;outline-offset: -1px;}
+
+  .roundBtn{ margin: 0 6px;
+    &:first-child{ margin-left: 0;}
+    &:last-child {margin-right: 0;}
+  }
+
+  @media screen and (min-width: $wwMaximum){
+    padding-right: 48px;
+  }
+
+}
+
+// 固定在頁面的下方
+.fixBottomRow{
+  z-index: 999;
+  position: fixed; bottom: 0;right: 0; left: 0;
+  padding-left: calc($sideBarWidth + 24px);
+  transition: padding-left .4s linear;
+
+}
+.sideBar.hidden ~ .main .fixBottomRow { padding-left: calc( $sideBarWidthMini + 24px);}
