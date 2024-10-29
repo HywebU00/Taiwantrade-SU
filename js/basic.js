@@ -887,10 +887,10 @@ $(function(){
 		let _cateItem = _cateList.find('li');
     
     let _pdCateInput = _this.find('.inputAndBtns').find('input[type="text"]');
-		// let _pdCateSel = $('#pdCateSel');
-		// let _pdCateOk = $('#pdCateOk');
-    let _pdCateSel = _pdCateInput.next('button');
-		let _pdCateOk = _pdCateSel.next('button');
+		let _pdCateSel = $('#pdCateSel');
+		let _pdCateOk = $('#pdCateOk');
+    // let _pdCateSel = _pdCateInput.next('button');
+		// let _pdCateOk = _pdCateSel.next('button');
 
 		let btnText1 = _pdCateSel.text();
 		let btnText2 = _pdCateSel.attr('data-alttext');
@@ -2117,5 +2117,17 @@ _fileDragDrop.each(function(){
   _iButton.on('mouseleave', function(){
     _hiddenInfo.delay(300).fadeOut(300);
   })
+
+
+
+  //////////////////////////////////////////////////////////////////////
+  // 202410 [填寫小幫手] 2024年版 //////////////////////////////////////////////////////////
+  const _showHelper = $('.showHelper');
+  const _referenceData = $('.referenceData');
+  const _closeRef = _referenceData.find('.closeThis');
+  _showHelper.on('click', function(){
+    _referenceData.is(':hidden') ? _referenceData.fadeIn(200) : _referenceData.fadeOut(200);
+  })
+  _closeRef.on('click', function(){_referenceData.fadeOut(200)})
 
 });

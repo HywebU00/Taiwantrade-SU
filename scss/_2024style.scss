@@ -5,4 +5,38 @@
 @import '_steps'; // 步驟
 @import '_langOption'; // 選擇產品語系
 @import '_elements24'; // ２０２４新作元件
+@import '_referenceData'; // 2024 小幫手
+
+
+.multiCategory{
+  .inputAndBtns{
+    position: relative;
+    input[type="text"]:has(~.aiOptimise) {padding-right: 5em;}
+    button.aiOptimise{
+      position: absolute; left: calc(100% - 3.5em - 40px); top: 6px; right: auto; 
+    }
+  }
+
+  button.aiOptimise {
+    background-color: var(--Purple_Light);
+    color: var(--Purple);
+
+    margin: 0;
+    box-shadow: none;
+    width: calc(3.5em + 30px); height: calc(2.4em - 4px); line-height: calc(2.4em - 4px);
+    transform: translateX(-100%);
+    &::before {
+      content: ''; 
+      display: inline-block; width: 24px;height: 24px;
+      vertical-align: middle; margin-top: -4px; margin-right: 6px;
+      background: url(../images/icon_ai.svg) no-repeat 0 0;
+    }
+
+    &:hover, &:focus{
+      background-color: var(--Purple);
+      color: var(--Grey-White);
+      &::before { filter: brightness(900%);}
+    }
+  }
+}
 
