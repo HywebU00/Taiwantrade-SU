@@ -1,0 +1,77 @@
+// 透過 AI 建立產品型錄 202410
+.catalogGenByAI {
+  padding: 24px 16px;
+  border-radius: 8px;
+  background-color: var(--Grey-Grey-100);
+  background-image: 
+  radial-gradient(ellipse 100% 190% at 90% -10%, rgb(254 136 34 / .14) 0%, rgb(254 136 34 / 0) 40%),
+  radial-gradient(ellipse 120% 255% at 20% 150%, rgb(128 36 213 / .08) 0%, rgb(128 36 213 / 0) 70%);
+
+  *{box-sizing:border-box;}
+
+  .slideHeader {
+    display: flex; justify-content: space-between;
+    h3{ flex: 1 1 auto;}
+    .arrowV { flex: 0 0 auto; }
+  }
+
+  h3{ margin: 0; padding: 0; line-height: 1.2;}
+
+  p:has(+.generateBy){margin:0 0 .8em; color: var(--Grey-Grey-800);}
+  .generateBy{
+    display: flex; 
+    margin: 24px 0 0;
+    button{
+      --tinge: var(--Grey-Grey-800);
+      --bdc: var(--Grey-Grey-500);
+
+      flex: 0 0 auto;min-width: 7.5em; height: auto;
+      margin: 2px 16px 8px 0;padding: 12px; line-height: 1.6;
+      box-shadow: var(--bdc) 0 0 0 1px inset;
+      border-radius: 8px;
+
+      color: var(--tinge);
+      background-color: transparent;
+      &:last-child {margin-right: 0;}
+      &::before{
+        content: ''; display: block; width: 24px;height: 24px;
+        margin: 0 auto 8px;
+        background-repeat: no-repeat;
+        filter: grayscale(1) brightness(1.5);
+      }
+      &.active{
+        --tinge: var(--Purple);
+        --bdc: var(--Purple);
+        background-color: #fff;
+        &::before { filter: none;}
+      }
+      &.url::before{ background-image: url(../images/icon_captive_portal.svg);}
+      &.picture::before{ background-image: url(../images/icon_broken_image.svg);}
+      &.keyword::before{ background-image: url(../images/icon_action_key.svg);}
+    }
+  }
+
+  .generateHere{
+    padding: 24px; border-radius: 8px;
+    overflow: hidden;
+    background-color: var(--Grey-White);
+    box-shadow: var(--Purple) 0 0 0 1px inset;
+
+    label.oneRow{
+      display: block;
+      .labelText{ display: block; margin: 0 6px 3px;}
+      input[type="text"]{ 
+        width: 100%;margin-left: 0;margin-right: 0;
+      }
+    }
+
+    button.intense{ 
+      background-color: var(--Purple);
+      float: right; margin-right: 0;
+      min-width: 8em;
+      &:hover, &:focus{
+        box-shadow: var(--Purple) 0 0 0 2px;
+      }
+    }
+  }
+}

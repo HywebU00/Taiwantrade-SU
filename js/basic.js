@@ -2122,12 +2122,38 @@ _fileDragDrop.each(function(){
 
   //////////////////////////////////////////////////////////////////////
   // 202410 [填寫小幫手] 2024年版 //////////////////////////////////////////////////////////
-  const _showHelper = $('.showHelper');
-  const _referenceData = $('.referenceData');
-  const _closeRef = _referenceData.find('.closeThis');
+  var _showHelper = $('.showHelper');
+  var _referenceData = $('.referenceData');
+  var _closeRef = _referenceData.find('.closeThis');
   _showHelper.on('click', function(){
     _referenceData.is(':hidden') ? _referenceData.fadeIn(200) : _referenceData.fadeOut(200);
   })
   _closeRef.on('click', function(){_referenceData.fadeOut(200)})
+
+
+
+
+  // 透過 AI 建立產品型錄
+  var _catalogGenByAI = $('.catalogGenByAI');
+  _catalogGenByAI.each( function(){
+    let _this = $(this);
+    let _controler = _this.find('button.arrowV');
+    let _slideArea = _this.find('.slideArea');
+
+    _slideArea.is(':hidden') ? _controler.removeClass('up') : _controler.addClass('up');
+
+    _controler.on('click', function(){
+      if( _slideArea.is(':hidden')) {
+        _slideArea.slideDown();
+        _controler.addClass('up');
+      } else {
+        _slideArea.slideUp();
+        _controler.removeClass('up');
+      }
+    })
+
+    // 切換內容生成方式
+    
+  })
 
 });

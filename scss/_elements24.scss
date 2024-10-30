@@ -42,6 +42,38 @@
 
 }
 
+// 上、下箭頭 button
+button.arrowV{
+  --btn_size: 32px;
+  --arrow_size: 8px;
+  --btn_bgc: var(--Grey-White);
+  --arrow_color: var(--Ocean);
+
+  position: relative;
+  width: var(--btn_size); height: var(--btn_size); line-height: var(--btn_size);
+  padding: 0; margin: 0; border-radius: 50%;
+  background-color: var(--btn_bgc);
+  transition: .2s;
+  &::before{
+    content: '';position: absolute; 
+    left: calc(50% - var(--arrow_size)/2 - 1px); 
+    top: calc(50% - var(--arrow_size)/2 - 3px);
+    width: var(--arrow_size); height: var(--arrow_size);
+    border: 2px solid var(--arrow_color);
+    border-top: none; border-left: none;
+    rotate: 45deg;
+    transition:all .2s, rotate .4s;
+  }
+  &:hover, &:focus{
+    --btn_bgc: var(--Ocean);
+    --arrow_color: var(--Grey-White);
+  }
+
+  &.up{
+    &::before {rotate: 225deg;top: calc(50% - var(--arrow_size)/2 + 1px);}
+  }
+}
+
 
 .bottomControler{
   display: flex; justify-content: space-between;

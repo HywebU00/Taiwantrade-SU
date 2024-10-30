@@ -190,9 +190,55 @@
             </ul>
           </div>
           
-          <div class="tabContainer show"><!-- 產品介紹 -->
-            <h3>產品基本資料</h3>
+          <div class="tabContainer show">
 
+            <!-- 透過 AI 建立產品型錄 -->
+            <section class="catalogGenByAI">
+              
+              <div class="slideHeader">
+                <h3>透過 AI 建立產品型錄</h3>
+                <button type="button" class="arrowV"></button>
+              </div>
+
+              <div class="slideArea">
+                
+                <p>請選擇一種方式進行內容生成</p>
+                <div class="generateBy">
+                  <button class="url active" type="button">產品 URL</button>
+                  <button class="picture" type="button">產品圖片</button>
+                  <button class="keyword" type="button">產品關鍵字</button>
+                </div>
+
+                <section class="generateHere">
+                  <section class="langTab">
+                    <ul>
+                      <li><a>英文</a></li>
+                      <li><a>正體中文</a></li>
+                      <li class="active"><a>日文</a></li>
+                    </ul>
+                  </section>
+  
+                  <label class="oneRow">
+                    <span class="labelText">產品 URL</span>
+                    <input type="text" placeholder="請輸入該語系產品 URL">
+                    <p class="hint">Tips: 每種語系皆需輸入各自的產品 URL</p>
+                  </label>
+                  <button class="intense" type="button">生成內容</button>
+                </section>
+  
+                <section class="generateHere" style="display: none;">
+                  <p>產品圖片</p>
+                </section>
+                <section class="generateHere" style="display: none;">
+  
+                </section>
+              </div>
+
+
+            </section>
+            
+            <!-- 產品基本資料 -->
+            <h3>產品基本資料</h3>
             <fieldset>
               <legend><abbr title="必填欄位" class="required">*</abbr> 產品類別</legend>
               <table class="formLayout">
@@ -3308,7 +3354,7 @@
           </tr>
         </table>
       </div>
-      
+
       <!-- <footer class="webFooter">
         <ul class="footLinks">
           <li><a href="#">Liability Disclaimer</a></li>

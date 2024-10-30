@@ -49,6 +49,7 @@
       &::before{display: none;}
       &::after{content: '';background:$hiLight2; width: auto; margin-left: 0;transition: 0;}
     }
+    &:not(.active) abbr.required {color: #fff;}
     &>.warning{ display: inline-block;vertical-align: top;margin: 0; min-width: 0;}
   }   
 }
