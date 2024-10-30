@@ -194,7 +194,7 @@
 
             <!-- 透過 AI 建立產品型錄 -->
             <section class="catalogGenByAI">
-              
+
               <div class="slideHeader">
                 <h3>透過 AI 建立產品型錄</h3>
                 <button type="button" class="arrowV"></button>
@@ -223,17 +223,30 @@
                     <input type="text" placeholder="請輸入該語系產品 URL">
                     <p class="hint">Tips: 每種語系皆需輸入各自的產品 URL</p>
                   </label>
-                  <button class="intense" type="button">生成內容</button>
                 </section>
   
-                <section class="generateHere" style="display: none;">
+                <section class="generateHere">
                   <p>產品圖片</p>
                 </section>
-                <section class="generateHere" style="display: none;">
+                <section class="generateHere">
+                  <!-- 產品關鍵字 -->
+                  <section class="langTab">
+                    <ul>
+                      <li><a>英文</a></li>
+                      <li><a>正體中文</a></li>
+                      <li class="active"><a>日文</a></li>
+                    </ul>
+                  </section>
   
+                  <label class="oneRow">
+                    <span class="labelText">產品關鍵字</span>
+                    <input type="text" placeholder="請輸入該語系產品關鍵字">
+                    <p class="hint">Tips: 每種語系皆需輸入各自的產品關鍵字</p>
+                  </label>
                 </section>
               </div>
 
+              <button class="intense" type="button">生成內容</button>
 
             </section>
             

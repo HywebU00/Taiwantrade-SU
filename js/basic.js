@@ -2153,7 +2153,20 @@ _fileDragDrop.each(function(){
     })
 
     // 切換內容生成方式
-    
+    let _buttons = _this.find('.generateBy').find('button');
+    let _generateHere = _this.find('.generateHere');
+    let  i = _buttons.filter('.active').index();
+
+    _generateHere.eq(i).addClass('show');
+
+    _buttons.on('click', function(){
+      i = $(this).index();
+      _generateHere.removeClass('show').eq(i).addClass('show');
+      $(this).addClass('active').siblings().removeClass('active');
+    })
+
+
+
   })
 
 });
