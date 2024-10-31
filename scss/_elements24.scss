@@ -102,3 +102,41 @@ button.arrowV{
 
 }
 .sideBar.hidden ~ .main .fixBottomRow { padding-left: calc( $sideBarWidthMini + 24px);}
+
+
+
+.popMsg.generating{
+  text-align: center;
+  max-width: 540px;
+  padding: 40px 24px;
+  h3{ border: none;}
+
+  .waiting{ margin: 16px auto;
+    outline: 1px dashed #f008;
+    outline-offset: -1px;
+  }
+
+}
+
+.waiting{
+  position: relative;
+  width: 160px; height: 160px;
+  span{
+    position: absolute; 
+    // left: 50%; top: 50%;
+    border-radius: 50%;
+    // opacity: .7;
+    &:nth-child(1){
+      width: 56px; height: 56px; background-color: #FF7600;
+      left: 52px; top: 24px;
+    }
+    &:nth-child(2){
+      width: 48px; height: 48px; background-color: #7511D2;
+      left: 70px; top: 84px;
+    }
+    &:nth-child(3){
+      width: 24px; height: 24px; background-color: #214E5D;
+      left: 40px; top: 84px;
+    }
+  }
+}
