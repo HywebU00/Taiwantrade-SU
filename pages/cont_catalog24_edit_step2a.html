@@ -263,11 +263,20 @@
                     <div class="multiCategory">
                       <div class="inputAndBtns">
                         <input id="pdCategory" type="text" readonly>
-                        <button type="button" class="aiOptimise">AI 優化</button>
+                        <button type="button" disabled class="aiOptimise">AI 優化</button>
                         <button type="button" id="pdCateSel" data-alttext="取消">選擇分類</button>
                         <button type="button" id="pdCateOk">確定</button>
                       </div>
                       <p class="hint">Tips: 為產品設定貿協分類結構代碼，將您的場品更準確的分門別類</p>
+                      <div class="categoryOptByAI">
+                        <div class="headNav">
+                          <div class="opt_heading">優化建議</div>
+                          <div class="opt_nav">建議 1/3</div>
+                          <button type="button" class="colseThis" title="關閉"></button>
+                        </div>
+                        <div class="opt_processing">內容優化中<i></i><i></i><i></i></div>
+                        <button class="opt_stopBtn" type="button">停止優化</button>
+                      </div>
                       <div class="cateSelect">
                         <div class="cateSearch">
                           <span class="label">查詢產業</span>

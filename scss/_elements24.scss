@@ -41,6 +41,9 @@
   }
 
 }
+// ---------------------------------------------------------------------- //
+
+
 
 // 上、下箭頭 button
 button.arrowV{
@@ -73,8 +76,137 @@ button.arrowV{
     &::before {rotate: 225deg;top: calc(50% - var(--arrow_size)/2 + 1px);}
   }
 }
+// ---------------------------------------------------------------------- //
 
 
+
+// 關閉（Ｘ） button
+button.colseThis{
+  --btn_size: 32px;
+  --bar_width: 14px;
+  --bar_height: 2px;
+  --btn_bgc: var(--Grey-Grey-100);
+  --bar_bgc: var(--Grey-Grey-700);
+
+  position: relative;
+  width: var(--btn_size); height: var(--btn_size); line-height: var(--btn_size);
+  padding: 0; margin: 0; border-radius: 50%;
+  background-color: var(--btn_bgc);
+  transition: .2s;
+  &::before, &::after{
+    content: '';position: absolute; 
+    left: calc(50% - var(--bar_width)/2 ); 
+    top: calc(50% - var(--bar_height)/2 );
+    width: var(--bar_width); height: var(--bar_height);
+    background-color:  var(--bar_bgc);
+    transition: .2s;
+  }
+  &::before {rotate: 45deg;}
+  &::after {rotate: -45deg;}
+  &:hover, &:focus{
+    --bar_width: 16px;
+    --btn_bgc: var(--Ocean);
+    --bar_bgc: var(--Grey-White);
+    box-shadow: var(--Ocean) 0 0 0 2px;
+  }
+}
+// ---------------------------------------------------------------------- //
+
+
+
+// AI優化 button
+button.aiOptimise {
+  background-color: var(--Purple_Light);
+  color: var(--Purple);
+
+  margin: 0; padding: 0 .4em;
+  box-shadow: none;
+  width: calc(3.5em + 30px); height: calc(2.4em - 4px); line-height: calc(2.4em - 4px);
+  transform: translateX(-100%);
+  &::before {
+    content: ''; 
+    display: inline-block; width: 24px;height: 24px;
+    vertical-align: middle; margin-top: -4px; margin-right: 6px;
+    background: url(../images/icon_ai.svg) no-repeat 0 0;
+  }
+
+  &:hover, &:focus{
+    background-color: var(--Purple);
+    color: var(--Grey-White);
+    box-shadow: none;
+    &::before { filter: brightness(900%);}
+  }
+
+  &[disabled] {
+    background-color: var(--Grey-Grey-300);
+    color: var(--Grey-Grey-700);
+    
+    &::before { filter: saturate(0%) brightness(2.5);}
+    &:hover, &:focus{ box-shadow: none;}
+  }
+}
+// ---------------------------------------------------------------------- //
+
+
+
+// 停止優化 button
+button.opt_stopBtn {
+  padding: 0 24px;
+  background-color: var(--Purple_Light);
+  color: var(--Purple);
+  font-weight: 500;
+  &::before{
+    content: ''; display: inline-block;
+    vertical-align: middle; margin:-2px 5px 0 0;
+    width: 16px;height: 16px;
+    border-radius: 2px;
+    background-color: var(--Purple);
+  }
+  &:hover{box-shadow: var(--Purple_Light) 0 0 0 2px;}
+  &:focus{box-shadow: var(--Purple) 0 0 0 2px;}
+}
+// ---------------------------------------------------------------------- //
+
+
+
+// 內容優化中：三個點點動畫
+.opt_processing{
+  position: relative;
+  padding: 8px;
+  &>i{
+    --ispeed : 1s;
+    content: ''; position: absolute;  left: auto;
+    top: calc(50% - 3px); 
+    width: 6px;height: 6px; border-radius: 50%;
+    &:nth-child(1){
+      background-color: var(--Orange);
+      margin-left: 12px; 
+      animation: dotsLift infinite var(--ispeed) 0s ease-in-out;
+    }
+    &:nth-child(2){
+      background-color: var(--Ocean);
+      margin-left: 22px; 
+      animation: dotsLift infinite var(--ispeed) .2s ease-in-out;
+    }
+    &:nth-child(3){
+      background-color: var(--Purple);
+      margin-left: 32px; 
+      animation: dotsLift infinite var(--ispeed) .4s ease-in-out;
+    }
+  }
+}
+
+@keyframes dotsLift {
+  0%   {translate: 0 0;}
+  35%  {translate: 0 -10px;}
+  70%  {translate: 0 0;}
+}
+// ---------------------------------------------------------------------- //
+
+
+
+
+// 
 .bottomControler{
   display: flex; justify-content: space-between;
   background-color: #fff;
@@ -92,6 +224,9 @@ button.arrowV{
   }
 
 }
+// ---------------------------------------------------------------------- //
+
+
 
 // 固定在頁面的下方
 .fixBottomRow{
@@ -102,19 +237,106 @@ button.arrowV{
 
 }
 .sideBar.hidden ~ .main .fixBottomRow { padding-left: calc( $sideBarWidthMini + 24px);}
+// ---------------------------------------------------------------------- //
 
 
 
-.popMsg.generating{
-  text-align: center;
-  max-width: 540px;
-  padding: 40px 24px;
-  h3{ border: none;}
 
-  .waiting{ margin: 16px auto;}
+
+// button 群組
+.btnDv.style24{
+  display: flex; justify-content: space-between;
+  gap: 16px; padding: 0; margin: 40px auto 10px;
+
+  button, input[type="button"], input[type="submit"], nput[type="reset"]{
+    flex: 1 1 auto; margin:5px 0;
+    border-radius: 8px;
+    font-size: 1.2em;
+    background-color: var(--Grey-White); color: var(--Grey-Grey-800);
+    box-shadow: var(--Grey-Grey-500) 0 0 0 1px inset;
+    &.confirm{
+      background-color: var(--Purple); color: var(--Grey-White);
+      box-shadow: none;
+    }
+  }
+}
+// ---------------------------------------------------------------------- //
+
+
+// 
+label.noshow{
+  position: relative;
+  margin:0; padding: 2px 0 0 2em;
+  line-height: 1.5;
+  cursor: pointer;
+  input[type="checkbox"] {
+    position: absolute; left: 0; top: 0;
+    width: 1.5em; height: 1.5em; margin: 0 ; 
+    border-radius: 5px;
+  }
 
 }
+// ---------------------------------------------------------------------- //
 
+
+// 彈出訊息
+.popMsg {
+  &.generatConfirm, &.generating {
+    position: fixed; left: 50vw; width: 460px;
+    translate: -50% 0;
+    margin: 0; padding: 40px 24px; 
+    border-radius: 16px;
+    h3 {
+      margin: 15px auto 0;
+      font-size: 1.6em;font-weight: 500;
+      border: none;
+    }
+    .popBody{
+      border: none; font-size: 1.067em;
+
+      &+.btnDv{
+        border: none;
+      }
+    }
+  }
+
+  //您確定要生成內容嗎？
+  &.generatConfirm{
+    
+    h3 {
+      margin: 15px auto 0;
+      font-size: 1.6em;font-weight: 500;
+      border: none;
+    }
+    .popBody{
+      border: none; font-size: 1.067em;
+
+      &+.btnDv{
+        border: none;
+      }
+    }
+  }
+
+
+  // AI 產品型錄生成中
+  &.generating{
+    text-align: center;
+    
+
+  
+    .waiting{ margin: 16px auto;}
+    p{ font-size: 1.125em;}
+  
+  }
+
+
+
+}
+// ---------------------------------------------------------------------- //
+
+
+
+// 「AI 產品型錄生成中」的動畫
 .waiting{
   --running_speed: 1400ms;
   position: relative;width: 160px; height: 160px;
@@ -153,4 +375,4 @@ button.arrowV{
   50% { left: 96px; top: 52px;}
   100%{ left: 40px; top: 84px;}
 }
-
+// ---------------------------------------------------------------------- //
