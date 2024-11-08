@@ -1,5 +1,5 @@
 // 產品類別ai優化建議
-.categoryOptByAI{
+.optimizedByAI{
   position: relative;
   padding: 16px; margin: 8px 0 24px;
   border-radius: 16px;
@@ -17,7 +17,6 @@
       text-align: center;
       margin-right: 3.6em;
     }
-
   }
   .opt_heading{
     position: relative;
@@ -34,4 +33,126 @@
   .opt_processing{margin: 16px 0;}
   .opt_stopBtn{position: relative; left: 50%; translate: -50% 0;}
 
+  .optionPool{
+    --tinge: var(--Grey-Grey-700);
+    --tingelight: var(--Grey-Grey-500);
+    --checked: var(--Purple);
+
+    width: 100% !important; margin: 0;
+    &>label{
+      padding: .65em 1em .6em 40px; margin: 8px;
+      line-height: 1.4; border-radius: 1.5em;
+      background-color: var(--Grey-Grey-100);
+      color: var(--Grey-Grey-900);
+      box-shadow: none;
+
+      &:hover{ box-shadow: var(--tingelight) 0 0 0 1px;}
+
+      &::before { left: 16px; top: .66em; margin: 0;}
+      &::after { left: 16px; margin-top: -8px; }
+
+      &.isSelected{
+        background-color: var(--Purple_Light);
+        &:hover{ box-shadow: var(--Purple) 0 0 0 1px;}
+      }
+    }
+
+    &.block{
+      &>label{margin: 4px;
+        &+label{ margin-top: 16px;}
+      }
+    }
+  }
+
+  .funcButtons{
+    margin: 16px 0 0;
+    display: flex; justify-content: space-between;
+    button{ margin: 0;}
+  }
+
 }
+
+// 優化建議結果和選擇
+// .aiRecomList.optionPool {
+
+//   --tinge: var(--Grey-Grey-700);
+//   --tingelight: var(--Grey-Grey-500);
+//   --checked: var(--Purple);
+
+//   &>label{
+//     padding: .65em 1em .6em 40px; margin: 3px;
+//     line-height: 1.4; border-radius: 1.5em;
+//     background-color: var(--Grey-Grey-100);
+//     color: var(--Grey-Grey-900);
+//     box-shadow: none;
+  
+
+//     &:hover{ box-shadow: var(--tingelight) 0 0 0 1px;}
+
+//     &::before { left: 16px; top: .66em; margin: 0;}
+
+//     &.isSelected{
+//       background-color: var(--Purple_Light);
+//       &:hover{ box-shadow: var(--Purple) 0 0 0 1px;}
+//     }
+//   }
+
+// }
+
+
+
+// AI 優化 button（button.aiOptimise） 定位
+
+.multiCategory{
+  .inputAndBtns{
+    position: relative;
+    input[type="text"]:has(~.aiOptimise) {padding-right: 5em;}
+    button.aiOptimise{
+      position: absolute; left: calc(100% - 3.5em - 40px); top: 6px; right: auto; 
+      margin: 0;
+      transform: translateX(-100%);
+    }
+  }
+}
+
+.keyFeatureEditor{
+  .aiOptimise{
+    z-index: 9;
+    position: absolute; right: 4px; bottom: auto;
+    translate: 0 calc(-100% - 4px);
+  }
+}
+
+// 產品型錄設定: 型錄內容設定 
+// .catalogSetting : 2024 增加的 classname 
+.catalogSetting {
+  fieldset{
+    .selectImitating {margin: 0;}
+    table.formLayout{
+      width: 100%;
+
+      td{
+        &:has(button.aiOptimise) {position: relative;}
+        input[type="text"].fullWidth { 
+          width: calc(100% - 20px);
+          &+.aiOptimise{ position: absolute; right: 7px; bottom: 7px;}
+        }
+        textarea.fullWidth {width: calc(100% - 20px);}
+
+        // 產品關鍵詞
+        .keywordPool{
+          background-color: var(--Grey-Grey-100);
+          margin-right: 3px;
+          &+.aiOptimise {position: absolute; right: 7px; top: 12px;}
+        }
+        
+        // 自選產品分類
+        .selectImitating{width: 100%;}
+
+      }
+
+  
+    }
+  }
+}
+

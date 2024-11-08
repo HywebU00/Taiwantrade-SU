@@ -263,11 +263,12 @@
                     <div class="multiCategory">
                       <div class="inputAndBtns">
                         <input id="pdCategory" type="text" readonly>
-                        <button type="button" disabled class="aiOptimise">AI 優化</button>
+                        <button disabled type="button" class="aiOptimise">AI 優化</button>
                         <button type="button" id="pdCateSel" data-alttext="取消">選擇分類</button>
                         <button type="button" id="pdCateOk">確定</button>
                       </div>
                       <p class="hint">Tips: 為產品設定貿協分類結構代碼，將您的場品更準確的分門別類</p>
+
                       <div class="categoryOptByAI">
                         <div class="headNav">
                           <div class="opt_heading">優化建議</div>
@@ -275,8 +276,36 @@
                           <button type="button" class="colseThis" title="關閉"></button>
                         </div>
                         <div class="opt_processing">內容優化中<i></i><i></i><i></i></div>
-                        <button class="opt_stopBtn" type="button">停止優化</button>
+                        <button class="ai24 opt_stopBtn" type="button">停止優化</button>
                       </div>
+
+                      <div class="categoryOptByAI">
+                        <div class="headNav">
+                          <div class="opt_heading">優化建議</div>
+                          <button type="button" class="colseThis" title="關閉"></button>
+                        </div>
+                        <div class="aiRecomList optionPool block singleSelection">
+                          <label class="isSelected">
+                            <input type="radio" checked name="aaa1">
+                            Automobiles & Motorcycle ❯ Automobile Engine ❯ Other Automobile Engine Parts --  其他汽車引擎零件
+                          </label>
+                          <label>
+                            <input type="radio" name="aaa1">
+                            Automobiles & Motorcycle ❯ Automobile Engine ❯ Other Automobile Engine Parts --  其他汽車引擎零件
+                          </label>
+                          <label>
+                            <input type="radio" name="aaa1">
+                            Automobiles & Motorcycle ❯ Automobile Engine ❯ Other Automobile Engine Parts --  其他汽車引擎零件
+                          </label>
+                        </div>
+
+                        <button class="ai24 refresh" type="button">重新生成</button>
+                        <button class="ai24 intense" type="button">使用</button>
+
+                      </div>
+
+
+
                       <div class="cateSelect">
                         <div class="cateSearch">
                           <span class="label">查詢產業</span>

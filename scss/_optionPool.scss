@@ -1,6 +1,12 @@
 /* 單選與複選 checkbox or radio group (用於 Insert a template, 問卷	)*/
 .optionPool{
+
+  --tinge: #{$btn-bg1};
+  --tingelight: #{$border-color-light};
+  --checked: #{$hiLight2};
+
   overflow: hidden;
+
   label {
       position: relative;float: left;overflow: hidden;
       line-height: 1; padding: 8px 10px 8px 32px;margin: 3px;
@@ -12,19 +18,22 @@
     /* 複選（checkbox） */
     &::before,
     &::after{content:'';position:absolute;left:7px;top:50%;margin-top:-9px; z-index:9;transition:.15s;}
-    &::before{width:16px;height:16px;background:#fff;border:1px solid $border-color-light;border-radius:2px;}
+    &::before{width:16px;height:16px;background:#fff;border:1px solid var(--tingelight);border-radius:2px;}
     &::after{display:none;border:2px solid #fff;width:10px;height:6px;margin-left:3px;margin-top: -6px;;transform:rotate(-45deg);border-top:none;border-right:none;}
-    &.isSelected{box-shadow: $btn-bg1 0 0 0 1px;color: $font-color;
-      &::before{background:$hiLight2;border-color:#fff;box-shadow:$hiLight2 0 0 0 1px;}
+    &.isSelected{
+      box-shadow: var(--tinge) 0 0 0 1px;color: $font-color;
+      &::before{background:var(--checked);border-color:#fff;box-shadow:var(--checked) 0 0 0 1px;}
       &::after{display:block;}
-      &:hover{box-shadow:$btn-bg1 0 0 0 1px;}
+      &:hover{box-shadow:var(--tinge) 0 0 0 1px;}
     }
-    &.disabled{color: $font-color-lighter; cursor: default;
+    &.disabled{
+      color: $font-color-lighter; cursor: default;
       &::before{border-color: $border-color-pale; background-color: $bg-color-pale;}
       &:hover{box-shadow: none;}
     }
-    &.isSelected.disabled{box-shadow: $border-color-pale 0 0 0 1px;color: inherit;
-      &::before{background:$border-color-light;border-color:#fff;box-shadow:$border-color-light 0 0 0 1px;}
+    &.isSelected.disabled{
+      box-shadow: $border-color-pale 0 0 0 1px;color: inherit;
+      &::before{background:var(--tingelight);border-color:#fff;box-shadow:var(--tingelight) 0 0 0 1px;}
       &::after{display:block;}
       &:hover{box-shadow:$border-color-pale 0 0 0 1px;}
     }
@@ -52,8 +61,10 @@
    /* 單選（radio） */
   &.singleSelection{
     label{
-      &::before{width:18px;height:18px;border-radius:50%;left:6px;top:50%;margin-top: -10px;}
-      &.isSelected:before{box-shadow: #fff 0 0 0 2px inset, $hiLight2 0 0 0 1px; border-color: $hiLight2;}
+      &::before{width:18px;height:18px;border-radius:50%;left:6px;top:50%;margin-top: -10px;
+        border:1px solid var(--tingelight);
+      }
+      &.isSelected:before{box-shadow: #fff 0 0 0 2px inset, var(--checked) 0 0 0 1px; border-color: var(--checked);}
       &.isSelected:after{display:none;}
     }
   } 
@@ -97,11 +108,11 @@
   }
 
   // 固定高度，有捲軸
-  &.scroll{padding:0 2px; border: 1px solid $border-color-light; border-radius: 4px; height: 11.8em; overflow: auto;
+  &.scroll{padding:0 2px; border: 1px solid var(--tingelight); border-radius: 4px; height: 11.8em; overflow: auto;
     &>label{
       &:hover{background-color: $bg-color-pale;}
       &.isSelected{background-color: $bg-color-pale; box-shadow: none;
-        &:hover{box-shadow:$btn-bg1 0 0 0 1px;}
+        &:hover{box-shadow:var(--tinge) 0 0 0 1px;}
       }
     }
   }

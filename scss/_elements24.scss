@@ -114,15 +114,83 @@ button.colseThis{
 
 
 
-// AI優化 button
-button.aiOptimise {
+
+
+
+
+// ---------------------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
+
+// .y24 2024年11月 因製作 AI 相關功能而設計的紫色系 button 樣式
+button.ai24{
+  height: 2.2em; line-height: 2.2; margin: 0; padding: 0 .8em;
+  font-weight: 500;
   background-color: var(--Purple_Light);
   color: var(--Purple);
+  box-shadow: none; 
+  border-radius: 8px;
+  &:hover{box-shadow: var(--Purple_Light) 0 0 0 2px;}
+  &:focus{box-shadow: var(--Purple) 0 0 0 2px;}
 
+  // 深紫色底白色字的 button
+  &.intense {
+    background-color: var(--Purple);
+    color: var(--Grey-White);
+    font-weight: 400;
+    &:hover,
+    &:focus{box-shadow: var(--Purple) 0 0 0 2px;}
+  }
+
+
+  // 停止優化 button
+  &.opt_stopBtn {
+    padding: 0 24px;    
+    &::before{
+      content: ''; display: inline-block;
+      vertical-align: middle; margin:-2px 5px 0 0;
+      width: 16px;height: 16px;
+      border-radius: 2px;
+      background-color: var(--Purple);
+    }
+  }
+  // ---------------------------------------- //
+
+
+  // 重新生成 使用 buttons
+  &.refresh{
+    &::before {
+      content: ''; display: inline-block;
+      vertical-align: middle; margin:-2px 5px 0 0;
+      width: 24px; height: 24px;
+      background: url(../images/icon_refresh.svg) no-repeat 0 0;
+      transition: .3s;
+    }
+    &:hover{
+      &::before{
+        rotate: 225deg;
+      }
+    }
+  }
+  // ---------------------------------------- //
+
+  
+
+
+  // ---------------------------------------- //
+
+}
+
+
+
+// AI優化 button
+// ---------------------------------------------------------------------- //
+button.aiOptimise {
   margin: 0; padding: 0 .4em;
+  background-color: var(--Purple_Light);
+  color: var(--Purple);
   box-shadow: none;
   width: calc(3.5em + 30px); height: calc(2.4em - 4px); line-height: calc(2.4em - 4px);
-  transform: translateX(-100%);
   &::before {
     content: ''; 
     display: inline-block; width: 24px;height: 24px;
@@ -148,60 +216,12 @@ button.aiOptimise {
 // ---------------------------------------------------------------------- //
 
 
-
-// 停止優化 button
-button.opt_stopBtn {
-  padding: 0 24px;
-  background-color: var(--Purple_Light);
-  color: var(--Purple);
-  font-weight: 500;
-  &::before{
-    content: ''; display: inline-block;
-    vertical-align: middle; margin:-2px 5px 0 0;
-    width: 16px;height: 16px;
-    border-radius: 2px;
-    background-color: var(--Purple);
-  }
-  &:hover{box-shadow: var(--Purple_Light) 0 0 0 2px;}
-  &:focus{box-shadow: var(--Purple) 0 0 0 2px;}
-}
+// ---------------------------------------------------------------------- //
+// ---------------------------------------------------------------------- //
 // ---------------------------------------------------------------------- //
 
 
 
-// 內容優化中：三個點點動畫
-.opt_processing{
-  position: relative;
-  padding: 8px;
-  &>i{
-    --ispeed : 1s;
-    content: ''; position: absolute;  left: auto;
-    top: calc(50% - 3px); 
-    width: 6px;height: 6px; border-radius: 50%;
-    &:nth-child(1){
-      background-color: var(--Orange);
-      margin-left: 12px; 
-      animation: dotsLift infinite var(--ispeed) 0s ease-in-out;
-    }
-    &:nth-child(2){
-      background-color: var(--Ocean);
-      margin-left: 22px; 
-      animation: dotsLift infinite var(--ispeed) .2s ease-in-out;
-    }
-    &:nth-child(3){
-      background-color: var(--Purple);
-      margin-left: 32px; 
-      animation: dotsLift infinite var(--ispeed) .4s ease-in-out;
-    }
-  }
-}
-
-@keyframes dotsLift {
-  0%   {translate: 0 0;}
-  35%  {translate: 0 -10px;}
-  70%  {translate: 0 0;}
-}
-// ---------------------------------------------------------------------- //
 
 
 
@@ -281,6 +301,20 @@ label.noshow{
 
 // 彈出訊息
 .popMsg {
+
+  .colseThis{
+    position: absolute; right: 16px; top: 16px;
+  }
+
+  // 窄版
+  &.short{
+    box-sizing: border-box;
+    width: 30em; padding: 40px; margin: 0;
+    border-radius: 16px;
+    top: 40vh;
+    translate: -50% -50%;
+  }
+
   &.generatConfirm, &.generating {
     position: fixed; left: 50vw; width: 460px;
     translate: -50% 0;
@@ -300,7 +334,7 @@ label.noshow{
     }
   }
 
-  //您確定要生成內容嗎？
+  // 您確定要生成內容嗎？
   &.generatConfirm{
     
     h3 {
@@ -321,12 +355,22 @@ label.noshow{
   // AI 產品型錄生成中
   &.generating{
     text-align: center;
-    
-
-  
     .waiting{ margin: 16px auto;}
     p{ font-size: 1.125em;}
   
+  }
+
+
+  // 內容生成完畢
+  .genDone{
+    text-align: center; margin: 16px auto 0;
+    font-size: 1.5rem; font-weight: 500;
+    color: var(--Grey-Grey-900);
+    &::after {
+      content: ''; width: 80px;height: 80px;
+      display: block; margin: 16px auto 0;
+      background: url(../images/icon_check_circle.svg) no-repeat 0 0;
+    }
   }
 
 
@@ -374,5 +418,40 @@ label.noshow{
   0%  { left: 40px; top: 84px;}
   50% { left: 96px; top: 52px;}
   100%{ left: 40px; top: 84px;}
+}
+// ---------------------------------------------------------------------- //
+
+
+// 內容優化中：三個點點動畫
+.opt_processing{
+  position: relative;
+  padding: 8px;
+  &>i{
+    --ispeed : 1s;
+    content: ''; position: absolute;  left: auto;
+    top: calc(50% - 3px); 
+    width: 6px;height: 6px; border-radius: 50%;
+    &:nth-child(1){
+      background-color: var(--Orange);
+      margin-left: 12px; 
+      animation: dotsLift infinite var(--ispeed) 0s ease-in-out;
+    }
+    &:nth-child(2){
+      background-color: var(--Ocean);
+      margin-left: 22px; 
+      animation: dotsLift infinite var(--ispeed) .2s ease-in-out;
+    }
+    &:nth-child(3){
+      background-color: var(--Purple);
+      margin-left: 32px; 
+      animation: dotsLift infinite var(--ispeed) .4s ease-in-out;
+    }
+  }
+}
+
+@keyframes dotsLift {
+  0%   {translate: 0 0;}
+  35%  {translate: 0 -10px;}
+  70%  {translate: 0 0;}
 }
 // ---------------------------------------------------------------------- //

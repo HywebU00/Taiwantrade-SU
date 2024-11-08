@@ -8,17 +8,3 @@
 @import '_referenceData'; // 2024 小幫手
 @import '_catalogGenByAI'; // 透過 AI 建立產品型錄
 @import '_categoryOptByAI'; // 產品類別 AI 優化建議
-
-.multiCategory{
-  .inputAndBtns{
-    position: relative;
-    input[type="text"]:has(~.aiOptimise) {padding-right: 5em;}
-    button.aiOptimise{
-      position: absolute; left: calc(100% - 3.5em - 40px); top: 6px; right: auto; 
-      margin: 0;
-    }
-  }
-
-
-}
-

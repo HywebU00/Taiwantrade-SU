@@ -176,7 +176,7 @@
       </section>
 
       
-      <section class="multiTabSetting">
+      <section class="multiTabSetting catalogSetting">
         <div class="tabGroup">
           <div class="tabs">
             <ul>
@@ -345,7 +345,8 @@
                           </ul>
                         </div>
                       </div>
-                      <script> //模擬產業別查詢結果 顯示／隱藏
+                      <script> 
+                        //模擬產業別查詢結果 顯示／隱藏
                         $(function(){
                           $('.cateSearch').find('input[type="submit"]').click(function(){
                             $('.cateSearch').next('.cateList').toggle();
@@ -353,8 +354,49 @@
                           })
                         })
                       </script>
+
+                      <!-- 內容優化中 2024 -->
+                      <div class="categoryOptByAI optimizedByAI">
+                        <div class="headNav">
+                          <div class="opt_heading">優化建議</div>
+                          <div class="opt_nav">建議 1/3</div>
+                          <button type="button" class="colseThis" title="關閉"></button>
+                        </div>
+                        <div class="opt_processing">內容優化中<i></i><i></i><i></i></div>
+                        <button class="ai24 opt_stopBtn" type="button">停止優化</button>
+                      </div>
+
+                      <!-- 優化建議選項 2024 -->
+                      <div class="categoryOptByAI optimizedByAI">
+                        <div class="headNav">
+                          <div class="opt_heading">優化建議</div>
+                          <button type="button" class="colseThis" title="關閉"></button>
+                        </div>
+                        <div class="aiRecomList optionPool block singleSelection">
+                          <label class="isSelected">
+                            <input type="radio" checked name="aaa1">
+                            Automobiles & Motorcycle ❯ Automobile Engine ❯ Other Automobile Engine Parts --  其他汽車引擎零件
+                          </label>
+                          <label>
+                            <input type="radio" name="aaa1">
+                            Automobiles & Motorcycle ❯ Automobile Engine ❯ Other Automobile Engine Parts --  其他汽車引擎零件
+                          </label>
+                          <label>
+                            <input type="radio" name="aaa1">
+                            Automobiles & Motorcycle ❯ Automobile Engine ❯ Other Automobile Engine Parts --  其他汽車引擎零件
+                          </label>
+                        </div>
+
+                        <div class="funcButtons">
+                          <button class="ai24 refresh" type="button">重新生成</button>
+                          <button class="ai24 intense" type="button">使用</button>
+                        </div>
+
+                      </div>
+
                     </div>
-      
+
+                    
                     <div class="cateInUse"><p>最近使用的產業別</p>
                       <ul>
                         <li>Computer ❯ Computer ❯ Laptop Computer -- 筆記型電腦</li>
@@ -394,40 +436,100 @@
               </table>
             </fieldset>
   
+            <!-- 產品名稱 -->
             <fieldset>
               <legend><abbr title="必填欄位" class="required">*</abbr> 產品名稱</legend>
-              <input class="fullWidth" type="text">
-              <p class="warning" style="display: block;">This field is required.</p>            
-            </fieldset>
 
-            <fieldset>
+              <section class="langTab">
+                <ul>
+                  <li class="active"><a>英文</a></li>
+                  <li><a>正體中文</a></li>
+                  <li><a>日文</a></li>
+                </ul>
+              </section>
+
               <table class="formLayout">
                 <tr>
-                  <td>產品型號</td>
-                  <td><input type="text"></td>
-                </tr>
-                <tr>
-                  <td>GTIN / UPC號碼</td>
-                  <td><input type="text"></td>
-                </tr>
-                <tr>
-                  <td>生產國家</td>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 名稱</td>
                   <td>
-                    <select>
-                      <option value="0">請選擇生產國家</option>
-                      <option value="">Afghanistan - 阿富汗</option>
-                      <option value="">Albania - 阿爾巴尼亞</option>
-                      <option value="">Algeria - 阿爾及利亞</option>
-                      <option value="">American Samoa - 美屬薩摩亞</option>
-                      <option selected value="">Taiwan - 台灣</option>
-                      <option value="">... ... ...</option>
-                    </select>
+                    <input type="text" class="fullWidth" value="產品名稱123">
+                    <button type="button" class="aiOptimise">AI 優化</button>
+                  </td>
+                </tr>
+              </table>
+
+            </fieldset>
+
+            <!-- 產品廣告詞 / 產品關鍵詞 -->
+            <fieldset>
+              <legend>產品廣告詞 / 產品關鍵詞</legend>
+              
+              <section class="langTab">
+                <ul>
+                  <li class="active"><a>英文</a></li>
+                  <li><a>正體中文</a></li>
+                  <li><a>日文</a></li>
+              </section>
+
+              <table class="formLayout">
+                <tr>
+                  <td>產品廣告詞</td>
+                  <td><input type="text" class="fullWidth" value="Disc type Thermoplastic thermostat Auto Reset For Heating Appliances" placeholder="請輸入英文產品廣告詞">
+                    <p class="hint">出現於產品描述上方</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td>產品關鍵詞</td>
+                  <td>
+                    <div class="keywordPool">
+                      <ul>
+                        <li class="pdLabel">Temperature Switch<span class="removeThis"></span></li>
+                        <li class="pdLabel">bimetal thermostat<span class="removeThis"></span></li>
+                        <li class="addOne"><input type="text" placeholder="請輸入英文產品關鍵詞"><span class="addThis">+</span></li>
+                      </ul>
+                    </div>
+                    <button type="button" class="aiOptimise">AI 優化</button>
+
+                    <!-- 產品關鍵詞優化建議選項 2024 -->
+                    <div class="categoryOptByAI optimizedByAI">
+                      <div class="headNav">
+                        <div class="opt_heading">優化建議</div>
+                        <button type="button" class="colseThis" title="關閉"></button>
+                      </div>
+                      <div class="optionPool">
+                        <label><input type="checkbox" name="bbb1">關鍵字建議</label>
+                        <label><input type="checkbox" name="bbb1">機車部位零件-1</label>
+                        <label><input type="checkbox" name="bbb1">機車部位零件-2</label>
+                        <label><input type="checkbox" name="bbb1">機車部位零件-3</label>
+                        <label><input type="checkbox" name="bbb1">機車部位零件-3</label>
+                        <label><input type="checkbox" name="bbb1">機車零件-1</label>
+                        <label><input type="checkbox" name="bbb1">機車零件-2</label>
+                        <label><input type="checkbox" name="bbb1">機車零件-3</label>
+                        <label><input type="checkbox" name="bbb1">機車部位零件-1</label>
+                        <label><input type="checkbox" name="bbb1">機車部位零件-2</label>
+                        <label><input type="checkbox" name="bbb1">機車部位零件-3</label>
+                        <label><input type="checkbox" name="bbb1">機車零件-1</label>
+                        <label><input type="checkbox" name="bbb1">機車零件-2</label>
+                        <label><input type="checkbox" name="bbb1">機車零件-3</label>
+                      </div>
+
+                      <div class="funcButtons">
+                        <button class="ai24 refresh" type="button">重新生成</button>
+                        <button class="ai24 intense" type="button">使用</button>
+                      </div>
+
+                    </div>
+                    
+                    <!-- <p class="hint">用於站內搜尋</p> -->
                   </td>
                 </tr>
               </table>
             </fieldset>
 
-            <fieldset><legend><abbr title="必填欄位" class="required">*</abbr> 主要特點</legend>
+
+            <!-- 主要特點 -->
+            <fieldset>
+              <legend><abbr title="必填欄位" class="required">*</abbr> 主要特點</legend>
               <div class="keyFeatureEditor">
                 <section class="langTab">
                   <ul>
@@ -707,97 +809,16 @@
                   <div class="fr-sticky-dummy" style="height: 121px;"></div>
                   <div class="fr-wrapper show-placeholder" dir="auto"><iframe src="about:blank" frameborder="0" class="fr-iframe" ></iframe><span class="fr-placeholder" style="margin: 0; line-height: 1.3;padding:5px 5px 0; text-align: start;font-size: 15px">插入的智慧型模板顯示於工作區</span></div>
                 </div>
+
+                <button type="button" class="aiOptimise">AI 優化</button>
                 <div class="textCount"><em>0</em>/8000</div>
               </div>
-              <!-- <div class="flexContainerR2e">
-              </div> -->
-
     
             </fieldset>
 
-            <fieldset><legend>產品廣告詞 / 產品關鍵詞</legend>
-              
-              <section class="langTab">
-                <ul>
-                  <li class="active"><a>英文</a></li>
-                  <li><a>正體中文</a></li>
-                  <li><a>日文</a></li>
-                  <li><a>中文(簡體)</a></li>
-                  <li class="moreLang"><a>其他語系</a>
-                    <ul>
-                      <li><a>俄文</a></li>
-                      <li><a>西班牙文</a></li>
-                      <li><a>葡萄牙文</a></li>
-                      <li><a>阿拉伯文</a></li>
-                      <li><a>印尼文</a></li>
-                      <li><a>德文</a></li>
-                      <li><a>法文</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </section>
-
-              <table class="formLayout">
-                <tr>
-                  <td>產品廣告詞</td>
-                  <td><input type="text" value="Disc type Thermoplastic thermostat Auto Reset For Heating Appliances" placeholder="請輸入英文產品廣告詞">
-                    <p class="hint">出現於產品描述上方</p>
-                  </td>
-                </tr>
-                <tr>
-                  <td>產品關鍵詞</td>
-                  <td>
-                    <!-- <input type="text" placeholder="請輸入英文產品關鍵詞"> -->
-                    <div class="keywordPool">
-                      <ul>
-                        <li class="pdLabel">Temperature Switch<span class="removeThis"></span></li>
-                        <li class="pdLabel">bimetal thermostat<span class="removeThis"></span></li>
-                        <li class="pdLabel">Circuit Protection<span class="removeThis"></span></li>
-                        <li class="addOne"><input type="text" placeholder="請輸入英文產品關鍵詞"><span class="addThis">+</span></li>
-                      </ul>
-                    </div>
-                    <p class="hint">用於站內搜尋</p>
-                  </td>
-                </tr>
-              </table>
-            </fieldset>
-
-            <fieldset><legend>自選產品分類（擇一使用）</legend>
-              <!-- 下拉選單請擇一使用 -->
-              <div class="selectImitating">
-                <div class="selectBtn" data-title="請選擇自選產品分類"></div>
-                <div class="optionGroup">
-                  <label><input type="checkbox">第一層分類 1 </label>
-                  <label class="cascade"><input type="checkbox">子分類 1-1 </label>
-                  <label class="cascade"><input type="checkbox">子分類 1-2 </label>
-                  <label class="cascade"><input type="checkbox">子分類 1-3 </label>
-                  <label class="cascade"><input type="checkbox">子分類子分類子分類 1-3 </label>
-                  <label class="cascade"><input type="checkbox">子分類子分類子分類子分類子分類 1-3 </label>
-                  <label class="cascade"><input type="checkbox">子分類子分類子分類 1-3 </label>
-                  <label class="cascade"><input type="checkbox">子分類 1-3 </label>
-                  <label><input type="checkbox">Thermostats（第一層分類 2 ）</label>
-                  <label class="cascade"><input type="checkbox">Auto Reset Ceramic Thermostats</label>
-                  <label class="cascade"><input type="checkbox">Auto Reset Thermostats</label>
-                  <label class="cascade"><input type="checkbox">Manual Reset Thermoplastic Thermost Protectors</label>
-                  <label class="cascade"><input type="checkbox">Control Components</label>
-  
-                </div>
-              </div>
-              <select class="fullWidth" name="" id="">
-                <option selected>請選擇自選產品分類</option>
-                <option>Circuit Breakers</option>
-                <option>---Manual Reset Circuit Breakers (38)</option>
-                <option>---Auto Reset Circuit Breakers (12)</option>
-                <option>Thermostats</option>
-                <option>---Auto Reset Ceramic Thermostats (14)</option>
-                <option>---Auto Reset Thermostats (27)</option>
-                <option>---Manual Reset Thermoplastic Thermost Protectors</option>
-                <option>---Control Components (2)</option>
-              </select>
-
-            </fieldset>
-
-            <fieldset><legend>網路搜尋最佳化</legend>
+            <!-- 網路搜尋最佳化 -->
+            <fieldset>
+              <legend>搜尋引擎最佳化</legend>
               <section class="langTab">
                 <ul>
                   <li class="active"><a>英文</a></li>
@@ -825,11 +846,11 @@
               <table class="formLayout">
                 <tr>
                   <td>SEO標題</td>
-                  <td><input class="textHere" type="text" placeholder="請輸入英文標題"></td>
+                  <td><input class="textHere fullWidth" type="text" placeholder="請輸入英文標題"></td>
                 </tr>
                 <tr>
                   <td>SEO內容描述</td>
-                  <td><textarea placeholder="請輸入英文內容描述"></textarea></td>
+                  <td><textarea class="fullWidth" placeholder="請輸入英文內容描述"></textarea></td>
                 </tr>
                 <tr>
                   <td>SEO關鍵字</td>
@@ -848,7 +869,8 @@
             </fieldset>
           </div>
 
-          <div class="tabContainer"><!-- 產品圖片 -->
+          <!-- 頁籤內容：產品圖片 -->
+          <div class="tabContainer">
             <h3>產品圖片</h3>
             <section class="langTab">
               <ul>
@@ -905,6 +927,7 @@
             <div class="countdown"><em>2</em> / 10</div>
             <p class="tips">Tips: 上傳產品圖片。建議尺寸需大於 640*640 px。排序第一的圖片將設為型錄主圖</p>
           </div>
+
           <!-- 燈箱：從圖庫挑選 -->
           <section class="lightbox imgInLib">
             <button type="button" title="close" class="closeThis hideLightbox"></button>
@@ -1038,7 +1061,8 @@
 
           </section>
 
-          <div class="tabContainer"><!-- 產品規格 -->
+          <!-- 頁籤內容：產品規格 -->
+          <div class="tabContainer">
             <h3>產品規格</h3>
             <section class="langTab">
               <ul>
@@ -1160,7 +1184,8 @@
 
           </div>
 
-          <div class="tabContainer"><!-- 產品多媒體與上傳檔案 -->
+          <!-- 頁籤內容：產品多媒體與上傳檔案 -->
+          <div class="tabContainer">
             <h3>產品多媒體與上傳檔案</h3>
             <fieldset>
               <legend>360°圖片</legend>
@@ -1340,7 +1365,8 @@
             </div>
           </section>
 
-          <div class="tabContainer"><!-- 產品認證 -->
+          <!-- 頁籤內容： 產品認證 -->
+          <div class="tabContainer">
             <h3>產品認證</h3>
             <section class="pdCertiList checkingList">
 
@@ -1817,7 +1843,8 @@
             </section>
           </div>
 
-          <div class="tabContainer"><!-- 採購資訊 -->
+          <!-- 頁籤內容： 採購資訊 -->
+          <div class="tabContainer">
             <h3>採購資訊</h3>
             <table class="formLayout">
               <tr>
@@ -1853,7 +1880,8 @@
             </table>
           </div>
 
-          <div class="tabContainer"><!-- 線上販售 -->
+          <!-- 頁籤內容： 線上販售 -->
+          <div class="tabContainer">
             <h3>線上販售</h3>
             <fieldset>
               <legend>線上銷售報價</legend>
@@ -2912,7 +2940,8 @@
 
           </div>
 
-          <div class="tabContainer"><!-- 啟用型錄 -->
+          <!-- 頁籤內容： 啟用型錄 -->
+          <div class="tabContainer">
             <h3>啟用型錄</h3>
             <table class="formLayout">
               <tr>
@@ -3385,7 +3414,7 @@
       </section>
 
 
-      <!-- loading -->
+      <!-- 產品型錄生成中 -->
       <section class="popMsg generating" id="genAni">
         <h3 class="head">AI 產品型錄生成中</h3>
         <div class="waiting">
@@ -3394,17 +3423,25 @@
         <p>請勿關閉或是重新整理此分頁，以避免內容遺失</p>
 
         <!-- 此 button 是 gui demo 時使用的隱藏元件，套版時請刪除 -->
-        <button class="closePop closeBefore" style="
-          position: absolute; right: 3px;bottom: 3px;
-          background-color: transparent; box-shadow: none;
-        ">關閉動畫</button>
-        <script>
-          $('.closeBefore').on('click', function(){
-            $('.popMsg.generatConfirm').hide();
-          })
-        </script>
-
+          <button class="closeBefore" style="
+            position: absolute; right: 3px;bottom: 3px;
+            background-color: transparent; box-shadow: none;
+          ">關閉動畫</button>
+          <script>
+            $('.closeBefore').on('click', function(){
+              $('.popMsg#genAni, .popMsg#genConfirm').hide();
+              $('.popMsg#genDone').show();
+            })
+          </script>
         <!-- end -->
+
+      </section>
+
+      <section class="popMsg short" id="genDone">
+        <button type="button" class="colseThis closePop" title="關閉"></button>
+        <div class="genDone">
+          內容生成完畢
+        </div>
       </section>
 
       <!-- <footer class="webFooter">
