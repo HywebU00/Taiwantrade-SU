@@ -82,3 +82,14 @@
     }
   }
 }
+
+
+
+// 啟用型錄設定
+.catalogEnable{
+  @extend %marginSet1;background: #fff; border-radius: 6px;padding:16px 16px 32px;
+  .dataTable{
+    margin:40px 3px 0; 
+    box-shadow: rgb(0 0 0 / .25) 0 0 4px;
+  }
+}

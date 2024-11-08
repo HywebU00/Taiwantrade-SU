@@ -216,6 +216,40 @@ button.aiOptimise {
 // ---------------------------------------------------------------------- //
 
 
+// ai建議 左右箭頭
+button.arrow24{
+  position: relative;
+  width: 24px; height: 24px; padding: 0; margin: 0;
+  background-color: var(--Purple_Light);
+  box-shadow: none;
+
+  &::before {
+    content: ''; position: absolute;
+    left: calc(50% - 5px); top: calc(50% - 4px);
+    width: 6px; height: 6px; 
+    border-style: solid; border-width: 2px;
+    border-bottom: none; border-right: none;
+    border-color: var(--Purple);
+  }
+
+  &.left{
+    margin-right: 4px;
+    &:not(:disabled):hover{ translate: -3px 0;}
+    &::before { rotate: -45deg;left: calc(50% - 3px); }
+  }
+  &.right{
+    margin-left: 4px;
+    &:not(:disabled):hover{ translate: 3px 0;}
+    &::before {rotate: 135deg; }
+  }
+
+  &:disabled{
+    background-color: var(--Grey-Grey-300);
+    &::before {border-color: var(--Grey-Grey-700);}
+  }
+}
+
+
 // ---------------------------------------------------------------------- //
 // ---------------------------------------------------------------------- //
 // ---------------------------------------------------------------------- //

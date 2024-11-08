@@ -356,18 +356,20 @@
                       </script>
 
                       <!-- 內容優化中 2024 -->
-                      <div class="categoryOptByAI optimizedByAI">
+                      <div class="optimizedByAI">
                         <div class="headNav">
                           <div class="opt_heading">優化建議</div>
-                          <div class="opt_nav">建議 1/3</div>
-                          <button type="button" class="colseThis" title="關閉"></button>
+                          <div class="opt_nav">
+                            <button class="arrow24 left" disabled type="button"></button>建議 1/3<button class="arrow24 right" disabled type="button"></button>
+                          </div>
+                            <button type="button" class="colseThis" title="關閉"></button>
                         </div>
                         <div class="opt_processing">內容優化中<i></i><i></i><i></i></div>
                         <button class="ai24 opt_stopBtn" type="button">停止優化</button>
                       </div>
 
                       <!-- 優化建議選項 2024 -->
-                      <div class="categoryOptByAI optimizedByAI">
+                      <div class="optimizedByAI">
                         <div class="headNav">
                           <div class="opt_heading">優化建議</div>
                           <button type="button" class="colseThis" title="關閉"></button>
@@ -454,6 +456,27 @@
                   <td>
                     <input type="text" class="fullWidth" value="產品名稱123">
                     <button type="button" class="aiOptimise">AI 優化</button>
+
+                    <!-- 內容優化中 2024 -->
+                    <div class="optimizedByAI">
+                      <div class="headNav">
+                        <div class="opt_heading">優化建議</div>
+                        <div class="opt_nav">
+                          <button class="arrow24 left" disabled type="button"></button>建議 1/3<button class="arrow24 right" type="button"></button>
+                        </div>
+                        <button type="button" class="colseThis" title="關閉"></button>
+                      </div>
+                      
+                      <div class="aiRecommend">
+                        產品名稱建議產品名稱建議
+                      </div>
+                      <div class="funcButtons">
+                        <button class="ai24 refresh" type="button">重新生成</button>
+                        <button class="ai24 intense" type="button">使用</button>
+                      </div>
+
+                    </div>
+                    
                   </td>
                 </tr>
               </table>
@@ -491,7 +514,7 @@
                     <button type="button" class="aiOptimise">AI 優化</button>
 
                     <!-- 產品關鍵詞優化建議選項 2024 -->
-                    <div class="categoryOptByAI optimizedByAI">
+                    <div class="optimizedByAI">
                       <div class="headNav">
                         <div class="opt_heading">優化建議</div>
                         <button type="button" class="colseThis" title="關閉"></button>
@@ -2940,402 +2963,6 @@
 
           </div>
 
-          <!-- 頁籤內容： 啟用型錄 -->
-          <div class="tabContainer">
-            <h3>啟用型錄</h3>
-            <table class="formLayout">
-              <tr>
-                <td><abbr title="必填欄位" class="required">*</abbr> 啟用語系</td>
-                <td>
-                  <div class="onOffItems">
-                    <ul>
-                      <li>英文<span class="switchOnOff"></span><!-- 預設是 off --></li>
-                      <li>中文<span class="switchOnOff on"></span><!-- on --></li>
-                      <li>日文<span class="switchOnOff"></span></li>
-                      <li>簡中<span class="switchOnOff"></span></li>
-                    </ul>
-                  </div>
-                  <p class="hint">Tips: 請開啟此型錄欲啟用的語系。</p>
-                </td>
-              </tr>
-              <tr>
-                <td><abbr title="必填欄位" class="required">*</abbr> 啟用販售</td>
-                <td>
-                  <div class="onOffItems">
-                    <ul>
-                      <li>英文<span class="switchOnOff"></span></li>
-                      <li>中文<span class="switchOnOff"></span></li>
-                      <li>日文<span class="switchOnOff"></span></li>
-                      <li>簡中<span class="switchOnOff"></span></li>
-                    </ul>
-                  </div>
-                  <p class="hint">Tips: 請開啟此型錄欲販售的語系。</p>
-                </td>
-              </tr>
-            </table>
-
-            <section class="dataTable">
-              <div class="onListTop">
-                <h4>審核結果</h4>
-                <section class="funcBtnGp">
-                  <ul>
-                    <li class="export"><a class="showLightbox" id="lbid01">檢視異動紀錄</a></li>
-                  </ul>
-                </section>
-              </div>
-              <table>
-                <tr>
-                  <th>建立時間</th>
-                  <td><time>2019-03-25 14:39:51</time></td>
-                  <th>建立人員</th>
-                  <td>吳梅桂</td>
-                </tr>
-                <tr>
-                  <th>最後更新時間</th>
-                  <td><time>2020-05-14 17:04:22</time></td>
-                  <th>最後更新人員</th>
-                  <td>吳梅桂</td>
-                </tr>
-                <tr>
-                  <th>內容審核狀態</th>
-                  <td>審核通過</td>
-                  <th>內容審核時間</th>
-                  <td><time>2019-03-25 14:43:08</time></td>
-                </tr>
-                <tr>
-                  <th>販售審核狀態</th>
-                  <td>審核通過</td>
-                  <th>販售審核時間</th>
-                  <td><time>2019-03-25 14:43:08</time></td>
-                </tr>
-              </table>
-            </section>
-
-            <!-- 燈箱： 型錄異動紀錄-->
-            <section class="lightbox lbid01">
-              <button type="button" title="close" class="closeThis hideLightbox"></button>
-              <div class="head">
-                <h3>型錄異動紀錄</h3>
-              </div>
-              <section class="logAndRecord">
-                <ul>
-                  <li class="expFolder">
-                    <div class="breif expCtrl" data-title="檢視內容">
-                      <dl>
-                        <dt>異動時間</dt>
-                        <dd><time>2019-03-25 14:39:51</time></dd>
-                        <dt>人員</dt>
-                        <dd>吳梅桂</dd>
-                      </dl>
-                    </div>
-                    <section class="listTable expContent">
-                      <table>
-                        <thead>
-                          <tr>
-                            <th></th>
-                            <th>異動前</th>
-                            <th>異動後</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th>共用欄位</th>
-                            <td>
-                              <ol>
-                                <li>產品語系：英文, 繁中</li>
-                                <li>產業別：752020 Temperature Controller & Transmitter -- 溫度控制器及傳送器</li>
-                                <li>產業別規格：Temperature Controller</li>
-                                <li>貼標設定：</li>
-                                <li>加密型錄：是</li>
-                                <li>產品型號：xxx xxx</li>
-                              </ol>
-                            </td>
-                            <td>
-                              <ol>
-                                <li>產品語系：英文, 繁中, 日文, 簡中</li>
-                                <li>產業別：752020 Temperature Controller & Transmitter -- 溫度控制器及傳送器</li>
-                                <li>產業別規格：Temperature Controller</li>
-                                <li>貼標設定：New Product, Featured</li>
-                                <li>加密型錄：否</li>
-                                <li>產品型號：C4-036-162-020</li>
-                              </ol>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>英文</th>
-                            <td>
-                              <ol>
-                                <li>產品名稱：C4-036 162C Ceramic Thermostat For Electric Water Heater Parts </li>
-                                <li>主要特點：?</li>
-                              </ol>
-                            </td>
-                            <td>
-                              <ol>
-                                <li>產品名稱：C4-036 162C Ceramic Thermostat For Electric Water Heater Parts2 </li>
-                                <li>主要特點：???</li>
-                              </ol>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>中文</th>
-                            <td>
-                              <ol>
-                                <li>主要特點：xxx xxx </li>
-                                <li>產品廣告詞： </li>
-                                <li>產品規格：尺寸</li>
-                              </ol>
-                            </td>
-                            <td>
-                              <ol>
-                                <li>主要特點：xxx xxx xxx xxx</li>
-                                <li>產品廣告詞：Buy One Get One Free </li>
-                                <li>產品規格</li>
-                              </ol>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </section>
-                  </li>
-                  <li class="expFolder">
-                    <div class="breif expCtrl" data-title="檢視內容">
-                      <dl>
-                        <dt>異動時間</dt>
-                        <dd><time>2019-02-23 10:20:25</time></dd>
-                        <dt>人員</dt>
-                        <dd>吳梅桂</dd>
-                      </dl>
-                    </div>
-                    <section class="listTable expContent">
-                      <table>
-                        <thead>
-                          <tr>
-                            <th></th>
-                            <th>異動前</th>
-                            <th>異動後</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th>共用欄位</th>
-                            <td>
-                              <ol>
-                                <li>產品語系：英文, 繁中</li>
-                                <li>產業別：752020 Temperature Controller & Transmitter -- 溫度控制器及傳送器</li>
-                                <li>產業別規格：Temperature Controller</li>
-                                <li>貼標設定：</li>
-                                <li>加密型錄：是</li>
-                                <li>產品型號：xxx xxx</li>
-                              </ol>
-                            </td>
-                            <td>
-                              <ol>
-                                <li>產品語系：英文, 繁中, 日文, 簡中</li>
-                                <li>產業別：752020 Temperature Controller & Transmitter -- 溫度控制器及傳送器</li>
-                                <li>產業別規格：Temperature Controller</li>
-                                <li>貼標設定：New Product, Featured</li>
-                                <li>加密型錄：否</li>
-                                <li>產品型號：C4-036-162-020</li>
-                              </ol>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>英文</th>
-                            <td>
-                              <ol>
-                                <li>產品名稱：C4-036 162C Ceramic Thermostat For Electric Water Heater Parts </li>
-                                <li>主要特點：?</li>
-                              </ol>
-                            </td>
-                            <td>
-                              <ol>
-                                <li>產品名稱：C4-036 162C Ceramic Thermostat For Electric Water Heater Parts2 </li>
-                                <li>主要特點：???</li>
-                              </ol>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>中文</th>
-                            <td>
-                              <ol>
-                                <li>主要特點：xxx xxx </li>
-                                <li>產品廣告詞： </li>
-                                <li>產品規格：尺寸</li>
-                              </ol>
-                            </td>
-                            <td>
-                              <ol>
-                                <li>主要特點：xxx xxx xxx xxx</li>
-                                <li>產品廣告詞：Buy One Get One Free </li>
-                                <li>產品規格</li>
-                              </ol>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </section>
-                  </li>
-                  <li class="expFolder">
-                    <div class="breif expCtrl" data-title="檢視內容">
-                      <dl>
-                        <dt>異動時間</dt>
-                        <dd><time>2019-02-17 07:10:14</time></dd>
-                        <dt>人員</dt>
-                        <dd>吳梅桂</dd>
-                      </dl>
-                    </div>
-                    <section class="listTable expContent">
-                      <table>
-                        <thead>
-                          <tr>
-                            <th></th>
-                            <th>異動前</th>
-                            <th>異動後</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th>共用欄位</th>
-                            <td>
-                              <ol>
-                                <li>產品語系：英文, 繁中</li>
-                                <li>產業別：752020 Temperature Controller & Transmitter -- 溫度控制器及傳送器</li>
-                                <li>產業別規格：Temperature Controller</li>
-                                <li>貼標設定：</li>
-                                <li>加密型錄：是</li>
-                                <li>產品型號：xxx xxx</li>
-                              </ol>
-                            </td>
-                            <td>
-                              <ol>
-                                <li>產品語系：英文, 繁中, 日文, 簡中</li>
-                                <li>產業別：752020 Temperature Controller & Transmitter -- 溫度控制器及傳送器</li>
-                                <li>產業別規格：Temperature Controller</li>
-                                <li>貼標設定：New Product, Featured</li>
-                                <li>加密型錄：否</li>
-                                <li>產品型號：C4-036-162-020</li>
-                              </ol>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>英文</th>
-                            <td>
-                              <ol>
-                                <li>產品名稱：C4-036 162C Ceramic Thermostat For Electric Water Heater Parts </li>
-                                <li>主要特點：?</li>
-                              </ol>
-                            </td>
-                            <td>
-                              <ol>
-                                <li>產品名稱：C4-036 162C Ceramic Thermostat For Electric Water Heater Parts2 </li>
-                                <li>主要特點：???</li>
-                              </ol>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>中文</th>
-                            <td>
-                              <ol>
-                                <li>主要特點：xxx xxx </li>
-                                <li>產品廣告詞： </li>
-                                <li>產品規格：尺寸</li>
-                              </ol>
-                            </td>
-                            <td>
-                              <ol>
-                                <li>主要特點：xxx xxx xxx xxx</li>
-                                <li>產品廣告詞：Buy One Get One Free </li>
-                                <li>產品規格</li>
-                              </ol>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </section>
-                  </li>
-                  <li class="expFolder">
-                    <div class="breif expCtrl" data-title="檢視內容">
-                      <dl>
-                        <dt>異動時間</dt>
-                        <dd><time>2019-01-25 14:43:27</time></dd>
-                        <dt>人員</dt>
-                        <dd>吳梅桂</dd>
-                      </dl>
-                    </div>
-                    <section class="listTable expContent">
-                      <table>
-                        <thead>
-                          <tr>
-                            <th></th>
-                            <th>異動前</th>
-                            <th>異動後</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th>共用欄位</th>
-                            <td>
-                              <ol>
-                                <li>產品語系：英文, 繁中</li>
-                                <li>產業別：752020 Temperature Controller & Transmitter -- 溫度控制器及傳送器</li>
-                                <li>產業別規格：Temperature Controller</li>
-                                <li>貼標設定：</li>
-                                <li>加密型錄：是</li>
-                                <li>產品型號：xxx xxx</li>
-                              </ol>
-                            </td>
-                            <td>
-                              <ol>
-                                <li>產品語系：英文, 繁中, 日文, 簡中</li>
-                                <li>產業別：752020 Temperature Controller & Transmitter -- 溫度控制器及傳送器</li>
-                                <li>產業別規格：Temperature Controller</li>
-                                <li>貼標設定：New Product, Featured</li>
-                                <li>加密型錄：否</li>
-                                <li>產品型號：C4-036-162-020</li>
-                              </ol>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>英文</th>
-                            <td>
-                              <ol>
-                                <li>產品名稱：C4-036 162C Ceramic Thermostat For Electric Water Heater Parts </li>
-                                <li>主要特點：?</li>
-                              </ol>
-                            </td>
-                            <td>
-                              <ol>
-                                <li>產品名稱：C4-036 162C Ceramic Thermostat For Electric Water Heater Parts2 </li>
-                                <li>主要特點：???</li>
-                              </ol>
-                            </td>
-                          </tr>
-                          <tr>
-                            <th>中文</th>
-                            <td>
-                              <ol>
-                                <li>主要特點：xxx xxx </li>
-                                <li>產品廣告詞： </li>
-                                <li>產品規格：尺寸</li>
-                              </ol>
-                            </td>
-                            <td>
-                              <ol>
-                                <li>主要特點：xxx xxx xxx xxx</li>
-                                <li>產品廣告詞：Buy One Get One Free </li>
-                                <li>產品規格</li>
-                              </ol>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </section>
-                  </li>
-                </ul>
-
-              </section>
-            </section>
-          </div>
         </div>
         
       </section>
@@ -3348,8 +2975,7 @@
           <button type="button" class="roundBtn white">儲存</button>
           <button type="button" class="roundBtn white">預覽</button>
           <a class="roundBtn white" href="#">上一步</a>
-          <button type="button" class="roundBtn white">取消</button>
-          <button type="submit" class="roundBtn hilight">開始設定型錄內容</button>
+          <button type="submit" class="roundBtn hilight">下一步，啟用型錄</button>
         </div>
       </section>
 

@@ -14,8 +14,9 @@
     .opt_nav{ 
       flex: 1 0 auto;
       font-size: 1.125em; color: var(--Grey-Grey-900);
-      text-align: center;
+      text-align: center; line-height: 1;
       margin-right: 3.6em;
+      button{vertical-align: middle; box-shadow: none;}
     }
   }
   .opt_heading{
@@ -72,33 +73,6 @@
 
 }
 
-// 優化建議結果和選擇
-// .aiRecomList.optionPool {
-
-//   --tinge: var(--Grey-Grey-700);
-//   --tingelight: var(--Grey-Grey-500);
-//   --checked: var(--Purple);
-
-//   &>label{
-//     padding: .65em 1em .6em 40px; margin: 3px;
-//     line-height: 1.4; border-radius: 1.5em;
-//     background-color: var(--Grey-Grey-100);
-//     color: var(--Grey-Grey-900);
-//     box-shadow: none;
-  
-
-//     &:hover{ box-shadow: var(--tingelight) 0 0 0 1px;}
-
-//     &::before { left: 16px; top: .66em; margin: 0;}
-
-//     &.isSelected{
-//       background-color: var(--Purple_Light);
-//       &:hover{ box-shadow: var(--Purple) 0 0 0 1px;}
-//     }
-//   }
-
-// }
-
 
 
 // AI 優化 button（button.aiOptimise） 定位
@@ -135,7 +109,7 @@
         &:has(button.aiOptimise) {position: relative;}
         input[type="text"].fullWidth { 
           width: calc(100% - 20px);
-          &+.aiOptimise{ position: absolute; right: 7px; bottom: 7px;}
+          &+.aiOptimise{ position: absolute; right: 7px; top: 11px;}
         }
         textarea.fullWidth {width: calc(100% - 20px);}
 
