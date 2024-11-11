@@ -19,6 +19,7 @@
       button{vertical-align: middle; box-shadow: none;}
     }
   }
+  // [優化建議]
   .opt_heading{
     position: relative;
     padding:0 0 0 30px; white-space: nowrap;
@@ -31,7 +32,10 @@
       filter: saturate(0%) brightness(250%);
     }
   }
+  // 內容優化中 animation
   .opt_processing{margin: 16px 0;}
+
+  // [停止優化]
   .opt_stopBtn{position: relative; left: 50%; translate: -50% 0;}
 
   .optionPool{
@@ -41,7 +45,7 @@
 
     width: 100% !important; margin: 0;
     &>label{
-      padding: .65em 1em .6em 40px; margin: 8px;
+      padding: .65em 1em .6em 44px; margin: 8px;
       line-height: 1.4; border-radius: 1.5em;
       background-color: var(--Grey-Grey-100);
       color: var(--Grey-Grey-900);
@@ -49,13 +53,31 @@
 
       &:hover{ box-shadow: var(--tingelight) 0 0 0 1px;}
 
-      &::before { left: 16px; top: .66em; margin: 0;}
-      &::after { left: 16px; margin-top: -8px; }
-
       &.isSelected{
         background-color: var(--Purple_Light);
         &:hover{ box-shadow: var(--Purple) 0 0 0 1px;}
       }
+
+      // 複選
+      &:has(input[type="checkbox"]) {
+        &::before { 
+          left: 16px; top: .65em; margin:0;
+          width: 20px;height: 20px; border-radius: 4px;
+        }
+        &::after { left: 18px; margin-top: -6px; }
+        &.isSelected{
+          &::before {  border-color: var(--checked);}
+        }
+      }
+
+      // 單選
+      &:has(input[type="radio"]){
+        &::before {
+          left: 12px; margin: 0; top: .65em;
+          width: 20px; height: 20px;
+        }
+      }
+
     }
 
     &.block{
@@ -77,6 +99,7 @@
 
 // AI 優化 button（button.aiOptimise） 定位
 
+// 產品類別
 .multiCategory{
   .inputAndBtns{
     position: relative;
@@ -89,11 +112,31 @@
   }
 }
 
+// 主要特點
 .keyFeatureEditor{
-  .aiOptimise{
-    z-index: 9;
-    position: absolute; right: 4px; bottom: auto;
+  .aiOptimise{position: absolute; z-index: 9; right: 4px;bottom: auto;}
+  .fr-box + .aiOptimise{
     translate: 0 calc(-100% - 4px);
+  }
+  .textCount + .aiOptimise { 
+    translate: 0 calc(-100% - 1em - 11px);
+  }
+
+  .recomText{
+    position: relative;
+    line-height: 1.6; max-height: 12.5em;
+    overflow-y: auto;
+    &::before {
+      content: '';  display: block; width: 100%; height: 20px;
+      position: sticky; top: 90%;
+      background-image: linear-gradient(to bottom, rgb(255 255 255 / 0) 0%, rgb(255 255 255  / .96) 90%);
+    }
+
+    article{
+      margin: -20px 0 0;
+      padding: 0 8px 22px;
+    }
+
   }
 }
 
@@ -122,10 +165,7 @@
         
         // 自選產品分類
         .selectImitating{width: 100%;}
-
       }
-
-  
     }
   }
 }
