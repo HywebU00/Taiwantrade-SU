@@ -147,20 +147,24 @@
     .selectImitating {margin: 0;}
     table.formLayout{
       width: 100%;
-
       td{
         &:has(button.aiOptimise) {position: relative;}
         input[type="text"].fullWidth { 
           width: calc(100% - 20px);
           &+.aiOptimise{ position: absolute; right: 7px; top: 11px;}
+          &:has(+.aiOptimise) {
+            padding-right: calc(4.5em + 24px);
+            width: calc(100% - 38px - 4.5em);
+          }
         }
         textarea.fullWidth {width: calc(100% - 20px);}
 
         // 產品關鍵詞
         .keywordPool{
           background-color: var(--Grey-Grey-100);
-          margin-right: 3px;
+          margin-right: 3px;          
           &+.aiOptimise {position: absolute; right: 7px; top: 12px;}
+          &:has(+.aiOptimise){padding-right: calc(4.5em + 26px);}
         }
         
         // 自選產品分類

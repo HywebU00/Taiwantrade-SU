@@ -190,7 +190,7 @@
             </ul>
           </div>
           
-          <div class="tabContainer show">
+          <div class="tabContainer">
 
             <!-- 透過 AI 建立產品型錄 -->
             <section class="catalogGenByAI">
@@ -395,9 +395,7 @@
                         </div>
 
                       </div>
-
                     </div>
-
                     
                     <div class="cateInUse"><p>最近使用的產業別</p>
                       <ul>
@@ -1118,105 +1116,132 @@
 
           </section>
 
-          <!-- 頁籤內容：產品規格 -->
+          <!-- 頁籤內容：產品規格 2024 -->
           <div class="tabContainer">
             <h3>產品規格</h3>
-            <section class="langTab">
-              <ul>
-                <li class="active"><a>英文</a></li>
-                <li><a>正體中文</a></li>
-                <li><a>日文</a></li>
-                <li><a>中文(簡體)</a></li>
-                <li class="moreLang"><a>其他語系</a>
+
+            <fieldset>
+              <legend>產品型號資料</legend>
+              <table class="formLayout">
+                <tr>
+                  <td>產品型號</td>
+                  <td><input type="text"></td>
+                </tr>
+                <tr>
+                  <td>GTIN / UPC號碼</td>
+                  <td><input type="text"></td>
+                </tr>
+                <tr>
+                  <td>生產國家</td>
+                  <td>
+                    <select>
+                      <option value="0">請選擇生產國家</option>
+                      <option value="">Afghanistan - 阿富汗</option>
+                      <option value="">Albania - 阿爾巴尼亞</option>
+                      <option value="">Algeria - 阿爾及利亞</option>
+                      <option value="">American Samoa - 美屬薩摩亞</option>
+                      <option selected value="">Taiwan - 台灣</option>
+                      <option value="">... ... ...</option>
+                    </select>
+                  </td>
+                </tr>
+              </table>
+            </fieldset>
+
+            <fieldset>
+              <legend>產品規格</legend>
+              <section class="langTab">
+                <ul>
+                  <li class="active"><a>英文</a></li>
+                  <li><a>正體中文</a></li>
+                  <li><a>日文</a></li>
+                  <li><a>中文(簡體)</a></li>
+                  <li class="moreLang"><a>其他語系</a>
+                    <ul>
+                      <li><a>俄文</a></li>
+                      <li><a>西班牙文</a></li>
+                      <li><a>葡萄牙文</a></li>
+                      <li><a>阿拉伯文</a></li>
+                      <li><a>印尼文</a></li>
+                      <li><a>德文</a></li>
+                      <li><a>法文</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </section>
+              <div class="onListTop">
+                <div class="funcBtnGp">
                   <ul>
-                    <li><a>俄文</a></li>
-                    <li><a>西班牙文</a></li>
-                    <li><a>葡萄牙文</a></li>
-                    <li><a>阿拉伯文</a></li>
-                    <li><a>印尼文</a></li>
-                    <li><a>德文</a></li>
-                    <li><a>法文</a></li>
+                    <li class="add"><a>新增一組規格</a></li>
                   </ul>
-                </li>
-              </ul>
-            </section>
-
-            <div class="onListTop">
-              <div class="funcBtnGp">
-                <ul>
-                  <li class="add"><a>新增一組設定</a></li>
-                </ul>
+                </div>
               </div>
-            </div>
-
-            <section class="specSet">
-              <span class="dragStick" title="拖移改變排列順序"></span>
-
-              <section class="funcBtnGp">
-                <ul>
-                  <li class="add"><a>新增規格內容</a></li>
-                  <li class="remove trigPop" id="pop-delSpec"><a>移除此組設定</a></li>
-                </ul>
+              <p class="tips">Tips: 當產品有不同的規格（如：顏色尺寸時），...</p>
+              <section class="specSet">
+                <span class="dragStick" title="拖移改變排列順序"></span>
+  
+                <section class="funcBtnGp">
+                  <ul>
+                    <li class="add"><a>新增規格內容</a></li>
+                    <li class="remove trigPop" id="pop-delSpec"><a>移除此組設定</a></li>
+                  </ul>
+                </section>
+                <table class="formLayout">
+                  <tr>
+                    <td>規格名稱</td>
+                    <td><input class="specName" type="text" value="Color" placeholder="請輸入英文規格名稱"></td>
+                  </tr>
+                  <tr>
+                    <td>規格內容</td>
+                    <td>
+                      <ul class="specValue">
+                        <li>
+                          <span class="dragStick" title="拖移改變排列順序"></span>
+                          <input type="text" value="Red">
+                          <span class="ficon delete trigPop" id="pop-delSpecCont" title="刪除"><a></a></span>
+                        </li>
+                        <li>
+                          <span class="dragStick" title="拖移改變排列順序"></span>
+                          <input type="text" value="Green">
+                          <span class="ficon delete trigPop" id="pop-delSpecCont" title="刪除"><a></a></span>
+                        </li>
+                        <li>
+                          <span class="dragStick" title="拖移改變排列順序"></span>
+                          <input type="text" value="Blue">
+                          <span class="ficon delete trigPop" id="pop-delSpecCont" title="刪除"><a></a></span>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
               </section>
-              <table class="formLayout">
-                <tr>
-                  <td>規格名稱</td>
-                  <td><input class="specName" type="text" value="Color" placeholder="請輸入英文規格名稱"></td>
-                </tr>
-                <tr>
-                  <td>規格內容</td>
-                  <td>
-                    <ul class="specValue">
-                      <li>
-                        <span class="dragStick" title="拖移改變排列順序"></span>
-                        <input type="text" value="Red">
-                        <span class="ficon delete trigPop" id="pop-delSpecCont" title="刪除"><a></a></span>
-                      </li>
-                      <li>
-                        <span class="dragStick" title="拖移改變排列順序"></span>
-                        <input type="text" value="Green">
-                        <span class="ficon delete trigPop" id="pop-delSpecCont" title="刪除"><a></a></span>
-                      </li>
-                      <li>
-                        <span class="dragStick" title="拖移改變排列順序"></span>
-                        <input type="text" value="Blue">
-                        <span class="ficon delete trigPop" id="pop-delSpecCont" title="刪除"><a></a></span>
-                      </li>
-                      <li>
-                        <span class="dragStick" title="拖移改變排列順序"></span>
-                        <input type="text" value="Purple">
-                        <span class="ficon delete trigPop" id="pop-delSpecCont" title="刪除"><a></a></span>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-              </table>
-            </section>
-            <section class="specSet">
-              <span class="dragStick" title="拖移改變排列順序"></span>
-              <section class="funcBtnGp">
-                <ul>
-                  <li class="add"><a>新增規格內容</a></li>
-                  <li class="remove trigPop" id="pop-delSpec"><a>移除此組設定</a></li>
-                </ul>
+              <section class="specSet">
+                <span class="dragStick" title="拖移改變排列順序"></span>
+                <section class="funcBtnGp">
+                  <ul>
+                    <li class="add"><a>新增規格內容</a></li>
+                    <li class="remove trigPop" id="pop-delSpec"><a>移除此組設定</a></li>
+                  </ul>
+                </section>
+                <table class="formLayout">
+                  <tr>
+                    <td>規格名稱</td>
+                    <td><input class="specName" type="text" placeholder="請輸入英文規格名稱"></td>
+                  </tr>
+                  <tr>
+                    <td>規格內容</td>
+                    <td>
+                      <ul class="specValue">
+                        <li>
+                          <span class="dragStick" title="拖移改變排列順序"></span>
+                          <input type="text"><span class="ficon delete trigPop" id="pop-delSpecCont" title="刪除"><a></a></span></li>
+                      </ul>
+                    </td>
+                  </tr>
+                </table>
               </section>
-              <table class="formLayout">
-                <tr>
-                  <td>規格名稱</td>
-                  <td><input class="specName" type="text" placeholder="請輸入英文規格名稱"></td>
-                </tr>
-                <tr>
-                  <td>規格內容</td>
-                  <td>
-                    <ul class="specValue">
-                      <li>
-                        <span class="dragStick" title="拖移改變排列順序"></span>
-                        <input type="text"><span class="ficon delete trigPop" id="pop-delSpecCont" title="刪除"><a></a></span></li>
-                    </ul>
-                  </td>
-                </tr>
-              </table>
-            </section>
+            </fieldset>
+
             <!-- 燈箱：刪除規格名稱 -->
             <section class="popMsg" id="delSpec">
               <h3>刪除規格名稱</h3>

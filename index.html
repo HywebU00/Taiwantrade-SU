@@ -9,12 +9,15 @@
   <title>2024 SU 型錄AI小助手 GUI List</title>
   <style>
     body {
-      margin: 0;
+      margin: 0; padding: 0;
+      font-size: 16px; line-height: 1.6;
       font-family: 'Source Code Pro', Arial, Helvetica, sans-serif;
-      font-size: 15px;
       background: #fff;
     }
-
+    a { 
+      text-decoration: none;color: #084099;
+      &:hover {text-decoration: underline;color: #0199eb;}
+    }
     h1 {
       margin: 0 0 10px;padding: 10px;
       background: rgb(8, 148, 164);color: #fff;font-size: 22px;text-align: center;
@@ -22,160 +25,66 @@
     }
 
     table {
+      margin: 20px auto;width: 96%;max-width: 1100px;
+      border-collapse: collapse;line-height: 1.5;
       counter-reset: item;
-      border-collapse: collapse;
-      margin: 20px auto;
-      max-width: 1100px;
-      width: 96%;
-      line-height: 1.5;
-      border-bottom: 2px solid #bbb;
-      color: #456;
-
-      caption{ font-size: 1.2em; font-weight: bold; border-bottom:2px solid #bbb;}
+      border-bottom: 2px solid #bbb; color: #456;
+      caption{ padding:4px 4px 8px; font-size: 1.2em; font-weight: bold; border-bottom:2px solid #bbb;}
+      &+table {margin-top: 60px;}
     }
-
-    table+table {
-      margin-top: 60px;
-    }
-
-    td,
-    th {
-      position: relative;
-      padding: .5em .9em;
+    tr:nth-child(5n) td { border-bottom-color: #999 }
+    td, th {
+      position: relative; padding: .5em .9em;
       border-bottom: 1px solid #d0d0d0;
+      &::after {
+        content: ''; position: absolute;
+        top: 4px;bottom: 4px;right: 0;width: 1px;
+        background: #ddd;
+      }
+      &:last-child::after {display: none}
     }
 
-    th {
-      border-bottom: 3px solid #bbb;
-      white-space: nowrap;
+    th {border-bottom: 3px solid #bbb; white-space: nowrap;}
+    td{
+      &:first-child {
+        text-align: center; font-size: .6em;
+        &::before {content: counter(item);counter-increment: item;}
+      }
+      &:last-child {font-size: .85em;}
+      ul, ol { 
+        margin: 0; padding-left: 1.25em; line-height: 1.4;
+        li+li {margin-top: .6em;}
+      }
     }
-
-    tr:nth-child(5n) td {
-      border-bottom-color: #999
-    }
-
-    th:after,
-    td:after {
-      content: '';
-      position: absolute;top: 4px;bottom: 4px;right: 0;
-      width: 1px;
-      background: #ddd;
-    }
-
-    th:last-child:after,
-    td:last-child:after {
-      display: none
-    }
-
-    td:first-child {
-      text-align: center;
-      font-size: .6em;
-    }
-
-    td:last-child {font-size: .85em;}
-
-    /* td:nth-child(2) {
-      width: 30%;
-    } */
-
-    td:first-child:before {
-      content: counter(item);
-      counter-increment: item;
-    }
-
-    .seperator {
-      font-size: 11px;background: #aaa;color: #fff
-    }
-
-    .seperator td {padding: 0;}
-
-    .seperator td:first-child {font-size: 0;}
-
-    td ul,
-    td ol {
-      margin: 0;
-      padding-left: 1.25em;
-      line-height: 1.4;
-    }
-
-    td ul,
-    td ol {
-      display: none
-    }
-
-    td li+li {
-      margin-top: .6em;
-    }
-
-    a {
-      text-decoration: none;
-      color: #084099;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      color: #0199eb;
-    }
-
 
     @media screen and (max-width: 700px) {
-
-      tr,
-      td,
-      th {
-        display: block;
-      }
-
-      td:after {
-        display: none;
-      }
-
-      td {
-        min-height: 1em;
-      }
-
-      tr:first-child {
-        display: none
-      }
-
+      table{border: none;}
+      thead{display: none;}
+      tr,td,th {display: block;}
       tr {
-        border: 1px solid #999;
-        margin: 0 0 10px;
+        position: relative; border-radius: 23px;
+        margin: 0 0 12px;border: 1px solid #999;
+        /* &:first-child {display: none } */
+        &:nth-child(5n) td {
+          border-bottom-color: #d6d6d6
+        }
       }
 
-      tr:nth-child(5n+1) td {
-        border-bottom-color: #d6d6d6
-      }
-
-      td:first-child,
-      td:nth-child(2) {
-        float: left;
-        padding: 8px;
-        height: 16px;
-        background: #eee;
-        border: none;
-      }
-
-      td:nth-child(2) {
-        float: right;
-      }
-
-      td:nth-child(3) {
-        clear: both;
-      }
-
-      td:last-child {
-        border: none;
-      }
-
-      .seperator td:nth-child(2) {
-        float: none;
-        background: transparent;
-        padding: 0;
-      }
-
-      .seperator td:first-child {
-        display: none
+      td {min-height: 1em; margin: 4px;
+        &::after {display: none;}
+        &:first-child {
+          position: absolute; left: -2px; top: -2px;
+          min-width: 2.8em; height: 2.8em; line-height: 2.8;
+          padding: 0;
+          font-size: .9em; font-weight: bold;
+          border-radius: 50%;
+          background-color: #555; color: #fff;
+          border: none;
+        }
+        &:nth-child(n+2) {padding-left:3em; }
+        &:nth-child(2) { padding-top: .6em;}
+        &:nth-child(3) {clear: both;}
+        &:last-child {border: none;}
       }
     }
   </style>
