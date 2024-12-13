@@ -193,7 +193,7 @@
           <div class="tabContainer">
 
             <!-- 透過 AI 建立產品型錄 -->
-            <section class="catalogGenByAI">
+            <section class="catalogGenByAI" style="display: none;">
 
               <div class="slideHeader">
                 <h3>透過 AI 建立產品型錄</h3>
@@ -205,10 +205,10 @@
                 <p>請選擇一種方式進行內容生成</p>
                 <div class="generateBy">
                   <button class="url active" type="button">產品 URL</button>
-                  <button class="picture" type="button">產品圖片</button>
                   <button class="keyword" type="button">產品關鍵字</button>
                 </div>
 
+                <!-- 產品 URL -->
                 <section class="generateHere">
                   <section class="langTab">
                     <ul>
@@ -225,11 +225,8 @@
                   </label>
                 </section>
   
+                <!-- 產品關鍵字 -->
                 <section class="generateHere">
-                  <p>產品圖片</p>
-                </section>
-                <section class="generateHere">
-                  <!-- 產品關鍵字 -->
                   <section class="langTab">
                     <ul>
                       <li><a>英文</a></li>
@@ -247,7 +244,6 @@
                 <button class="intense pop trigPop" id="pop-genConfirm" type="button">生成內容</button>
               </div>
 
-
             </section>
             
             <!-- 產品基本資料 -->
@@ -263,7 +259,6 @@
                     <div class="multiCategory">
                       <div class="inputAndBtns">
                         <input id="pdCategory" type="text" readonly>
-                        <button type="button" class="aiOptimise">AI 優化</button>
                         <button type="button" id="pdCateSel" data-alttext="取消">選擇分類</button>
                         <button type="button" id="pdCateOk">確定</button>
                       </div>
@@ -354,47 +349,6 @@
                           })
                         })
                       </script>
-
-                      <!-- 內容優化中 2024 -->
-                      <div class="optimizedByAI">
-                        <div class="headNav">
-                          <div class="opt_heading">優化建議</div>
-                          <div class="opt_nav">
-                            <button class="arrow24 left" disabled type="button"></button>建議 1/3<button class="arrow24 right" disabled type="button"></button>
-                          </div>
-                            <button type="button" class="colseThis" title="關閉"></button>
-                        </div>
-                        <div class="opt_processing">內容優化中<i></i><i></i><i></i></div>
-                        <button class="ai24 opt_stopBtn" type="button">停止優化</button>
-                      </div>
-
-                      <!-- 優化建議選項 2024 -->
-                      <div class="optimizedByAI">
-                        <div class="headNav">
-                          <div class="opt_heading">優化建議</div>
-                          <button type="button" class="colseThis" title="關閉"></button>
-                        </div>
-                        <div class="aiRecomList optionPool block singleSelection">
-                          <label class="isSelected">
-                            <input type="radio" checked name="aaa1">
-                            Automobiles & Motorcycle ❯ Automobile Engine ❯ Other Automobile Engine Parts --  其他汽車引擎零件
-                          </label>
-                          <label>
-                            <input type="radio" name="aaa1">
-                            Automobiles & Motorcycle ❯ Automobile Engine ❯ Other Automobile Engine Parts --  其他汽車引擎零件
-                          </label>
-                          <label>
-                            <input type="radio" name="aaa1">
-                            Automobiles & Motorcycle ❯ Automobile Engine ❯ Other Automobile Engine Parts --  其他汽車引擎零件
-                          </label>
-                        </div>
-
-                        <div class="funcButtons">
-                          <button class="ai24 refresh" type="button">重新生成</button>
-                          <button class="ai24 intense" type="button">使用</button>
-                        </div>
-
-                      </div>
                     </div>
                     
                     <div class="cateInUse"><p>最近使用的產業別</p>
@@ -405,6 +359,33 @@
                         <li>Computer ❯ Computer Software ❯ Application Software -- 工具軟體</li>
                         <li>Computer ❯ Computer Software ❯ Other Computer Software -- 其他電腦軟體</li>
                       </ul>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><abbr title="必填欄位" class="required">*</abbr> 產業別規格<span style="font-size: .88em; display: block;">（共用）</span></td>
+                  <td>
+                    <div class="optionPool">
+                      <span class="groupLabel"><abbr title="必填欄位" class="required">*</abbr> Screen Size</span>
+                      <label><input type="checkbox">16"-</label>
+                      <label><input type="checkbox">14"-15"</label>
+                      <label><input type="checkbox">11"-13"</label>
+                      <label><input type="checkbox">5"-10"</label>
+                    </div>
+                    <div class="optionPool">
+                      <span class="groupLabel"><abbr title="必填欄位" class="required">*</abbr> Memory Capacity</span>
+                      <label><input type="checkbox">8GB</label>
+                      <label><input type="checkbox">4GB</label>
+                      <label><input type="checkbox">3GB</label>
+                      <label><input type="checkbox">2GB</label>
+                      <label><input type="checkbox">1GB</label>
+                      <label><input type="checkbox">512MB</label>
+                      <label><input type="checkbox">256MB</label>
+                    </div>
+                    <div class="optionPool">
+                      <span class="groupLabel">Type</span>
+                      <label><input type="checkbox">Temperature  Controller</label>
+                      <label><input type="checkbox">Temperature Transmitter</label>
                     </div>
                   </td>
                 </tr>
@@ -432,7 +413,6 @@
                     </div>
                   </td>
                 </tr>
-      
               </table>
             </fieldset>
   
@@ -453,26 +433,34 @@
                   <td><abbr title="必填欄位" class="required">*</abbr> 名稱</td>
                   <td>
                     <input type="text" class="fullWidth" value="產品名稱123">
-                    <button type="button" class="aiOptimise">AI 優化</button>
+                    <button type="button" class="aiOptimise" disabled="disabled">AI 優化</button>
 
-                    <!-- 產品名稱優化建議 2024 -->
-                    <div class="optimizedByAI" style="display: none;">
+                    <!-- 內容優化中 2024 -->
+                    <div class="optimizedByAI">
                       <div class="headNav">
                         <div class="opt_heading">優化建議</div>
-                        <div class="opt_nav">
-                          <button class="arrow24 left" disabled type="button"></button>建議 1/3<button class="arrow24 right" type="button"></button>
-                        </div>
+                          <button type="button" class="colseThis" title="關閉"></button>
+                      </div>
+                      <div class="opt_processing">內容優化中<i></i><i></i><i></i></div>
+                      <button class="ai24 opt_stopBtn" type="button">停止優化</button>
+                    </div>
+
+                    <!-- 產品名稱優化建議選項 2024 -->
+                    <div class="optimizedByAI">
+                      <div class="headNav">
+                        <div class="opt_heading">優化建議</div>
                         <button type="button" class="colseThis" title="關閉"></button>
                       </div>
-                      
-                      <div class="aiRecommend">
-                        產品名稱建議產品名稱建議
+                      <div class="aiRecomList optionPool block singleSelection">
+                        <label class="isSelected"><input type="radio" checked name="aaa1">產品名稱建議-1</label>
+                        <label><input type="radio" name="aaa1">產品名稱建議產品名稱建議-2</label>
+                        <label><input type="radio" name="aaa1">產品名稱建議-3</label>
                       </div>
+
                       <div class="funcButtons">
                         <button class="ai24 refresh" type="button">重新生成</button>
                         <button class="ai24 intense" type="button">使用</button>
                       </div>
-
                     </div>
                     
                   </td>
@@ -838,8 +826,10 @@
                 <div class="optimizedByAI" style="display: none;">
                   <div class="headNav">
                     <div class="opt_heading">優化建議</div>
-                    <div class="opt_nav">
-                      <button class="arrow24 left" type="button"></button>建議 2/3<button class="arrow24 right" type="button"></button>
+                    <div class="opt_tab">
+                      <button class="tabItem active" class="active" type="button">建議 1</button>
+                      <button class="tabItem" type="button">建議 2</button>
+                      <button class="tabItem" type="button">建議 3</button>
                     </div>
                     <button type="button" class="colseThis" title="關閉"></button>
                   </div>
@@ -3034,7 +3024,7 @@
           <button type="button" class="roundBtn white">儲存</button>
           <button type="button" class="roundBtn white">預覽</button>
           <a class="roundBtn white" href="cont_catalog24_edit_step1.html">上一步</a>
-          <button type="submit" class="roundBtn hilight" onclick="location.href='cont_catalog24_edit_step3.html';">下一步，啟用型錄</button>
+          <button type="submit" class="roundBtn hilight" onclick="location.href='cont_catalog24_edit_step3.html';">下一步，型錄啟用設定</button>
         </div>
       </section>
 

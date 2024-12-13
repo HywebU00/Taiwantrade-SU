@@ -3,8 +3,8 @@
   position: relative;
   padding: 16px; margin: 8px 0 24px;
   border-radius: 16px;
-  border: 2px solid var(--Grey-Grey-300);
-  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.16);
+  // border: 2px solid var(--Grey-Grey-300);
+  box-shadow: 0 2px 8px 0 rgba(0 0 0 / .2);
   font-size: 16px;
 
   .headNav{
@@ -17,6 +17,27 @@
       text-align: center; line-height: 1;
       margin-right: 3.6em;
       button{vertical-align: middle; box-shadow: none;}
+    }
+    .opt_tab{
+      flex: 0 0 auto;
+      display: flex; justify-content: center;
+      padding: 3px;
+      background-color: var(--Purple_Light);
+      border-radius: 2em;
+      button.tabItem{
+        font-size: 1rem; white-space: nowrap;
+        height: 1.9em; line-height:1.9; margin: 0 3px; padding: 0 1em;
+        background-color: transparent; color: var(--Purple);
+        box-shadow: none;
+        border-radius: 2em;
+        &:last-child{margin-right: 0;}
+        &:first-child {margin-left: 0;}
+        &:hover{ background-color: #fff;}
+        &.active{
+          background: var(--Purple); color: var(--Grey-White);
+          box-shadow: var(--Purple) 0 0 0 4px;
+        }
+      }
     }
   }
   // [優化建議]
