@@ -121,17 +121,18 @@
 // AI 優化 button（button.aiOptimise） 定位
 
 // 產品類別
-.multiCategory{
-  .inputAndBtns{
-    position: relative;
-    input[type="text"]:has(~.aiOptimise) {padding-right: 5em;}
-    button.aiOptimise{
-      position: absolute; left: calc(100% - 3.5em - 40px); top: 6px; right: auto; 
-      margin: 0;
-      transform: translateX(-100%);
-    }
-  }
-}
+// .multiCategory{
+//   .inputAndBtns{
+//     position: relative;
+//     input[type="text"]:has(~.aiOptimise) {padding-right: 5em;}
+//     button.aiOptimise{
+//       position: absolute; left: calc(100% - 3.5em - 40px); top: 6px; right: auto; 
+//       margin: 0;
+//       transform: translateX(-100%);
+//     }
+//   }
+// }
+// 20241213 delete
 
 // 主要特點
 .keyFeatureEditor{
@@ -169,13 +170,18 @@
     table.formLayout{
       width: 100%;
       td{
-        &:has(button.aiOptimise) {position: relative;}
+        &:has(.aiOptimise) {
+          position: relative;
+          // outline: 1px solid #f003;
+          // outline-offset: -1px;
+        }
+        .aiOptimise{ position: absolute; right: 3px; top: 11px;}
         input[type="text"].fullWidth { 
           width: calc(100% - 20px);
-          &+.aiOptimise{ position: absolute; right: 7px; top: 11px;}
           &:has(+.aiOptimise) {
-            padding-right: calc(4.5em + 24px);
-            width: calc(100% - 38px - 4.5em);
+            margin: 3px 0;
+            padding-right: calc(6em + 24px);
+            width: calc(100% - 6em - 32px);
           }
         }
         textarea.fullWidth {width: calc(100% - 20px);}
@@ -184,8 +190,8 @@
         .keywordPool{
           background-color: var(--Grey-Grey-100);
           margin-right: 3px;          
-          &+.aiOptimise {position: absolute; right: 7px; top: 12px;}
-          &:has(+.aiOptimise){padding-right: calc(4.5em + 26px);}
+          &:has(+.aiOptimise){padding-right: calc(5em + 28px);}
+          &+.aiOptimise {position: absolute; right: 9px; top: 12px;}
         }
         
         // 自選產品分類
