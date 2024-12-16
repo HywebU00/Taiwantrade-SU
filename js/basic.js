@@ -669,7 +669,7 @@ $(function(){
         _coverAll.fadeIn(200);
       }
 
-      if (_this.is('input[type="submit"]')){
+      if (_this.is('input[type="submit"]') || _this.parents('.popMsg').length > 0){
         _this.parents('.popMsg').fadeOut(200);
       }
       _body.addClass('noScroll');
@@ -2164,8 +2164,6 @@ _fileDragDrop.each(function(){
       _generateHere.removeClass('show').eq(i).addClass('show');
       $(this).addClass('active').siblings().removeClass('active');
     })
-
-
 
   })
 

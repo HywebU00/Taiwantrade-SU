@@ -202,7 +202,7 @@ button.aiOptimise {
     background-color: var(--Purple);
     color: var(--Grey-White);
     box-shadow: none;
-    &::before { filter: brightness(900%);}
+    &::before { filter:saturate(0%) brightness(10);}
   }
 
   &[disabled] {

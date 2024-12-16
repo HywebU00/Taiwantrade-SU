@@ -524,7 +524,7 @@
 
                       <div class="funcButtons">
                         <button class="ai24 refresh" type="button">重新生成</button>
-                        <button class="ai24 intense trigPop" type="button" id="pop-overwriteConfirm">使用</button>
+                        <button class="ai24 intense trigPop" type="button">使用</button>
                       </div>
 
                     </div>
@@ -841,7 +841,7 @@
 
                   <div class="funcButtons">
                     <button class="ai24 refresh" type="button">重新生成</button>
-                    <button class="ai24 intense trigPop" type="button" id="pop-overwriteConfirm">使用</button>
+                    <button class="ai24 intense trigPop" type="button">使用</button>
                   </div>
                 </div>
               </div>
@@ -3079,26 +3079,10 @@
         </table>
       </div>
 
-
-      <!-- 確定覆蓋？ -->
-      <section class="popMsg generatConfirm" id="overwriteConfirm">
-        <h3>您確定要使用 AI 生成的內容嗎？</h3>
-        <div class="popBody">
-          <p>使用 AI 生成內容將會覆蓋欄位內原有內容。</p>
-          <label class="noshow">
-            <input type="checkbox">請不要再出現此提醒
-          </label>
-        </div>
-        <div class="btnDv style24">
-          <input type="button" value="取消" class="closePop">
-          <input type="button" value="使用" class="confirm">
-        </div>
-      </section>
       
-      
-      <!-- 您確定要生成內容嗎？ -->
+      <!-- 您確定要生成內容嗎？確定覆蓋？ -->
       <section class="popMsg generatConfirm" id="genConfirm">
-        <h3>您確定要生成內容嗎？</h3>
+        <h3>您確定要使用 AI 生成的內容嗎？</h3>
         <div class="popBody">
           <p>使用 AI 生成內容將會覆蓋欄位內原有內容。</p>
           <label class="noshow">
@@ -3127,13 +3111,52 @@
           ">關閉動畫</button>
           <script>
             $('.closeBefore').on('click', function(){
-              $('.popMsg#genAni, .popMsg#genConfirm').hide();
+              $('.popMsg#genAni').hide();
               $('.popMsg#genDone').show();
             })
           </script>
         <!-- end -->
-
       </section>
+
+
+      <!-- 確定覆蓋？ -->
+      <section class="popMsg generatConfirm" id="overwriteConfirm">
+        <h3>您確定要使用 AI 生成的內容嗎？？？</h3>
+        <div class="popBody">
+          <p>使用 AI 生成內容將會覆蓋欄位內原有內容。</p>
+          <label class="noshow">
+            <input type="checkbox">請不要再出現此提醒
+          </label>
+        </div>
+        <div class="btnDv style24">
+          <input type="button" value="取消" class="closePop">
+          <input type="button" value="使用" class="confirm trigPop" id="pop-genAni2">
+        </div>
+      </section>
+      
+
+      <!-- 產品名稱生成中 -->
+      <section class="popMsg generating" id="genAni2">
+        <h3 class="head">AI 產品名稱生成中</h3>
+        <div class="waiting">
+          <span></span><span></span><span></span>
+        </div>
+        <p>請勿關閉或是重新整理此分頁，以避免內容遺失</p>
+
+        <!-- 此 button 是 gui demo 時使用的隱藏元件，套版時請刪除 -->
+          <button class="closeBefore" style="
+            position: absolute; right: 3px;bottom: 3px;
+            background-color: transparent; box-shadow: none;
+          ">關閉動畫</button>
+          <script>
+            $('.closeBefore').on('click', function(){
+              $('.popMsg#genAni2').hide();
+              $('.popMsg#genDone').show();
+            })
+          </script>
+        <!-- end -->
+      </section>
+
 
       <section class="popMsg short" id="genDone">
         <button type="button" class="colseThis closePop" title="關閉"></button>
