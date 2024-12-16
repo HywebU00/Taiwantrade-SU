@@ -2121,7 +2121,7 @@ _fileDragDrop.each(function(){
 
 
   //////////////////////////////////////////////////////////////////////
-  // 202410 [填寫小幫手] 2024年版 //////////////////////////////////////////////////////////
+  // 202410 [填寫小幫手] 2024年版 //////////////////////////////////////
   var _showHelper = $('.showHelper');
   var _referenceData = $('.referenceData');
   var _closeRef = _referenceData.find('.closeThis');
@@ -2169,4 +2169,31 @@ _fileDragDrop.each(function(){
 
   })
 
+
+  // 202410 「預覽」選單
+  var _showDropMenu = $('.fixBottomRow').find('.showDropMenu');
+  _showDropMenu.each(function(){
+    let _this = $(this);
+    let _dropMenu = _this.next('.dropMenu');
+    let _dropMenuItem = _dropMenu.find('li');
+
+    _this.on('click', function(){
+      if(_dropMenu.is(':hidden')) {
+        _dropMenu.css({
+          'right': ww - _this.position().left ,
+          'bottom' : _this.position().top + _this.innerHeight() + 10 + 'px'
+        }).fadeIn(150);
+      } else {
+        _dropMenu.fadeOut(150, function(){
+          _dropMenu.removeAttr('style');
+        });
+      }
+    })
+
+    _dropMenuItem.on('click', function(){
+      _dropMenu.fadeOut(150, function(){
+        _dropMenu.removeAttr('style');
+      });
+    })
+  })
 });

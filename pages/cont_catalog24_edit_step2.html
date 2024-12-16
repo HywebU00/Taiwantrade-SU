@@ -459,7 +459,7 @@
 
                       <div class="funcButtons">
                         <button class="ai24 refresh" type="button">重新生成</button>
-                        <button class="ai24 intense" type="button">使用</button>
+                        <button class="ai24 intense trigPop" id="pop-overwriteConfirm" type="button">使用</button>
                       </div>
                     </div>
                     
@@ -494,8 +494,6 @@
                       <ul>
                         <li class="pdLabel">Temperature Switch<span class="removeThis"></span></li>
                         <li class="pdLabel">bimetal thermostat<span class="removeThis"></span></li>
-                        <li class="pdLabel">Temperature Switch<span class="removeThis"></span></li>
-                        <li class="pdLabel">bimetal thermostat<span class="removeThis"></span></li>
                         <li class="addOne"><input type="text" placeholder="請輸入英文產品關鍵詞"><span class="addThis">+</span></li>
                       </ul>
                     </div>
@@ -526,7 +524,7 @@
 
                       <div class="funcButtons">
                         <button class="ai24 refresh" type="button">重新生成</button>
-                        <button class="ai24 intense" type="button">使用</button>
+                        <button class="ai24 intense trigPop" type="button" id="pop-overwriteConfirm">使用</button>
                       </div>
 
                     </div>
@@ -843,7 +841,7 @@
 
                   <div class="funcButtons">
                     <button class="ai24 refresh" type="button">重新生成</button>
-                    <button class="ai24 intense" type="button">使用</button>
+                    <button class="ai24 intense trigPop" type="button" id="pop-overwriteConfirm">使用</button>
                   </div>
                 </div>
               </div>
@@ -3024,7 +3022,14 @@
         </div>
         <div class="rightGroup">
           <button type="button" class="roundBtn white">儲存</button>
-          <button type="button" class="roundBtn white">預覽</button>
+          <button type="button" class="roundBtn white showDropMenu">預覽</button>
+          <div class="dropMenu">
+            <ul>
+              <li><a href="#">英文</a></li>
+              <li><a href="#">正體中文</a></li>
+              <li><a href="#">日文</a></li>
+            </ul>
+          </div>
           <a class="roundBtn white" href="cont_catalog24_edit_step1.html">上一步</a>
           <button type="submit" class="roundBtn hilight" onclick="location.href='cont_catalog24_edit_step3.html';">下一步，型錄啟用設定</button>
         </div>
@@ -3075,6 +3080,22 @@
       </div>
 
 
+      <!-- 確定覆蓋？ -->
+      <section class="popMsg generatConfirm" id="overwriteConfirm">
+        <h3>您確定要使用 AI 生成的內容嗎？</h3>
+        <div class="popBody">
+          <p>使用 AI 生成內容將會覆蓋欄位內原有內容。</p>
+          <label class="noshow">
+            <input type="checkbox">請不要再出現此提醒
+          </label>
+        </div>
+        <div class="btnDv style24">
+          <input type="button" value="取消" class="closePop">
+          <input type="button" value="使用" class="confirm">
+        </div>
+      </section>
+      
+      
       <!-- 您確定要生成內容嗎？ -->
       <section class="popMsg generatConfirm" id="genConfirm">
         <h3>您確定要生成內容嗎？</h3>
