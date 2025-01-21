@@ -133,6 +133,7 @@ button.ai24{
   &:hover{box-shadow: var(--Purple_Light) 0 0 0 2px;}
   &:focus{box-shadow: var(--Purple) 0 0 0 2px;}
 
+  
   // 深紫色底白色字的 button
   &.intense {
     background-color: var(--Purple);
@@ -140,6 +141,12 @@ button.ai24{
     font-weight: 400;
     &:hover,
     &:focus{box-shadow: var(--Purple) 0 0 0 2px;}
+
+    &[disabled] {
+      background-color: var(--Grey-Grey-300);
+      color: var(--Grey-Grey-700);
+      &:hover, &:focus{ box-shadow: none;}
+    }
   }
 
 

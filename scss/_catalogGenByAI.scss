@@ -77,8 +77,12 @@
     background-color: var(--Purple);
     float: right; margin:24px 0 0;
     min-width: 8em;
-    &:hover, &:focus{
-      box-shadow: var(--Purple) 0 0 0 2px;
+    &:hover, &:focus{box-shadow: var(--Purple) 0 0 0 2px;}
+
+    &[disabled] {
+      background-color: var(--Grey-Grey-300);
+      color: var(--Grey-Grey-700);
+      &:hover, &:focus{ box-shadow: none;}
     }
   }
 }
