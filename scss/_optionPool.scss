@@ -4,6 +4,7 @@
   --tinge: #{$btn-bg1};
   --tingelight: #{$border-color-light};
   --checked: #{$hiLight2};
+  --checkedDis: #{$border-color-light};
 
   overflow: hidden;
 
@@ -29,7 +30,7 @@
     &.disabled{
       color: $font-color-lighter; cursor: default;
       &::before{border-color: $border-color-pale; background-color: $bg-color-pale;}
-      &:hover{box-shadow: none;}
+      &:hover{box-shadow: none;border-color:$font-color-lighter;}
     }
     &.isSelected.disabled{
       box-shadow: $border-color-pale 0 0 0 1px;color: inherit;

@@ -35,6 +35,17 @@
       }
       box-shadow: var(--Purple) 0 0 0 1px inset;
     }
+    &.disabled{
+      box-shadow: $border-color-pale 0 0 0 1px;
+      &::before{border-color: $border-color-pale; background-color: $bg-color-pale;}
+      &:hover{box-shadow: $border-color-pale 0 0 0 1px;border-color:$font-color-lighter;}
+    }
+    &.isSelected.disabled{
+      box-shadow: $border-color-light 0 0 0 1px;color: inherit;
+      &::before{background:$border-color-light;border-color:transparent; box-shadow:$border-color-light 0 0 0 1px;}
+      &::after{display:block;}
+      &:hover{box-shadow:$border-color-light 0 0 0 1px;;}
+    }
   }
 
 }
