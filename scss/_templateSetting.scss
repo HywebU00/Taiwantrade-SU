@@ -525,11 +525,12 @@
     .ofallCheck{margin-left: 9px;}
   }
 }
-.editCertification{position: relative;padding:12px 12px 15px 180px;margin-bottom: 15px; @extend %shadowThin; border-radius: 6px;
-  // outline: 1px dashed red; 
-  &>.funcBtnGp{margin: 0 0 15px 40%; position: static;
-   &>ul{float: right;}
-   li .aloneCheck{margin-right: 1em;}
+.editCertification{
+  position: relative;padding:12px 12px 15px 180px;margin-bottom: 15px; @extend %shadowThin; border-radius: 6px;
+  &>.funcBtnGp{margin: 0 0 15px 40%; position: static; 
+    &::after{ content: ''; display: block; clear: both;}
+    &>ul{float: right;}
+    li .aloneCheck{margin-right: 1em;}
   }
 
 
