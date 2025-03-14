@@ -2,11 +2,18 @@
 .multiCategory{
   .inputAndBtns{
     display: flex; flex-flow: row nowrap;
+    &:has(.aiOptimise) input[type="text"] {padding-right: 6.5em;}
 
-    input[type="text"]{flex: 1 1 88%; margin-right: 0;
+    input[type="text"]{
+      flex: 1 1 88%; margin-right: 0;
       &[readonly]:hover{border-color:$btn-bg1}
     }
     button{ flex:0 1 6%; white-space: nowrap; vertical-align: top;margin: 4px 0 0 5px;}
+    button.aiOptimise{
+      position: relative !important; 
+      margin: -5px 0 0 calc( -3.5em - 36px);
+    }
+
   }
 
   .cateSelect{display:none;margin:0 0 5px;border:1px solid $border-color-light;width:100% !important;

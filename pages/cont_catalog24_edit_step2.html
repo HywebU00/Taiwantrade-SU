@@ -245,6 +245,7 @@
               </div>
 
             </section>
+
             
             <!-- 產品基本資料 -->
             <h3>產品基本資料</h3>
@@ -258,7 +259,8 @@
                   <td>
                     <div class="multiCategory">
                       <div class="inputAndBtns">
-                        <input id="pdCategory" type="text" readonly>
+                        <input id="pdCategory" type="text" value="引擎零件" readonly>
+                        <button type="button" class="aiOptimise" disabled="disabled">AI 優化</button>
                         <button type="button" id="pdCateSel" data-alttext="取消">選擇分類</button>
                         <button type="button" id="pdCateOk">確定</button>
                       </div>
@@ -350,6 +352,24 @@
                         })
                       </script>
                     </div>
+
+                    <!-- ***產品類別***優化建議選項 20250314 -->
+                    <div class="optimizedByAI">
+                      <div class="headNav">
+                        <div class="opt_heading">優化建議</div>
+                        <button type="button" class="colseThis" title="關閉"></button>
+                      </div>
+                      <div class="aiRecomList optionPool block singleSelection">
+                        <label class="isSelected"><input type="radio" checked name="aaa1">玩具、嬰幼兒及寵物用品 ❯ 慣性玩具、遙控及發條玩具 ❯ 遙控玩具零件</label>
+                        <label><input type="radio" name="aaa1">Toys, Baby & Pet Products ❯ Friction, Radio Control & Wind-up Toys ❯ Radio Control Toy Parts</label>
+                        <label><input type="radio" name="aaa1">Игрушки, продукты для детей и домашних животных ❯ Фрикционные, радиоуправляемые и заводные игрушки ❯ Детали радиоуправляемых игрушек</label>
+                      </div>
+
+                      <div class="funcButtons">
+                        <button class="ai24 refresh" type="button">重新生成</button>
+                        <button class="ai24 intense trigPop" id="pop-overwriteConfirm" type="button">使用</button>
+                      </div>
+                    </div>
                     
                     <div class="cateInUse"><p>最近使用的產業別</p>
                       <ul>
@@ -415,7 +435,8 @@
                 </tr>
               </table>
             </fieldset>
-  
+
+            
             <!-- 產品名稱 -->
             <fieldset>
               <legend><abbr title="必填欄位" class="required">*</abbr> 產品名稱</legend>
