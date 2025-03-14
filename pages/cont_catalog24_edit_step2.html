@@ -260,7 +260,7 @@
                     <div class="multiCategory">
                       <div class="inputAndBtns">
                         <input id="pdCategory" type="text" value="引擎零件" readonly>
-                        <button type="button" class="aiOptimise" disabled="disabled">AI 優化</button>
+                        <button type="button" class="aiOptimise">AI 優化</button>
                         <button type="button" id="pdCateSel" data-alttext="取消">選擇分類</button>
                         <button type="button" id="pdCateOk">確定</button>
                       </div>
@@ -354,7 +354,7 @@
                     </div>
 
                     <!-- ***產品類別***優化建議選項 20250314 -->
-                    <div class="optimizedByAI">
+                    <div class="optimizedByAI" style="display: none;">
                       <div class="headNav">
                         <div class="opt_heading">優化建議</div>
                         <button type="button" class="colseThis" title="關閉"></button>
@@ -436,7 +436,7 @@
               </table>
             </fieldset>
 
-            
+
             <!-- 產品名稱 -->
             <fieldset>
               <legend><abbr title="必填欄位" class="required">*</abbr> 產品名稱</legend>
@@ -928,9 +928,15 @@
             var _closeAiOpt = $('.optimizedByAI').find('.colseThis');
             _closeAiOpt.on('click' , function(){
               $(this).parents('.optimizedByAI').hide().prev('.aiOptimise').removeAttr('disabled');
+              if ( $(this).parents('.optimizedByAI').prev('.multiCategory').length > 0 ) {
+                $(this).parents('.optimizedByAI').prev('.multiCategory').find('.aiOptimise').removeAttr('disabled');
+              }
             })
-            _aiOptimise.on('click', function(){            
-              $(this).attr('disabled', 'disabled').next('.optimizedByAI').show();
+            _aiOptimise.on('click', function(){
+              $(this).attr('disabled', '').next('.optimizedByAI').show();
+              if ( $(this).parents('.multiCategory').length > 0 ) {
+                $(this).parents('.multiCategory').next('.optimizedByAI').show();
+              }
             })
             
           </script>
