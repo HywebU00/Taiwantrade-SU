@@ -248,6 +248,7 @@
 
             
             <!-- 產品基本資料 -->
+            <!-- 產品類別 -->
             <h3>產品基本資料</h3>
             <fieldset>
               <legend><abbr title="必填欄位" class="required">*</abbr> 產品類別</legend>
@@ -260,28 +261,12 @@
                     <div class="multiCategory">
                       <div class="inputAndBtns">
                         <input id="pdCategory" type="text" value="引擎零件" readonly>
-                        <button type="button" class="aiOptimise">AI 優化</button>
+                        <button type="button" class="aiOptimise trigPop" id="pop-complex">AI 優化</button>
                         <button type="button" id="pdCateSel" data-alttext="取消">選擇分類</button>
                         <button type="button" id="pdCateOk">確定</button>
                       </div>
                       <p class="hint">Tips: 為產品設定貿協分類結構代碼，將您的產品更準確的分門別類。</p>
                       
-                      <!-- ***產品類別***優化建議選項 20250314 -->
-                      <div class="optimizedByAI" style="display: none;">
-                        <div class="headNav">
-                          <div class="opt_heading">優化建議</div>
-                          <button type="button" class="colseThis" title="關閉"></button>
-                        </div>
-                        <div class="aiRecomList optionPool block singleSelection">
-                          <label class="isSelected"><input type="radio" checked name="aaa1">Computer ❯ Computer ❯ Laptop Computer -- 筆記型電腦</label>
-                        </div>
-
-                        <div class="funcButtons">
-                          <button class="ai24 refresh" type="button">重新生成</button>
-                          <button class="ai24 intense trigPop" id="pop-overwriteConfirm" type="button">使用</button>
-                        </div>
-                      </div>
-
                       <div class="cateSelect">
                         <div class="cateSearch">
                           <span class="label">查詢產業</span>
@@ -360,15 +345,13 @@
                         </div>
                       </div>
                       <script> 
-                        //模擬產業別查詢結果 顯示／隱藏
+                        //模擬產業別查詢結果 顯示／隱藏，套版時請刪除
                         $(function(){
                           $('.cateSearch').find('input[type="submit"]').click(function(){
                             $('.cateSearch').next('.cateList').toggle();
                             $('.cateList.bySearch').toggle();
                           })
                         })
-
-
                       </script>
                     </div>
 
@@ -926,19 +909,13 @@
 
           <script>
             // GUI demo 用，套版時請刪除
-            var _aiOptimise = $('.aiOptimise'); // ai button
+            var _aiOptimise = $('.aiOptimise').not('.trigPop'); // ai button
             var _closeAiOpt = $('.optimizedByAI').find('.colseThis');
             _closeAiOpt.on('click' , function(){
               $(this).parents('.optimizedByAI').slideUp(300).prev('.aiOptimise').removeAttr('disabled');
-              if ( $(this).parents('.multiCategory').length > 0 ) {
-                $('.multiCategory').find('.aiOptimise').removeAttr('disabled');
-              }
             })
             _aiOptimise.on('click', function(){
               $(this).attr('disabled', '').next('.optimizedByAI').slideDown(300);
-              if ( $(this).parents('.multiCategory').length > 0 ) {
-                $('.multiCategory').find('.optimizedByAI').slideDown(300);
-              }
             })
             
           </script>
@@ -3193,6 +3170,44 @@
           內容生成完畢
         </div>
       </section>
+
+      <!-- *** 20250318 整合「生成中動畫」、「生成內容（產業別）、詢問是否使用」 的彈出訊息 -->
+      <section  class="popMsg complex" id="complex">
+
+        <!-- 生成中動畫 -->
+        <div class="generating">
+          <h3 class="head">產業別生成中</h3>
+          <div class="waiting">
+            <span></span><span></span><span></span>
+          </div>
+          <p>請勿關閉或是重新整理此分頁，以避免內容遺失</p>
+        </div>
+
+        <!-- 生成內容（產業別） -->
+        <div class="generatConfirm" style="display: none;">
+          <h3>AI 建議的產業別</h3>
+          <div class="popBody">
+            <p class="aiGenCate">Computer ❯ Computer ❯ Laptop Computer -- 筆記型電腦</p>
+            <p>使用 AI 生成內容將會覆蓋欄位內原有內容，您確定要使用 AI 生成的內容嗎？</p>
+          </div>
+          <div class="btnDv style24">
+            <input type="button" value="取消" class="closePop">
+            <input type="button" value="使用" class="confirm closePop">
+          </div>
+        </div>
+
+      </section>
+
+      <script>
+        // GUI 展示用，套版時請刪除
+        const _complexPop = $('.popMsg.complex');
+        $('.aiOptimise#pop-complex').on('click', function(){
+          setTimeout( () => { _complexPop.find('.generating').hide().next().show() }, 3200)
+        })
+        _complexPop.find('.closePop').on('click', function(){
+          setTimeout( () => { _complexPop.find('.generating').show().next().hide() }, 200)
+        })
+      </script>
 
       <!-- <footer class="webFooter">
         <ul class="footLinks">

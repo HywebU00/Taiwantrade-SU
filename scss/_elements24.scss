@@ -402,6 +402,30 @@ label.noshow{
   }
 
 
+  // 20250318
+  &.complex{
+    text-align: center;
+    h3 {
+      margin: 15px auto 0;
+      font-size: 1.6em;font-weight: 500;
+      border: none;
+    }
+    .popBody{
+      border: none; font-size: 1.067em; 
+      &+.btnDv{border: none; }
+    }
+    .aiGenCate{
+      display: block; 
+      padding: .65em 1.2em .6em; margin: 1.5em 0;
+      font-size: 1.125em; text-align: left;
+      border-radius: 1.5em;
+      background-color: var(--Purple_Light);
+    }
+    .waiting{ margin: 0 auto;}
+
+  }
+
+
   // 內容生成完畢
   .genDone{
     text-align: center; margin: 16px auto 0;
