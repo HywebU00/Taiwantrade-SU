@@ -73,26 +73,26 @@
     }
 
 
-    .fileDragDrop{
-      width: 45%; min-width: 20em; height: auto; 
-      padding: 1.8em 1em; margin: .3em 0;
-      border: 2px dashed $border-color-pale;border-radius: 6px;
-      &::before {
-        content: ''; display: inline-block; vertical-align: middle;
-        width: 25px; height: 25px; margin-right: 5px;
-        background: url(../images/icon_uploasd.svg) no-repeat center center;
-        background-size: contain;
-      }
-      &::after {
-        content: '點擊上傳'; display: inline-block; padding: 0 .2em; height: 2em;line-height: 2;
-        background-color: transparent; color: #0098c4;
-      }
-      &:hover{
-        border-color: $border-color-light;
-        &::after{box-shadow:none;}
-      }
-      p{display: inline-block; margin: 0;}
-    }
+    // .fileDragDrop{
+    //   width: 45%; min-width: 20em; height: auto; 
+    //   padding: 1.8em 1em; margin: .3em 0;
+    //   border: 2px dashed $border-color-pale;border-radius: 6px;
+    //   &::before {
+    //     content: ''; display: inline-block; vertical-align: middle;
+    //     width: 25px; height: 25px; margin-right: 5px;
+    //     background: url(../images/icon_uploasd.svg) no-repeat center center;
+    //     background-size: contain;
+    //   }
+    //   &::after {
+    //     content: '點擊上傳'; display: inline-block; padding: 0 .2em; height: 2em;line-height: 2;
+    //     background-color: transparent; color: #0098c4;
+    //   }
+    //   &:hover{
+    //     border-color: $border-color-light;
+    //     &::after{box-shadow:none;}
+    //   }
+    //   p{display: inline-block; margin: 0;}
+    // }
   }
 
   button.intense{ 
@@ -117,5 +117,19 @@
   .dataTable{
     margin:40px 3px 0; 
     box-shadow: rgb(0 0 0 / .25) 0 0 4px;
+  }
+}
+
+
+.previewThumb{
+  width: 240px;
+  padding: 5px; margin: 8px 0;
+  box-shadow: $border-color-light 0 0 0 1px;
+  img{
+    display: block; width: 100%; height: auto; max-height: 240px; object-fit: contain;
+  }
+  p{
+    margin: 8px 0 0; line-height: 1.3;
+    word-break: break-all;
   }
 }
