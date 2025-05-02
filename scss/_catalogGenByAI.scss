@@ -66,33 +66,25 @@
 
     label.oneRow{
       display: block;
-      .labelText{ display: block; margin: 0 6px 3px;}
       input[type="text"]{ 
         width: 100%;margin-left: 0;margin-right: 0;
       }
+      textarea{
+        width: 100%; height: 8em;
+      }
     }
 
+    .genByImg { 
+      margin: 36px auto 0;
+      .fileDragDrop {
+        padding:1.6em 1em; margin-top: 6px; height: auto;
+        &>p{ margin-top: 0;}
+      }
+    }
+    .oneRow, .genByImg {
+      .labelText{ display: block; margin: 0 6px 3px; color: #000;}
+    }
 
-    // .fileDragDrop{
-    //   width: 45%; min-width: 20em; height: auto; 
-    //   padding: 1.8em 1em; margin: .3em 0;
-    //   border: 2px dashed $border-color-pale;border-radius: 6px;
-    //   &::before {
-    //     content: ''; display: inline-block; vertical-align: middle;
-    //     width: 25px; height: 25px; margin-right: 5px;
-    //     background: url(../images/icon_uploasd.svg) no-repeat center center;
-    //     background-size: contain;
-    //   }
-    //   &::after {
-    //     content: '點擊上傳'; display: inline-block; padding: 0 .2em; height: 2em;line-height: 2;
-    //     background-color: transparent; color: #0098c4;
-    //   }
-    //   &:hover{
-    //     border-color: $border-color-light;
-    //     &::after{box-shadow:none;}
-    //   }
-    //   p{display: inline-block; margin: 0;}
-    // }
   }
 
   button.intense{ 

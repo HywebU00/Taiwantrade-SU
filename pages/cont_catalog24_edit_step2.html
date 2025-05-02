@@ -205,8 +205,8 @@
                 <p>請選擇一種方式進行內容生成</p>
                 <div class="generateBy">
                   <button class="url" type="button">產品 URL</button>
-                  <button class="keyword" type="button">產品關鍵字</button>
-                  <button class="picture active" type="button">產品圖片</button>
+                  <button class="keyword active" type="button">圖文生成</button>
+                  <!-- <button class="picture" type="button">產品圖片</button> -->
                 </div>
 
                 <!-- 產品 URL -->
@@ -226,25 +226,40 @@
                   </label>
                 </section>
   
-                <!-- 產品關鍵字 -->
+                <!-- 圖文生成 -->
                 <section class="generateHere">
                   <section class="langTab">
                     <ul>
-                      <li><a>英文</a></li>
+                      <li class="active"><a>英文</a></li>
                       <li><a>正體中文</a></li>
-                      <li class="active"><a>日文</a></li>
+                      <li><a>日文</a></li>
                     </ul>
                   </section>
   
                   <label class="oneRow">
                     <span class="labelText">產品關鍵字</span>
-                    <input type="text" placeholder="請輸入該語系產品關鍵字">
+                    <textarea placeholder="請輸入該語系產品關鍵字"></textarea>
                     <p class="hint">Tips: 每種語系皆需輸入各自的產品關鍵字</p>
                   </label>
+
+                  <div class="genByImg">
+                    <span class="labelText">產品圖片</span>
+                    <!-- <div class="previewThumb">
+                      <img src="../publicData/ph_photo3.jpg">
+                      <p>imageFileName1234567897894651323.jpg</p>
+                    </div> -->
+                    <div class="fileDragDrop">
+                      <input type="file">
+                      <p>拖拉檔案或選擇檔案上傳</p>
+                      <button type="button" class="showLightbox" id="imgInLib">從圖庫選擇</button>
+                    </div>
+                    <p class="tips">Tips: 每種語系皆需上傳各自的產品圖片，圖片大小不能大於 6Mb，檔案格式須為 jpeg、webp、jpg、gif、png。</p>
+                  </div>
+
                 </section>
 
                 <!-- 產品圖片 -->
-                <section class="generateHere">
+                <!-- <section class="generateHere">
                   <section class="langTab">
                     <ul>
                       <li><a>英文</a></li>
@@ -264,7 +279,7 @@
                     <button type="button" class="showLightbox" id="imgInLib">從圖庫選擇</button>
                   </div>
                   <p class="tips">Tips: 每種語系皆需上傳各自的產品圖片，圖片大小不能大於 6Mb，檔案格式須為 jpeg、webp、jpg、gif、png。</p>
-                </section>
+                </section> -->
 
                 <button disabled="disabled" class="intense pop trigPop" id="pop-genConfirm" type="button">生成內容</button>
               </div>
